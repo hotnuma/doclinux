@@ -100,6 +100,7 @@ system
     systemd-analyze blame --no-pager
     systemd-analyze critical-chain
     
+    systemctl list-units --no-pager
     systemctl list-unit-files | grep "enabled "
     systemctl | grep running
     ```
