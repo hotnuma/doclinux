@@ -2,9 +2,9 @@
 
 Reminder of common Linux commands.
 
-## System commands
+### System commands
 
-* Format USB key on /dev/sdc
+#### Format USB key on /dev/sdc
     
     lsblk -p
     sudo umount /dev/sdc1
