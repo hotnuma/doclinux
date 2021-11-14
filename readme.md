@@ -25,4 +25,39 @@ Reminder of common Linux commands.
     LANG=C free -h
 
 
+* Firefox config
+
+    about:config
+    
+    browser.sessionstore.resume_from_crash user_set boolean false
+    layers accelerated
+    gpu process
+    gpu enabled
+
+* smartmontools
+    sudo smartctl -s on -a /dev/sda
+
+* write rpi image
+    
+    rpimg "file.img" /dev/sdc
+    
+* systemd
+
+    systemd-analyze time
+    systemd-analyze blame
+    systemd-analyze blame --no-pager
+    systemd-analyze critical-chain
+    
+    systemctl list-unit-files | grep "enabled "
+    systemctl | grep running
+
+* build dependencies
+
+    sudo apt-get build-dep --dry-run thunar
+
+* check if installed
+
+    apt list thunar
+
+
 
