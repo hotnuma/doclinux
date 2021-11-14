@@ -6,10 +6,12 @@ Reminder of common Linux commands.
     ```
     lsblk -p
     sudo umount /dev/sdc1
-    
+    ```
+    ext4
+    ```
     sudo mkfs.ext4 -L "Backup" /dev/sdc1
     ```
-    or
+    or ntfs
     ```
     sudo mkfs.ntfs -f -L "Backup" /dev/sdc1
     sudo chown $USER:$USER /media/hotnuma/Backup
