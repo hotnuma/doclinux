@@ -11,6 +11,9 @@ Reminder of common Linux commands.
     ```
 or
 
+    ```
     sudo mkfs.ntfs -f -L "Backup" /dev/sdc1
     sudo chown $USER:$USER /media/hotnuma/Backup
+    ```
+
 
