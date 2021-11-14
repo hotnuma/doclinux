@@ -2,6 +2,22 @@
 
 Reminder of common Linux commands.
 
+dev
+drives
+files
+misc
+packages
+system
+
+### Dev
+
+* build dependencies
+    ```
+    sudo apt-get build-dep --dry-run thunar
+    ```
+    
+### Drives
+
 * Format USB key on /dev/sdc
     ```
     lsblk -p
@@ -16,15 +32,24 @@ Reminder of common Linux commands.
     sudo mkfs.ntfs -f -L "Backup" /dev/sdc1
     sudo chown $USER:$USER /media/hotnuma/Backup
     ```
+* Read smart infos
+    ```
+    sudo smartctl -s on -a /dev/sda
+    ```
+    
+* Write img file to drive
+    ```
+    rpimg "file.img" /dev/sdc
+    ```
+    
+### Files
+
 * Files not own by user in home
     ```
     find ~ \( ! -user $USER -o ! -group $USER \)
     ```
 
-* Output without localization
-    ```
-    LANG=C free -h
-    ```
+### Misc
 
 * Firefox config
     about:config
@@ -35,16 +60,19 @@ Reminder of common Linux commands.
     gpu enabled
     ```
     
-* smartmontools
+* Output without localization
     ```
-    sudo smartctl -s on -a /dev/sda
+    LANG=C free -h
+    ```
+
+### Packages
+* check if installed
+    ```
+    apt list thunar
     ```
     
-* write rpi image
-    ```
-    rpimg "file.img" /dev/sdc
-    ```
-    
+### System
+
 * systemd
     ```
     systemd-analyze time
@@ -54,16 +82,6 @@ Reminder of common Linux commands.
     
     systemctl list-unit-files | grep "enabled "
     systemctl | grep running
-    ```
-    
-* build dependencies
-    ```
-    sudo apt-get build-dep --dry-run thunar
-    ```
-    
-* check if installed
-    ```
-    apt list thunar
     ```
     
 
