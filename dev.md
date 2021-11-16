@@ -1,9 +1,9 @@
 ### C
 
-[Awesome C - oz123](https://github.com/oz123/awesome-c)
-oz123/awesome-c: A curated list of awesome C frameworks, libraries, resources and other shiny things. Inspired by all the other awesome-... projects out there.
+[Awesome C - oz123](https://github.com/oz123/awesome-c)\
+A curated list of awesome C frameworks, libraries, resources and other shiny things. Inspired by all the other awesome projects out there.
 
-[Awesome C - uhub](https://github.com/uhub/awesome-c)
+[Awesome C - uhub](https://github.com/uhub/awesome-c)\
 uhub/awesome-c: A curated list of awesome C frameworks, libraries and software.
 
 [Linux proc](https://mtodorovic.developpez.com/linux/programmation-avancee/?page=page_7)
