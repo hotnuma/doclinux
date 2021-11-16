@@ -1,4 +1,4 @@
-###C
+### C
 
 [Awesome C - oz123](https://github.com/oz123/awesome-c)
 oz123/awesome-c: A curated list of awesome C frameworks, libraries, resources and other shiny things. Inspired by all the other awesome-... projects out there.
@@ -18,7 +18,7 @@ QtCreator printf
 [stat, fstat, lstat](http://manpages.ubuntu.com/manpages/trusty/fr/man2/stat.2.html)
 stat, fstat, lstat
 
-###Daemon
+### Daemon
 
 [A sample Daemon program in C ](https://gist.github.com/copyninja/1033862)
 A sample Daemon program in C 
@@ -41,7 +41,7 @@ pasce/daemon-skeleton-linux-c: Basic skeleton of a linux daemon written in C
 [src_pfork_c · master · 𐰀𐰞𐰃:𐰺𐰃𐰔𐰀:𐰚𐰀𐰾𐰚𐰃𐰤 (𐰽𐰆𐰞𐰃𐰤𐰆𐰽) _ fork · GitLab ](https://gitlab.com/sulincix/fork/-/blob/master/src/pfork.c)
 src/pfork.c · master · 𐰀𐰞𐰃:𐰺𐰃𐰔𐰀:𐰚𐰀𐰾𐰚𐰃𐰤 (𐰽𐰆𐰞𐰃𐰤𐰆𐰽) / fork · GitLab 
 
-###Execute
+### Execute
 
 [Execute program in C](https://stackoverflow.com/questions/5237482/how-do-i-execute-external-program-within-c-code-in-linux-with-arguments)
 How do I execute external program within C code in linux with arguments? - Stack Overflow
@@ -52,7 +52,7 @@ How do I execute external program within C code in linux with arguments? - Stack
 [posix_spawn](https://www.systutorials.com/a-posix_spawn-example-in-c-to-create-child-process-on-linux/)
 Creating a Child Process using posix_spawn in C in Linux - SysTutorials 
 
-###Gtk
+### Gtk
 
 [Gtk2 - Custom Widgets](https://www.cc.gatech.edu/data_files/public/doc/gtk/tutorial/gtk_tut-20.html)
 Custom Widgets
@@ -69,7 +69,7 @@ python - How can i make tabs in pygtk closable? - Stack Overflow
 [Tutorial - Gnome](https://developer.gnome.org/documentation/tutorials.html)
 Tutorials
 
-###Src
+### Src
 
 [Geany - GitHub](https://github.com/geany/geany)
 geany
@@ -83,12 +83,12 @@ pcmanfm
 [Scite Gtk - GitHub](https://github.com/mirror/scite/tree/master/gtk)
 scite/gtk
 
-###TreeView
+### TreeView
 
 [Gtk2 - TreeView Tutorial](http://scentric.net/tutorial/)
 GTK+ 2.0 Tree View Tutorial
 
-###ArchiveDocs
+### ArchiveDocs
 
 [find static lib](https://stackoverflow.com/questions/67925406/what-is-the-correct-way-to-include-a-pre-compiled-library-in-meson-build)
 dependencies - What is the correct way to include a pre-compiled library in meson-build? - Stack Overflow
