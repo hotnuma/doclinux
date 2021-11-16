@@ -2,13 +2,6 @@
 
 Reminder of common Linux commands.
 
-dev
-drives
-Files
-misc
-packages
-system
-
 ### Dev
 
 * build dependencies
@@ -105,5 +98,3 @@ system
     systemctl | grep running
     ```
     
-
-
