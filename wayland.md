@@ -1,11 +1,11 @@
 ### Wayland
 
-* swaywm/wlroots: A modular Wayland compositor library\
-    https://github.com/swaywm/wlroots
+* wlroots: a modular Wayland compositor library\
+    https://gitlab.freedesktop.org/wlroots/wlroots
 
-johanmalm/labwc: A Wayland stacking compositor\
-[Wayland labwc](https://github.com/johanmalm/labwc)\
+* johanmalm/labwc: a Wayland stacking compositor\
+    https://github.com/johanmalm/labwc
 
-natpen/awesome-wayland: A curated list of Wayland code and resources\
-[Wayland awesome](https://github.com/natpen/awesome-wayland)\
+* natpen/awesome-wayland: a curated list of Wayland code and resources\
+    https://github.com/natpen/awesome-wayland
 
