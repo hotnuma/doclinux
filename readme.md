@@ -2,6 +2,8 @@
 
 Reminder of common Linux commands.
 
+[github markdown](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+
 [ffmpeg](ffmpeg.md)\
 [network](network.md)\
 [startup](startup.md)\
