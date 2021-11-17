@@ -2,15 +2,14 @@
 
 Reminder of common Linux commands.
 
-[dev](dev.md)\
-[gtk](dev_gtk.md)\
+[ffmpeg](ffmpeg.md)\
+[network](network.md)\
+[startup](startup.md)\
+[wayland](wayland.md)\
+[xfce](xfce.md)
 
-[startup](linux_startup.md)\
-
-[ffmpeg](media_ffmpeg.md)\
-
-[links1](misc_links1.md)\
-[links2](misc_links2.md)\
+[bugs](misc_bugs.md)\
+[links](misc_links.md)
 
 ### Drives
 
