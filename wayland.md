@@ -1,6 +1,6 @@
 ### Wayland
 
-* swaywm/wlroots: A modular Wayland compositor library
+* swaywm/wlroots: A modular Wayland compositor library\
     https://github.com/swaywm/wlroots
 
 johanmalm/labwc: A Wayland stacking compositor\
