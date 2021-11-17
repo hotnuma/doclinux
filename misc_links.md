@@ -1,19 +1,19 @@
 ### BuilsSystem
 
-[Autotools to Meson - Meson](https://mesonbuild.com/Porting-from-autotools.html)\
 Porting from Autotools
+[Autotools to Meson - Meson](https://mesonbuild.com/Porting-from-autotools.html)\
 
-[Autotools to Meson](https://nibblestew.blogspot.com/2016/09/how-to-convert-autotools-project-to.html)\
 Autotools to Meson
+[Autotools to Meson](https://nibblestew.blogspot.com/2016/09/how-to-convert-autotools-project-to.html)\
 
-[Meson In-depth Tutorial](https://mesonbuild.com/IndepthTutorial.html)\
 An in-depth tutorial
+[Meson In-depth Tutorial](https://mesonbuild.com/IndepthTutorial.html)\
 
-[meson_ac_converter_py](https://github.com/mesonbuild/meson/blob/master/tools/ac_converter.py)\
 meson/ac_converter.py
+[meson_ac_converter_py](https://github.com/mesonbuild/meson/blob/master/tools/ac_converter.py)\
 
-[meson_cmake2meson_py](https://github.com/mesonbuild/meson/blob/master/tools/cmake2meson.py)\
 meson/cmake2meson.py at master · mesonbuild/meson
+[meson_cmake2meson_py](https://github.com/mesonbuild/meson/blob/master/tools/cmake2meson.py)\
 
 ### DBus
 
@@ -55,9 +55,6 @@ stuff/dbus-example.c at master · wware/stuff
 
 ### Divers
 
-[Bash Heredoc](https://linuxize.com/post/bash-heredoc/)\
-Bash Heredoc
-
 [Logiciels libres](https://fr.wikipedia.org/wiki/Socle_interminist%C3%A9riel_de_logiciels_libres)\
 logiciels libres
 
@@ -85,6 +82,11 @@ SysStat Git
 [SysStat](http://sebastien.godard.pagesperso-orange.fr/index.html)\
 SysStat
 
+[XBindKeys](https://www.nongnu.org/xbindkeys/xbindkeys.fr.html)\
+XBindKeys
+
+### Wayland
+
 [Wayland awesome](https://github.com/natpen/awesome-wayland)\
 natpen/awesome-wayland: A curated list of Wayland code and resources.
 
@@ -94,141 +96,7 @@ johanmalm/labwc: A Wayland stacking compositor
 [Wayland wlroots](https://github.com/swaywm/wlroots)\
 swaywm/wlroots: A modular Wayland compositor library
 
-[XBindKeys](https://www.nongnu.org/xbindkeys/xbindkeys.fr.html)\
-XBindKeys
 
-### Git
-
-[Access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)\
-Access token
-
-[An Intro to Git](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)\
-An Intro to Git
-
-[Authenticate Token](https://stackoverflow.com/questions/18935539/authenticate-with-github-using-a-token)\
-Authenticate
-
-[Git Guide](https://github.com/git-guides/)\
-Git
-
-[Line endings](https://docs.github.com/en/github/getting-started-with-github/configuring-git-to-handle-line-endings)\
-Git line endings
-
-[Main vs Master](https://stackoverflow.com/questions/64249491/difference-between-main-branch-and-master-branch-in-github)\
-Main vs Master
-
-[Remote Origin](https://stackoverflow.com/questions/6565357/git-push-requires-username-and-password)\
-Git push
-
-### Linux
-
-[Alias Ubuntu](https://forum.ubuntu-fr.org/viewtopic.php?id=20437)\
-alias et function
-
-[Audio playing detect](https://stackoverflow.com/questions/22144203/how-to-determine-the-last-time-the-audio-device-was-playing-a-file)\
-determine audio playing
-
-[CPU getusage_c](https://github.com/fho/code_snippets/blob/master/c/getusage.c)\
-getusage.c
-
-[CPU top processes](https://unix.stackexchange.com/questions/13968/show-top-five-cpu-consuming-processes-with-ps)\
-linux - Show top five CPU consuming processes with `ps` - Unix & Linux Stack Exchange
-
-[CPU usage by PID](https://stackoverflow.com/questions/1420426/how-to-calculate-the-cpu-usage-of-a-process-by-pid-in-linux-from-c)\
-CPU usage by PID
-
-[CPU usage](https://stackoverflow.com/questions/1221555/retrieve-cpu-usage-and-memory-usage-of-a-single-process-on-linux)\
-CPU usage
-
-[cpu-frequtils](https://doc.ubuntu-fr.org/cpu-frequtils)\
-cpu-frequtils
-
-[disable at-spi-bus-launcher _ Applications & Desktop Environments _ Arch Linux Forums](https://bbs.archlinux.org/viewtopic.php?id=237697)\
-disable at-spi-bus-launcher / Applications & Desktop Environments / Arch Linux Forums
-
-[Display Signaling](https://wiki.archlinux.org/title/Display_Power_Management_Signaling)\
-Display Signaling
-
-[Drive spin down](https://superuser.com/questions/173622/hdparm-checking-if-a-drive-is-spun-down/176079)\
-Drive spin down
-
-[Execute flag remove](https://unix.stackexchange.com/questions/296967/how-to-recursively-remove-execute-permissions-from-files-without-touching-folder)\
-executable - How to recursively remove execute permissions from files without touching folders? - Unix & Linux Stack Exchange
-
-[Find process by name](https://www.cyberciti.biz/faq/linux-find-process-name/)\
-Linux find process by name - nixCraft
-
-[Idle Reset](https://askubuntu.com/questions/1323618/how-to-disable-auto-suspend-temporary-reset-idle-time)\
-disable auto suspend
-
-[Image Viewers](https://itsfoss.com/image-viewers-linux/)\
-best Image Viewer
-
-[LightDm](https://doc.ubuntu-fr.org/lightdm)\
-lightdm [Wiki ubuntu-fr]
-
-[Locale Collation](https://wiki.archlinux.org/title/locale#LC_COLLATE:_collation)\
-Locale - ArchWiki
-
-[Log files](https://ubuntu.com/tutorials/viewing-and-monitoring-log-files#2-log-files-locations)\
-Viewing log files
-
-[Log view](https://vitux.com/view-system-log-files-ubuntu/)\
-View System Log
-
-[Mount ntfs](https://superuser.com/questions/1049044/how-to-mount-properly-ntfs-partition-shared-between-linux-and-windows)\
-Mount ntfs
-
-[Partitions Format](https://phoenixnap.com/kb/linux-format-disk)\
-Format Partitions
-
-[PATH variable](https://askubuntu.com/questions/866161/setting-path-variable-in-etc-environment-vs-profile)\
-Setting PATH variable in /etc/environment vs .profile - Ask Ubuntu
-
-[Remove snap](https://askubuntu.com/questions/1369159/how-to-remove-snap-completely-without-losing-firefox)\
-remove snap
-
-[Restart if needed](https://askubuntu.com/questions/921541/how-to-determine-if-a-restart-is-needed-on-my-ubuntu-server/921546#921546)\
-restart is needed
-
-[Screen On Off](https://superuser.com/questions/374637/how-to-turn-off-screen-with-shortcut-in-linux)\
-turn off screen
-
-[Screen sleep](https://qastack.fr/superuser/31726/how-to-disable-the-screen-linux-without-x)\
-désactiver l'écran
-
-[Set CPU governor](https://askubuntu.com/questions/1021748/set-cpu-governor-to-performance-in-18-04)\
-Set CPU governor
-
-[sudo test](https://stackoverflow.com/questions/42875809/checking-sudo-in-bash-script-with-if-statements/42876846)\
-linux - Checking sudo in Bash (script with if statements) - Stack Overflow
-
-[Systemctl howto](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units-fr)\
-Comment utiliser Systemctl pour gérer les services et les unités de Systemd | DigitalOcean
-
-[Systemctl list services](https://askubuntu.com/questions/795226/how-to-list-all-enabled-services-from-systemctl)\
-list services
-
-[Systemctl](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units-fr)\
-Systemctl
-
-[Theme Adwaita based](https://askubuntu.com/questions/1170151/help-creating-a-new-theme-based-on-adwaita)\
-theme based on Adwaita
-
-[Theme Guide](https://github.com/surajmandalcell/Gtk-Theming-Guide/blob/master/creating_gtk_themes.md)\
-Gtk-Theming-Guide
-
-[Top directory 1](https://www.tecmint.com/find-top-large-directories-and-files-sizes-in-linux/)\
-How to Find Top Directories and Files (Disk Space) in Linux
-
-[Top directory 2](https://superuser.com/questions/276487/how-to-find-the-largest-directories-or-largest-files)\
-linux - How to find the largest directories or largest files? - Super User
-
-[Top directory 3](https://www.cyberciti.biz/faq/linux-find-largest-file-in-directory-recursively-using-find-du/)\
-Linux find largest file in directory recursively using find/du - nixCraft
-
-[XDG_CONFIG_DIRS](https://askubuntu.com/questions/1179729/where-is-xdg-config-dirs-set)\
-desktop environments - Where is XDG_CONFIG_DIRS set? - Ask Ubuntu
 
 ### LinuxBugs
 
@@ -261,6 +129,8 @@ Keyboard shorcuts stop working randomly (#232) · Issues · Xfce / xfce4-setting
 
 [XFCE - xfsettingsd (#257)](https://gitlab.xfce.org/xfce/xfce4-settings/-/issues/257)\
 xfsettingsd swallows up wrong shortcuts (#257) · Issues · Xfce / xfce4-settings · GitLab
+
+
 
 ### Network
 
@@ -297,6 +167,8 @@ Switch back to ifupdown
 [Switch back to interfaces](https://askubuntu.com/questions/1031709/ubuntu-18-04-switch-back-to-etc-network-interfaces)\
 switch back to interfaces
 
+
+
 ### Process
 
 [Exit status](https://stackoverflow.com/questions/27306764/capturing-exit-status-code-of-child-process/27307246)\
@@ -319,6 +191,8 @@ exec to buffer or file
 
 [select](https://www.blaess.fr/christophe/2013/12/27/comprendre-le-fonctionnement-de-select/)\
 select()
+
+
 
 ### XFCE
 
@@ -363,4 +237,43 @@ Ubuntu Manpage: xfconf-query - Command line utility for xfconf system
 
 [xfconf-query](https://docs.xfce.org/xfce/xfconf/xfconf-query)\
 xfce:xfconf:xfconf-query [Xfce Docs]
+
+
+
+### Divers
+
+[Basic writing and formatting syntax - GitHub Docs](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)\
+[Specifications](https://specifications.freedesktop.org/)\
+[Git status doesn’t know if your local repository is out of date · Mike F. Robbins](https://mikefrobbins.com/2016/02/18/git-status-doesnt-know-if-your-local-repository-is-out-of-date/)\
+[les commandes Git que vous devez absolument connaitre!](https://www.hostinger.fr/tutoriels/commandes-git)\
+[raspberrypi-ui](https://github.com/raspberrypi-ui)\
+[documentation/installing-from-linux.adoc at develop · raspberrypi/documentation](https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/getting-started/installing-from-linux.adoc)\
+[how to umount all partitions of a mobile disk. / Applications &amp; Desktop Environments / Arch Linux Forums](https://bbs.archlinux.org/viewtopic.php?id=117100)\
+[nautilus - Unmounting several partitions at once - Ask Ubuntu](https://askubuntu.com/questions/8819/unmounting-several-partitions-at-once)\
+[dd [Wiki ubuntu-fr]](https://doc.ubuntu-fr.org/dd)\
+[grep recursiv](https://stackoverflow.com/questions/1987926/how-do-i-grep-recursively)\
+[ag search](https://github.com/ggreer/the_silver_searcher)\
+[mate-desktop/mate-utils](https://github.com/mate-desktop/mate-utils)\
+[BuildingTutorial](https://wiki.debian.org/BuildingTutorial)\
+[Find build deps](https://askubuntu.com/questions/172367/how-do-i-find-the-dependencies-when-building-software-from-source)\
+[12052018_systemd_6.pdf](https://access.redhat.com/sites/default/files/attachments/12052018_systemd_6.pdf)\
+[Chapter 10. Managing Services with systemd Red Hat Enterprise Linux 7 | Red Hat Customer Portal](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/chap-managing_services_with_systemd)\
+[systemctl](https://www.freedesktop.org/software/systemd/man/systemctl.html)\
+[Comment utiliser Systemctl pour gérer les services et les unités de Systemd | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units-fr)\
+[mpv media player - How do I go about fixing my system freezing every time I launch a video after installing mpv? - Ask Ubuntu](https://askubuntu.com/questions/1352457/how-do-i-go-about-fixing-my-system-freezing-every-time-i-launch-a-video-after-in)\
+[Comment désactiver at-spi2 (a11y) proprement ? (Contourné) / Autres logiciels et problèmes généraux / Forum Ubuntu-fr.org](https://forum.ubuntu-fr.org/viewtopic.php?id=2004988)\
+[How to uninstall or remove at-spi2-core software package from Ubuntu 17.04 (Zesty Zapus)](https://www.thelinuxfaq.com/ubuntu/ubuntu-17-04-zesty-/at-spi2-core?type=uninstall)\
+[debian - Disable gnome-keyring-daemon - Unix &amp; Linux Stack Exchange](https://unix.stackexchange.com/questions/271661/disable-gnome-keyring-daemon/397645)\
+[[ubuntu] how to permanently disable gnome-keyring-daemon](https://ubuntuforums.org/showthread.php?t=1655397)\
+[libreoffice - Convert .csv file to .ods using terminal - Ask Ubuntu](https://askubuntu.com/questions/1105378/convert-csv-file-to-ods-using-terminal)\
+[parameter passing - Check number of arguments passed to a Bash script - Stack Overflow](https://stackoverflow.com/questions/18568706/check-number-of-arguments-passed-to-a-bash-script)\
+[RaspberryPi - Debian Wiki](https://wiki.debian.org/RaspberryPi)\
+[X11 - Xorg set the screen background or wallpaper](https://revadig.blogspot.com/2017/09/x11-xorg-set-screen-background-or.html)\
+[Set wallpaper without a program? / Newbie Corner / Arch Linux Forums](https://bbs.archlinux.org/viewtopic.php?id=119049)\
+[set wallpaper on X11 | documentacoes.wordpess.com](https://documentacoes.wordpress.com/2015/06/05/set-wallpaper-on-x11/)\
+[The X Window system](https://tronche.com/gui/x/)\
+[RPi-Distro](https://github.com/RPi-Distro)\
+[Can I turn off the auto-hiding of scrollbars ? / Desktop / Xfce Forums](https://forum.xfce.org/viewtopic.php?id=9540)\
+[How do I disable overlay scrollbars? - Ask Ubuntu](https://askubuntu.com/questions/34214/how-do-i-disable-overlay-scrollbars)\
+
 
