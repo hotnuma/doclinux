@@ -2,8 +2,6 @@
 
 Reminder of common Linux commands.
 
-[github markdown](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-
 [ffmpeg](ffmpeg.md)\
 [network](network.md)\
 [startup](startup.md)\
@@ -12,6 +10,11 @@ Reminder of common Linux commands.
 
 [bugs](misc_bugs.md)\
 [links](misc_links.md)
+
+### Markdown Reference
+
+[github markdown](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+[cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet)
 
 ### Drives
 
