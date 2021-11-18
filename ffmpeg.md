@@ -28,37 +28,34 @@ https://ffmpeg.org/ffmpeg-filters.html
 
     http://superuser.com/questions/323119/how-can-i-normalize-audio-using-ffmpeg
 
-    analyze using volumedetect
+    Analyze using volumedetect :
     ```
     ffmpeg -i "input.avi" -af "volumedetect" -f null /dev/null
     ```
-    read "max_volume", for example -22.5 dB, then amplify audio channel
+    Read "max_volume", for example -22.5 dB, then amplify audio channel by +22.5dB.
     ```
     ffmpeg -i "input.mp4" -c:v copy -c:a libmp3lame -b:a 192k -af "volume=22.5dB" "output.mp4"
     ```
-    
 * Delay audio by one second
     ```
     ffmpeg -i input.mkv -itsoffset 1.0 -i input.mkv -map 0:0 -map 1:1 -c copy output.mkv
     ```
-* Choisir la piste par défaut
+* Choose default audio channel
     ```
     ffmpeg -i "input.mkv" -map 0:0 -map 0:2 -map 0:1 \
     -disposition:a:0 default -disposition:a:1 none -c copy "output.mkv"
     ```
-    
 * Change audio speed
     ```
-    ffmpeg -i "audio.mp3" -af "atempo=1.001" -b:a 192k "audio-2.mp3"
+    ffmpeg -i "audio.mp3" -af "atempo=1.001" -b:a 192k "audio-faster.mp3"
     ```
     
 ### Subtitles
 
 * Download subtitles
     ```
-    youtube-dl --write-sub --sub-lang en --skip-download URL
-    youtube-dl --cookies=cookies/youtube.txt --write-auto-sub --convert-subs=srt --skip-download URL
-    youtube-dl --cookies=cookies/youtube.txt URL
+    youtube-dl --write-sub --sub-lang en --skip-download "URL"
+    youtube-dl --cookies=cookies/youtube.txt --write-auto-sub --convert-subs=srt --skip-download "URL"
     ```
 * Remove all subs and chapters :
     ```
@@ -68,11 +65,11 @@ https://ffmpeg.org/ffmpeg-filters.html
     ```
     ffmpeg -i in.mp4 -c copy -dn -map_metadata:c -1 out.mp4
     ```
-* extract subs
+* Extract subs
     ```
     mkvextract tracks "input.mkv" 2:out.idx
     ```
-* convert sub to str
+* Convert sub to str
 
     https://subtitletools.com/convert-sub-idx-to-srt-online
 
@@ -82,7 +79,7 @@ https://ffmpeg.org/ffmpeg-filters.html
     ```
     ffmpeg -i "input.mp4" -c copy -metadata title="Test title" "output.mp4"
     ```
-* pts has no value
+* Pts has no value error
 
     First, a background on why this error exists.
     AVI does not support variable frame rate video.
@@ -94,7 +91,7 @@ https://ffmpeg.org/ffmpeg-filters.html
     The solution is specifying -fflags +genpts (must be before
     the input file is specified with -i).
 
-* generate pts
+    Generate pts :
     ```
     ffmpeg -fflags +genpts -i film.avi -codec copy film.mp4
     ```

@@ -9,3 +9,13 @@
 * natpen/awesome-wayland: a curated list of Wayland code and resources\
     https://github.com/natpen/awesome-wayland
 
+### Sway
+
+    To change keyboard layout edit ~/.config/sway/config and append keyboard config for example :
+    
+    ```
+    input * {
+        xkb_layout "fr"
+    }
+
+    ```
