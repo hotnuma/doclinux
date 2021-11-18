@@ -84,7 +84,14 @@ Reminder of common Linux commands.
     ```
 ### Packages
 
+[pacman](https://wiki.archlinux.org/title/pacman)
+
 * check if installed
+	Manjaro :
+    ```
+    pacman -Ss mesa | grep installé
+    ```
+    Ubuntu :
     ```
     apt list thunar
     ```
