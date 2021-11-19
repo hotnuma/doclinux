@@ -1,4 +1,4 @@
-Linux notes
+### Linux Notes Wiki
 
-see the wiki
+https://github.com/hotnuma/doclinux/wiki
 
