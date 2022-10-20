@@ -69,6 +69,11 @@
     ```
     7z a example.7z example/
     ```
+    without compression
+
+    ```
+    7z a -mx=0 example.7z example/
+    ```
     
 * Recursive grep
 
