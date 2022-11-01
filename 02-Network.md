@@ -1,4 +1,8 @@
-**[ [Home](00-Home.html) | [FFmpeg](01-FFmpeg.html) | [Network](02-Network.html) | [Systemd](03-Systemd.html) | [Wayland](04-Wayland.html) | [Xfce](05-Xfce.html) ]**
+**[ [Home](00-Home.html) | [Bugs](01-Bugs.html) | [FFmpeg](01-FFmpeg.html) | Network | [Systemd](03-Systemd.html) | [Wayland](04-Wayland.html) ]**
+
+### Network
+
+---
 
 * DNS
     

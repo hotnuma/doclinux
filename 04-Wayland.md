@@ -1,4 +1,8 @@
-**[ [Home](00-Home.html) | [FFmpeg](01-FFmpeg.html) | [Network](02-Network.html) | [Systemd](03-Systemd.html) | [Wayland](04-Wayland.html) | [Xfce](05-Xfce.html) ]**
+**[ [Home](00-Home.html) | [Bugs](01-Bugs.html) | [FFmpeg](01-FFmpeg.html) | [Network](02-Network.html) | [Systemd](03-Systemd.html) | Wayland ]**
+
+### Wayland
+
+---
 
 * References
     
@@ -18,13 +22,13 @@
     
     https://github.com/labwc/labwc  
 
-* Waybar : a highly customizable Wayland bar
-    
-    https://github.com/Alexays/Waybar  
-
 * Xfce Xfwm4
     
     https://github.com/adlocode/xfwm4/tree/wlroots  
+
+* Waybar : a highly customizable Wayland bar
+    
+    https://github.com/Alexays/Waybar  
 
 * Yes another task bar for Wayland
     

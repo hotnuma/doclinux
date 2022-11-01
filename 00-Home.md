@@ -1,4 +1,8 @@
-**[ [Home](00-Home.html) | [FFmpeg](01-FFmpeg.html) | [Network](02-Network.html) | [Systemd](03-Systemd.html) | [Wayland](04-Wayland.html) | [Xfce](05-Xfce.html) ]**
+**[ Home | [Bugs](01-Bugs.html) | [FFmpeg](01-FFmpeg.html) | [Network](02-Network.html) | [Systemd](03-Systemd.html) | [Wayland](04-Wayland.html) ]**
+
+### Docs Linux
+
+---
 
 #### Reference
 
@@ -64,6 +68,38 @@
     
 #### Files
 
+* find multiple pattern
+    
+    ```
+    find . -type f \( -name "*.h" -o -name "*.c" \)
+    ```
+    
+* Find files not own by user
+
+    ```
+    find ~ \( ! -user $USER -o ! -group $USER \)
+    ```
+    
+* Find last modified files
+
+    ```
+    find ~ -cmin -5
+    ```
+    
+* Remove execute flag
+
+    ```
+    find . ! -type l ! -type d -exec ls -la {} +
+    find . ! -type l ! -type d -exec chmod 0664 {} +
+    find . ! -type l ! -type d -exec chmod a-x {} +
+    ```
+    
+    ```
+    find . ! -wholename "./.git/*" ! -type l ! -type d -exec ls -la {} +
+    find . ! -wholename "./.git/*" ! -type l ! -type d -exec chmod 0664 {} +
+    find . ! -wholename "./.git/*" ! -type l ! -type d -exec chmod a-x {} +
+    ```
+
 * Compress a directory with 7zip
 
     ```
@@ -99,32 +135,6 @@
     ln -s target_path link_name
     ```
     
-* Find files not own by user
-
-    ```
-    find ~ \( ! -user $USER -o ! -group $USER \)
-    ```
-    
-* Find last modified files
-
-    ```
-    find ~ -cmin -5
-    ```
-    
-* Remove execute flag
-
-    ```
-    find . ! -type l ! -type d -exec ls -la {} +
-    find . ! -type l ! -type d -exec chmod 0664 {} +
-    find . ! -type l ! -type d -exec chmod a-x {} +
-    ```
-    
-    ```
-    find . ! -wholename "./.git/*" ! -type l ! -type d -exec ls -la {} +
-    find . ! -wholename "./.git/*" ! -type l ! -type d -exec chmod 0664 {} +
-    find . ! -wholename "./.git/*" ! -type l ! -type d -exec chmod a-x {} +
-    ```
-
 #### Packages apt
 
 * Check if a package is installed using apt
@@ -236,5 +246,37 @@
     ```
     sudo update-alternatives --config x-session-manager
     ```
+#### Install
 
+* Ubuntu install codecs and fonts
+
+    ```
+    sudo apt install ubuntu-restricted-extras
+    ```
+
+* Install NVidia Drivers
+
+    https://phoenixnap.com/kb/install-nvidia-drivers-ubuntu
+
+    ```
+    apt search nvidia-driver
+    ```
+
+    or
+
+    ```
+    ubuntu-drivers devices
+    ```
+
+    ```
+    sudo apt install nvidia-driver-470
+    ```
+
+* Ubuntu Firefox ESR
+
+    ```
+    sudo add-apt-repository ppa:mozillateam/ppa
+    sudo apt update
+    sudo apt install firefox-esr
+    ```
 
