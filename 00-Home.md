@@ -10,6 +10,8 @@
     
     https://github.com/luisgbm/lfs-scripts  
 
+
+
 #### Alias
 
 * Defines aliases in `~/.bashrc` or `~/.bash_aliases`
@@ -17,7 +19,9 @@
     ```
     alias cgrep='grep -rni --include=*.{h,c,cpp,cxx}'
     ```
-    
+
+
+
 #### Drives
 
 * Format `/dev/sdc1` partition in Ext4
@@ -65,7 +69,9 @@
     lsblk -p
     rpimg "file.img" /dev/sdc
     ```
-    
+
+
+
 #### Files
 
 * find multiple pattern
@@ -134,7 +140,9 @@
     ```
     ln -s target_path link_name
     ```
-    
+
+
+
 #### Packages apt
 
 * Check if a package is installed using apt
@@ -166,6 +174,8 @@
     
     https://askubuntu.com/questions/164/
 
+
+
 #### Paths
 
 * Environment variables
@@ -184,7 +194,9 @@
     ```
     /etc/default/locale
     ```
-    
+
+
+
 #### Misc
 
 * Installation date
@@ -198,6 +210,8 @@
     https://wiki.archlinux.org/title/XDG_Autostart
 
     ```
+    echo "Hidden=true" > $HOME/.config/autostart/xcompmgr.desktop
+    or
     echo "Hidden=true" > $XDG_CONFIG_HOME/autostart/xcompmgr.desktop
     ```
     
@@ -242,11 +256,23 @@
     ```
     
 * Change default session
+
     
     ```
     sudo update-alternatives --config x-session-manager
     ```
+
+
+
 #### Install
+
+* Install Firefox ESR
+
+    ```
+    sudo add-apt-repository ppa:mozillateam/ppa
+    sudo apt update
+    sudo apt install firefox-esr
+    ```
 
 * Ubuntu install codecs and fonts
 
@@ -272,11 +298,4 @@
     sudo apt install nvidia-driver-470
     ```
 
-* Ubuntu Firefox ESR
-
-    ```
-    sudo add-apt-repository ppa:mozillateam/ppa
-    sudo apt update
-    sudo apt install firefox-esr
-    ```
 
