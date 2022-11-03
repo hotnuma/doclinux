@@ -1,16 +1,8 @@
-**[ Home | [Bugs](01-Bugs.html) | [FFmpeg](01-FFmpeg.html) | [Network](02-Network.html) | [Systemd](03-Systemd.html) | [Wayland](04-Wayland.html) ]**
+**[ Home | [Bugs](01-Bugs.html) | [FFmpeg](01-FFmpeg.html) | [Network](02-Network.html) | [Systemd](03-Systemd.html) | [Wayland](04-Wayland.html) | [Other](99-Other.html) ]**
 
 ### Docs Linux
 
 ---
-
-#### Reference
-
-* Simplified LFS
-    
-    https://github.com/luisgbm/lfs-scripts  
-
-
 
 #### Alias
 
@@ -18,6 +10,18 @@
 
     ```
     alias cgrep='grep -rni --include=*.{h,c,cpp,cxx}'
+    ```
+
+
+
+#### System
+
+* List processes
+    
+    by mem usage
+    
+    ```
+    top -b -o +%MEM | head -n 30
     ```
 
 
