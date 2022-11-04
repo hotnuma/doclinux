@@ -33,3 +33,9 @@
 * Yes another task bar for Wayland
     
     https://github.com/selairi/yatbfw  
+
+* Wayward
+    
+    https://github.com/varmd/wayward
+
+

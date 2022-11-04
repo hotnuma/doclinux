@@ -4,312 +4,22 @@
 
 ---
 
-<!--
-#### Reference
-
-* Simplified LFS
+#### Gnome is garbage
     
-    https://github.com/luisgbm/lfs-scripts  
+    https://nitter.it/jeremy_soller  
+    https://www.reddit.com/r/linux/comments/xwtns5/does_it_seem_like_gnome_wants_system_76s_cosmic/  
+    https://www.reddit.com/r/GTK/comments/xdfgjr/api_changes_in_gtk4_removal_of_gtkmenu/  
+    https://fosspost.org/are-gtk-developers-destroying-linux-desktop-with-their-plans/  
+    https://blogs.gnome.org/antoniof/2022/06/15/the-tree-view-is-undead-long-live-the-column-view%e2%80%bd/  
+    https://medium.com/@sarvex/gnome-shell-for-stupids-by-morons-a9020318198b  
+    https://ludditus.com/2021/05/30/is-there-any-future-for-the-gtk-based-desktop-environments/  
+    https://joshuastrobl.com/2021/09/14/building-an-alternative-ecosystem/  
+    https://medium.com/@fulalas/gnome-42-the-nonsense-continues-7d96c3287f7  
+    https://news.ycombinator.com/item?id=28939752  
+    https://news.ycombinator.com/item?id=29926411  
+    https://news.ycombinator.com/item?id=10758192  
 
 
-
-
-
-
-
-
-
-
-
-#### Git
-
-* Basics
-
-    [Git status doesn’t know if your local repository is out of date · Mike F. Robbins](https://mikefrobbins.com/2016/02/18/git-status-doesnt-know-if-your-local-repository-is-out-of-date/)
-
-    [les commandes Git que vous devez absolument connaitre!](https://www.hostinger.fr/tutoriels/commandes-git)
-
-    [Access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
-
-    [An Intro to Git](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
-
-    [Authenticate Token](https://stackoverflow.com/questions/18935539/authenticate-with-github-using-a-token)
-
-    [Git Guide](https://github.com/git-guides/)
-
-    [Line endings](https://docs.github.com/en/github/getting-started-with-github/configuring-git-to-handle-line-endings)
-
-    [Main vs Master](https://stackoverflow.com/questions/64249491/difference-between-main-branch-and-master-branch-in-github)
-
-    [Remote Origin](https://stackoverflow.com/questions/6565357/git-push-requires-username-and-password)
-
-#### Raspi
-
-* Custom OS
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=327060
-
-* XML libraries
-    
-    https://forums.raspberrypi.com/viewtopic.php?p=1958438#p1958438
-    
-* Double click bug
-
-    https://discourse.gnome.org/t/double-click-on-already-selected-item-will-often-not-open-item-in-nautilus/4590/5
-    https://gitlab.gnome.org/GNOME/nautilus/-/issues/1599
-    
-    GTK version :
-    
-    ```
-    libgtk-3-0:amd64 3.24.25-1ubuntu4.1 amd64 
-    ```
-
-* Test RPi version
-
-    https://forums.raspberrypi.com/viewtopic.php?t=34678  
-    https://forums.raspberrypi.com/viewtopic.php?t=200059
-
-    ```
-    ARCH=$(uname -m)
-    VERSION=$(cat /etc/debian_version)
-    if [[ $ARCH != "aarch64" ]] || [[ $VERSION != 11* ]]; then
-        echo " *** This script was tested only on a Raspberry Pi 4B 64 bit"
-        echo " *** abort..."
-        exit 1
-    fi
-
-    cat /proc/cpuinfo
-    grep -q BCM2708 /proc/cpuinfo
-    cat /etc/*-release
-    cat /proc/device-tree/model
-    cat /sys/firmware/devicetree/base/model
-    ```
-* Command line piclone
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=180383
-
-* Default audio playback
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=327267#p1958987
-    
-* C++ SSD1306 I2C LCD
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=224984  
-    https://forums.raspberrypi.com/viewtopic.php?t=171817
-    
-* Chromium/Youtube audio choppy with Bullseye and KMS driver
-
-    https://forums.raspberrypi.com/viewtopic.php?p=1945157#p1935815
-
-* RPi4 with PiOS ignore display setting in config.txt
-
-    https://forums.raspberrypi.com/viewtopic.php?p=1945199#p1945199
-
-* Display issue with Bullseye image and Pi 4B
-
-    https://forums.raspberrypi.com/viewtopic.php?p=1945198#p1945198
-
-* RPi4 HW Acceleration
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=325586
-    
-* Chromium 88 HW
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=319304
-
-#### Manjaro
-
-* LXDE profiles and settings
-
-    https://forum.manjaro.org/t/lxde-lxqt-openbox-community-iso/77471  
-    [https://gitlab.manjaro.org/profiles-and-settings/](https://gitlab.manjaro.org/profiles-and-settings/iso-profiles/-/blob/master/community/lxde/Packages-Desktop)
-
-* Brcm patchram plus
-    
-    https://forum.manjaro.org/t/arm-testing-update-2020-11-16-bitwarden-mesa-git-pacman-and-kernels/37996/19  
-    https://forum.manjaro.org/t/brcm-patchram-plus-conflict-with-pi-bluetooth/37935
-
-* Mpv
-    
-    https://forum.manjaro.org/t/possible-rpi-mpv-hwdec-v4l2m2m-copy-solution/96636
-    
-#### Ubuntu
-    
-    * Uninstall block snaps
-    
-    https://forum.ubuntu-fr.org/viewtopic.php?pid=22458861#p22458861
-    
-#### Wayland
-
-* Wayward
-    
-    https://github.com/varmd/wayward
-    
----
-
-- Usefull commands
-- Wayland
-- Raspi
-- Misc
-- Log files
-- CPU governor
-- Packages
-- youtube-dl
-
-#### Firefox
-
-* Webrender
-
-	https://www.google.com/search?q=raspberry+pi+webrender  
-	https://bugzilla.mozilla.org/show_bug.cgi?id=1663285  
-	https://forum.manjaro.org/t/firefox-webrender-pi4-400/63702
-		
-	https://forums.raspberrypi.com/search.php?keywords=webrender
-
-	https://www.google.com/search?q=raspberry+pi+firefox+webrender
-
-	https://bugzilla.mozilla.org/show_bug.cgi?id=1663285
-
-	```
-	gfx.webrender.all to true
-	Run 'MOZ_X11_EGL=1 firefox' in terminal
-	```
-	
-	https://bugzilla.mozilla.org/show_bug.cgi?id=1725624
-
-	https://bugs.launchpad.net/ubuntu/+source/firefox/+bug/1930982
-
-#### Raspberry Pi
-
-* USB Chipset
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=326157
-    
-    ```
-    That's true for most of the JMS578 family of USB 3.0 bridge chips,
-    but not necessarily with the 580 series USB 3.1 chips.
-    I have a USB 3.1 Gen 2 enclosure with a JMS583 chip that works
-    fine with Pi computers. It supports UASP in RPiOS, and TRIM works
-    with a udev rule.
-    ```
-    
-* Custom RPi images
-	
-	https://forums.raspberrypi.com/viewtopic.php?f=131&t=314419
-	
-#### Manjaro
-
-https://forum.manjaro.org/tag/raspberry-pi-4
-https://forum.manjaro.org/t/arm-stable-update-2021-12-13-firefox-kde-gear-thunderbird-libreoffice-icu-and-kernels/94518
-
-https://forum.manjaro.org/t/additional-arm-packages/10132  
-https://gitlab.manjaro.org/manjaro-arm
-
-* bcrm_patchram_plus
-
-    https://forum.manjaro.org/t/bcrm-patchram-plus-at-100-cpu-utilization/51035/4
-
-    ```
-    sudo systemctl disable attach-bluetooth.service
-    sudo chmod 000 /usr/bin/brcm_patchram_plus
-    ```
-
-* Vivaldi
-
-    https://help.vivaldi.com/fr/desktop-fr/install-update-fr/raspberry-pi-astuces-pour-utiliser-vivaldi/
-
-    ```
-    wget https://downloads.vivaldi.com/snapshot/install-vivaldi.sh
-    sh install-vivaldi.sh
-    ```
-
-#### Mini PC
-
-£140.00 ChromeBox  
-£25 for a 4GB memory module
-
-Gemnes - Chromebox – Mini PC Windows 10,  
-processeur Intel 3865U 8e génération,  
-double 4k, USB type-c PD, 4G-DDR4, 32G-mSATA
-
-https://fr.aliexpress.com/item/32966393971.html
-
-https://ark.intel.com/content/www/us/en/ark/products/96507/
-
-Intel® Celeron® Processor 3865U  
-2M Cache, 1.80 GHz
-
-#### Sysconfig
-
-* Manjaro update error 
-
-    ```
-    error: failed to commit transaction (conflicting files)
-    rpi4-post-install: /etc/udev/rules.d/99-vcio-rewrite.rules exists in filesystem
-    ```
-    fix
-    ```
-    sudo pacman -Syu --overwrite /etc/udev/rules.d/99-vcio-rewrite.rules
-    ```
-
-#### Links 
-
-references :
-
-https://specifications.freedesktop.org/  
-https://askubuntu.com/questions/1179729/where-is-xdg-config-dirs-set  
-https://www.nongnu.org/xbindkeys/xbindkeys.html
-
-display settings :
-
-video=HDMI-1:800x480@60
-
-https://forums.raspberrypi.com/viewtopic.php?t=325011#p1945199
-
-chromium crash :
-
-https://forums.raspberrypi.com/viewtopic.php?t=323640&start=75#p1940502
-
-firefox :
-
-https://forum.manjaro.org/t/new-mesa-drivers/39735  
-https://forum.manjaro.org/t/firefox-webrender-pi4-400/63702
-
-#### Compton
-
-https://www.youtube.com/watch?v=3esPpe-fclI  
-https://gist.github.com/kelleyk/6beba22586ac0c40aa30  
-compton --backend glx --unredir-if-possible --vsync opengl-swc
-compton --backend glx --vsync opengl-swc
-
-#### Bugs
-
-* Syslog
-
-    kernel: v3d fec00000.v3d: MMU error from client L2T  
-    https://forums.raspberrypi.com/viewtopic.php?t=277917  
-    http://tabuas.tech/2021/05/19/pi-400-log/
-
-* Mutter
-
-    ```
-    (mutter:2044): Clutter-WARNING **: 07:06:58.281: Bogus presentation time 0 travelled back in time, using current time.
-
-    (mutter:2044): Clutter-WARNING **: 07:07:28.733: Can't update stage views actor MetaStage is on because it needs an allocation.
-
-    (mutter:2044): Clutter-WARNING **: 07:07:28.734: Can't update stage views actor MetaWindowGroup is on because it needs an allocation.
-
-    (mutter:2044): Clutter-WARNING **: 07:07:28.734: Can't update stage views actor MetaWindowActorX11 is on because it needs an allocation.
-    ```
-    
-* Pixel wrap bug fix
-
-    ```
-    Jun 24 2021 17:24:58 
-    Copyright (c) 2012 Broadcom
-    version 65aff9e0bea5b64c530db52aa4497e809fdf22c8 (clean) (release) (start)
-    Linux raspberrypi 5.10.44-v8+ #1429 SMP PREEMPT Fri Jun 25 10:03:37 BST 2021 aarch64 GNU/Linux
-    ```
 
 #### Usefull commands
 
@@ -362,6 +72,264 @@ compton --backend glx --vsync opengl-swc
 
     https://superuser.com/questions/374637/how-to-turn-off-screen-with-shortcut-in-linux  
     https://qastack.fr/superuser/31726/how-to-disable-the-screen-linux-without-x
+
+
+
+#### Raspberry Pi
+
+* USB Chipset
+    
+    https://forums.raspberrypi.com/viewtopic.php?t=326157
+    
+    ```
+    That's true for most of the JMS578 family of USB 3.0 bridge chips,
+    but not necessarily with the 580 series USB 3.1 chips.
+    I have a USB 3.1 Gen 2 enclosure with a JMS583 chip that works
+    fine with Pi computers. It supports UASP in RPiOS, and TRIM works
+    with a udev rule.
+    ```
+    
+* Custom RPi images
+	
+	https://forums.raspberrypi.com/viewtopic.php?f=131&t=314419
+	
+* Custom OS
+    
+    https://forums.raspberrypi.com/viewtopic.php?t=327060
+
+* XML libraries
+    
+    https://forums.raspberrypi.com/viewtopic.php?p=1958438#p1958438
+    
+* Double click bug
+
+    https://discourse.gnome.org/t/double-click-on-already-selected-item-will-often-not-open-item-in-nautilus/4590/5  
+    https://gitlab.gnome.org/GNOME/nautilus/-/issues/1599
+    
+    GTK version :
+    
+    ```
+    libgtk-3-0:amd64 3.24.25-1ubuntu4.1 amd64 
+    ```
+
+* Test RPi version
+
+    https://forums.raspberrypi.com/viewtopic.php?t=34678  
+    https://forums.raspberrypi.com/viewtopic.php?t=200059
+
+    ```
+    ARCH=$(uname -m)
+    VERSION=$(cat /etc/debian_version)
+    if [[ $ARCH != "aarch64" ]] || [[ $VERSION != 11* ]]; then
+        echo " *** This script was tested only on a Raspberry Pi 4B 64 bit"
+        echo " *** abort..."
+        exit 1
+    fi
+
+    cat /proc/cpuinfo
+    grep -q BCM2708 /proc/cpuinfo
+    cat /etc/*-release
+    cat /proc/device-tree/model
+    cat /sys/firmware/devicetree/base/model
+    ```
+    
+* Command line piclone
+    
+    https://forums.raspberrypi.com/viewtopic.php?t=180383
+
+* Default audio playback
+    
+    https://forums.raspberrypi.com/viewtopic.php?t=327267#p1958987
+    
+* C++ SSD1306 I2C LCD
+    
+    https://forums.raspberrypi.com/viewtopic.php?t=224984  
+    https://forums.raspberrypi.com/viewtopic.php?t=171817
+    
+* Chromium/Youtube audio choppy with Bullseye and KMS driver
+
+    https://forums.raspberrypi.com/viewtopic.php?p=1945157#p1935815
+
+* RPi4 with PiOS ignore display setting in config.txt
+
+    https://forums.raspberrypi.com/viewtopic.php?p=1945199#p1945199
+
+* Display issue with Bullseye image and Pi 4B
+
+    https://forums.raspberrypi.com/viewtopic.php?p=1945198#p1945198
+
+* RPi4 HW Acceleration
+    
+    https://forums.raspberrypi.com/viewtopic.php?t=325586
+    
+* Chromium 88 HW
+    
+    https://forums.raspberrypi.com/viewtopic.php?t=319304
+
+
+
+#### Manjaro
+
+* References
+    
+    https://forum.manjaro.org/tag/raspberry-pi-4  
+    https://forum.manjaro.org/t/arm-stable-update-2021-12-13-firefox-kde-gear-thunderbird-libreoffice-icu-and-kernels/94518  
+
+    https://forum.manjaro.org/t/additional-arm-packages/10132  
+    https://gitlab.manjaro.org/manjaro-arm  
+
+* bcrm_patchram_plus
+
+    https://forum.manjaro.org/t/bcrm-patchram-plus-at-100-cpu-utilization/51035/4
+
+    ```
+    sudo systemctl disable attach-bluetooth.service
+    sudo chmod 000 /usr/bin/brcm_patchram_plus
+    ```
+
+* Vivaldi
+
+    https://help.vivaldi.com/fr/desktop-fr/install-update-fr/raspberry-pi-astuces-pour-utiliser-vivaldi/
+
+    ```
+    wget https://downloads.vivaldi.com/snapshot/install-vivaldi.sh
+    sh install-vivaldi.sh
+    ```
+
+* LXDE profiles and settings
+
+    https://forum.manjaro.org/t/lxde-lxqt-openbox-community-iso/77471  
+    [https://gitlab.manjaro.org/profiles-and-settings/](https://gitlab.manjaro.org/profiles-and-settings/iso-profiles/-/blob/master/community/lxde/Packages-Desktop)
+
+* Brcm patchram plus
+    
+    https://forum.manjaro.org/t/arm-testing-update-2020-11-16-bitwarden-mesa-git-pacman-and-kernels/37996/19  
+    https://forum.manjaro.org/t/brcm-patchram-plus-conflict-with-pi-bluetooth/37935
+
+* Mpv
+    
+    https://forum.manjaro.org/t/possible-rpi-mpv-hwdec-v4l2m2m-copy-solution/96636
+    
+* Manjaro update error 
+
+    ```
+    error: failed to commit transaction (conflicting files)
+    rpi4-post-install: /etc/udev/rules.d/99-vcio-rewrite.rules exists in filesystem
+    ```
+    fix
+    ```
+    sudo pacman -Syu --overwrite /etc/udev/rules.d/99-vcio-rewrite.rules
+    ```
+
+
+
+#### Firefox
+
+* Webrender
+
+	https://www.google.com/search?q=raspberry+pi+webrender  
+	https://bugzilla.mozilla.org/show_bug.cgi?id=1663285  
+	https://forum.manjaro.org/t/firefox-webrender-pi4-400/63702
+		
+	https://forums.raspberrypi.com/search.php?keywords=webrender
+
+	https://www.google.com/search?q=raspberry+pi+firefox+webrender
+
+	https://bugzilla.mozilla.org/show_bug.cgi?id=1663285
+
+	```
+	gfx.webrender.all to true
+	Run 'MOZ_X11_EGL=1 firefox' in terminal
+	```
+	
+	https://bugzilla.mozilla.org/show_bug.cgi?id=1725624
+
+	https://bugs.launchpad.net/ubuntu/+source/firefox/+bug/1930982
+
+
+<!--
+
+
+
+#### Reference
+
+* Simplified LFS
+    
+    https://github.com/luisgbm/lfs-scripts  
+
+
+
+#### Git
+
+* Basics
+
+    [https://mikefrobbins.com/2016/02/18/git-status...](https://mikefrobbins.com/2016/02/18/git-status-doesnt-know-if-your-local-repository-is-out-of-date/)  
+    https://www.hostinger.fr/tutoriels/commandes-git  
+    https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token  
+    https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners  
+    https://stackoverflow.com/questions/18935539/  
+    https://github.com/git-guides/  
+    [https://docs.github.com/en/github/...](https://docs.github.com/en/github/getting-started-with-github/configuring-git-to-handle-line-endings)  
+    https://stackoverflow.com/questions/64249491/  
+    https://stackoverflow.com/questions/6565357/  
+
+
+
+
+#### Links 
+
+references :
+
+display settings :
+
+video=HDMI-1:800x480@60
+
+https://forums.raspberrypi.com/viewtopic.php?t=325011#p1945199
+
+chromium crash :
+
+https://forums.raspberrypi.com/viewtopic.php?t=323640&start=75#p1940502
+
+firefox :
+
+https://forum.manjaro.org/t/new-mesa-drivers/39735  
+https://forum.manjaro.org/t/firefox-webrender-pi4-400/63702
+
+#### Compton
+
+https://www.youtube.com/watch?v=3esPpe-fclI  
+https://gist.github.com/kelleyk/6beba22586ac0c40aa30  
+compton --backend glx --unredir-if-possible --vsync opengl-swc
+compton --backend glx --vsync opengl-swc
+
+#### Bugs
+
+* Syslog
+
+    kernel: v3d fec00000.v3d: MMU error from client L2T  
+    https://forums.raspberrypi.com/viewtopic.php?t=277917  
+    http://tabuas.tech/2021/05/19/pi-400-log/
+
+* Mutter
+
+    ```
+    (mutter:2044): Clutter-WARNING **: 07:06:58.281: Bogus presentation time 0 travelled back in time, using current time.
+
+    (mutter:2044): Clutter-WARNING **: 07:07:28.733: Can't update stage views actor MetaStage is on because it needs an allocation.
+
+    (mutter:2044): Clutter-WARNING **: 07:07:28.734: Can't update stage views actor MetaWindowGroup is on because it needs an allocation.
+
+    (mutter:2044): Clutter-WARNING **: 07:07:28.734: Can't update stage views actor MetaWindowActorX11 is on because it needs an allocation.
+    ```
+    
+* Pixel wrap bug fix
+
+    ```
+    Jun 24 2021 17:24:58 
+    Copyright (c) 2012 Broadcom
+    version 65aff9e0bea5b64c530db52aa4497e809fdf22c8 (clean) (release) (start)
+    Linux raspberrypi 5.10.44-v8+ #1429 SMP PREEMPT Fri Jun 25 10:03:37 BST 2021 aarch64 GNU/Linux
+    ```
 
 #### Misc
 

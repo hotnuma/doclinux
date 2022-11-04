@@ -7,6 +7,7 @@
 * xfsettingsd shortcuts
     
     [https://archived.forum.manjaro.org/t/xfce4-keyboard-shortcut](https://archived.forum.manjaro.org/t/xfce4-keyboard-shortcut-not-working-sometimes-when-logging-in/73498)  
+    
     <!--
     [https://itectec.com/unixlinux/](https://itectec.com/unixlinux/linux-cannot-change-global-keyboard-shortcuts-in-linux-mint-xfce/)  
     [https://gitlab.xfce.org/xfce/xfce4-settings/](https://gitlab.xfce.org/xfce/xfce4-settings/-/issues/116)  

@@ -4,17 +4,31 @@
 
 ---
 
-#### Alias
+#### References
 
-* Defines aliases in `~/.bashrc` or `~/.bash_aliases`
+* FreeDesktop
+    
+    https://specifications.freedesktop.org/  
 
-    ```
-    alias cgrep='grep -rni --include=*.{h,c,cpp,cxx}'
-    ```
+* XBindKeys
+    
+    https://www.nongnu.org/xbindkeys/xbindkeys.html  
 
 
 
 #### System
+
+* Background color
+    
+    ```
+    #5e5c64
+    ```
+    
+* Installation date
+    
+    ```
+    stat -c %w /
+    ```
 
 * List processes
     
@@ -22,6 +36,43 @@
     
     ```
     top -b -o +%MEM | head -n 30
+    ```
+
+* Environment variables
+    
+    https://askubuntu.com/questions/866161/
+    
+    ```
+    /etc/environment
+    ~/.profile
+    ```
+    
+* Xsession xdg paths
+    
+    https://askubuntu.com/questions/1179729/  
+
+* Locale
+    
+    https://wiki.archlinux.org/title/locale
+    
+    ```
+    /etc/default/locale
+    ```
+    
+* Alias
+    
+    Define aliases in `~/.bash_aliases` or `~/.bashrc`
+
+    ```
+    alias cgrep='grep -rni --include=*.{h,c,cpp,cxx}'
+    ```
+
+* Disable autostart program
+    
+    https://wiki.archlinux.org/title/XDG_Autostart
+
+    ```
+    echo "Hidden=true" > $HOME/.config/autostart/xcompmgr.desktop
     ```
 
 
@@ -76,7 +127,46 @@
 
 
 
+#### Directories
+
+* Top Directories
+
+    ```
+    sudo du -ham / 2>/dev/null | sort -nr | head -n 20
+    ```
+    
+* Compress a directory with 7zip
+
+    ```
+    7z a example.7z example/
+    ```
+    without compression
+
+    ```
+    7z a -mx=0 example.7z example/
+    ```
+    
+* Recursive grep
+
+    ```
+    grep -r "texthere" .
+    ```
+    
+    https://stackoverflow.com/questions/12516937/
+    
+    ```
+    grep -rni --include=*.{h,c,cpp,cxx} "texthere"
+    ```
+    
+
+
 #### Files
+
+* Create a symbolic link
+
+    ```
+    ln -s target_path link_name
+    ```
 
 * find multiple pattern
     
@@ -110,44 +200,23 @@
     find . ! -wholename "./.git/*" ! -type l ! -type d -exec chmod a-x {} +
     ```
 
-* Compress a directory with 7zip
-
-    ```
-    7z a example.7z example/
-    ```
-    without compression
-
-    ```
-    7z a -mx=0 example.7z example/
-    ```
-    
-* Recursive grep
-
-    ```
-    grep -r "texthere" .
-    ```
-    
-    https://stackoverflow.com/questions/12516937/
-    
-    ```
-    grep -rni --include=*.{h,c,cpp,cxx} "texthere"
-    ```
-    
-* Top Directories
-
-    ```
-    sudo du -ham / 2>/dev/null | sort -nr | head -n 20
-    ```
-    
-* Create a symbolic link
-
-    ```
-    ln -s target_path link_name
-    ```
-
 
 
 #### Packages apt
+
+* Source list
+    
+    ```
+    /etc/apt/sources.list
+    ```
+
+* End of life releases
+    
+    https://doc.ubuntu-fr.org/old-releases  
+    
+* Uninstall block snaps
+    
+    https://forum.ubuntu-fr.org/viewtopic.php?pid=22458861#p22458861  
 
 * Check if a package is installed using apt
 
@@ -180,97 +249,9 @@
 
 
 
-#### Paths
-
-* Environment variables
-    
-    https://askubuntu.com/questions/866161/
-    
-    ```
-    /etc/environment
-    ~/.profile
-    ```
-    
-* Locale
-    
-    https://wiki.archlinux.org/title/locale
-    
-    ```
-    /etc/default/locale
-    ```
-
-
-
-#### Misc
-
-* Installation date
-    
-    ```
-    stat -c %w /
-    ```
-
-* Disable autostart program
-    
-    https://wiki.archlinux.org/title/XDG_Autostart
-
-    ```
-    echo "Hidden=true" > $HOME/.config/autostart/xcompmgr.desktop
-    or
-    echo "Hidden=true" > $XDG_CONFIG_HOME/autostart/xcompmgr.desktop
-    ```
-    
-* Install yt-dlp
-    
-    https://github.com/yt-dlp/yt-dlp
-    
-    ```
-    python3 -m pip install -U yt-dlp
-    ```
-    
-* Output command without localization
-
-    ```
-    LANGUAGE=C free -h
-    ```
-    
-    or
-    
-    ```
-    LANG=C free -h
-    ```
-    
-* Change wallpaper with feh
-    
-    https://wiki.archlinux.org/title/feh
-
-    ```
-    feh --bg-scale /usr/share/rpd-wallpaper/clouds.jpg
-    ```
-    
-    ```
-    feh --bg-scale --randomize /usr/share/rpd-wallpaper/
-    ```
-
-* Change default terminal
-    
-    https://stackoverflow.com/questions/16808231/
-    
-    ```
-    sudo update-alternatives --config x-terminal-emulator
-    ```
-    
-* Change default session
-
-    
-    ```
-    sudo update-alternatives --config x-session-manager
-    ```
-
-
-
 #### Install
 
-* Install Firefox ESR
+* Firefox ESR
 
     ```
     sudo add-apt-repository ppa:mozillateam/ppa
@@ -278,13 +259,21 @@
     sudo apt install firefox-esr
     ```
 
-* Ubuntu install codecs and fonts
+* yt-dlp
+    
+    https://github.com/yt-dlp/yt-dlp
+    
+    ```
+    python3 -m pip install -U yt-dlp
+    ```
+    
+* Codecs and fonts
 
     ```
     sudo apt install ubuntu-restricted-extras
     ```
 
-* Install NVidia Drivers
+* NVidia Drivers
 
     https://phoenixnap.com/kb/install-nvidia-drivers-ubuntu
 
@@ -300,6 +289,44 @@
 
     ```
     sudo apt install nvidia-driver-470
+    ```
+
+
+
+#### Misc
+
+* Output command without localization
+
+    ```
+    LANGUAGE=C free -h
+    ```
+    
+    or
+    
+    ```
+    LANG=C free -h
+    ```
+    
+* Change desktop background
+
+    Solid color : `hsetroot -solid '#5e5c64'`
+    
+    Walpaper : `feh --bg-scale /usr/share/rpd-wallpaper/clouds.jpg`
+    
+    Random walpaper : `feh --bg-scale --randomize /usr/share/rpd-wallpaper/`
+
+* Change default terminal
+    
+    https://stackoverflow.com/questions/16808231/
+    
+    ```
+    sudo update-alternatives --config x-terminal-emulator
+    ```
+    
+* Change default session
+    
+    ```
+    sudo update-alternatives --config x-session-manager
     ```
 
 
