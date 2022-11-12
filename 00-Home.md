@@ -249,6 +249,18 @@
 
 
 
+#### Log files
+
+* Viewing log files
+
+    https://ubuntu.com/tutorials/viewing-and-monitoring-log-files
+
+* View System Log
+
+    https://vitux.com/view-system-log-files-ubuntu/
+
+
+
 #### Install
 
 * Firefox ESR

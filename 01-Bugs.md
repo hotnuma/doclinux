@@ -45,9 +45,11 @@
     https://gitlab.xfce.org/xfce/libxfce4ui/-/issues/14  
     https://winaero.com/disable-client-side-decorations-in-xfce-for-open-save-dialog/  
 
-* Thunar sorting
+* File Manager Sorting
     
     https://gitlab.xfce.org/xfce/thunar/-/issues/68  
+    https://unix.stackexchange.com/questions/510530/  
+    https://github.com/linuxmint/nemo/issues/2247  
 
 * Window Border
     

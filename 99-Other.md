@@ -4,23 +4,6 @@
 
 ---
 
-#### Gnome is garbage
-    
-    https://nitter.it/jeremy_soller  
-    https://www.reddit.com/r/linux/comments/xwtns5/does_it_seem_like_gnome_wants_system_76s_cosmic/  
-    https://www.reddit.com/r/GTK/comments/xdfgjr/api_changes_in_gtk4_removal_of_gtkmenu/  
-    https://fosspost.org/are-gtk-developers-destroying-linux-desktop-with-their-plans/  
-    https://blogs.gnome.org/antoniof/2022/06/15/the-tree-view-is-undead-long-live-the-column-view%e2%80%bd/  
-    https://medium.com/@sarvex/gnome-shell-for-stupids-by-morons-a9020318198b  
-    https://ludditus.com/2021/05/30/is-there-any-future-for-the-gtk-based-desktop-environments/  
-    https://joshuastrobl.com/2021/09/14/building-an-alternative-ecosystem/  
-    https://medium.com/@fulalas/gnome-42-the-nonsense-continues-7d96c3287f7  
-    https://news.ycombinator.com/item?id=28939752  
-    https://news.ycombinator.com/item?id=29926411  
-    https://news.ycombinator.com/item?id=10758192  
-
-
-
 #### Usefull commands
 
 * Diagnostic commands
@@ -75,7 +58,31 @@
 
 
 
+<!--
+
+#### Gnome is garbage
+    
+https://nitter.it/jeremy_soller  
+https://www.reddit.com/r/linux/comments/xwtns5/does_it_seem_like_gnome_wants_system_76s_cosmic/  
+https://www.reddit.com/r/GTK/comments/xdfgjr/api_changes_in_gtk4_removal_of_gtkmenu/  
+https://fosspost.org/are-gtk-developers-destroying-linux-desktop-with-their-plans/  
+https://blogs.gnome.org/antoniof/2022/06/15/the-tree-view-is-undead-long-live-the-column-view%e2%80%bd/  
+https://medium.com/@sarvex/gnome-shell-for-stupids-by-morons-a9020318198b  
+https://ludditus.com/2021/05/30/is-there-any-future-for-the-gtk-based-desktop-environments/  
+https://joshuastrobl.com/2021/09/14/building-an-alternative-ecosystem/  
+https://medium.com/@fulalas/gnome-42-the-nonsense-continues-7d96c3287f7  
+https://news.ycombinator.com/item?id=28939752  
+https://news.ycombinator.com/item?id=29926411  
+https://news.ycombinator.com/item?id=10758192  
+
+
+
 #### Raspberry Pi
+
+* CPU governor
+
+    https://askubuntu.com/questions/1021748/  
+    https://raspberrypi.stackexchange.com/questions/9034/  
 
 * USB Chipset
     
@@ -166,6 +173,82 @@
     
     https://forums.raspberrypi.com/viewtopic.php?t=319304
 
+* Firefox Webrender
+
+	https://www.google.com/search?q=raspberry+pi+webrender  
+	https://bugzilla.mozilla.org/show_bug.cgi?id=1663285  
+	https://forum.manjaro.org/t/firefox-webrender-pi4-400/63702
+		
+	https://forums.raspberrypi.com/search.php?keywords=webrender
+
+	https://www.google.com/search?q=raspberry+pi+firefox+webrender
+
+	https://bugzilla.mozilla.org/show_bug.cgi?id=1663285
+
+	```
+	gfx.webrender.all to true
+	Run 'MOZ_X11_EGL=1 firefox' in terminal
+	```
+	
+	https://bugzilla.mozilla.org/show_bug.cgi?id=1725624
+
+	https://bugs.launchpad.net/ubuntu/+source/firefox/+bug/1930982
+
+* references
+
+    display settings :
+
+    video=HDMI-1:800x480@60
+
+    https://forums.raspberrypi.com/viewtopic.php?t=325011#p1945199
+
+    chromium crash :
+
+    https://forums.raspberrypi.com/viewtopic.php?t=323640&start=75#p1940502
+
+    firefox :
+
+    https://forum.manjaro.org/t/new-mesa-drivers/39735  
+    https://forum.manjaro.org/t/firefox-webrender-pi4-400/63702
+
+* Compton
+
+    https://www.youtube.com/watch?v=3esPpe-fclI  
+    https://gist.github.com/kelleyk/6beba22586ac0c40aa30  
+    compton --backend glx --unredir-if-possible --vsync opengl-swc
+    compton --backend glx --vsync opengl-swc
+
+
+
+#### Bugs
+
+* Syslog
+
+    kernel: v3d fec00000.v3d: MMU error from client L2T  
+    https://forums.raspberrypi.com/viewtopic.php?t=277917  
+    http://tabuas.tech/2021/05/19/pi-400-log/
+
+* Mutter
+
+    ```
+    (mutter:2044): Clutter-WARNING **: 07:06:58.281: Bogus presentation time 0 travelled back in time, using current time.
+
+    (mutter:2044): Clutter-WARNING **: 07:07:28.733: Can't update stage views actor MetaStage is on because it needs an allocation.
+
+    (mutter:2044): Clutter-WARNING **: 07:07:28.734: Can't update stage views actor MetaWindowGroup is on because it needs an allocation.
+
+    (mutter:2044): Clutter-WARNING **: 07:07:28.734: Can't update stage views actor MetaWindowActorX11 is on because it needs an allocation.
+    ```
+    
+* Pixel wrap bug fix
+
+    ```
+    Jun 24 2021 17:24:58 
+    Copyright (c) 2012 Broadcom
+    version 65aff9e0bea5b64c530db52aa4497e809fdf22c8 (clean) (release) (start)
+    Linux raspberrypi 5.10.44-v8+ #1429 SMP PREEMPT Fri Jun 25 10:03:37 BST 2021 aarch64 GNU/Linux
+    ```
+
 
 
 #### Manjaro
@@ -223,34 +306,6 @@
 
 
 
-#### Firefox
-
-* Webrender
-
-	https://www.google.com/search?q=raspberry+pi+webrender  
-	https://bugzilla.mozilla.org/show_bug.cgi?id=1663285  
-	https://forum.manjaro.org/t/firefox-webrender-pi4-400/63702
-		
-	https://forums.raspberrypi.com/search.php?keywords=webrender
-
-	https://www.google.com/search?q=raspberry+pi+firefox+webrender
-
-	https://bugzilla.mozilla.org/show_bug.cgi?id=1663285
-
-	```
-	gfx.webrender.all to true
-	Run 'MOZ_X11_EGL=1 firefox' in terminal
-	```
-	
-	https://bugzilla.mozilla.org/show_bug.cgi?id=1725624
-
-	https://bugs.launchpad.net/ubuntu/+source/firefox/+bug/1930982
-
-
-<!--
-
-
-
 #### Reference
 
 * Simplified LFS
@@ -258,78 +313,6 @@
     https://github.com/luisgbm/lfs-scripts  
 
 
-
-#### Git
-
-* Basics
-
-    [https://mikefrobbins.com/2016/02/18/git-status...](https://mikefrobbins.com/2016/02/18/git-status-doesnt-know-if-your-local-repository-is-out-of-date/)  
-    https://www.hostinger.fr/tutoriels/commandes-git  
-    https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token  
-    https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners  
-    https://stackoverflow.com/questions/18935539/  
-    https://github.com/git-guides/  
-    [https://docs.github.com/en/github/...](https://docs.github.com/en/github/getting-started-with-github/configuring-git-to-handle-line-endings)  
-    https://stackoverflow.com/questions/64249491/  
-    https://stackoverflow.com/questions/6565357/  
-
-
-
-
-#### Links 
-
-references :
-
-display settings :
-
-video=HDMI-1:800x480@60
-
-https://forums.raspberrypi.com/viewtopic.php?t=325011#p1945199
-
-chromium crash :
-
-https://forums.raspberrypi.com/viewtopic.php?t=323640&start=75#p1940502
-
-firefox :
-
-https://forum.manjaro.org/t/new-mesa-drivers/39735  
-https://forum.manjaro.org/t/firefox-webrender-pi4-400/63702
-
-#### Compton
-
-https://www.youtube.com/watch?v=3esPpe-fclI  
-https://gist.github.com/kelleyk/6beba22586ac0c40aa30  
-compton --backend glx --unredir-if-possible --vsync opengl-swc
-compton --backend glx --vsync opengl-swc
-
-#### Bugs
-
-* Syslog
-
-    kernel: v3d fec00000.v3d: MMU error from client L2T  
-    https://forums.raspberrypi.com/viewtopic.php?t=277917  
-    http://tabuas.tech/2021/05/19/pi-400-log/
-
-* Mutter
-
-    ```
-    (mutter:2044): Clutter-WARNING **: 07:06:58.281: Bogus presentation time 0 travelled back in time, using current time.
-
-    (mutter:2044): Clutter-WARNING **: 07:07:28.733: Can't update stage views actor MetaStage is on because it needs an allocation.
-
-    (mutter:2044): Clutter-WARNING **: 07:07:28.734: Can't update stage views actor MetaWindowGroup is on because it needs an allocation.
-
-    (mutter:2044): Clutter-WARNING **: 07:07:28.734: Can't update stage views actor MetaWindowActorX11 is on because it needs an allocation.
-    ```
-    
-* Pixel wrap bug fix
-
-    ```
-    Jun 24 2021 17:24:58 
-    Copyright (c) 2012 Broadcom
-    version 65aff9e0bea5b64c530db52aa4497e809fdf22c8 (clean) (release) (start)
-    Linux raspberrypi 5.10.44-v8+ #1429 SMP PREEMPT Fri Jun 25 10:03:37 BST 2021 aarch64 GNU/Linux
-    ```
 
 #### Misc
 
@@ -504,20 +487,7 @@ compton --backend glx --vsync opengl-swc
     /usr/share/dbus-1/services/
     ```
 
-#### Log files
 
-* Viewing log files
-
-    https://ubuntu.com/tutorials/viewing-and-monitoring-log-files
-
-* View System Log
-
-    https://vitux.com/view-system-log-files-ubuntu/
-
-#### CPU governor
-
-https://askubuntu.com/questions/1021748/  
-https://raspberrypi.stackexchange.com/questions/9034/
 
 #### Packages
 
@@ -533,7 +503,9 @@ https://raspberrypi.stackexchange.com/questions/9034/
 
     dpkg -l | awk '/^rc/{print $2}' | xargs -r sudo dpkg -P
     ```
-    
+
+
+
 #### youtube-dl
 
 * ytdl
@@ -551,198 +523,7 @@ https://raspberrypi.stackexchange.com/questions/9034/
     youtube-dl http://players.brightcove.net/data-account/default_default/index.html?videoId=data-video-id
 
 
----
 
-* A trip into dbus-send
-    
-    https://sheitsandgiggles.com/2019/07/16/a-trip-into-dbus-send/
-
-* An example Linux daemon using DBus
-    
-    https://gist.github.com/dradtke/4949546
-
-* DFeet
-    
-    https://wiki.gnome.org/action/show/Apps/DFeet?action=show&redirect=DFeet
-
-* DBus tutorial using the low-level API
-    
-    [https://leonardoce.wordpress.com/2015/03/11/](https://leonardoce.wordpress.com/2015/03/11/dbus-tutorial-using-the-low-level-api/)
-
-* Dbus using C API
-    
-    https://stackoverflow.com/questions/43118430/
-
-* dbus
-    
-    https://www.freedesktop.org/wiki/Software/dbus/
-
-* How to Send Dbus Messages Manually
-    
-    https://developer.ridgerun.com/wiki/index.php/How_to_send_Dbus_messages_manually
-
-* Introspecting D-Bus from the command-line
-    
-    http://www.kaizou.org/2014/06/dbus-command-line.html
-
-* How to emit dbus signal from command line
-    
-    https://stackoverflow.com/questions/3684999/how-to-emit-dbus-signal-from-command-line
-
-* stuff_dbus-example_c
-    
-    https://github.com/wware/stuff/blob/master/dbus-example/dbus-example.c
-
----
-
-# FFmpeg
-
-    https://trac.ffmpeg.org/wiki
-    http://ffmpeg.org/documentation.html
-    https://ffmpeg.org/ffmpeg-filters.html
-    https://trac.ffmpeg.org/wiki/FFprobeTips
-
-* Obtenir des informations sur le fichier
-
-    ffprobe -v quiet -show_format -show_streams "input.avi"
-
-* Créer un extrait de 1 min à partir de 2 min du début
-
-    ffmpeg -ss 00:02:00 -i "input.avi" -t 00:01:00 -c copy "output.avi"
-
-* Copier un extrait de 1 min avec uniquement la vidéo
-
-    ffmpeg -ss 00:02:00 -i "input.avi" -t 00:01:00 -map 0:0 -c copy "output.avi"
-
-* Copier un extrait de 1 min avec uniquement l'audio
-
-    ffmpeg -ss 00:02:00  -i "input.avi" -t 00:01:00 -map 0:1 -c copy "output.avi"
-
-#### Audio
-
-* Filtrer l'audio :
-
-    ffmpeg -i "input.mp4" -c:v copy -af "highpass=f=100" "output.mp4"
-
-#### Images
-
-    On peut modifier les options de VLC pour qu'il utilise une numérotation séquencielle.
-    Dans Options/Préférences, Video, cocher la case "Numérotation séquentielle".
-
-* 2x2 images, chacune de 333px de large :
-
-    ffmpeg -i "vlcsnap-%05d.png" -vf "scale=333:-1,tile=2x2" "output.png"
-
-* 3x3 images, chacune de 111px de large :
-
-    ffmpeg -i "vlcsnap-%05d.png" -vf "scale=111:-1,tile=3x3" "output.png"
-
-    "%05d" signifie, un nombre de 5 chiffres, par exemple vlcsnap-00001.png.
-
-    A noter que les images doivent être consécutives,
-    exemple pic-001.png, pic-002.png, pic-003.png etc...
-
-* Créer automatiquement à partir d'une série de captures d'écran :
-
-    ffmpeg -i "input.avi" -frames 1 -vf "select=not(mod(n\,7600)),scale=111:-1,tile=4x4" "output.png"
-
-#### Other
-
-* Créer une capture d'écran toutes les 5 minutes :
-
-    ffmpeg -i "input.avi" -vf fps=1/300 "pic-%03d.png"
-
-    (300 = 5 x 60 secondes)
-
-* Appliquer le même traitement sur une série d'images :
-
-    ffmpeg -y -i "input-%03d.png" -vf "scale=666:-1" "output-%03d.png"
-
-* Concatenating files
-
-    concat VOB files      
-    copy /b *.vob output.vob
-    cat file*.vob > Allfiles.vob
-
-* Enregistrer un flux en direct
-
-    ffmpeg -i http://live.francetv.fr/simulcast/France_3/hls_v1/index.m3u8 \
-    -bsf:a aac_adtstoasc -c:a copy -c:v copy output.mp4
-
-* Utiliser un preset
-
-    ffmpeg -i "input.mp4" -preset ultrafast -crf 18 "output.mp4"
-    ffmpeg -i "input.mp4" -preset slow -crf 18 "output.mp4"
-
-    Le preset détermine la compression et par conséquent la qualité et la taille du fichier.
-    La valeur par défaut est "médium". Les valeurs plus rapides sont fast, faster, veryfast,
-    superfast, ultrafast. Les valeurs plus lents sont, slow, slower, veryslow, placebo.
-
-* Upscale and unsharp with default values :
-
-    ffmpeg -i input.mp4 -vf "scale=640:480:flags=lanczos,unsharp" output.mp4
-    ffmpeg -i input.mp4 -vf "scale=640:480,unsharp" -sws_flags lanczos output.mp4
-
-    For downscaling use Lanczosresize only
-    For upscaling use Bicubicresize with 0.45 to 0.6 sharpening.    
-
-* Diaporama
-
-    ffmpeg -framerate 1/12 -i pic-%03d.png -c:v libx264 -r 25 -pix_fmt yuv420p out.mp4
-    ffmpeg -i "vlcsnap-%05d.png" -vf "scale=-1:480,pad=640:480:154:0" "input-%05d.png"
-
-    Add metadata :
-
-    ffmpeg -i "input.avi" -c copy -metadata title="Le schpountz" "output.avi"
-    ffmpeg -i "input.avi" -c copy -map_metadata -1 -metadata title="1938 - Le schpountz" -metadata comment="tt0030722" "output.avi"
-
-    ffmpeg -i [INPUT] -aspect 4:3 -c copy [OUPTPUT]
-
-    ffmpeg -ss 00:00:14 -i "D:/Films/Convert/1945 - Carmen-orig.mp4" \
-    -deinterlace -b:v 1200k -vf hue=s=0,crop=704:566:0:2 "1945 - Carmen-orig.mp4"
-
-    ffmpeg -i "D:/Films/Films 4-7/1935 - La Kermesse héroïque.avi" \
-    -b:v 1000k -vf scale=720:576 "1935 - La Kermesse héroïque.avi"
-
-    ffmpeg -t 01:51:20 -i "D:/Films Supprimer/1945 - La vie de boheme.ts" \
-    -b:v 1000k -deinterlace -vf crop=530:566:91:2 -aspect 4:3
-
-    ffmpeg -i "D:/Films/Convert/1929 - Adieu Mascotte.mp4" -preset ultrafast \
-    -crf 22 -deinterlace -r 25 -vf crop=626:470:8:6 "1929 - Adieu Mascotte.mp4"
-
-    ffmpeg -y -i "1934 - Caravane-orig.mp4" -preset slow -vsync 0 -crf 22 \
-    -vf hue=s=0,crop=938:704:15:3,unsharp=3:3:0.4 -af highpass=f=100 "1934 - Caravane.mp4"
-
-    ffmpeg -y -t 01:34:46 -i "D:/Films Selection/_1935 - L'École des cocottes.avi" -crf 18 \
-    -preset slow -vsync 0 -vf hue=s=0,crop=680:544:14:14,unsharp=3:3:0.3 -b:a 256k \
-    "1935 - L'École des cocottes-unsharp303.mp4"
-
-    ffmpeg -y -t 01:29:54 -i "D:/Films Convert/1941 - Valet Maitre.mkv" -b:v 2000k \
-    -preset slow -vsync 0 -vf hue=s=0,crop=710:568:0:0,unsharp=3:3:0.3 "1941 - Valet Maitre.mp4"
-
-    "Too many packets buffered for output stream"
-
-    -max_muxing_queue_size 1024
-
-    ffmpeg -framerate 1/2 -loop 1 -t 1 -i NWL1.png -framerate 60 -loop 1 -t 1 -i NWL2.png -framerate 60 -loop 1 -t 1 -i NWL3.png -framerate 60 -loop 1 -t 1 -i NWL4.png -framerate 60 -loop 1 -t 1 -i NWL5.png -filter_complex "[1:v][0:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b1v]; [2:v][1:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b2v]; [3:v][2:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b3v]; [4:v][3:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b4v]; [0:v][b1v][1:v][b2v][2:v][b3v][3:v][b4v][4:v]concat=n=9:v=1:a=0,format=yuv420p,scale=480:270[vx]" -map "[vx]" -c:v libx264 -r 30 -pix_fmt yuv420p "EXfondu2.mp4"
-
-    ffmpeg -i "video.mp4"  -i "audio.mp3" -c copy -shortest "output.mp4"
-
-    youtube-dl --extract-audio --audio-format mp3 -l "https://www.youtube.com/watch?v=xN8Q75ov6A4"
-
-* remux avi to mp4
-
-    avi2raw.exe -v "D:\Films\Films 3-8\1936 - Topaze.avi" "1936 - Topaze.264"
-    avi2raw.exe -a "D:\Films\Films 3-8\1936 - Topaze.avi" "1936 - Topaze.aac"
-    ffmpeg -i "D:\Films\Films 3-8\1936 - Topaze.avi" -vn -c:a copy "1936 - Topaze.aac"
-    mp4box.exe -add "1936 - Topaze.264" -fps 25 -add "1936 - Topaze.aac" "1936 - Topaze.mp4"
-    ffmpeg -i input.mkv -itsoffset 1.0 -i input.mkv -map 0:0 -map 1:1 -c copy output.mkv   
-    ffmpeg -ss 00:00:33.5 -i "D:\Downloads\Invitation.to.the.Waltz.1935.mkv" \
-    -c copy -avoid_negative_ts 1 "D:\Downloads\1935 - Invitation to the Waltz.mkv"
-
-* screenshot
-
-    ffmpeg -ss 00:00:30 -i "D:\Films\Convert\1937 - Forfaiture-0.mkv" -vframes 1 -q:v 2 output.jpg
 
 
 ---
