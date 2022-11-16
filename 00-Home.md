@@ -1,6 +1,6 @@
 **[ Home | [Bugs](01-Bugs.html) | [FFmpeg](01-FFmpeg.html) | [Network](02-Network.html) | [Systemd](03-Systemd.html) | [Wayland](04-Wayland.html) | [Other](99-Other.html) ]**
 
-### Docs Linux
+## Docs Linux
 
 ---
 
@@ -37,7 +37,8 @@
     ```
     top -b -o +%MEM | head -n 30
     ```
-
+    ps_mem : https://github.com/pixelb/ps_mem
+    
 * Environment variables
     
     https://askubuntu.com/questions/866161/
@@ -224,6 +225,12 @@
     apt list thunar
     ```
 
+* List installed packages
+    
+    ```
+    apt list --installed | grep glib
+    ```
+    
 * Get package version
 
     

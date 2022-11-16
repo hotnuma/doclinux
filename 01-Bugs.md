@@ -1,8 +1,14 @@
 **[ [Home](00-Home.html) | Bugs | [FFmpeg](01-FFmpeg.html) | [Network](02-Network.html) | [Systemd](03-Systemd.html) | [Wayland](04-Wayland.html) | [Other](99-Other.html) ]**
 
-### Bugs
+## Bugs
 
 ---
+
+* Startup freeze
+    
+    ```
+    nov. 15 16:28:59 athlon kernel: [drm:drm_atomic_helper_wait_for_flip_done [drm_kms_helper]] *ERROR* [CRTC:62:crtc-0] flip_done timed out
+    ```
 
 * xfsettingsd shortcuts
     
@@ -54,5 +60,16 @@
 * Window Border
     
     http://sevkeifert.blogspot.com/2014/12/increase-window-border-size-in-xubuntu.html  
+
+* Double click bug
+
+    https://discourse.gnome.org/t/double-click-on-already-selected-item-will-often-not-open-item-in-nautilus/4590/5  
+    https://gitlab.gnome.org/GNOME/nautilus/-/issues/1599
+    
+    GTK version :
+    
+    ```
+    libgtk-3-0:amd64 3.24.25-1ubuntu4.1 amd64 
+    ```
 
 

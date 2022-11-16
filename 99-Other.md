@@ -1,6 +1,6 @@
 **[ [Home](00-Home.html) | [Bugs](01-Bugs.html) | [FFmpeg](01-FFmpeg.html) | [Network](02-Network.html) | [Systemd](03-Systemd.html) | [Wayland](04-Wayland.html) | Other ]**
 
-### Other
+## Other
 
 ---
 
@@ -58,10 +58,19 @@
 
 
 
+#### RPi
+
+* Install XFCE
+    
+    https://raspberrytips.fr/meilleurs-logiciels-raspberry-pi/  
+
+
+
 <!--
 
 #### Gnome is garbage
     
+https://bugzilla.mozilla.org/show_bug.cgi?id=1701123  
 https://nitter.it/jeremy_soller  
 https://www.reddit.com/r/linux/comments/xwtns5/does_it_seem_like_gnome_wants_system_76s_cosmic/  
 https://www.reddit.com/r/GTK/comments/xdfgjr/api_changes_in_gtk4_removal_of_gtkmenu/  
@@ -108,17 +117,6 @@ https://news.ycombinator.com/item?id=10758192
     
     https://forums.raspberrypi.com/viewtopic.php?p=1958438#p1958438
     
-* Double click bug
-
-    https://discourse.gnome.org/t/double-click-on-already-selected-item-will-often-not-open-item-in-nautilus/4590/5  
-    https://gitlab.gnome.org/GNOME/nautilus/-/issues/1599
-    
-    GTK version :
-    
-    ```
-    libgtk-3-0:amd64 3.24.25-1ubuntu4.1 amd64 
-    ```
-
 * Test RPi version
 
     https://forums.raspberrypi.com/viewtopic.php?t=34678  
@@ -228,18 +226,6 @@ https://news.ycombinator.com/item?id=10758192
     https://forums.raspberrypi.com/viewtopic.php?t=277917  
     http://tabuas.tech/2021/05/19/pi-400-log/
 
-* Mutter
-
-    ```
-    (mutter:2044): Clutter-WARNING **: 07:06:58.281: Bogus presentation time 0 travelled back in time, using current time.
-
-    (mutter:2044): Clutter-WARNING **: 07:07:28.733: Can't update stage views actor MetaStage is on because it needs an allocation.
-
-    (mutter:2044): Clutter-WARNING **: 07:07:28.734: Can't update stage views actor MetaWindowGroup is on because it needs an allocation.
-
-    (mutter:2044): Clutter-WARNING **: 07:07:28.734: Can't update stage views actor MetaWindowActorX11 is on because it needs an allocation.
-    ```
-    
 * Pixel wrap bug fix
 
     ```
@@ -303,14 +289,6 @@ https://news.ycombinator.com/item?id=10758192
     ```
     sudo pacman -Syu --overwrite /etc/udev/rules.d/99-vcio-rewrite.rules
     ```
-
-
-
-#### Reference
-
-* Simplified LFS
-    
-    https://github.com/luisgbm/lfs-scripts  
 
 
 
@@ -492,12 +470,15 @@ https://news.ycombinator.com/item?id=10758192
 #### Packages
 
 * pour purger les caches du gestionnaire de paquets APT/.deb
+
     ```
     sudo apt clean ; sudo apt autoclean
     ```
+    
 * paquets cassés
 
-    https://forum.ubuntu-fr.org/viewtopic.php?pid=22273320#p22273320
+    https://forum.ubuntu-fr.org/viewtopic.php?pid=22273320#p22273320  
+    
     ```
     dpkg -l | grep -v ^ii
 
@@ -510,7 +491,7 @@ https://news.ycombinator.com/item?id=10758192
 
 * ytdl
 
-    https://ytdl-org.github.io/youtube-dl/download.html
+    https://ytdl-org.github.io/youtube-dl/download.html  
     
     ```
     sudo apt -y purge youtube-dl
@@ -524,15 +505,13 @@ https://news.ycombinator.com/item?id=10758192
 
 
 
-
-
----
-
-# Network
+#### Network
 
 * DND BBox 
 
+    ```
     echo "192.168.1.254  mabbox.bytel.fr" >> /etc/hosts
+    ```
 
 * interfaces
 
@@ -540,11 +519,14 @@ https://news.ycombinator.com/item?id=10758192
 
     I. Reinstall the ifupdown package:
 
+    ```
     sudo apt update
     sudo apt install ifupdown
+    ```
 
     II. Configure your /etc/network/interfaces file with configuration stanzas such as:
 
+    ```
     # The loopback network interface
     auto lo
     iface lo inet loopback
@@ -566,22 +548,27 @@ https://news.ycombinator.com/item?id=10758192
     # Only relevant if you make use of RESOLVCONF(8)
     # or similar...
     dns-nameservers 8.8.8.8 8.8.4.4
+    ```
 
     III. Make the configuration effective (no reboot needed):
 
+    ```
     sudo ifdown --force enp27s0 lo && ifup -a
     sudo systemctl unmask networking
     sudo systemctl enable networking
     sudo systemctl restart networking
+    ```
 
     IV. Disable and remove the unwanted services:
 
+    ```
     sudo systemctl stop systemd-networkd.socket systemd-networkd networkd-dispatcher systemd-networkd-wait-online
     sudo systemctl disable systemd-networkd.socket systemd-networkd networkd-dispatcher systemd-networkd-wait-online
     sudo systemctl mask systemd-networkd.socket systemd-networkd networkd-dispatcher systemd-networkd-wait-online
 
     sudo apt -y purge nplan netplan.io
     #sudo apt --assume-yes purge nplan netplan.io
+    ```
 
     Then, you're done.
 
@@ -601,7 +588,9 @@ https://news.ycombinator.com/item?id=10758192
 
     and then restart the systemd-resolved service once done:
 
+    ```
     systemctl restart systemd-resolved
+    ```
 
     The DNS entries in the ifupdown INTERFACES(5) file, as shown above,
     are only relevant if you make use of RESOLVCONF(8) or similar.
@@ -616,17 +605,21 @@ https://news.ycombinator.com/item?id=10758192
 
     Stop network manager
 
+    ```
     sudo systemctl stop NetworkManager.service
     sudo systemctl stop NetworkManager-wait-online.service
     sudo systemctl stop NetworkManager-dispatcher.service
     sudo systemctl stop network-manager.service
+    ```
 
     Disable network manager (permanently) to avoid it restarting after a reboot
 
+    ```
     sudo systemctl disable NetworkManager.service
     sudo systemctl disable NetworkManager-wait-online.service
     sudo systemctl disable NetworkManager-dispatcher.service
     sudo systemctl disable network-manager.service
+    ```
 
 * uninstall network manager
 
@@ -635,45 +628,50 @@ https://news.ycombinator.com/item?id=10758192
 
     Remove NetworkManager from the system
 
+    ```
     sudo apt purge network-manager
+    ```
 
     Configure eth0 using ifup.
 
+    ```
     sudo ifup eth0
+    ```
 
 * DNS
 
-    CODE:
-    (check to see if resolvconf is installed)
+    ```
+    # check to see if resolvconf is installed
     sudo systemctl status resolvconf.service
 
-    (install resolveconf package)
+    # install resolveconf package
     sudo apt update
     sudo apt install resolvconf
 
-    (confirm resolveconf is running)
+    # confirm resolveconf is running
     sudo systemctl status resolvconf.service
 
-    (if resolveconf isn't running, enable then start it)
+    # if resolveconf isn't running, enable then start it
     sudo systemctl enable resolvconf.service
     sudo systemctl start resolvconf.service
 
-    (check resolveconf status)
+    # check resolveconf status
     sudo systemctl status resolvconf.service
 
-    (edit the head file)
+    # edit the head file
     sudo nano /etc/resolvconf/resolv.conf.d/head
 
-    (enter your nameservers below the comments)
+    # enter your nameservers below the comments
     nameserver 8.8.8.8
     nameserver 8.8.4.4
 
-    (update resolve.conf file)
+    # update resolve.conf file
     sudo resolvconf --enable-updates
     sudo resolvconf -u
 
-    (check if changes we successful)
+    # check if changes we successful
     sudo nano /etc/resolv.conf
+    ```
 
 -->
 
