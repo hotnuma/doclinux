@@ -58,18 +58,9 @@
 
 
 
-#### RPi
-
-* Install XFCE
-    
-    https://raspberrytips.fr/meilleurs-logiciels-raspberry-pi/  
-
-
-
-<!--
-
 #### Gnome is garbage
-    
+
+https://github.com/lah7/gtk3-classic  
 https://bugzilla.mozilla.org/show_bug.cgi?id=1701123  
 https://nitter.it/jeremy_soller  
 https://www.reddit.com/r/linux/comments/xwtns5/does_it_seem_like_gnome_wants_system_76s_cosmic/  
@@ -84,213 +75,14 @@ https://news.ycombinator.com/item?id=28939752
 https://news.ycombinator.com/item?id=29926411  
 https://news.ycombinator.com/item?id=10758192  
 
+#### Wayland is garbage
 
-
-#### Raspberry Pi
-
-* CPU governor
-
-    https://askubuntu.com/questions/1021748/  
-    https://raspberrypi.stackexchange.com/questions/9034/  
-
-* USB Chipset
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=326157
-    
-    ```
-    That's true for most of the JMS578 family of USB 3.0 bridge chips,
-    but not necessarily with the 580 series USB 3.1 chips.
-    I have a USB 3.1 Gen 2 enclosure with a JMS583 chip that works
-    fine with Pi computers. It supports UASP in RPiOS, and TRIM works
-    with a udev rule.
-    ```
-    
-* Custom RPi images
-	
-	https://forums.raspberrypi.com/viewtopic.php?f=131&t=314419
-	
-* Custom OS
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=327060
-
-* XML libraries
-    
-    https://forums.raspberrypi.com/viewtopic.php?p=1958438#p1958438
-    
-* Test RPi version
-
-    https://forums.raspberrypi.com/viewtopic.php?t=34678  
-    https://forums.raspberrypi.com/viewtopic.php?t=200059
-
-    ```
-    ARCH=$(uname -m)
-    VERSION=$(cat /etc/debian_version)
-    if [[ $ARCH != "aarch64" ]] || [[ $VERSION != 11* ]]; then
-        echo " *** This script was tested only on a Raspberry Pi 4B 64 bit"
-        echo " *** abort..."
-        exit 1
-    fi
-
-    cat /proc/cpuinfo
-    grep -q BCM2708 /proc/cpuinfo
-    cat /etc/*-release
-    cat /proc/device-tree/model
-    cat /sys/firmware/devicetree/base/model
-    ```
-    
-* Command line piclone
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=180383
-
-* Default audio playback
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=327267#p1958987
-    
-* C++ SSD1306 I2C LCD
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=224984  
-    https://forums.raspberrypi.com/viewtopic.php?t=171817
-    
-* Chromium/Youtube audio choppy with Bullseye and KMS driver
-
-    https://forums.raspberrypi.com/viewtopic.php?p=1945157#p1935815
-
-* RPi4 with PiOS ignore display setting in config.txt
-
-    https://forums.raspberrypi.com/viewtopic.php?p=1945199#p1945199
-
-* Display issue with Bullseye image and Pi 4B
-
-    https://forums.raspberrypi.com/viewtopic.php?p=1945198#p1945198
-
-* RPi4 HW Acceleration
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=325586
-    
-* Chromium 88 HW
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=319304
-
-* Firefox Webrender
-
-	https://www.google.com/search?q=raspberry+pi+webrender  
-	https://bugzilla.mozilla.org/show_bug.cgi?id=1663285  
-	https://forum.manjaro.org/t/firefox-webrender-pi4-400/63702
-		
-	https://forums.raspberrypi.com/search.php?keywords=webrender
-
-	https://www.google.com/search?q=raspberry+pi+firefox+webrender
-
-	https://bugzilla.mozilla.org/show_bug.cgi?id=1663285
-
-	```
-	gfx.webrender.all to true
-	Run 'MOZ_X11_EGL=1 firefox' in terminal
-	```
-	
-	https://bugzilla.mozilla.org/show_bug.cgi?id=1725624
-
-	https://bugs.launchpad.net/ubuntu/+source/firefox/+bug/1930982
-
-* references
-
-    display settings :
-
-    video=HDMI-1:800x480@60
-
-    https://forums.raspberrypi.com/viewtopic.php?t=325011#p1945199
-
-    chromium crash :
-
-    https://forums.raspberrypi.com/viewtopic.php?t=323640&start=75#p1940502
-
-    firefox :
-
-    https://forum.manjaro.org/t/new-mesa-drivers/39735  
-    https://forum.manjaro.org/t/firefox-webrender-pi4-400/63702
-
-* Compton
-
-    https://www.youtube.com/watch?v=3esPpe-fclI  
-    https://gist.github.com/kelleyk/6beba22586ac0c40aa30  
-    compton --backend glx --unredir-if-possible --vsync opengl-swc
-    compton --backend glx --vsync opengl-swc
+[https://gist.github.com/probonopd/...](https://gist.github.com/probonopd/9feb7c20257af5dd915e3a9f2d1f2277)  
+[https://dudemanguy.github.io/blog/...](https://dudemanguy.github.io/blog/posts/2022-06-10-wayland-xorg/wayland-xorg.html)  
 
 
 
-#### Bugs
-
-* Syslog
-
-    kernel: v3d fec00000.v3d: MMU error from client L2T  
-    https://forums.raspberrypi.com/viewtopic.php?t=277917  
-    http://tabuas.tech/2021/05/19/pi-400-log/
-
-* Pixel wrap bug fix
-
-    ```
-    Jun 24 2021 17:24:58 
-    Copyright (c) 2012 Broadcom
-    version 65aff9e0bea5b64c530db52aa4497e809fdf22c8 (clean) (release) (start)
-    Linux raspberrypi 5.10.44-v8+ #1429 SMP PREEMPT Fri Jun 25 10:03:37 BST 2021 aarch64 GNU/Linux
-    ```
-
-
-
-#### Manjaro
-
-* References
-    
-    https://forum.manjaro.org/tag/raspberry-pi-4  
-    https://forum.manjaro.org/t/arm-stable-update-2021-12-13-firefox-kde-gear-thunderbird-libreoffice-icu-and-kernels/94518  
-
-    https://forum.manjaro.org/t/additional-arm-packages/10132  
-    https://gitlab.manjaro.org/manjaro-arm  
-
-* bcrm_patchram_plus
-
-    https://forum.manjaro.org/t/bcrm-patchram-plus-at-100-cpu-utilization/51035/4
-
-    ```
-    sudo systemctl disable attach-bluetooth.service
-    sudo chmod 000 /usr/bin/brcm_patchram_plus
-    ```
-
-* Vivaldi
-
-    https://help.vivaldi.com/fr/desktop-fr/install-update-fr/raspberry-pi-astuces-pour-utiliser-vivaldi/
-
-    ```
-    wget https://downloads.vivaldi.com/snapshot/install-vivaldi.sh
-    sh install-vivaldi.sh
-    ```
-
-* LXDE profiles and settings
-
-    https://forum.manjaro.org/t/lxde-lxqt-openbox-community-iso/77471  
-    [https://gitlab.manjaro.org/profiles-and-settings/](https://gitlab.manjaro.org/profiles-and-settings/iso-profiles/-/blob/master/community/lxde/Packages-Desktop)
-
-* Brcm patchram plus
-    
-    https://forum.manjaro.org/t/arm-testing-update-2020-11-16-bitwarden-mesa-git-pacman-and-kernels/37996/19  
-    https://forum.manjaro.org/t/brcm-patchram-plus-conflict-with-pi-bluetooth/37935
-
-* Mpv
-    
-    https://forum.manjaro.org/t/possible-rpi-mpv-hwdec-v4l2m2m-copy-solution/96636
-    
-* Manjaro update error 
-
-    ```
-    error: failed to commit transaction (conflicting files)
-    rpi4-post-install: /etc/udev/rules.d/99-vcio-rewrite.rules exists in filesystem
-    ```
-    fix
-    ```
-    sudo pacman -Syu --overwrite /etc/udev/rules.d/99-vcio-rewrite.rules
-    ```
-
-
+<!--
 
 #### Misc
 
@@ -302,35 +94,6 @@ https://news.ycombinator.com/item?id=10758192
     I have not used Manjaro, but I guess it uses initramfs on all platforms.
     The real question is how does Raspberry Pi OS boot without any initramfs? It can assume it is running on a Pi, so the hardware is much less variable than on a PC. You could never change the GPU, for instance. Also, because it is distributed as a pre-formatted image, it can assume that the rootfs will always be ext4. And the root device can only really be an SD card or USB storage.
     If you wanted to change any of those assumptions, using a different root filesystem type, RAID, LVM, full-disk encryption, network storage, or attaching custom PCI-Express hardware on a Pi4 Compute Module, then it is likely you would need to build an initramfs (or custom kernel) for Pi OS too.
-
-* Firefox config
-    
-    about:config
-    
-    ```
-    browser.sessionstore.resume_from_crash false
-    layers.acceleration.force-enabled true
-    layers.gpu-process.enabled true
-    media.gpu-process-decoder true
-    ```
-
-* Remove Snap completely
-
-    https://askubuntu.com/questions/1369159/
-
-* Ubuntu upgrade
-
-    ```
-    sudo do-release-upgrade
-    ```
-    Troubles can come from third party repositories or orphan packages
-    
-    ```
-    cat /etc/apt/sources.list
-    ls /etc/apt/sources.list.d
-    cat /etc/apt/sources.list.d/*.list
-    apt list | grep "installé, local"
-    ```
 
 * Install desktop using tasksel
 
@@ -345,21 +108,9 @@ https://news.ycombinator.com/item?id=10758192
     ```
     Select a session.
 
-* glamor
-    
-    /usr/share/X11/xorg.conf.d/20-noglamor.conf
-
 * Downmix stereo to mono
     
     https://askubuntu.com/questions/17791/
-
-* Xfce Classic Fork
-    
-    [https://www.linuxadictos.com/en/xfce-classic](https://www.linuxadictos.com/en/xfce-classic-a-fork-of-xfce-but-without-the-client-side-window-decoration.html)
-
-* Delete thumbnails older than 30 days
-
-    find ~/.cache/thumbnails/ -type f -iname \*.png -mtime +30 -delete
 
 * Power manager
 
@@ -502,6 +253,61 @@ https://news.ycombinator.com/item?id=10758192
 * RMC Story url
 
     youtube-dl http://players.brightcove.net/data-account/default_default/index.html?videoId=data-video-id
+
+
+
+#### Manjaro
+
+* References
+    
+    https://forum.manjaro.org/tag/raspberry-pi-4  
+    https://forum.manjaro.org/t/arm-stable-update-2021-12-13-firefox-kde-gear-thunderbird-libreoffice-icu-and-kernels/94518  
+
+    https://forum.manjaro.org/t/additional-arm-packages/10132  
+    https://gitlab.manjaro.org/manjaro-arm  
+
+* bcrm_patchram_plus
+
+    https://forum.manjaro.org/t/bcrm-patchram-plus-at-100-cpu-utilization/51035/4
+
+    ```
+    sudo systemctl disable attach-bluetooth.service
+    sudo chmod 000 /usr/bin/brcm_patchram_plus
+    ```
+
+* Vivaldi
+
+    https://help.vivaldi.com/fr/desktop-fr/install-update-fr/raspberry-pi-astuces-pour-utiliser-vivaldi/
+
+    ```
+    wget https://downloads.vivaldi.com/snapshot/install-vivaldi.sh
+    sh install-vivaldi.sh
+    ```
+
+* LXDE profiles and settings
+
+    https://forum.manjaro.org/t/lxde-lxqt-openbox-community-iso/77471  
+    [https://gitlab.manjaro.org/profiles-and-settings/](https://gitlab.manjaro.org/profiles-and-settings/iso-profiles/-/blob/master/community/lxde/Packages-Desktop)
+
+* Brcm patchram plus
+    
+    https://forum.manjaro.org/t/arm-testing-update-2020-11-16-bitwarden-mesa-git-pacman-and-kernels/37996/19  
+    https://forum.manjaro.org/t/brcm-patchram-plus-conflict-with-pi-bluetooth/37935
+
+* Mpv
+    
+    https://forum.manjaro.org/t/possible-rpi-mpv-hwdec-v4l2m2m-copy-solution/96636
+    
+* Manjaro update error 
+
+    ```
+    error: failed to commit transaction (conflicting files)
+    rpi4-post-install: /etc/udev/rules.d/99-vcio-rewrite.rules exists in filesystem
+    ```
+    fix
+    ```
+    sudo pacman -Syu --overwrite /etc/udev/rules.d/99-vcio-rewrite.rules
+    ```
 
 
 

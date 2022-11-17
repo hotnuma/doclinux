@@ -7,8 +7,6 @@
 * References
     
     https://wiki.archlinux.org/title/wayland  
-    [https://gist.github.com/probonopd/...](https://gist.github.com/probonopd/9feb7c20257af5dd915e3a9f2d1f2277)  
-    [https://dudemanguy.github.io/blog/...](https://dudemanguy.github.io/blog/posts/2022-06-10-wayland-xorg/wayland-xorg.html)  
 
 * awesome-wayland : a curated list of Wayland code and resources
     

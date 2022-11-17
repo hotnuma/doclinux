@@ -15,6 +15,40 @@
     https://www.nongnu.org/xbindkeys/xbindkeys.html  
 
 
+#### Misc
+
+* Firefox config
+    
+    about:config
+    
+    ```
+    browser.sessionstore.resume_from_crash false
+    layers.acceleration.force-enabled true
+    layers.gpu-process.enabled true
+    media.gpu-process-decoder true
+    ```
+
+* Delete thumbnails older than 30 days
+
+    find ~/.cache/thumbnails/ -type f -iname \*.png -mtime +30 -delete
+
+* Remove Snap completely
+
+    https://askubuntu.com/questions/1369159/
+
+* Ubuntu upgrade
+
+    ```
+    sudo do-release-upgrade
+    ```
+    Troubles can come from third party repositories or orphan packages
+    
+    ```
+    cat /etc/apt/sources.list
+    ls /etc/apt/sources.list.d
+    cat /etc/apt/sources.list.d/*.list
+    apt list | grep "installé, local"
+    ```
 
 #### System
 
