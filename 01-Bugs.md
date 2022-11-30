@@ -4,6 +4,10 @@
 
 ---
 
+* QtCreator printf
+
+    https://chowdera.com/2020/12/20201208210320326z.html  
+
 * Startup freeze
     
     ```
@@ -31,6 +35,10 @@
     [styling]
     line_height=0;2;
     ```
+
+* Geany double clic on tab buttons
+    
+    https://github.com/geany/geany/issues/1890  
     
 * ifupdown
     

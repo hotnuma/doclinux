@@ -15,8 +15,13 @@
     https://www.nongnu.org/xbindkeys/xbindkeys.html  
 
 
+
 #### Misc
 
+* Play a sound
+    
+    `paplay /usr/share/sounds/freedesktop/stereo/dialog-information.oga`
+    
 * Firefox config
     
     about:config
@@ -50,8 +55,14 @@
     apt list | grep "installé, local"
     ```
 
+
+
 #### System
 
+* File associations
+    
+    `~/.config/mimeapps.list`
+    
 * Background color
     
     ```
@@ -203,6 +214,18 @@
     ln -s target_path link_name
     ```
 
+* Ignore errors
+    
+    ```
+    find / -name *.html 2>/dev/null
+    ```
+    
+* List biggest files in directory
+    
+    ```
+    find . -type f -printf "%s\t%p\n" | sort -nr | head -10
+    ```
+    
 * find multiple pattern
     
     ```

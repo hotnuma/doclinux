@@ -4,6 +4,10 @@
 
 ---
 
+* Dusable `systemd-oomd`
+    
+    https://askubuntu.com/questions/1404888/  
+    
 * Manage services and units
     
     [https://www.digitalocean.com/community/tutorials/](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units-fr)

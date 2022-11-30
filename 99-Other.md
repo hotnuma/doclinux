@@ -58,27 +58,31 @@
 
 
 
-#### Gnome is garbage
+#### Linux is garbage
 
-https://github.com/lah7/gtk3-classic  
-https://bugzilla.mozilla.org/show_bug.cgi?id=1701123  
-https://nitter.it/jeremy_soller  
-https://www.reddit.com/r/linux/comments/xwtns5/does_it_seem_like_gnome_wants_system_76s_cosmic/  
-https://www.reddit.com/r/GTK/comments/xdfgjr/api_changes_in_gtk4_removal_of_gtkmenu/  
-https://fosspost.org/are-gtk-developers-destroying-linux-desktop-with-their-plans/  
-https://blogs.gnome.org/antoniof/2022/06/15/the-tree-view-is-undead-long-live-the-column-view%e2%80%bd/  
-https://medium.com/@sarvex/gnome-shell-for-stupids-by-morons-a9020318198b  
-https://ludditus.com/2021/05/30/is-there-any-future-for-the-gtk-based-desktop-environments/  
-https://joshuastrobl.com/2021/09/14/building-an-alternative-ecosystem/  
-https://medium.com/@fulalas/gnome-42-the-nonsense-continues-7d96c3287f7  
-https://news.ycombinator.com/item?id=28939752  
-https://news.ycombinator.com/item?id=29926411  
-https://news.ycombinator.com/item?id=10758192  
+* Gtk
+    
+    https://github.com/lah7/gtk3-classic  
+    https://joshuastrobl.com/2021/09/14/building-an-alternative-ecosystem/  
+    https://www.reddit.com/r/GTK/comments/xdfgjr/api_changes_in_gtk4_removal_of_gtkmenu/  
+    https://blogs.gnome.org/antoniof/2022/06/15/the-tree-view-is-undead-long-live-the-column-view%e2%80%bd/  
+    https://bugzilla.mozilla.org/show_bug.cgi?id=1701123  
+    https://medium.com/@fulalas/gnome-42-the-nonsense-continues-7d96c3287f7  
+    https://ludditus.com/2021/05/30/is-there-any-future-for-the-gtk-based-desktop-environments/  
 
-#### Wayland is garbage
+    <!--
+    https://medium.com/@sarvex/gnome-shell-for-stupids-by-morons-a9020318198b  
+    https://fosspost.org/are-gtk-developers-destroying-linux-desktop-with-their-plans/  
 
-[https://gist.github.com/probonopd/...](https://gist.github.com/probonopd/9feb7c20257af5dd915e3a9f2d1f2277)  
-[https://dudemanguy.github.io/blog/...](https://dudemanguy.github.io/blog/posts/2022-06-10-wayland-xorg/wayland-xorg.html)  
+    system 76
+    https://www.reddit.com/r/linux/comments/xwtns5/does_it_seem_like_gnome_wants_system_76s_cosmic/  
+    https://nitter.it/jeremy_soller  
+    -->
+
+* Wayland
+
+    [https://gist.github.com/probonopd/...](https://gist.github.com/probonopd/9feb7c20257af5dd915e3a9f2d1f2277)  
+    [https://dudemanguy.github.io/blog/...](https://dudemanguy.github.io/blog/posts/2022-06-10-wayland-xorg/wayland-xorg.html)  
 
 
 
@@ -253,61 +257,6 @@ https://news.ycombinator.com/item?id=10758192
 * RMC Story url
 
     youtube-dl http://players.brightcove.net/data-account/default_default/index.html?videoId=data-video-id
-
-
-
-#### Manjaro
-
-* References
-    
-    https://forum.manjaro.org/tag/raspberry-pi-4  
-    https://forum.manjaro.org/t/arm-stable-update-2021-12-13-firefox-kde-gear-thunderbird-libreoffice-icu-and-kernels/94518  
-
-    https://forum.manjaro.org/t/additional-arm-packages/10132  
-    https://gitlab.manjaro.org/manjaro-arm  
-
-* bcrm_patchram_plus
-
-    https://forum.manjaro.org/t/bcrm-patchram-plus-at-100-cpu-utilization/51035/4
-
-    ```
-    sudo systemctl disable attach-bluetooth.service
-    sudo chmod 000 /usr/bin/brcm_patchram_plus
-    ```
-
-* Vivaldi
-
-    https://help.vivaldi.com/fr/desktop-fr/install-update-fr/raspberry-pi-astuces-pour-utiliser-vivaldi/
-
-    ```
-    wget https://downloads.vivaldi.com/snapshot/install-vivaldi.sh
-    sh install-vivaldi.sh
-    ```
-
-* LXDE profiles and settings
-
-    https://forum.manjaro.org/t/lxde-lxqt-openbox-community-iso/77471  
-    [https://gitlab.manjaro.org/profiles-and-settings/](https://gitlab.manjaro.org/profiles-and-settings/iso-profiles/-/blob/master/community/lxde/Packages-Desktop)
-
-* Brcm patchram plus
-    
-    https://forum.manjaro.org/t/arm-testing-update-2020-11-16-bitwarden-mesa-git-pacman-and-kernels/37996/19  
-    https://forum.manjaro.org/t/brcm-patchram-plus-conflict-with-pi-bluetooth/37935
-
-* Mpv
-    
-    https://forum.manjaro.org/t/possible-rpi-mpv-hwdec-v4l2m2m-copy-solution/96636
-    
-* Manjaro update error 
-
-    ```
-    error: failed to commit transaction (conflicting files)
-    rpi4-post-install: /etc/udev/rules.d/99-vcio-rewrite.rules exists in filesystem
-    ```
-    fix
-    ```
-    sudo pacman -Syu --overwrite /etc/udev/rules.d/99-vcio-rewrite.rules
-    ```
 
 
 
