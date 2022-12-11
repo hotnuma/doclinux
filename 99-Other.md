@@ -58,7 +58,44 @@
 
 
 
-#### Linux is garbage
+#### Anti-Linux :-D
+
+* System76 accused of not collaborating with GNOME
+    
+    [https://www.theregister.com/2021/11/10/system76_gnome_deskto](https://www.theregister.com/2021/11/10/system76_gnome_desktop_fight/)
+
+* GNOME to prevent theming, wider community not happy
+    
+    [https://www.osnews.com/story/133955/gnome-to-prevent-theming](https://www.osnews.com/story/133955/gnome-to-prevent-theming-wider-community-not-happy/)
+
+* The Direction of Gnome
+    
+    https://forum.zorin.com/t/the-direction-of-gnome/22697/4
+
+* Gtk 5 might drop X11 support
+    
+    https://www.theregister.com/2022/07/05/gtk_5_might_drop_x11/
+
+* Gnome developers actively hate their users and non-gnome developers
+    
+    https://news.ycombinator.com/item?id=27075980
+
+* Gnome is the worst major FOSS project
+    
+    https://news.ycombinator.com/item?id=26002504
+
+* Ulrich Drepper
+    
+    https://news.ycombinator.com/item?id=2378013
+
+* GNOME Rotting In Threes
+    
+    [https://igurublog.wordpress.com/2012/11/05/gnome-et-al-rotti](https://igurublog.wordpress.com/2012/11/05/gnome-et-al-rotting-in-threes/)
+
+* Manjarno
+    
+    https://manjarno.snorlax.sh/
+
 
 * Gtk
     
@@ -76,7 +113,7 @@
 
     system 76
     https://www.reddit.com/r/linux/comments/xwtns5/does_it_seem_like_gnome_wants_system_76s_cosmic/  
-    https://nitter.it/jeremy_soller  
+    https://nitter.net/jeremy_soller  
     -->
 
 * Wayland
