@@ -176,6 +176,9 @@
 #### Directories
 
 * Top Directories
+    
+    [https://www.cyberciti.biz/faq/how-do-i-find-the-largest-file](https://www.cyberciti.biz/faq/how-do-i-find-the-largest-filesdirectories-on-a-linuxunixbsd-filesystem/)  
+
 
     ```
     sudo du -ham / 2>/dev/null | sort -nr | head -n 20

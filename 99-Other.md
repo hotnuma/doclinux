@@ -96,6 +96,9 @@
     
     https://manjarno.snorlax.sh/
 
+* Avoid GTK3? : xfce
+    
+    https://www.reddit.com/r/xfce/comments/spn0d0/avoid_gtk3/
 
 * Gtk
     
@@ -106,13 +109,11 @@
     https://bugzilla.mozilla.org/show_bug.cgi?id=1701123  
     https://medium.com/@fulalas/gnome-42-the-nonsense-continues-7d96c3287f7  
     https://ludditus.com/2021/05/30/is-there-any-future-for-the-gtk-based-desktop-environments/  
-
-    <!--
     https://medium.com/@sarvex/gnome-shell-for-stupids-by-morons-a9020318198b  
     https://fosspost.org/are-gtk-developers-destroying-linux-desktop-with-their-plans/  
-
-    system 76
     https://www.reddit.com/r/linux/comments/xwtns5/does_it_seem_like_gnome_wants_system_76s_cosmic/  
+
+    <!--
     https://nitter.net/jeremy_soller  
     -->
 
