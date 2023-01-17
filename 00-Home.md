@@ -10,71 +10,27 @@
     
     https://specifications.freedesktop.org/  
 
-* XBindKeys
-    
-    https://www.nongnu.org/xbindkeys/xbindkeys.html  
-
-
-
-#### Misc
-
-* Play a sound
-    
-    `paplay /usr/share/sounds/freedesktop/stereo/dialog-information.oga`
-    
-* Firefox config
-    
-    about:config
-    
-    ```
-    browser.sessionstore.resume_from_crash false
-    layers.acceleration.force-enabled true
-    layers.gpu-process.enabled true
-    media.gpu-process-decoder true
-    ```
-
-* Delete thumbnails older than 30 days
-
-    find ~/.cache/thumbnails/ -type f -iname \*.png -mtime +30 -delete
-
-* Remove Snap completely
-
-    https://askubuntu.com/questions/1369159/
-
-* Ubuntu upgrade
-
-    ```
-    sudo do-release-upgrade
-    ```
-    Troubles can come from third party repositories or orphan packages
-    
-    ```
-    cat /etc/apt/sources.list
-    ls /etc/apt/sources.list.d
-    cat /etc/apt/sources.list.d/*.list
-    apt list | grep "installé, local"
-    ```
-
 
 
 #### System
 
+* /bin /sbin /local/bin
+    
+    https://askubuntu.com/questions/308045/  
+
+* Environment variables
+    
+    https://askubuntu.com/questions/866161/
+    
+    ```
+    ~/.profile
+    /etc/environment
+    ```
+    
 * File associations
     
     `~/.config/mimeapps.list`
     
-* Background color
-    
-    ```
-    #5e5c64
-    ```
-    
-* Installation date
-    
-    ```
-    stat -c %w /
-    ```
-
 * List processes
     
     by mem usage
@@ -83,15 +39,6 @@
     top -b -o +%MEM | head -n 30
     ```
     ps_mem : https://github.com/pixelb/ps_mem
-    
-* Environment variables
-    
-    https://askubuntu.com/questions/866161/
-    
-    ```
-    /etc/environment
-    ~/.profile
-    ```
     
 * Xsession xdg paths
     
@@ -120,6 +67,18 @@
     ```
     echo "Hidden=true" > $HOME/.config/autostart/xcompmgr.desktop
     ```
+    
+* Hide menu items
+    
+    https://bbs.archlinux.org/viewtopic.php?id=138015  
+    
+    ```
+    echo "NoDisplay=true" > $HOME/.local/share/applications/hplj1020.desktop
+    ```
+
+* XBindKeys
+    
+    https://www.nongnu.org/xbindkeys/xbindkeys.html  
 
 
 
@@ -342,6 +301,8 @@
     
     https://github.com/yt-dlp/yt-dlp
     
+    Install or Update :
+    
     ```
     python3 -m pip install -U yt-dlp
     ```
@@ -373,6 +334,55 @@
 
 
 #### Misc
+
+* Background color
+    
+    ```
+    #5e5c64
+    ```
+    
+* Installation date
+    
+    ```
+    stat -c %w /
+    ```
+
+* Play a sound
+    
+    `paplay /usr/share/sounds/freedesktop/stereo/dialog-information.oga`
+    
+* Firefox config
+    
+    about:config
+    
+    ```
+    browser.sessionstore.resume_from_crash false
+    layers.acceleration.force-enabled true
+    layers.gpu-process.enabled true
+    media.gpu-process-decoder true
+    ```
+
+* Delete thumbnails older than 30 days
+
+    find ~/.cache/thumbnails/ -type f -iname \*.png -mtime +30 -delete
+
+* Remove Snap completely
+
+    https://askubuntu.com/questions/1369159/
+
+* Ubuntu upgrade
+
+    ```
+    sudo do-release-upgrade
+    ```
+    Troubles can come from third party repositories or orphan packages
+    
+    ```
+    cat /etc/apt/sources.list
+    ls /etc/apt/sources.list.d
+    cat /etc/apt/sources.list.d/*.list
+    apt list | grep "installé, local"
+    ```
 
 * Output command without localization
 

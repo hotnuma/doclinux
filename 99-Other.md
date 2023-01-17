@@ -72,6 +72,10 @@
     
     https://forum.zorin.com/t/the-direction-of-gnome/22697/4
 
+* Horrible GTK3 / GNOME UI design
+    
+    [https://ubuntu-mate.community/t/horrible-gtk3-gnome-ui-desig](https://ubuntu-mate.community/t/horrible-gtk3-gnome-ui-design-is-leaking-into-ubuntu-mate-applications-in-20-04/22028)
+
 * Gtk 5 might drop X11 support
     
     https://www.theregister.com/2022/07/05/gtk_5_might_drop_x11/
