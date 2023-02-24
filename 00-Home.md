@@ -12,6 +12,23 @@
 
 
 
+#### Log files
+
+* journalctl
+
+    ```
+    journalctl --boot --lines=100 --follow
+    ```
+    
+    https://unix.stackexchange.com/questions/684379/  
+
+* Viewing log files
+
+    https://ubuntu.com/tutorials/viewing-and-monitoring-log-files  
+    https://vitux.com/view-system-log-files-ubuntu/  
+
+
+
 #### System
 
 * /bin /sbin /local/bin
@@ -272,18 +289,6 @@
 * Check if reboot is needed
     
     https://askubuntu.com/questions/164/
-
-
-
-#### Log files
-
-* Viewing log files
-
-    https://ubuntu.com/tutorials/viewing-and-monitoring-log-files
-
-* View System Log
-
-    https://vitux.com/view-system-log-files-ubuntu/
 
 
 
