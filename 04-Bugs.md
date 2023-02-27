@@ -1,4 +1,4 @@
-**[ [Home](00-Home.html) | Bugs | [FFmpeg](01-FFmpeg.html) | [Network](02-Network.html) | [Systemd](03-Systemd.html) | [Wayland](04-Wayland.html) | [Other](99-Other.html) ]**
+**[ [Home](00-Home.html) | [Systemd](01-Systemd.html) | [FFmpeg](02-FFmpeg.html) | [Network](03-Network.html) | Bugs | [Other](99-Other.html) ]**
 
 ## Bugs
 

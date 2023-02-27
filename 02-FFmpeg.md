@@ -1,4 +1,4 @@
-**[ [Home](00-Home.html) | [Bugs](01-Bugs.html) | FFmpeg | [Network](02-Network.html) | [Systemd](03-Systemd.html) | [Wayland](04-Wayland.html) | [Other](99-Other.html) ]**
+**[ [Home](00-Home.html) | [Systemd](01-Systemd.html) | FFmpeg | [Network](03-Network.html) | [Bugs](04-Bugs.html) | [Other](99-Other.html) ]**
 
 ## FFmpeg
 
@@ -6,6 +6,8 @@
 
 https://ffmpeg.org/documentation.html  
 https://ffmpeg.org/ffmpeg-filters.html  
+
+
 
 #### Audio
 
@@ -56,7 +58,9 @@ https://ffmpeg.org/ffmpeg-filters.html
     ```
     ffmpeg -i "audio.mp3" -af "atempo=1.001" -b:a 192k "audio-faster.mp3"
     ```
-    
+
+
+
 #### Video
 
 * Curves
@@ -67,6 +71,9 @@ https://ffmpeg.org/ffmpeg-filters.html
     curves=preset=darker
     curves=preset=lighter
     ```
+
+
+
 #### Subtitles
 
 * Download subtitles from YouTube
@@ -92,9 +99,13 @@ https://ffmpeg.org/ffmpeg-filters.html
 
     https://subtitletools.com/convert-sub-idx-to-srt-online
 
+
+
 #### Use cookies with YouTube
 
     yt-dlp --cookies=cookies.txt "URL"
+
+
 
 #### Other
 
@@ -150,13 +161,6 @@ https://ffmpeg.org/ffmpeg-filters.html
 
 <!--
 
-# FFmpeg
-
-    https://trac.ffmpeg.org/wiki
-    http://ffmpeg.org/documentation.html
-    https://ffmpeg.org/ffmpeg-filters.html
-    https://trac.ffmpeg.org/wiki/FFprobeTips
-
 * Obtenir des informations sur le fichier
 
     ffprobe -v quiet -show_format -show_streams "input.avi"
@@ -173,15 +177,11 @@ https://ffmpeg.org/ffmpeg-filters.html
 
     ffmpeg -ss 00:02:00  -i "input.avi" -t 00:01:00 -map 0:1 -c copy "output.avi"
 
-
-
 #### Audio
 
 * Filtrer l'audio :
 
     ffmpeg -i "input.mp4" -c:v copy -af "highpass=f=100" "output.mp4"
-
-
 
 #### Images
 
@@ -204,8 +204,6 @@ https://ffmpeg.org/ffmpeg-filters.html
 * Créer automatiquement à partir d'une série de captures d'écran :
 
     ffmpeg -i "input.avi" -frames 1 -vf "select=not(mod(n\,7600)),scale=111:-1,tile=4x4" "output.png"
-
-
 
 #### Other
 

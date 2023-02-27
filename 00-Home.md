@@ -1,4 +1,4 @@
-**[ Home | [Bugs](01-Bugs.html) | [FFmpeg](01-FFmpeg.html) | [Network](02-Network.html) | [Systemd](03-Systemd.html) | [Wayland](04-Wayland.html) | [Other](99-Other.html) ]**
+**[ Home | [Systemd](01-Systemd.html) | [FFmpeg](02-FFmpeg.html) | [Network](03-Network.html) | [Bugs](04-Bugs.html) | [Other](99-Other.html) ]**
 
 ## Docs Linux
 
@@ -48,15 +48,6 @@
     
     `~/.config/mimeapps.list`
     
-* List processes
-    
-    by mem usage
-    
-    ```
-    top -b -o +%MEM | head -n 30
-    ```
-    ps_mem : https://github.com/pixelb/ps_mem
-    
 * Xsession xdg paths
     
     https://askubuntu.com/questions/1179729/  
@@ -85,14 +76,6 @@
     echo "Hidden=true" > $HOME/.config/autostart/xcompmgr.desktop
     ```
     
-* Hide menu items
-    
-    https://bbs.archlinux.org/viewtopic.php?id=138015  
-    
-    ```
-    echo "NoDisplay=true" > $HOME/.local/share/applications/hplj1020.desktop
-    ```
-
 * XBindKeys
     
     https://www.nongnu.org/xbindkeys/xbindkeys.html  
@@ -155,7 +138,6 @@
     
     [https://www.cyberciti.biz/faq/how-do-i-find-the-largest-file](https://www.cyberciti.biz/faq/how-do-i-find-the-largest-filesdirectories-on-a-linuxunixbsd-filesystem/)  
 
-
     ```
     sudo du -ham / 2>/dev/null | sort -nr | head -n 20
     ```
@@ -173,11 +155,11 @@
     
 * Recursive grep
 
+    https://stackoverflow.com/questions/12516937/
+    
     ```
     grep -r "texthere" .
     ```
-    
-    https://stackoverflow.com/questions/12516937/
     
     ```
     grep -rni --include=*.{h,c,cpp,cxx} "texthere"
@@ -239,7 +221,40 @@
 
 
 
-#### Packages apt
+#### Firefox
+
+* Config
+    
+    about:config
+    
+    ```
+    browser.sessionstore.resume_from_crash false
+    layers.acceleration.force-enabled true
+    layers.gpu-process.enabled true
+    media.gpu-process-decoder true
+    ```
+
+* Firefox ESR
+
+    ```
+    sudo add-apt-repository ppa:mozillateam/ppa
+    sudo apt update
+    sudo apt install firefox-esr
+    ```
+
+* Install Firefox deb
+    
+    https://forum.ubuntu-fr.org/viewtopic.php?id=2074608  
+    [https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-d](https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-deb-apt-ubuntu-22-04)  
+
+* How to disable DRM banner
+    
+    [https://www.reddit.com/r/firefox/comments/sgyu1s/how_to_disa](https://www.reddit.com/r/firefox/comments/sgyu1s/how_to_disable_enable_drm_banner_to_prompt/)  
+    https://support.cdn.mozilla.net/ml/questions/1388341  
+
+
+
+#### Install
 
 * Source list
     
@@ -247,24 +262,43 @@
     /etc/apt/sources.list
     ```
 
+* Uninstall block snaps
+    
+    https://askubuntu.com/questions/1369159/  
+    https://forum.ubuntu-fr.org/viewtopic.php?pid=22458861#p22458861  
+
+* Remove useless packages
+
+    ```
+    sudo apt autoremove --purge
+    ```
+
+* Paquets Cassés
+
+    https://forum.ubuntu-fr.org/viewtopic.php?pid=22273320#p22273320  
+    
+    ```
+    dpkg -l | grep -v ^ii
+    ```
+    
+    Cleanup
+    
+    ```
+    dpkg -l | awk '/^rc/{print $2}' | xargs -r sudo dpkg -P
+    ```
+
 * End of life releases
     
     https://doc.ubuntu-fr.org/old-releases  
     
-* Uninstall block snaps
-    
-    https://forum.ubuntu-fr.org/viewtopic.php?pid=22458861#p22458861  
-
-* Check if a package is installed using apt
-
-    ```
-    apt list thunar
-    ```
-
 * List installed packages
     
     ```
     apt list --installed | grep glib
+    ```
+
+    ```
+    apt list thunar
     ```
     
 * Get package version
@@ -274,33 +308,24 @@
     dpkg -l libgtk-3-0 | grep ^ii
     ```
 
-* Remove useless packages
-
-    ```
-    sudo apt autoremove --purge
-    ```
-
 * Ubuntu upgrade system
 
     ```
     sudo do-release-upgrade
     ```
 
+    Troubles can come from third party repositories or orphan packages
+    
+    ```
+    cat /etc/apt/sources.list
+    ls /etc/apt/sources.list.d
+    cat /etc/apt/sources.list.d/*.list
+    apt list | grep "installé, local"
+    ```
+
 * Check if reboot is needed
     
-    https://askubuntu.com/questions/164/
-
-
-
-#### Install
-
-* Firefox ESR
-
-    ```
-    sudo add-apt-repository ppa:mozillateam/ppa
-    sudo apt update
-    sudo apt install firefox-esr
-    ```
+    https://askubuntu.com/questions/164/  
 
 * yt-dlp
     
@@ -340,12 +365,14 @@
 
 #### Misc
 
-* Background color
+* Change desktop background
+
+    Solid color : `hsetroot -solid '#5e5c64'`
     
-    ```
-    #5e5c64
-    ```
+    Walpaper : `feh --bg-scale /usr/share/rpd-wallpaper/clouds.jpg`
     
+    Random walpaper : `feh --bg-scale --randomize /usr/share/rpd-wallpaper/`
+
 * Installation date
     
     ```
@@ -356,38 +383,9 @@
     
     `paplay /usr/share/sounds/freedesktop/stereo/dialog-information.oga`
     
-* Firefox config
-    
-    about:config
-    
-    ```
-    browser.sessionstore.resume_from_crash false
-    layers.acceleration.force-enabled true
-    layers.gpu-process.enabled true
-    media.gpu-process-decoder true
-    ```
-
 * Delete thumbnails older than 30 days
 
     find ~/.cache/thumbnails/ -type f -iname \*.png -mtime +30 -delete
-
-* Remove Snap completely
-
-    https://askubuntu.com/questions/1369159/
-
-* Ubuntu upgrade
-
-    ```
-    sudo do-release-upgrade
-    ```
-    Troubles can come from third party repositories or orphan packages
-    
-    ```
-    cat /etc/apt/sources.list
-    ls /etc/apt/sources.list.d
-    cat /etc/apt/sources.list.d/*.list
-    apt list | grep "installé, local"
-    ```
 
 * Output command without localization
 
@@ -401,17 +399,9 @@
     LANG=C free -h
     ```
     
-* Change desktop background
-
-    Solid color : `hsetroot -solid '#5e5c64'`
-    
-    Walpaper : `feh --bg-scale /usr/share/rpd-wallpaper/clouds.jpg`
-    
-    Random walpaper : `feh --bg-scale --randomize /usr/share/rpd-wallpaper/`
-
 * Change default terminal
     
-    https://stackoverflow.com/questions/16808231/
+    https://stackoverflow.com/questions/16808231/  
     
     ```
     sudo update-alternatives --config x-terminal-emulator
