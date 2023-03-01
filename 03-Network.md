@@ -4,155 +4,43 @@
 
 ---
 
-* DNS
+#### Reference
+
+* Configuration
     
-    https://askubuntu.com/questions/1080230/  
+    https://wiki.debian.org/NetworkConfiguration  
 
 * Netplan
     
     https://askubuntu.com/questions/1034711/  
 
-* Uninstall NetworkManager
-    
-    https://askubuntu.com/questions/249944/  
-    https://help.ubuntu.com/community/NetworkManager  
-    [https://techpiezo.com/linux/switch-back-to-ifupdown](https://techpiezo.com/linux/switch-back-to-ifupdown-etc-network-interfaces-in-ubuntu/)  
-    https://askubuntu.com/questions/1031709/  
-
-* DNS BBox 
-
-    ```
-    echo "192.168.1.254  mabbox.bytel.fr" >> /etc/hosts
-    ```
-
-#### Network
-
-* interfaces
-
-    The following procedure works for Ubuntu 18.04 (Bionic Beaver)
-
-    I. Reinstall the ifupdown package:
-
-    ```
-    sudo apt update
-    sudo apt install ifupdown
-    ```
-
-    II. Configure your /etc/network/interfaces file with configuration stanzas such as:
-
-    ```
-    # The loopback network interface
-    auto lo
-    iface lo inet loopback
-
-    auto enp27s0
-    iface enp27s0 inet dhcp
-
-    # The loopback network interface
-    auto lo
-    iface lo inet loopback
-
-    allow-hotplug enp27s0
-    auto enp27s0
-    iface enp27s0 inet static
-    address 192.168.1.100
-    netmask 255.255.255.0
-    broadcast 192.168.1.255
-    gateway 192.168.1.254
-    # Only relevant if you make use of RESOLVCONF(8)
-    # or similar...
-    dns-nameservers 8.8.8.8 8.8.4.4
-    ```
-
-    III. Make the configuration effective (no reboot needed):
-
-    ```
-    sudo ifdown --force enp27s0 lo && ifup -a
-    sudo systemctl unmask networking
-    sudo systemctl enable networking
-    sudo systemctl restart networking
-    ```
-
-    IV. Disable and remove the unwanted services:
-
-    ```
-    sudo systemctl stop systemd-networkd.socket systemd-networkd networkd-dispatcher systemd-networkd-wait-online
-    sudo systemctl disable systemd-networkd.socket systemd-networkd networkd-dispatcher systemd-networkd-wait-online
-    sudo systemctl mask systemd-networkd.socket systemd-networkd networkd-dispatcher systemd-networkd-wait-online
-
-    sudo apt -y purge nplan netplan.io
-    #sudo apt --assume-yes purge nplan netplan.io
-    ```
-
-    Then, you're done.
-
-    Note: You MUST, of course, adapt the values according to your system
-    (network, interface name...).
-
-    V. DNS Resolver
-
-    Because Ubuntu Bionic Beaver (18.04) make use of the DNS stub
-    resolver as provided by SYSTEMD-RESOLVED.SERVICE(8), you SHOULD
-    also add the DNS to contact into the /etc/systemd/resolved.conf
-    file. For instance:
-
-    ....
-    DNS=1.1.1.1 1.0.0.1
-    ....
-
-    and then restart the systemd-resolved service once done:
-
-    ```
-    systemctl restart systemd-resolved
-    ```
-
-    The DNS entries in the ifupdown INTERFACES(5) file, as shown above,
-    are only relevant if you make use of RESOLVCONF(8) or similar.
-
-* disable network manager
-
-    Using Systemd
-
-    Systemd became the default initialization system in Ubuntu 15.04.
-    Here's how to stop and disable Network Manager without uninstalling
-    it (taken from AskUbuntu):
-
-    Stop network manager
-
-    ```
-    sudo systemctl stop NetworkManager.service
-    sudo systemctl stop NetworkManager-wait-online.service
-    sudo systemctl stop NetworkManager-dispatcher.service
-    sudo systemctl stop network-manager.service
-    ```
-
-    Disable network manager (permanently) to avoid it restarting after a reboot
-
-    ```
-    sudo systemctl disable NetworkManager.service
-    sudo systemctl disable NetworkManager-wait-online.service
-    sudo systemctl disable NetworkManager-dispatcher.service
-    sudo systemctl disable network-manager.service
-    ```
-
-* uninstall network manager
-
-    First edit /etc/network/interfaces so that the ifup utility can be
-    used to configure eth0 once NetworkManager is gone.
-
-    Remove NetworkManager from the system
-
-    ```
-    sudo apt purge network-manager
-    ```
-
-    Configure eth0 using ifup.
-
-    ```
-    sudo ifup eth0
-    ```
-
 * DNS
+    
+    https://askubuntu.com/questions/1080230/  
+
+* Find the default networking interface
+    
+    https://stackoverflow.com/questions/15668653/  
+    [https://www.linuxquestions.org/questions/linux-networking-3/](https://www.linuxquestions.org/questions/linux-networking-3/howto-find-gateway-address-through-code-397078/)  
+    https://unix.stackexchange.com/questions/270008/  
+    https://unix.stackexchange.com/questions/14961/  
+
+
+
+
+#### Interfaces
+
+* Predictable Network Interface Names
+    
+    https://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/  
+    
+* Switch back to /etc/network/interfaces
+    
+    https://askubuntu.com/questions/1031709/  
+    [https://linuxconfig.org/how-to-switch-back-networking-to-etc](https://linuxconfig.org/how-to-switch-back-networking-to-etc-network-interfaces-on-ubuntu-20-04-focal-fossa-linux)  
+    [https://support.solusvm.com/hc/en-us/articles/360018794671-H](https://support.solusvm.com/hc/en-us/articles/360018794671-How-to-configure-Ubuntu-18-to-use-eth0-and-switch-back-to-etc-network-interfaces-file-)  
+
+* resolvconf
 
     ```
     # check to see if resolvconf is installed
@@ -186,4 +74,46 @@
     # check if changes we successful
     sudo nano /etc/resolv.conf
     ```
+
+* DNS BBox 
+
+    ```
+    echo "192.168.1.254  mabbox.bytel.fr" >> /etc/hosts
+    ```
+
+
+
+#### Network Manager
+
+https://askubuntu.com/questions/249944/  
+https://help.ubuntu.com/community/NetworkManager  
+[https://techpiezo.com/linux/switch-back-to-ifupdown](https://techpiezo.com/linux/switch-back-to-ifupdown-etc-network-interfaces-in-ubuntu/)  
+
+* Disable network manager
+
+    ```
+    sudo systemctl stop NetworkManager.service
+    sudo systemctl disable NetworkManager.service
+    sudo systemctl stop NetworkManager-wait-online.service
+    sudo systemctl disable NetworkManager-wait-online.service
+    sudo systemctl stop NetworkManager-dispatcher.service
+    sudo systemctl disable NetworkManager-dispatcher.service
+    sudo systemctl stop network-manager.service
+    sudo systemctl disable network-manager.service
+    ```
+
+* Uninstall network manager
+
+    Remove NetworkManager from the system
+
+    ```
+    sudo apt purge network-manager
+    ```
+
+    Configure eth0 using ifup.
+
+    ```
+    sudo ifup eth0
+    ```
+
 

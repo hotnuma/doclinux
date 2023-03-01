@@ -12,20 +12,117 @@
 
 
 
+#### Processes
+    
+* polkitd polkit-gnome-authentication-agent-1
+    
+    https://wiki.archlinux.org/title/Polkit  
+    https://doc.ubuntu-fr.org/policykit  
+    
+    mem : 11543
+
+* udisksd
+    
+    https://wiki.archlinux.org/title/udisks  
+    
+    mem : 6010
+
+* systemd-resolved
+    
+    https://wiki.archlinux.org/title/systemd-resolved  
+    
+    mem : 5850
+
+* systemd-udevd
+    
+    https://linuxembedded.fr/2018/03/kernel-udev-et-systemd-la-gestion-du-hotplug  
+    
+    mem : 2722
+
+* gnome-keyring-daemon
+    
+    https://wiki.archlinux.org/title/GNOME/Keyring  
+    
+    mem : 2637
+
+* (sd-pam)
+    
+    https://www.reddit.com/r/linuxquestions/comments/n6akxv/  
+    
+    The sole purpose of this process is to wait for the service to terminate and to perform the "close PAM session" operations when that occurs.
+    
+    mem : 2622
+    
+* upowerd
+    
+    mem : 2308
+
+* systemd-logind
+    
+    mem : 1911
+
+* accounts-daemon
+    
+    mem : 1604
+
+* avahi-daemon:
+    
+    The Avahi mDNS/DNS-SD daemon implements Apple's Zeroconf architectur
+    
+    mem : 1100
+    
+* irqbalance
+    
+    mem : 563
+
+* rtkit-daemon
+    
+    Realtime Kit enables realtime scheduling for the PulseAudio daemon
+    
+    mem : 477
+
+* agetty
+    
+    mem : 372
+
+* acpid
+    
+    mem : 261
+
+
+
 #### Log files
 
 * journalctl
 
     ```
-    journalctl --boot --lines=100 --follow
+    journalctl -b -f --lines=100
     ```
+
+* Rotation des logs avec logrotate
     
-    https://unix.stackexchange.com/questions/684379/  
+    [https://journaldunadminlinux.fr/rotation-des-logs-avec-logro](https://journaldunadminlinux.fr/rotation-des-logs-avec-logrotate/)
 
-* Viewing log files
+* Delete old files
+    
+    https://unix.stackexchange.com/questions/459996/  
+    https://unix.stackexchange.com/questions/184488/  
 
-    https://ubuntu.com/tutorials/viewing-and-monitoring-log-files  
-    https://vitux.com/view-system-log-files-ubuntu/  
+    ```
+    sudo find /var/log -type f -mtime +7 -delete
+    sudo find /var/log -mindepth 1 -mtime +7 -delete
+    ```
+
+* Stop excessive logging of sudo
+    
+    https://unix.stackexchange.com/questions/224370/  
+    https://unix.stackexchange.com/questions/637227/  
+    
+    In `/etc/pam.d/sudo` replace user_name with real name
+    
+    ```
+    session [success=1 default=ignore] pam_succeed_if.so quiet uid = 0 ruser = user_name
+    ```
 
 
 
@@ -121,7 +218,7 @@
     
 * Write img file to drive /dev/sdc using systools
 
-    https://github.com/hotnuma/systools
+    https://github.com/hotnuma/systools  
     
     ```
     lsblk -p
@@ -223,6 +320,10 @@
 
 #### Firefox
 
+* Extensions
+    
+    uBlock Origin, Single File, Export Cookies
+    
 * Config
     
     about:config
@@ -301,6 +402,14 @@
     apt list thunar
     ```
     
+* List of installed files from a package
+    
+    https://askubuntu.com/questions/32507/  
+
+* Find the package that provides a file
+    
+    https://askubuntu.com/questions/481/  
+
 * Get package version
 
     

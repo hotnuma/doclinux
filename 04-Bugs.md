@@ -4,6 +4,13 @@
 
 ---
 
+#### Firefox
+    
+Impossible de lire cette vidéo avec votre navigateur  
+Votre navigateur est à jour  
+
+
+
 #### XFCE
 
 * xfsettingsd shortcuts

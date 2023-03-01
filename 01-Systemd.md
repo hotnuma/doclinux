@@ -4,6 +4,12 @@
 
 ---
 
+#### References
+
+* Journalctl cheat sheet with 10+ commands to filter systemd logs | GoLinuxCloud
+    
+    [https://www.golinuxcloud.com/view-logs-using-journalctl-filt](https://www.golinuxcloud.com/view-logs-using-journalctl-filter-journald/)
+
 * Manage services and units
     
     [https://www.digitalocean.com/community/tutorials/](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units-fr)  
@@ -33,6 +39,13 @@
     systemctl list-unit-files | grep "enabled "
     systemctl | grep running
     ```
+    
+* List timers
+    
+    ```
+    systemctl list-timers --all
+    ```
+
 * Analyze startup
 
     ```
@@ -41,7 +54,7 @@
     systemd-analyze critical-chain
     ```
 
-* Disable `systemd-oomd`
+* Disable systemd-oomd
     
     https://askubuntu.com/questions/1404888/  
     
