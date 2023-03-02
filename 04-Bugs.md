@@ -86,8 +86,8 @@ Votre navigateur est à jour
 * ifupdown
     
     https://bugs.launchpad.net/ubuntu/+source/ifupdown/+bug/1907878  
-    [https://git.launchpad.net/ubuntu/+source/ifupdown/](https://git.launchpad.net/ubuntu/+source/ifupdown/commit/?id=54fec5eedfd59adaffe9021c271914578dd05d1b)  
     https://bugs.launchpad.net/ubuntu/+source/ifupdown/+bug/1910273  
+    [https://git.launchpad.net/ubuntu/+source/ifupdown/](https://git.launchpad.net/ubuntu/+source/ifupdown/commit/?id=54fec5eedfd59adaffe9021c271914578dd05d1b)  
 
 * Startup freeze
     

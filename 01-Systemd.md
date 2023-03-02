@@ -35,8 +35,9 @@
     https://askubuntu.com/questions/795226/  
     
     ```
-    systemctl list-units --no-pager
+    systemctl list-unit-files --type=service
     systemctl list-unit-files | grep "enabled "
+    systemctl list-units --no-pager
     systemctl | grep running
     ```
     

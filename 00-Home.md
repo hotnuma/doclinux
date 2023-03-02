@@ -10,9 +10,19 @@
     
     https://specifications.freedesktop.org/  
 
+* Disable Overlay Scrollbars
+    
+    https://forums.linuxmint.com/viewtopic.php?t=298083  
+
+* Ubuntu periodic tasks
+    
+    https://0e39bf7b.blog/posts/ubuntu-periodic-tasks/
 
 
-#### Processes
+
+#### Processes / Services
+
+https://debian-facile.org/viewtopic.php?pid=254022#p254022  
     
 * polkitd polkit-gnome-authentication-agent-1
     
@@ -55,39 +65,84 @@
     
 * upowerd
     
+    https://upower.freedesktop.org/  
+    https://www.cyberciti.biz/faq/linux-upower-command-examples-and-syntax/  
+    
+    UPower is an abstraction for enumerating power devices, listening to device events and querying history and statistics. Any application or service on the system can access the org.freedesktop.UPower service via the system message bus.
+    
+    ```
     mem : 2308
+    ```
 
 * systemd-logind
     
+    https://www.freedesktop.org/software/systemd/man/systemd-logind.service.html  
+    
+    A system service that manages user logins.
+    
+    ```
     mem : 1911
+    ```
 
 * accounts-daemon
     
+    https://www.freedesktop.org/wiki/Software/AccountsService/  
+    
+    AccountsService is a D-Bus service for accessing the list of user accounts and information attached to those accounts.
+    
+    ```
     mem : 1604
+    required : no
+    ```
 
 * avahi-daemon:
     
-    The Avahi mDNS/DNS-SD daemon implements Apple's Zeroconf architectur
+    https://wiki.archlinux.org/title/avahi  
     
+    The Avahi mDNS/DNS-SD daemon implements Apple's Zeroconf architectur.
+    
+    ```
     mem : 1100
+    required : no
+    ```
     
 * irqbalance
     
+    https://linux.die.net/man/1/irqbalance  
+    
+    Distribute hardware interrupts across processors on a multiprocessor system.
+    
+    ```
     mem : 563
+    ```
 
 * rtkit-daemon
     
-    Realtime Kit enables realtime scheduling for the PulseAudio daemon
+    Realtime Kit enables realtime scheduling for the PulseAudio daemon.
     
+    ```
     mem : 477
+    ```
 
 * agetty
     
+    https://man.archlinux.org/man/agetty.8.en  
+    
+    getty@tty1 service : `systemctl status getty@tty1`
+    
+    ```
     mem : 372
+    ```
 
 * acpid
     
+    https://wiki.archlinux.org/title/acpid  
+    
+    A flexible and extensible daemon for delivering ACPI events. When an event occurs, it executes programs to handle the event.
+    
+    ```
     mem : 261
+    ```
 
 
 
@@ -110,7 +165,6 @@
 
     ```
     sudo find /var/log -type f -mtime +7 -delete
-    sudo find /var/log -mindepth 1 -mtime +7 -delete
     ```
 
 * Stop excessive logging of sudo
@@ -176,6 +230,13 @@
 * XBindKeys
     
     https://www.nongnu.org/xbindkeys/xbindkeys.html  
+
+* Reboot / Halt System
+    
+    ```
+    systemctl reboot
+    systemctl poweroff
+    ```
 
 
 
