@@ -4,10 +4,21 @@
 
 ---
 
-#### Firefox
+#### Errors
+
+* Firefox
     
-Impossible de lire cette vidéo avec votre navigateur  
-Votre navigateur est à jour  
+    https://support.google.com/youtube/thread/120697903?hl=en&msgid=120734104  
+    
+    Your browser can't play this video.  
+    Impossible de lire cette vidéo avec votre navigateur  
+    Votre navigateur est à jour  
+
+* Logs
+    
+    systemd: -.slice: Failed to migrate controller cgroups from /user.slice/user-1000.slice/user@1000.service, ignoring: Permission denied
+    
+    gnome-keyring-daemon: couldn't access control socket: /run/user/1000/keyring/control
 
 
 

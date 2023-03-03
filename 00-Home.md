@@ -18,6 +18,26 @@
     
     https://0e39bf7b.blog/posts/ubuntu-periodic-tasks/
 
+* pkexec
+    
+    https://unix.stackexchange.com/questions/203136/  
+    https://forum.ubuntu-fr.org/viewtopic.php?pid=22395969#p22395969  
+    https://stackoverflow.com/questions/6764030/  
+    https://askubuntu.com/questions/608419/  
+    https://sites.google.com/site/installationubuntu/home/ubuntu-17-10/alternatives-for-gksu-and-gksudo  
+    https://lists.ubuntu.com/archives/foundations-bugs/2012-July/100103.html  
+    https://www.freedesktop.org/software/polkit/docs/0.105/polkit-apps.html  
+
+* disable gnome-keyring-daemon
+    
+    https://unix.stackexchange.com/questions/271661/  
+    https://ubuntuforums.org/showthread.php?t=1655397  
+    
+    ```
+    /etc/pam.d/lightdm
+    /usr/share/dbus-1/services/
+    ```
+
 
 
 #### Processes / Services
@@ -92,20 +112,8 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     
     ```
     mem : 1604
-    required : no
     ```
 
-* avahi-daemon:
-    
-    https://wiki.archlinux.org/title/avahi  
-    
-    The Avahi mDNS/DNS-SD daemon implements Apple's Zeroconf architectur.
-    
-    ```
-    mem : 1100
-    required : no
-    ```
-    
 * irqbalance
     
     https://linux.die.net/man/1/irqbalance  
@@ -146,40 +154,6 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
 
 
 
-#### Log files
-
-* journalctl
-
-    ```
-    journalctl -b -f --lines=100
-    ```
-
-* Rotation des logs avec logrotate
-    
-    [https://journaldunadminlinux.fr/rotation-des-logs-avec-logro](https://journaldunadminlinux.fr/rotation-des-logs-avec-logrotate/)
-
-* Delete old files
-    
-    https://unix.stackexchange.com/questions/459996/  
-    https://unix.stackexchange.com/questions/184488/  
-
-    ```
-    sudo find /var/log -type f -mtime +7 -delete
-    ```
-
-* Stop excessive logging of sudo
-    
-    https://unix.stackexchange.com/questions/224370/  
-    https://unix.stackexchange.com/questions/637227/  
-    
-    In `/etc/pam.d/sudo` replace user_name with real name
-    
-    ```
-    session [success=1 default=ignore] pam_succeed_if.so quiet uid = 0 ruser = user_name
-    ```
-
-
-
 #### System
 
 * /bin /sbin /local/bin
@@ -188,7 +162,7 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
 
 * Environment variables
     
-    https://askubuntu.com/questions/866161/
+    https://askubuntu.com/questions/866161/  
     
     ```
     ~/.profile
@@ -379,43 +353,6 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
 
 
 
-#### Firefox
-
-* Extensions
-    
-    uBlock Origin, Single File, Export Cookies
-    
-* Config
-    
-    about:config
-    
-    ```
-    browser.sessionstore.resume_from_crash false
-    layers.acceleration.force-enabled true
-    layers.gpu-process.enabled true
-    media.gpu-process-decoder true
-    ```
-
-* Firefox ESR
-
-    ```
-    sudo add-apt-repository ppa:mozillateam/ppa
-    sudo apt update
-    sudo apt install firefox-esr
-    ```
-
-* Install Firefox deb
-    
-    https://forum.ubuntu-fr.org/viewtopic.php?id=2074608  
-    [https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-d](https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-deb-apt-ubuntu-22-04)  
-
-* How to disable DRM banner
-    
-    [https://www.reddit.com/r/firefox/comments/sgyu1s/how_to_disa](https://www.reddit.com/r/firefox/comments/sgyu1s/how_to_disable_enable_drm_banner_to_prompt/)  
-    https://support.cdn.mozilla.net/ml/questions/1388341  
-
-
-
 #### Install
 
 * Source list
@@ -435,20 +372,20 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     sudo apt autoremove --purge
     ```
 
-* Paquets Cassés
+     https://forum.ubuntu-fr.org/viewtopic.php?pid=22563731#p22563731  
+    
+    ```
+    apt list ~c
+    sudo apt purge ~c
+    ```
 
-    https://forum.ubuntu-fr.org/viewtopic.php?pid=22273320#p22273320  
+   https://forum.ubuntu-fr.org/viewtopic.php?pid=22273320#p22273320  
     
     ```
     dpkg -l | grep -v ^ii
-    ```
-    
-    Cleanup
-    
-    ```
     dpkg -l | awk '/^rc/{print $2}' | xargs -r sudo dpkg -P
     ```
-
+    
 * End of life releases
     
     https://doc.ubuntu-fr.org/old-releases  
@@ -473,7 +410,6 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
 
 * Get package version
 
-    
     ```
     dpkg -l libgtk-3-0 | grep ^ii
     ```
@@ -530,6 +466,44 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     ```
     sudo apt install nvidia-driver-470
     ```
+
+
+#### Firefox
+
+* Extensions
+    
+    uBlock Origin, Single File, Export Cookies
+    
+* Config
+    
+    about:config
+    
+    ```
+    browser.sessionstore.resume_from_crash false
+    layers.acceleration.force-enabled true
+    layers.gpu-process.enabled true
+    media.gpu-process-decoder true
+    ```
+
+* Firefox ESR
+    
+    https://ubuntuhandbook.org/index.php/2022/03/install-firefox-esr-ubuntu/  
+
+    ```
+    sudo add-apt-repository ppa:mozillateam/ppa
+    sudo apt update
+    sudo apt install firefox-esr
+    ```
+
+* Install Firefox deb
+    
+    https://forum.ubuntu-fr.org/viewtopic.php?id=2074608  
+    [https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-d](https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-deb-apt-ubuntu-22-04)  
+
+* How to disable DRM banner
+    
+    [https://www.reddit.com/r/firefox/comments/sgyu1s/how_to_disa](https://www.reddit.com/r/firefox/comments/sgyu1s/how_to_disable_enable_drm_banner_to_prompt/)  
+    https://support.cdn.mozilla.net/ml/questions/1388341  
 
 
 

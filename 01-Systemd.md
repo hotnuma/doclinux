@@ -6,9 +6,9 @@
 
 #### References
 
-* Journalctl cheat sheet with 10+ commands to filter systemd logs | GoLinuxCloud
-    
-    [https://www.golinuxcloud.com/view-logs-using-journalctl-filt](https://www.golinuxcloud.com/view-logs-using-journalctl-filter-journald/)
+https://www.freedesktop.org/software/systemd/man/systemctl.html  
+[https://access.redhat.com/attachments/12052018_systemd_6.pdf](https://access.redhat.com/sites/default/files/attachments/12052018_systemd_6.pdf)  
+[https://access.redhat.com/documentation/](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/chap-managing_services_with_systemd)  
 
 * Manage services and units
     
@@ -47,6 +47,46 @@
     systemctl list-timers --all
     ```
 
+
+
+#### Log files
+
+[https://www.golinuxcloud.com/view-logs-using-journalctl-filt](https://www.golinuxcloud.com/view-logs-using-journalctl-filter-journald/)
+
+* journalctl
+
+    ```
+    journalctl -b -f --lines=100
+    ```
+
+* Rotation des logs avec logrotate
+    
+    [https://journaldunadminlinux.fr/rotation-des-logs-avec-logro](https://journaldunadminlinux.fr/rotation-des-logs-avec-logrotate/)
+
+* Delete old files
+    
+    https://unix.stackexchange.com/questions/459996/  
+    https://unix.stackexchange.com/questions/184488/  
+
+    ```
+    sudo find /var/log -type f -mtime +7 -delete
+    ```
+
+* Stop excessive logging of sudo
+    
+    https://unix.stackexchange.com/questions/224370/  
+    https://unix.stackexchange.com/questions/637227/  
+    
+    In `/etc/pam.d/sudo` replace user_name with real name
+    
+    ```
+    session [success=1 default=ignore] pam_succeed_if.so quiet uid = 0 ruser = user_name
+    ```
+
+
+
+#### Other
+
 * Analyze startup
 
     ```
@@ -73,10 +113,4 @@
     journalctl -b -1 -e
     ```
     
-* References
-    
-    https://www.freedesktop.org/software/systemd/man/systemctl.html  
-    [https://access.redhat.com/attachments/12052018_systemd_6.pdf](https://access.redhat.com/sites/default/files/attachments/12052018_systemd_6.pdf)  
-    [https://access.redhat.com/documentation/](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/chap-managing_services_with_systemd)  
-
 

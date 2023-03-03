@@ -1,5 +1,4 @@
 
-
 #### Articles
 
 * Diagnostic commands
@@ -24,14 +23,15 @@
     ~/.profile
     ```
 
-* disable gnome-keyring-daemon
+* avahi-daemon:
     
-    https://unix.stackexchange.com/questions/271661/  
-    https://ubuntuforums.org/showthread.php?t=1655397  
+    https://wiki.archlinux.org/title/avahi  
+    
+    The Avahi mDNS/DNS-SD daemon implements Apple's Zeroconf architectur.
     
     ```
-    /etc/pam.d/lightdm
-    /usr/share/dbus-1/services/
+    mem : 1100
+    required : no
     ```
 
 * Desktop entries
@@ -41,6 +41,24 @@
 * Regex tutorials
     
     [https://www3.ntu.edu.sg/home/ehchua/...](https://www3.ntu.edu.sg/home/ehchua/programming/howto/Regexe.html)  
+
+* Hide menu items
+    
+    https://bbs.archlinux.org/viewtopic.php?id=138015  
+    
+    ```
+    echo "NoDisplay=true" > $HOME/.local/share/applications/hplj1020.desktop
+    ```
+
+* List processes
+    
+    ps_mem : https://github.com/pixelb/ps_mem
+
+    by mem usage
+    
+    ```
+    top -b -o +%MEM | head -n 30
+    ```
 
 * CPU top processes
     
@@ -136,7 +154,6 @@
     ```
     sudo ntfsfix /dev/sda1
     ```
-
 
 * Downmix stereo to mono
     
@@ -266,27 +283,5 @@
 * RMC Story url
 
     youtube-dl http://players.brightcove.net/data-account/default_default/index.html?videoId=data-video-id
-
-
-
-<!--
-* Hide menu items
-    
-    https://bbs.archlinux.org/viewtopic.php?id=138015  
-    
-    ```
-    echo "NoDisplay=true" > $HOME/.local/share/applications/hplj1020.desktop
-    ```
-
-* List processes
-    
-    ps_mem : https://github.com/pixelb/ps_mem
-
-    by mem usage
-    
-    ```
-    top -b -o +%MEM | head -n 30
-    ```
--->
 
 
