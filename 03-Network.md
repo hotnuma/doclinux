@@ -41,7 +41,9 @@
     [https://support.solusvm.com/hc/en-us/articles/360018794671-H](https://support.solusvm.com/hc/en-us/articles/360018794671-How-to-configure-Ubuntu-18-to-use-eth0-and-switch-back-to-etc-network-interfaces-file-)  
 
 * resolvconf
-
+    
+    https://fr.linux-console.net/?p=1413#gsc.tab=0  
+    
     ```
     # check to see if resolvconf is installed
     sudo systemctl status resolvconf.service

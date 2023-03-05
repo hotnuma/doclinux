@@ -10,9 +10,9 @@
     
     https://specifications.freedesktop.org/  
 
-* Disable Overlay Scrollbars
+* Memory Usage
     
-    https://forums.linuxmint.com/viewtopic.php?t=298083  
+    https://itvision.altervista.org/linux-desktop-environments-system-usage.html  
 
 * Ubuntu periodic tasks
     
@@ -28,14 +28,35 @@
     https://lists.ubuntu.com/archives/foundations-bugs/2012-July/100103.html  
     https://www.freedesktop.org/software/polkit/docs/0.105/polkit-apps.html  
 
-* disable gnome-keyring-daemon
+
+
+#### Enable / Disable
+
+* Disable Overlay Scrollbars
     
-    https://unix.stackexchange.com/questions/271661/  
-    https://ubuntuforums.org/showthread.php?t=1655397  
+    https://forums.linuxmint.com/viewtopic.php?t=298083  
+
+* Disable at-spi
+    
+    https://wiki.archlinux.de/title/GNOME#Tipps_und_Tricks  
+    
+    In `/etc/environment` add :
     
     ```
-    /etc/pam.d/lightdm
-    /usr/share/dbus-1/services/
+    export NO_AT_BRIDGE=1
+    ```
+
+* Disable AppArmor
+    
+    https://linuxconfig.org/how-to-disable-apparmor-on-ubuntu-20-04-focal-fossa-linux  
+    https://help.ubuntu.com/community/AppArmor  
+
+* Disable autostart programs
+    
+    https://wiki.archlinux.org/title/XDG_Autostart  
+
+    ```
+    echo "Hidden=true" > $HOME/.config/autostart/xcompmgr.desktop
     ```
 
 
@@ -46,8 +67,10 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     
 * polkitd polkit-gnome-authentication-agent-1
     
+    https://www.freedesktop.org/software/polkit/docs/latest/polkit.8.html  
     https://wiki.archlinux.org/title/Polkit  
-    https://doc.ubuntu-fr.org/policykit  
+    
+    Polkit is used for controlling system-wide privileges. It provides an organized way for non-privileged processes to communicate with privileged ones. In contrast to systems such as sudo, it does not grant root permission to an entire process, but rather allows a finer level of control of centralized system policy.
     
     mem : 11543
 
@@ -72,6 +95,8 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
 * gnome-keyring-daemon
     
     https://wiki.archlinux.org/title/GNOME/Keyring  
+    
+    Directory : `~/.local/share/keyrings`
     
     mem : 2637
 
@@ -156,17 +181,33 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
 
 #### System
 
-* /bin /sbin /local/bin
+* /sbin /bin /local/bin
     
     https://askubuntu.com/questions/308045/  
 
+* Edit grub.conf
+    
+    https://askubuntu.com/questions/575651/  
+    
+    Modify : `/etc/default/grub`
+    
+    Execute : `sudo update-grub`
+    
 * Environment variables
     
     https://askubuntu.com/questions/866161/  
     
     ```
-    ~/.profile
     /etc/environment
+    ~/.profile
+    ```
+    
+* Locale
+    
+    https://wiki.archlinux.org/title/locale
+    
+    ```
+    /etc/default/locale
     ```
     
 * File associations
@@ -177,15 +218,9 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     
     https://askubuntu.com/questions/1179729/  
 
-* Locale
-    
-    https://wiki.archlinux.org/title/locale
-    
-    ```
-    /etc/default/locale
-    ```
-    
 * Alias
+    
+    List aliases : `alias`
     
     Define aliases in `~/.bash_aliases` or `~/.bashrc`
 
@@ -193,14 +228,6 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     alias cgrep='grep -rni --include=*.{h,c,cpp,cxx}'
     ```
 
-* Disable autostart program
-    
-    https://wiki.archlinux.org/title/XDG_Autostart
-
-    ```
-    echo "Hidden=true" > $HOME/.config/autostart/xcompmgr.desktop
-    ```
-    
 * XBindKeys
     
     https://www.nongnu.org/xbindkeys/xbindkeys.html  
@@ -400,13 +427,13 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     apt list thunar
     ```
     
-* List of installed files from a package
-    
-    https://askubuntu.com/questions/32507/  
-
 * Find the package that provides a file
     
     https://askubuntu.com/questions/481/  
+
+* List of installed files from a package
+    
+    https://askubuntu.com/questions/32507/  
 
 * Get package version
 

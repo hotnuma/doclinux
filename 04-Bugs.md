@@ -6,19 +6,61 @@
 
 #### Errors
 
+* gnome-keyring-daemon
+    
+    https://bbs.archlinux.org/viewtopic.php?id=224652  
+    https://askubuntu.com/questions/243210/  
+    
+    ```
+    gnome-keyring-daemon: couldn't access control socket: /run/user/1000/keyring/control
+    ```
+
+* udisk2
+    
+    https://github.com/storaged-project/udisks/issues/638  
+    https://github.com/storaged-project/udisks/commit/818b7b29b0d8fee43994646a944d046b1cf47633  
+
+    ```
+    udisksd: failed to load module mdraid: libbd_mdraid.so.2: cannot open shared object file: No such file or directory
+    udisksd: Failed to load the 'mdraid' libblockdev plugin
+
+    /etc/udisks2/udisks2.conf
+    ```
+
+* systemd
+    
+    https://bbs.archlinux.org/viewtopic.php?id=261330  
+
+    ```
+    systemd: -.slice: Failed to migrate controller cgroups from
+    /user.slice/user-1000.slice/user@1000.service, ignoring: Permission denied
+    ```
+    
+    In `/etc/default/grub` edit `GRUB_CMDLINE_LINUX_DEFAULT` :
+    
+    `GRUB_CMDLINE_LINUX_DEFAULT="systemd.unified_cgroup_hierarchy=true quiet splash"`
+
+    Update grub.conf : `sudo update-grub`
+
+* Startup/Restart freeze
+    
+    ```
+    nov. 15 16:28:59 athlon kernel: [drm:drm_atomic_helper_wait_for_flip_done [drm_kms_helper]] *ERROR* [CRTC:62:crtc-0] flip_done timed out
+    ```
+
+    ```
+    dev/sdaX: clean, X files, X blocks
+    ```
+    
 * Firefox
     
     https://support.google.com/youtube/thread/120697903?hl=en&msgid=120734104  
-    
-    Your browser can't play this video.  
-    Impossible de lire cette vidéo avec votre navigateur  
-    Votre navigateur est à jour  
 
-* Logs
-    
-    systemd: -.slice: Failed to migrate controller cgroups from /user.slice/user-1000.slice/user@1000.service, ignoring: Permission denied
-    
-    gnome-keyring-daemon: couldn't access control socket: /run/user/1000/keyring/control
+    ```
+    Your browser can't play this video.
+    Impossible de lire cette vidéo avec votre navigateur
+    Votre navigateur est à jour
+    ```
 
 
 
@@ -62,7 +104,7 @@
 * Double click bug
 
     https://discourse.gnome.org/t/double-click-on-already-selected-item-will-often-not-open-item-in-nautilus/4590/5  
-    https://gitlab.gnome.org/GNOME/nautilus/-/issues/1599
+    https://gitlab.gnome.org/GNOME/nautilus/-/issues/1599  
 
 * GtkTreeView Memory leak
     
@@ -74,6 +116,13 @@
 
 
 #### Other
+
+* Mpv
+    
+    ```
+    ls -l /var/crash
+    -rw-r-----  1 hotnuma hotnuma 23227218 févr. 24 05:59 _usr_bin_mpv.1000.crash
+    ```
 
 * QtCreator printf
 
@@ -99,12 +148,6 @@
     https://bugs.launchpad.net/ubuntu/+source/ifupdown/+bug/1907878  
     https://bugs.launchpad.net/ubuntu/+source/ifupdown/+bug/1910273  
     [https://git.launchpad.net/ubuntu/+source/ifupdown/](https://git.launchpad.net/ubuntu/+source/ifupdown/commit/?id=54fec5eedfd59adaffe9021c271914578dd05d1b)  
-
-* Startup freeze
-    
-    ```
-    nov. 15 16:28:59 athlon kernel: [drm:drm_atomic_helper_wait_for_flip_done [drm_kms_helper]] *ERROR* [CRTC:62:crtc-0] flip_done timed out
-    ```
 
 * Plymouth KillMode=none
     

@@ -69,7 +69,9 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     https://unix.stackexchange.com/questions/184488/  
 
     ```
-    sudo find /var/log -type f -mtime +7 -delete
+    sudo find /var/log -type f -mtime +5 -delete
+    sudo find /var/log -maxdepth 1 -type f -mtime +5 -delete
+    sudo find /var/log ! -wholename "/var/log/journal/*" -type f -mtime +5 -delete
     ```
 
 * Stop excessive logging of sudo

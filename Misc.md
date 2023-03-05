@@ -9,18 +9,20 @@
 
     https://forum.ubuntu-fr.org/viewtopic.php?id=20437
 
-* Disable at-spi
+* Disable gnome-keyring-daemon
     
-    According to https://wiki.archlinux.de/title/GNOME#Tipps_und_Tricks
+    https://ubuntuforums.org/showthread.php?t=1655397  
+    https://unix.stackexchange.com/questions/271661/  
+    https://unix.stackexchange.com/questions/612525/  
     
     ```
-    export NO_AT_BRIDGE=1
+    /etc/pam.d/lightdm
 
-    in /etc/environment.
-    ```
-    or
-    ```
-    ~/.profile
+    grep -r "gnome-keyring-daemon" /usr/share/dbus-1/services/
+    
+    /usr/share/dbus-1/services/org.freedesktop.secrets.service
+    /usr/share/dbus-1/services/org.gnome.keyring.service
+    /usr/share/dbus-1/services/org.freedesktop.impl.portal.Secret.service
     ```
 
 * avahi-daemon:
