@@ -4,6 +4,14 @@
 
 ---
 
+#### Forums
+    
+https://forums.linuxmint.com/search.php?search_id=active_topics  
+https://ubuntuforums.org/search.php?do=getnew&contenttype=vBForum_Post  
+https://forums.debian.net/search.php?search_id=active_topics  
+https://forum.manjaro.org/latest  
+https://forum.palemoon.org/search.php?search_id=active_topics  
+
 #### Anti-Linux :-D
 
 * Horrible Gnome

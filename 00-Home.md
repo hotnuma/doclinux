@@ -78,11 +78,15 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     
     https://wiki.archlinux.org/title/udisks  
     
+    udisks provides a daemon udisksd, that implements D-Bus interfaces used to query and manipulate storage devices, and a command-line tool udisksctl, used to query and use the daemon.
+    
     mem : 6010
 
 * systemd-resolved
     
     https://wiki.archlinux.org/title/systemd-resolved  
+    
+    `systemd-resolved` is a systemd service that provides network name resolution to local applications via a D-Bus interface, the resolve NSS service (nss-resolve), and a local DNS stub listener on 127.0.0.53.
     
     mem : 5850
 
@@ -90,11 +94,15 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     
     https://linuxembedded.fr/2018/03/kernel-udev-et-systemd-la-gestion-du-hotplug  
     
+    `systemd-udevd` listens to kernel uevents. For every event, systemd-udevd executes matching instructions specified in udev rules.
+    
     mem : 2722
 
 * gnome-keyring-daemon
     
     https://wiki.archlinux.org/title/GNOME/Keyring  
+    
+    GNOME Keyring is a collection of components that store secrets, passwords, keys, certificates and make them available to applications.
     
     Directory : `~/.local/share/keyrings`
     
@@ -161,7 +169,11 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     
     https://man.archlinux.org/man/agetty.8.en  
     
-    getty@tty1 service : `systemctl status getty@tty1`
+    Ctrl+Alt+F1 terminal started by getty@tty1 service :
+    
+    ```
+    systemctl status getty@tty1
+    ```
     
     ```
     mem : 372
