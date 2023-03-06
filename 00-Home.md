@@ -21,13 +21,8 @@
 * pkexec
     
     https://unix.stackexchange.com/questions/203136/  
-    https://forum.ubuntu-fr.org/viewtopic.php?pid=22395969#p22395969  
-    https://stackoverflow.com/questions/6764030/  
     https://askubuntu.com/questions/608419/  
-    https://sites.google.com/site/installationubuntu/home/ubuntu-17-10/alternatives-for-gksu-and-gksudo  
-    https://lists.ubuntu.com/archives/foundations-bugs/2012-July/100103.html  
-    https://www.freedesktop.org/software/polkit/docs/0.105/polkit-apps.html  
-
+    
 
 
 #### Enable / Disable

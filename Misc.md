@@ -25,6 +25,12 @@
     /usr/share/dbus-1/services/org.freedesktop.impl.portal.Secret.service
     ```
 
+* Gtk File Chooser
+    
+    https://gitlab.xfce.org/xfce/thunar/-/issues/547  
+    [https://www.reddit.com/r/xfce/comments/kk8xo5/file_chooser_b](https://www.reddit.com/r/xfce/comments/kk8xo5/file_chooser_buttons_in_csd_titlebar_not_of/)  
+    [https://superuser.com/questions/944119/replace-gtk-file-dial](https://superuser.com/questions/944119/replace-gtk-file-dialog-with-alternative)  
+
 * avahi-daemon:
     
     https://wiki.archlinux.org/title/avahi  
