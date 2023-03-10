@@ -7,6 +7,8 @@
 https://ffmpeg.org/documentation.html  
 https://ffmpeg.org/ffmpeg-filters.html  
 
+[https://www.codeproject.com/Tips/5356341/](https://www.codeproject.com/Tips/5356341/How-to-Compile-FFmpeg-6-0-in-Linux-and-What-New-Th)  
+
 
 
 #### Audio

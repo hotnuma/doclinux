@@ -12,6 +12,16 @@ https://forums.debian.net/search.php?search_id=active_topics
 https://forum.manjaro.org/latest  
 https://forum.palemoon.org/search.php?search_id=active_topics  
 
+
+
+#### Articles
+
+* Set  default audio output
+    
+    https://askubuntu.com/questions/1038490/  
+
+
+
 #### Anti-Linux :-D
 
 * Horrible Gnome
