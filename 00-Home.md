@@ -469,12 +469,22 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
 
 * yt-dlp
     
-    https://github.com/yt-dlp/yt-dlp
+    https://github.com/yt-dlp/yt-dlp  
     
     Install or Update :
     
     ```
     python3 -m pip install -U yt-dlp
+    ```
+
+* youtube-dl
+    
+    https://github.com/ytdl-org/youtube-dl  
+    
+    Install or Update :
+        
+    ```
+    sudo -H pip install --upgrade youtube-dl
     ```
     
 * Codecs and fonts
@@ -485,7 +495,7 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
 
 * NVidia Drivers
 
-    https://phoenixnap.com/kb/install-nvidia-drivers-ubuntu
+    https://phoenixnap.com/kb/install-nvidia-drivers-ubuntu  
 
     ```
     apt search nvidia-driver
