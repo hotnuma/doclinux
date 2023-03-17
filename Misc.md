@@ -97,7 +97,7 @@
     
     https://unix.stackexchange.com/questions/35508/
 
-* mount NTFS partition
+* Mount NTFS partition
     
     https://superuser.com/questions/1049044/  
 
