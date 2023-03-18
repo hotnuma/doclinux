@@ -246,6 +246,12 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     systemctl poweroff
     ```
 
+* Default boot target
+
+    ```
+    sudo systemctl get-default
+    sudo systemctl set-default graphical.target
+    ```
 
 
 #### Drives
