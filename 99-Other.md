@@ -20,6 +20,11 @@ https://forum.palemoon.org/search.php?search_id=active_topics
     
     https://askubuntu.com/questions/1038490/  
 
+* Default network interface
+    
+    [https://unix.stackexchange.com/questions/14961/how-to-find-o](https://unix.stackexchange.com/questions/14961/how-to-find-out-which-interface-am-i-using-for-connecting-to-the-internet/14967#14967)  
+    [https://serverfault.com/questions/842964/bash-script-to-retr](https://serverfault.com/questions/842964/bash-script-to-retrieve-name-of-ethernet-network-interface)  
+
 
 
 #### Anti-Linux :-D

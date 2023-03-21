@@ -9,6 +9,21 @@
 
     https://forum.ubuntu-fr.org/viewtopic.php?id=20437
 
+* Install XFCE Desktop on Debian
+    
+    [http://linux.how2shout.com/2-ways-to-install-xfce-desktop-on](http://linux.how2shout.com/2-ways-to-install-xfce-desktop-on-debian-11-bullseye/)  
+
+* Display network traffic
+    
+    [https://askubuntu.com/questions/257263/how-to-display-networ](https://askubuntu.com/questions/257263/how-to-display-network-traffic-in-the-terminal)  
+    [https://askubuntu.com/questions/2411/how-do-i-find-out-which](https://askubuntu.com/questions/2411/how-do-i-find-out-which-process-is-eating-up-my-bandwidth)  
+    [https://askubuntu.com/questions/532424/how-to-monitor-bandwi](https://askubuntu.com/questions/532424/how-to-monitor-bandwidth-usage-per-process)  
+    https://forum.ubuntu-fr.org/viewtopic.php?id=2018157  
+    https://forum.ubuntu-fr.org/viewtopic.php?id=443009  
+    https://forum.ubuntu-fr.org/viewtopic.php?id=1600291  
+    https://doc.ubuntu-fr.org/trafic  
+    https://geekflare.com/fr/netstat/  
+
 * Disable gnome-keyring-daemon
     
     https://ubuntuforums.org/showthread.php?t=1655397  

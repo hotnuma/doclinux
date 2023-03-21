@@ -27,7 +27,6 @@
 
 
 
-
 #### Interfaces
 
 * Predictable Network Interface Names
