@@ -308,3 +308,41 @@
     youtube-dl http://players.brightcove.net/data-account/default_default/index.html?videoId=data-video-id
 
 
+
+## Wayland
+
+---
+
+* References
+    
+    https://wiki.archlinux.org/title/wayland  
+
+* awesome-wayland : a curated list of Wayland code and resources
+    
+    https://github.com/natpen/awesome-wayland  
+
+* wlroots : a modular Wayland compositor library
+    
+    https://gitlab.freedesktop.org/wlroots/wlroots  
+
+* Labwc : a Wayland stacking compositor
+    
+    https://github.com/labwc/labwc  
+
+* Xfce Xfwm4
+    
+    https://github.com/adlocode/xfwm4/tree/wlroots  
+
+* Waybar : a highly customizable Wayland bar
+    
+    https://github.com/Alexays/Waybar  
+
+* Yes another task bar for Wayland
+    
+    https://github.com/selairi/yatbfw  
+
+* Wayward
+    
+    https://github.com/varmd/wayward
+
+

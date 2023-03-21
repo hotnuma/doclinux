@@ -1,4 +1,4 @@
-**[ [Home](00-Home.html) | [Systemd](01-Systemd.html) | [FFmpeg](02-FFmpeg.html) | Network | [Bugs](04-Bugs.html) | [Other](99-Other.html) ]**
+**[ [Home](00-Home.html) | [Systemd](01-Systemd.html) | Network | [FFmpeg](03-FFmpeg.html) | [Bugs](04-Bugs.html) | [Other](99-Other.html) ]**
 
 ## Network
 
@@ -18,12 +18,17 @@
     
     https://askubuntu.com/questions/1080230/  
 
-* Find the default networking interface
+* Default network interface
     
+    ```
+    ip route show default | cut -d " " -f 5
+    ```
+    
+    https://unix.stackexchange.com/questions/14961/  
+    https://serverfault.com/questions/842964/  
     https://stackoverflow.com/questions/15668653/  
     [https://www.linuxquestions.org/questions/linux-networking-3/](https://www.linuxquestions.org/questions/linux-networking-3/howto-find-gateway-address-through-code-397078/)  
     https://unix.stackexchange.com/questions/270008/  
-    https://unix.stackexchange.com/questions/14961/  
 
 
 
