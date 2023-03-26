@@ -142,7 +142,42 @@
     sudo umount /dev/sdc1
     sudo mkfs.ntfs -f -L "Backup" /dev/sdc1
     ```
+
+* Rename partition
     
+    ```
+    sudo ntfslabel -f /dev/sdc1 Backup1
+    ```
+
+* Fix NTFS
+    
+    ```
+    sudo ntfsfix /dev/sdc1
+    ```
+
+* Power Off Drive
+    
+    https://askubuntu.com/questions/671683/  
+    
+    ```
+    sync
+    sudo hdparm -Y /dev/sdX
+    
+    sync
+    udisksctl power-off -b /dev/sdX
+    
+    sync
+    echo 1 | sudo tee /sys/block/sdc/device/delete
+    ```
+
+* Check drive spin down
+
+    https://superuser.com/questions/173622/  
+
+* Eject USB drives
+    
+    https://unix.stackexchange.com/questions/35508/
+
 * Unmount all partitions
 
     ```
@@ -322,6 +357,12 @@
 
     ```
     dpkg -l libgtk-3-0 | grep ^ii
+    ```
+
+* Purge Apt Cache
+
+    ```
+    sudo apt clean ; sudo apt autoclean
     ```
 
 * Ubuntu upgrade system

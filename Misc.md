@@ -104,18 +104,6 @@
     pgrep firefox 
     ```
 
-* Check drive spin down
-
-    https://superuser.com/questions/173622/  
-
-* Eject USB drives
-    
-    https://unix.stackexchange.com/questions/35508/
-
-* Mount NTFS partition
-    
-    https://superuser.com/questions/1049044/  
-
 * Block Unwanted Content Using uBlock Origin
     
     [https://www.freecodecamp.org/news/how-to-block-content-from-](https://www.freecodecamp.org/news/how-to-block-content-from-web-pages-using-ublock-origin/)  
@@ -132,21 +120,6 @@
 * Command fd not found
     
     https://github.com/sharkdp/fd/issues/791
-
-* Reset IDLE time
-    
-    https://askubuntu.com/questions/1323618/  
-
-* Stop dkms from blanking the screen
-    
-    ```
-    xset dpms force off
-    ```
-
-* turn off screen
-
-    https://superuser.com/questions/374637/how-to-turn-off-screen-with-shortcut-in-linux  
-    https://qastack.fr/superuser/31726/how-to-disable-the-screen-linux-without-x  
 
 * Install desktop using tasksel
 
@@ -169,22 +142,9 @@
     4194304
     ```
     
-* ntfs fix
-    
-    ```
-    chkdsk /r d:
-    ```
-    ```
-    sudo ntfsfix /dev/sda1
-    ```
-
 * Downmix stereo to mono
     
     https://askubuntu.com/questions/17791/
-
-* Power manager
-
-    https://wiki.archlinux.org/title/Display_Power_Management_Signaling
 
 * diagnostics
     
@@ -225,6 +185,34 @@
     libxss-dev
     socat
     ```
+
+
+#### Drives and Power Manager
+
+* Reset IDLE time
+    
+    https://askubuntu.com/questions/1323618/  
+
+* Stop dkms from blanking the screen
+    
+    ```
+    xset dpms force off
+    ```
+
+* turn off screen
+
+    https://superuser.com/questions/374637/how-to-turn-off-screen-with-shortcut-in-linux  
+    https://qastack.fr/superuser/31726/how-to-disable-the-screen-linux-without-x  
+
+* ntfs fix
+    
+    ```
+    chkdsk /r d:
+    ```
+
+* Power manager
+
+    https://wiki.archlinux.org/title/Display_Power_Management_Signaling
 
 
 
@@ -291,16 +279,6 @@
 
 
 
-#### Packages
-
-* pour purger les caches du gestionnaire de paquets APT/.deb
-
-    ```
-    sudo apt clean ; sudo apt autoclean
-    ```
-
-
-
 #### youtube-dl
 
 * RMC Story url
@@ -309,9 +287,7 @@
 
 
 
-## Wayland
-
----
+#### Wayland
 
 * References
     
