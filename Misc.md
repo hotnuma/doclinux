@@ -1,4 +1,37 @@
 
+
+#### Libraries
+
+* Awesome C
+    
+    https://github.com/uhub/awesome-c  
+
+* Simple Dynamic Strings
+    
+    https://github.com/antirez/sds  
+
+
+
+#### XML Parser
+
+* A simple C XML parser - Stack Overflow
+    
+    [https://stackoverflow.com/questions/2851983/a-simple-c-xml-p](https://stackoverflow.com/questions/2851983/a-simple-c-xml-parser)
+
+* C XML library for Embedded Systems - Stack Overflow
+    
+    [https://stackoverflow.com/questions/1131701/c-xml-library-fo](https://stackoverflow.com/questions/1131701/c-xml-library-for-embedded-systems)
+
+* Is there a good tiny XML parser for an embedded C project? - Stack Overflow
+    
+    [https://stackoverflow.com/questions/3739474/is-there-a-good-](https://stackoverflow.com/questions/3739474/is-there-a-good-tiny-xml-parser-for-an-embedded-c-project)
+
+* xml.c
+    
+    https://github.com/ooxi/xml.c  
+
+
+
 #### Articles
 
 * Diagnostic commands
