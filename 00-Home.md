@@ -169,13 +169,7 @@
     
     ```
     sync
-    sudo hdparm -Y /dev/sdX
-    
-    sync
     udisksctl power-off -b /dev/sdX
-    
-    sync
-    echo 1 | sudo tee /sys/block/sdc/device/delete
     ```
 
 * Check drive spin down
