@@ -57,6 +57,7 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
 
     ```
     journalctl -b -f --lines=100
+    journalctl --no-pager -b -p err
     ```
 
 * Rotation des logs avec logrotate
