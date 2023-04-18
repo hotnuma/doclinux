@@ -18,14 +18,19 @@ https://ffmpeg.org/ffmpeg-filters.html
     ```
     ffmpeg -i input.m4a -c:a libmp3lame -b:a 192k output.mp3
     ```
+    
 * Keep left channel
+
     ```
     ffmpeg -i "input.avi" -c:v copy -c:a libmp3lame -b:a 192k -af "pan=stereo|c0=c0|c1=c0" "output.avi"
     ```
+    
 * Keep right channel
+
     ```
     ffmpeg -i "input.avi" -c:v copy -c:a libmp3lame -b:a 192k -af "pan=stereo|c0=c1|c1=c1" "output.avi"
     ```
+    
 * Audio normalize
 
     http://superuser.com/questions/323119/
@@ -79,11 +84,14 @@ https://ffmpeg.org/ffmpeg-filters.html
 #### Subtitles
 
 * Download subtitles from YouTube
+
     ```
     youtube-dl --write-sub --sub-lang en --skip-download "URL"
     youtube-dl --cookies=cookies/youtube.txt --write-auto-sub --convert-subs=srt --skip-download "URL"
     ```
-* Remove subtitles and chapters :
+    
+* Remove subtitles and chapters
+
     ```
     ffmpeg -i in.mp4 -c copy -sn out.mp4
     ```
@@ -93,17 +101,22 @@ https://ffmpeg.org/ffmpeg-filters.html
     ```
     ffmpeg -i in.mp4 -c copy -dn -map_metadata:c -1 out.mp4
     ```
+    
 * Extract subs with MKVToolNix
+
     ```
     mkvextract tracks "input.mkv" 2:out.idx
     ```
+    
 * Convert sub to srt online
 
-    https://subtitletools.com/convert-sub-idx-to-srt-online
+    https://subtitletools.com/convert-sub-idx-to-srt-online  
 
 
 
-#### Use cookies with YouTube
+#### Cookies
+
+* Youtube
 
     yt-dlp --cookies=cookies.txt "URL"
 
@@ -114,7 +127,7 @@ https://ffmpeg.org/ffmpeg-filters.html
 * Concatenating files
     
     https://stackoverflow.com/questions/7333232/  
-    https://trac.ffmpeg.org/wiki/Concatenate
+    https://trac.ffmpeg.org/wiki/Concatenate  
 
     Create a file containing the list of files to concatenate :
     
@@ -149,10 +162,13 @@ https://ffmpeg.org/ffmpeg-filters.html
     the input file is specified with -i).
 
     Generate pts
+    
     ```
     ffmpeg -fflags +genpts -i film.avi -codec copy film.mp4
     ```
+    
     or
+    
     ```
     ffmpeg -i source.mp4 -map 0:v -vcodec copy -bsf:v h264_mp4toannexb source-video.h264
 
