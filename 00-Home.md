@@ -166,6 +166,7 @@
 * Power Off Drive
     
     https://askubuntu.com/questions/671683/  
+    https://forum.manjaro.org/t/eject-external-hard-drive-option-gone/61895/6  
     
     ```
     sync
@@ -253,6 +254,14 @@
     ```
     ln -s target_path link_name
     ```
+
+* Check open files
+    
+    https://linuxhint.com/check-open-files-in-linux/  
+
+* Get file's MIME type
+    
+    [https://stackoverflow.com/questions/2227182/how-can-i-find-o](https://stackoverflow.com/questions/2227182/how-can-i-find-out-a-files-mime-type-content-type)  
 
 * Ignore errors
     

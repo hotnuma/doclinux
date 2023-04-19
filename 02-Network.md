@@ -17,6 +17,10 @@
 * DNS
     
     https://askubuntu.com/questions/1080230/  
+    
+* Change DNS configuration
+    
+    https://forum.ubuntu-fr.org/viewtopic.php?id=2078751  
 
 * Default network interface
     
