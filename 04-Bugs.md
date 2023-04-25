@@ -113,6 +113,10 @@
     https://gitlab.gnome.org/GNOME/gtk/-/pipelines/289296  
     https://gitlab.gnome.org/GNOME/gtk/-/merge_requests/3660  
 
+* Gtk 3.24.26 preedit bug
+    
+    https://gitlab.gnome.org/GNOME/gtk/-/issues/5744  
+
 
 
 #### Other
