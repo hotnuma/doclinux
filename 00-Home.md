@@ -331,6 +331,12 @@
     ```
     sudo apt autoremove --purge
     ```
+    
+    or
+    
+    ```
+    sudo apt autopurge
+    ```
 
      https://forum.ubuntu-fr.org/viewtopic.php?pid=22563731#p22563731  
     
