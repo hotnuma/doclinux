@@ -491,6 +491,10 @@
 
 #### Misc
 
+* Check VA-API
+
+    `vainfo`
+
 * Change desktop background
 
     Solid color : `hsetroot -solid '#5e5c64'`
