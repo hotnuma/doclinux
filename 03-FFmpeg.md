@@ -1,3 +1,5 @@
+<link href="style.css" rel="stylesheet"></link>
+
 **[ [Home](00-Home.html) | [Systemd](01-Systemd.html) | [Network](02-Network.html) | FFmpeg | [Bugs](04-Bugs.html) | [Other](99-Other.html) ]**
 
 ## FFmpeg

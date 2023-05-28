@@ -1,3 +1,5 @@
+<link href="style.css" rel="stylesheet"></link>
+
 **[ Home | [Systemd](01-Systemd.html) | [Network](02-Network.html) | [FFmpeg](03-FFmpeg.html) | [Bugs](04-Bugs.html) | [Other](99-Other.html) ]**
 
 ## Docs Linux
