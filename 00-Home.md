@@ -39,9 +39,7 @@
     
     In `/etc/environment` add :
     
-    ```
-    export NO_AT_BRIDGE=1
-    ```
+    `export NO_AT_BRIDGE=1`
 
 * Disable AppArmor
     
@@ -52,9 +50,7 @@
     
     https://wiki.archlinux.org/title/XDG_Autostart  
 
-    ```
-    echo "Hidden=true" > $HOME/.config/autostart/xcompmgr.desktop
-    ```
+    `echo "Hidden=true" > $HOME/.config/autostart/xcompmgr.desktop`
 
 
 
