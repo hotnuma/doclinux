@@ -7,13 +7,20 @@
 ---
 
 #### Forums
-    
-https://forums.linuxmint.com/search.php?search_id=active_topics  
-https://ubuntuforums.org/search.php?do=getnew&contenttype=vBForum_Post  
-https://forums.debian.net/search.php?search_id=active_topics  
-https://forum.manjaro.org/latest  
-https://forum.palemoon.org/search.php?search_id=active_topics  
 
+84 https://forums.linuxmint.com/search.php?search_id=active_topics  
+59 https://forums.raspberrypi.com/search.php?search_id=active_topics  
+41 https://ubuntuforums.org/search.php?do=getnew&contenttype=vBForum_Post  
+39 https://forum.manjaro.org/latest  
+23 https://forum.mxlinux.org/search.php?search_id=active_topics  
+16 https://forum.ubuntu-fr.org/search.php?action=show_recent  
+14 https://forums.debian.net/search.php?search_id=active_topics  
+
+08 https://forum-francophone-linuxmint.fr/search.php?search_id=active_topics  
+06 https://www.debian-fr.org/latest  
+05 https://debian-facile.org/search.php?action=show_recent  
+03 https://forum-debian.fr/  
+04 https://forum.palemoon.org/search.php?search_id=active_topics  
 
 
 #### Articles
@@ -21,7 +28,6 @@ https://forum.palemoon.org/search.php?search_id=active_topics
 * Set  default audio output
     
     https://askubuntu.com/questions/1038490/  
-
 
 
 #### Processes / Services
@@ -151,7 +157,6 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     ```
     mem : 261
     ```
-
 
 
 #### Anti-Linux :-D

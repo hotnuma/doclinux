@@ -26,7 +26,6 @@
     https://askubuntu.com/questions/608419/  
     
 
-
 #### Enable / Disable
 
 * Disable Overlay Scrollbars
@@ -51,7 +50,6 @@
     https://wiki.archlinux.org/title/XDG_Autostart  
 
     `echo "Hidden=true" > $HOME/.config/autostart/xcompmgr.desktop`
-
 
 
 #### System
@@ -209,7 +207,6 @@
     ```
 
 
-
 #### Directories
 
 * Top Directories
@@ -243,7 +240,6 @@
     grep -rni --include=*.{h,c,cpp,cxx} "texthere"
     ```
     
-
 
 #### Files
 
@@ -304,7 +300,6 @@
     find . ! -wholename "./.git/*" ! -type l ! -type d -exec chmod 0664 {} +
     find . ! -wholename "./.git/*" ! -type l ! -type d -exec chmod a-x {} +
     ```
-
 
 
 #### Install
@@ -486,7 +481,6 @@
     https://support.cdn.mozilla.net/ml/questions/1388341  
 
 
-
 #### Misc
 
 * Check VA-API
@@ -540,5 +534,4 @@
     ```
     sudo update-alternatives --config x-session-manager
     ```
-
 

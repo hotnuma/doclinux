@@ -6,6 +6,14 @@
 
 ---
 
+#### Thunar
+
+* memory leak
+    
+    https://gitlab.xfce.org/xfce/thunar/-/issues/573  
+    [https://gitlab.xfce.org/xfce/thunar/-/commit/...](https://gitlab.xfce.org/xfce/thunar/-/commit/bdb2f762cf335e621d9bd2556f5f92306ecf4201)  
+
+
 #### Errors
 
 * gnome-keyring-daemon
@@ -102,6 +110,10 @@
 
 
 #### Gtk
+
+* Gtk4 Listview scrolling is broken
+    
+    https://gitlab.gnome.org/GNOME/gtk/-/issues/2971  
 
 * Double click bug
 
