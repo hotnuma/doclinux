@@ -286,20 +286,6 @@
     ```
     find ~ -cmin -5
     ```
-    
-* Remove execute flag
-
-    ```
-    find . ! -type l ! -type d -exec ls -la {} +
-    find . ! -type l ! -type d -exec chmod 0664 {} +
-    find . ! -type l ! -type d -exec chmod a-x {} +
-    ```
-    
-    ```
-    find . ! -wholename "./.git/*" ! -type l ! -type d -exec ls -la {} +
-    find . ! -wholename "./.git/*" ! -type l ! -type d -exec chmod 0664 {} +
-    find . ! -wholename "./.git/*" ! -type l ! -type d -exec chmod a-x {} +
-    ```
 
 
 #### Install
