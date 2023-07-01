@@ -38,7 +38,7 @@
     
     In `/etc/environment` add :
     
-    `export NO_AT_BRIDGE=1`
+    `NO_AT_BRIDGE=1`
 
 * Disable AppArmor
     
@@ -65,7 +65,11 @@
     Modify : `/etc/default/grub`
     
     Execute : `sudo update-grub`
+
+* List user's groups
     
+    `groups username`
+
 * Environment variables
     
     https://askubuntu.com/questions/866161/  
