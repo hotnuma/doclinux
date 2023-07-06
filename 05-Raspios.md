@@ -1,5 +1,8 @@
 <link href="style.css" rel="stylesheet"></link>
 
+## Raspios
+
+---
 
 #### References
 
@@ -20,21 +23,17 @@ https://github.com/orgs/RPi-Distro/repositories
 
 #### System informations
 
-* Read kernel and firmware version :
+* Read kernel and firmware version
 
-    ```
-    uname -a && vcgencmd version
-    ```
+    `uname -a && vcgencmd version`
 
 * Read CPU temperature
 
-    ```
-    vcgencmd measure_temp
-    ```
+    `vcgencmd measure_temp`
 
 * Release notes : 
     
-    https://downloads.raspberrypi.org/raspios_armhf/release_notes.txt
+    https://downloads.raspberrypi.org/raspios_armhf/release_notes.txt  
 
 
 #### Startup Sequence
@@ -57,9 +56,9 @@ https://github.com/orgs/RPi-Distro/repositories
 
 * Configuration
 
-    `lightdm --show-config`
+    `/etc/lightdm/lightdm.conf`
 
-    lightdm : /etc/lightdm/lightdm.conf
+    `lightdm --show-config`
 
     ```
     [LightDM]
@@ -74,7 +73,13 @@ https://github.com/orgs/RPi-Distro/repositories
     [VNCServer]
     ```
 
-* Default session
+* Session
+
+    https://askubuntu.com/questions/77191/  
+
+    _The Name entry is what lightdm would display for this session. The Exec entry is the important thing, and it should be the name of the program that starts the actual session. When you log in, lightdm calls the /etc/X11/Xsession script, passing it the value of Exec as an argument, and Xsession will, eventually, execute this program (for example, it could be startxfce4 for starting a xfce4 session). If the Exec entry is the special string default, then Xsession will execute the user's ~/.xsession file. (Xsession would also execute ~/.xsession if it's called without arguments.)_
+
+    `DESKTOP_SESSION=LXDE-pi`
 
     `~/.dmrc`
 
@@ -93,16 +98,7 @@ https://github.com/orgs/RPi-Distro/repositories
     Icon=
     Type=Application
     ```
-
-* Custom session
-
-    https://askubuntu.com/questions/77191/  
-
-    _The Name entry is what lightdm would display for this session. The Exec entry is the important thing, and it should be the name of the program that starts the actual session. When you log in, lightdm calls the /etc/X11/Xsession script, passing it the value of Exec as an argument, and Xsession will, eventually, execute this program (for example, it could be startxfce4 for starting a xfce4 session). If the Exec entry is the special string default, then Xsession will execute the user's ~/.xsession file. (Xsession would also execute ~/.xsession if it's called without arguments.)_
-
-    `DESKTOP_SESSION=LXDE-pi`
-
-    startup script : `/usr/bin/startlxde-pi`
+    Startup script : `/usr/bin/startlxde-pi`
 
 
 #### Openbox
@@ -280,6 +276,9 @@ https://www.raspberrypi.com/documentation/computers/os.html
     https://forums.raspberrypi.com/viewtopic.php?t=325011#p1945199  
     
     `video=HDMI-1:800x480@60`
+
+
+
 
 
 <!-- old docs
