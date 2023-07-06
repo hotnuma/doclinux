@@ -18,7 +18,7 @@ https://github.com/orgs/raspberrypi/repositories
 
 * Install XFCE
     
-    https://raspberrytips.fr/meilleurs-logiciels-raspberry-pi/  
+    https://forums.raspberrypi.com/viewtopic.php?p=2044411#p2043974  
 
 
 #### System informations
