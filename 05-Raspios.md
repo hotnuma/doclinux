@@ -16,10 +16,6 @@ https://github.com/orgs/raspberrypi-ui/repositories
 https://github.com/orgs/RPi-Distro/repositories  
 https://github.com/orgs/raspberrypi/repositories  
 
-* Install XFCE
-    
-    https://forums.raspberrypi.com/viewtopic.php?p=2044411#p2043974  
-
 
 #### System informations
 
@@ -33,7 +29,7 @@ https://github.com/orgs/raspberrypi/repositories
 
 * Release notes : 
     
-    https://downloads.raspberrypi.org/raspios_armhf/release_notes.txt  
+    https://downloads.raspberrypi.org/raspios_arm64/release_notes.txt  
 
 
 #### Startup Sequence
@@ -98,6 +94,7 @@ https://github.com/orgs/raspberrypi/repositories
     Icon=
     Type=Application
     ```
+    
     Startup script : `/usr/bin/startlxde-pi`
 
 
@@ -107,7 +104,8 @@ https://github.com/orgs/raspberrypi/repositories
 
     Openbox is set in `~/config/lxsession/LXDE-pi/desktop.conf` using a wrapper script.
 
-    ```cat /usr/bin/openbox-lxde-pi 
+    ```
+    cat /usr/bin/openbox-lxde-pi 
     #!/bin/sh
     exec openbox --config-file $XDG_CONFIG_HOME/openbox/lxde-pi-rc.xml $@
     ```
@@ -133,7 +131,7 @@ https://github.com/orgs/raspberrypi/repositories
 
 #### Raspi configuration
 
-https://www.raspberrypi.com/documentation/computers/os.html
+https://www.raspberrypi.com/documentation/computers/os.html  
 
 * Change hostname, disable xcompmgr
 
@@ -157,53 +155,26 @@ https://www.raspberrypi.com/documentation/computers/os.html
 
 #### Other
 
-* Firefox
+* Install Xfce
     
-    https://forums.raspberrypi.com/viewtopic.php?t=336756#p2015599  
-    https://forum.manjaro.org/t/new-mesa-drivers/39735  
-    https://forum.manjaro.org/t/firefox-webrender-pi4-400/63702  
-
-* Firefox Webrender
-
-	https://www.google.com/search?q=raspberry+pi+webrender  
-	https://bugzilla.mozilla.org/show_bug.cgi?id=1663285  
-	https://forum.manjaro.org/t/firefox-webrender-pi4-400/63702  
-		
-	https://forums.raspberrypi.com/search.php?keywords=webrender  
-
-	https://www.google.com/search?q=raspberry+pi+firefox+webrender  
-
-	https://bugzilla.mozilla.org/show_bug.cgi?id=1663285  
-
-	```
-	gfx.webrender.all to true
-	Run 'MOZ_X11_EGL=1 firefox' in terminal
-	```
-	
-	https://bugzilla.mozilla.org/show_bug.cgi?id=1725624  
-
-	https://bugs.launchpad.net/ubuntu/+source/firefox/+bug/1930982  
-
-* Chromium/Youtube audio choppy with Bullseye and KMS driver
-
-    https://forums.raspberrypi.com/viewtopic.php?p=1945157#p1935815  
-
-* Chromium 88 HW
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=319304  
-
-* RPi4 HW Acceleration
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=325586  
-
-* Glamor
-    
-    `/usr/share/X11/xorg.conf.d/20-noglamor.conf`
+    https://easylinuxtipsproject.blogspot.com/p/raspberry.html  
 
 * CPU governor
 
     https://askubuntu.com/questions/1021748/  
     https://raspberrypi.stackexchange.com/questions/9034/  
+
+* Display settings
+
+    https://forums.raspberrypi.com/viewtopic.php?p=1945199#p1945199  
+    https://forums.raspberrypi.com/viewtopic.php?p=1945198#p1945198  
+    https://forums.raspberrypi.com/viewtopic.php?t=325011#p1945199  
+    
+    `video=HDMI-1:800x480@60`
+
+* Glamor
+    
+    `/usr/share/X11/xorg.conf.d/20-noglamor.conf`
 
 * USB Chipset
     
@@ -216,18 +187,6 @@ https://www.raspberrypi.com/documentation/computers/os.html
     fine with Pi computers. It supports UASP in RPiOS, and TRIM works
     with a udev rule.
     ```
-
-* Custom RPi images
-	
-	https://forums.raspberrypi.com/viewtopic.php?f=131&t=314419  
-
-* Custom OS
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=327060  
-
-* XML libraries
-    
-    https://forums.raspberrypi.com/viewtopic.php?p=1958438#p1958438  
 
 * Test RPi version
 
@@ -254,71 +213,13 @@ https://www.raspberrypi.com/documentation/computers/os.html
     
     https://forums.raspberrypi.com/viewtopic.php?t=180383  
 
-* Default audio playback
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=327267#p1958987  
-    
+* GPIO Programming
+
+    https://forums.raspberrypi.com/viewtopic.php?t=327539  
+
 * C++ SSD1306 I2C LCD
     
     https://forums.raspberrypi.com/viewtopic.php?t=224984  
     https://forums.raspberrypi.com/viewtopic.php?t=171817  
     
-* RPi4 with PiOS ignore display setting in config.txt
-
-    https://forums.raspberrypi.com/viewtopic.php?p=1945199#p1945199  
-
-* Display issue with Bullseye image and Pi 4B
-
-    https://forums.raspberrypi.com/viewtopic.php?p=1945198#p1945198  
-
-* Display settings
-
-    https://forums.raspberrypi.com/viewtopic.php?t=325011#p1945199  
-    
-    `video=HDMI-1:800x480@60`
-
-
-
-
-
-<!-- old docs
-#### Other
-
-https://forums.raspberrypi.com/viewtopic.php?t=327539  
-https://github.com/WiringPi  
-https://github.com/librerpi/rpi-open-firmware  
-
-* Compton
-
-    https://www.youtube.com/watch?v=3esPpe-fclI  
-    https://gist.github.com/kelleyk/6beba22586ac0c40aa30  
-    
-    ```
-    compton --backend glx --unredir-if-possible --vsync opengl-swc
-    compton --backend glx --vsync opengl-swc
-    ```
-
-#### Bugs
-
-* Chromium crash :
-
-    https://forums.raspberrypi.com/viewtopic.php?t=323640&start=75#p1940502  
-
-* Syslog
-
-    kernel: `v3d fec00000.v3d: MMU error from client L2T`
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=277917  
-    http://tabuas.tech/2021/05/19/pi-400-log/  
-
-* Pixel wrap bug fix
-
-    ```
-    Jun 24 2021 17:24:58 
-    Copyright (c) 2012 Broadcom
-    version 65aff9e0bea5b64c530db52aa4497e809fdf22c8 (clean) (release) (start)
-    Linux raspberrypi 5.10.44-v8+ #1429 SMP PREEMPT Fri Jun 25 10:03:37 BST 2021 aarch64 GNU/Linux
-    ```
--->
-
 
