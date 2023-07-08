@@ -153,7 +153,7 @@ https://www.raspberrypi.com/documentation/computers/os.html
     ```
 
 
-#### Other
+#### Xfce
 
 * Switch to network-manager
     
@@ -173,6 +173,27 @@ https://www.raspberrypi.com/documentation/computers/os.html
     [Desktop]
     Session=xfce
     ```
+
+* Fix screen tearing
+    
+    https://forum.manjaro.org/t/how-to-fix-intel-screen-tearing-on-xfce/31361/1  
+    
+    ```
+    1- Go to “setting manager”
+    2- Go to “setting editor”
+    3- Choose “xfwm4”
+    4- Find “vblank_mode” and select
+    5- Press the “edit”
+    6- Type glx to “value” section
+    7- Save and reboot
+
+    Note: This is the gui way of those commands
+    xfwm4 --replace --vblank=glx &
+    xfconf-query -c xfwm4 -p /general/vblank_mode -s glx
+    ```
+
+
+#### Other
 
 * CPU governor
 
