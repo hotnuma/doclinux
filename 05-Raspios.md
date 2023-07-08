@@ -152,15 +152,27 @@ https://www.raspberrypi.com/documentation/computers/os.html
     sudo apt install --reinstall libraspberrypi0 libraspberrypi-{bin,dev,doc} raspberrypi-bootloader raspberrypi-kernel
     ```
 
+
+#### Other
+
 * Switch to network-manager
     
     `sudo raspi-config` advanced configuration, network.
 
-#### Other
-
 * Install Xfce
     
-    https://easylinuxtipsproject.blogspot.com/p/raspberry.html  
+    Switch to NetworkManager, install xfce desktop :
+    
+    `sudo apt install xfce4`
+    
+    Set xfce session :
+
+    `~/.dmrc`
+
+    ```
+    [Desktop]
+    Session=xfce
+    ```
 
 * CPU governor
 
