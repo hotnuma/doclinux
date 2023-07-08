@@ -152,6 +152,9 @@ https://www.raspberrypi.com/documentation/computers/os.html
     sudo apt install --reinstall libraspberrypi0 libraspberrypi-{bin,dev,doc} raspberrypi-bootloader raspberrypi-kernel
     ```
 
+* Switch to network-manager
+    
+    `sudo raspi-config` advanced configuration, network.
 
 #### Other
 
