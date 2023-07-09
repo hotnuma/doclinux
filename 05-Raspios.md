@@ -123,6 +123,10 @@ https://github.com/orgs/raspberrypi/repositories
     openbox --reconfigure
     ```
 
+* Picom
+    
+    `picom --backend glx`
+
 
 #### Application menu
 
