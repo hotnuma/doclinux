@@ -300,6 +300,10 @@
     /etc/apt/sources.list
     ```
 
+* Enable non-free-firmware
+    
+    [https://www.linuxtricks.fr/wiki](https://www.linuxtricks.fr/wiki/debian-configurer-les-sources-activer-non-free-et-contrib)  
+
 * Uninstall block snaps
     
     https://askubuntu.com/questions/1369159/  
