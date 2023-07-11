@@ -7,7 +7,11 @@
 #### References
 
 https://forums.raspberrypi.com/search.php?search_id=newposts  
+
 https://www.raspberrypi.com/documentation/  
+[howto_desktops](https://forums.raspberrypi.com/viewtopic.php?t=133691)  
+[howto_autostart](https://forums.raspberrypi.com/viewtopic.php?t=294014)  
+
 https://www.fsf.org/resources/hw/single-board-computers  
 https://wiki.debian.org/RaspberryPi/  
 
@@ -125,6 +129,8 @@ https://github.com/orgs/raspberrypi/repositories
 
 * Picom
     
+    https://wiki.archlinux.org/title/picom  
+    
     `picom --backend glx`
 
 
@@ -199,6 +205,10 @@ https://www.raspberrypi.com/documentation/computers/os.html
 
 #### Other
 
+* Upgrade to Debian 12
+    
+    https://raspberrytips.com/update-raspberry-pi-latest-version/  
+    
 * CPU governor
 
     https://askubuntu.com/questions/1021748/  
