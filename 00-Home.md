@@ -300,10 +300,6 @@
     /etc/apt/sources.list
     ```
 
-* Install XFCE Desktop on Debian
-    
-    [http://linux.how2shout.com/2-ways-to-install-xfce-desktop-on](http://linux.how2shout.com/2-ways-to-install-xfce-desktop-on-debian-11-bullseye/)  
-
 * Uninstall block snaps
     
     https://askubuntu.com/questions/1369159/  
