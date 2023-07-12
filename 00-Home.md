@@ -473,6 +473,12 @@
 
 #### Misc
 
+* CPU Load
+    
+    https://superuser.com/questions/443406/  
+    
+    `openssl speed -multi $(nproc --all)`
+
 * Check VA-API
 
     `vainfo`
