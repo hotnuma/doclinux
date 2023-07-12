@@ -9,6 +9,7 @@
 https://forums.raspberrypi.com/search.php?search_id=newposts  
 
 https://www.raspberrypi.com/documentation/  
+[tearing_test](https://www.youtube.com/watch?v=cuXsupMuik4)  
 [howto_desktops](https://forums.raspberrypi.com/viewtopic.php?t=133691)  
 [howto_autostart](https://forums.raspberrypi.com/viewtopic.php?t=294014)  
 
