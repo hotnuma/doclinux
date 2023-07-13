@@ -14,6 +14,67 @@
     [https://gitlab.xfce.org/xfce/thunar/-/commit/...](https://gitlab.xfce.org/xfce/thunar/-/commit/bdb2f762cf335e621d9bd2556f5f92306ecf4201)  
 
 
+#### XFCE
+
+* xfsettingsd shortcuts
+    
+    [https://archived.forum.manjaro.org/t/xfce4-keyboard-shortcut](https://web.archive.org/web/20210123051319/https://archived.forum.manjaro.org/t/xfce4-keyboard-shortcut-not-working-sometimes-when-logging-in/73498)  
+    [https://itectec.com/unixlinux/](https://itectec.com/unixlinux/linux-cannot-change-global-keyboard-shortcuts-in-linux-mint-xfce/)  
+    [https://gitlab.xfce.org/xfce/xfce4-settings/](https://gitlab.xfce.org/xfce/xfce4-settings/-/issues/116)  
+    [https://gitlab.xfce.org/xfce/xfce4-settings/](https://gitlab.xfce.org/xfce/xfce4-settings/-/issues/232)  
+    [https://gitlab.xfce.org/xfce/xfce4-settings/](https://gitlab.xfce.org/xfce/xfce4-settings/-/issues/257)  
+    
+* /usr/share appears twice in XDG_DATA_DIRS
+    
+    https://gitlab.xfce.org/xfce/xfce4-session/-/issues/50  
+    https://gitlab.xfce.org/xfce/xfce4-session/-/issues/111  
+
+* CSD
+    
+    https://gitlab.xfce.org/xfce/xfce4-settings/-/issues/235  
+    https://forum.xfce.org/viewtopic.php?id=15116  
+    https://github.com/Xfce-Classic/libxfce4ui-nocsd  
+    https://gitlab.xfce.org/xfce/libxfce4ui/-/issues/14  
+    https://winaero.com/disable-client-side-decorations-in-xfce-for-open-save-dialog/  
+
+* File Manager Sorting
+    
+    https://gitlab.xfce.org/xfce/thunar/-/issues/68  
+    https://unix.stackexchange.com/questions/510530/  
+    https://github.com/linuxmint/nemo/issues/2247  
+
+* Window Border
+    
+    http://sevkeifert.blogspot.com/2014/12/increase-window-border-size-in-xubuntu.html  
+
+
+#### Gtk
+
+* Gtk4 Listview scrolling is broken
+    
+    https://gitlab.gnome.org/GNOME/gtk/-/issues/2971  
+
+* Double click bug
+
+    https://discourse.gnome.org/t/double-click-on-already-selected-item-will-often-not-open-item-in-nautilus/4590/5  
+    https://gitlab.gnome.org/GNOME/nautilus/-/issues/1599  
+
+* GtkTreeView Memory leak
+    
+    https://bugzilla.redhat.com/show_bug.cgi?id=1965195  
+    [https://gitlab.gnome.org/GNOME/gtk/-/commit/21f8098261486417](https://gitlab.gnome.org/GNOME/gtk/-/commit/21f8098261486417db371b202bc0494c12017468)  
+    https://gitlab.gnome.org/GNOME/gtk/-/pipelines/289296  
+    https://gitlab.gnome.org/GNOME/gtk/-/merge_requests/3660  
+
+* Gtk 3.24.26 preedit bug
+    
+    https://gitlab.gnome.org/GNOME/gtk/-/issues/5744  
+
+* Tooltip position
+    
+    https://gitlab.gnome.org/GNOME/gtk/-/issues/2784  
+
+
 #### Errors
 
 * gnome-keyring-daemon
@@ -71,66 +132,6 @@
     Impossible de lire cette vidéo avec votre navigateur
     Votre navigateur est à jour
     ```
-
-
-
-#### XFCE
-
-* xfsettingsd shortcuts
-    
-    [https://archived.forum.manjaro.org/t/xfce4-keyboard-shortcut](https://web.archive.org/web/20210123051319/https://archived.forum.manjaro.org/t/xfce4-keyboard-shortcut-not-working-sometimes-when-logging-in/73498)  
-    [https://itectec.com/unixlinux/](https://itectec.com/unixlinux/linux-cannot-change-global-keyboard-shortcuts-in-linux-mint-xfce/)  
-    [https://gitlab.xfce.org/xfce/xfce4-settings/](https://gitlab.xfce.org/xfce/xfce4-settings/-/issues/116)  
-    [https://gitlab.xfce.org/xfce/xfce4-settings/](https://gitlab.xfce.org/xfce/xfce4-settings/-/issues/232)  
-    [https://gitlab.xfce.org/xfce/xfce4-settings/](https://gitlab.xfce.org/xfce/xfce4-settings/-/issues/257)  
-    
-* /usr/share appears twice in XDG_DATA_DIRS
-    
-    https://gitlab.xfce.org/xfce/xfce4-session/-/issues/50  
-    https://gitlab.xfce.org/xfce/xfce4-session/-/issues/111  
-
-* CSD
-    
-    https://gitlab.xfce.org/xfce/xfce4-settings/-/issues/235  
-    https://forum.xfce.org/viewtopic.php?id=15116  
-    https://github.com/Xfce-Classic/libxfce4ui-nocsd  
-    https://gitlab.xfce.org/xfce/libxfce4ui/-/issues/14  
-    https://winaero.com/disable-client-side-decorations-in-xfce-for-open-save-dialog/  
-
-* File Manager Sorting
-    
-    https://gitlab.xfce.org/xfce/thunar/-/issues/68  
-    https://unix.stackexchange.com/questions/510530/  
-    https://github.com/linuxmint/nemo/issues/2247  
-
-* Window Border
-    
-    http://sevkeifert.blogspot.com/2014/12/increase-window-border-size-in-xubuntu.html  
-
-
-
-#### Gtk
-
-* Gtk4 Listview scrolling is broken
-    
-    https://gitlab.gnome.org/GNOME/gtk/-/issues/2971  
-
-* Double click bug
-
-    https://discourse.gnome.org/t/double-click-on-already-selected-item-will-often-not-open-item-in-nautilus/4590/5  
-    https://gitlab.gnome.org/GNOME/nautilus/-/issues/1599  
-
-* GtkTreeView Memory leak
-    
-    https://bugzilla.redhat.com/show_bug.cgi?id=1965195  
-    [https://gitlab.gnome.org/GNOME/gtk/-/commit/21f8098261486417](https://gitlab.gnome.org/GNOME/gtk/-/commit/21f8098261486417db371b202bc0494c12017468)  
-    https://gitlab.gnome.org/GNOME/gtk/-/pipelines/289296  
-    https://gitlab.gnome.org/GNOME/gtk/-/merge_requests/3660  
-
-* Gtk 3.24.26 preedit bug
-    
-    https://gitlab.gnome.org/GNOME/gtk/-/issues/5744  
-
 
 
 #### Other
