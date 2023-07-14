@@ -271,10 +271,6 @@ https://bugzilla.mozilla.org/show_bug.cgi?id=1725624
     cat /proc/device-tree/model
     cat /sys/firmware/devicetree/base/model
     ```
-    
-* Command line piclone
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=180383  
 
 * GPIO Programming
 
@@ -284,5 +280,11 @@ https://bugzilla.mozilla.org/show_bug.cgi?id=1725624
     
     https://forums.raspberrypi.com/viewtopic.php?t=224984  
     https://forums.raspberrypi.com/viewtopic.php?t=171817  
+
+<!--
+* Command line piclone
     
+    https://forums.raspberrypi.com/viewtopic.php?t=180383  
+-->
+
 
