@@ -217,6 +217,13 @@ https://bugzilla.mozilla.org/show_bug.cgi?id=1725624
     
     https://raspberrytips.com/update-raspberry-pi-latest-version/  
     
+    [rpios_bookworm](https://forums.raspberrypi.com/viewtopic.php?t=352477)  
+    [upgrade_bookworm](https://forums.raspberrypi.com/viewtopic.php?p=2110754)  
+    [metapackages_bookworm](https://forums.raspberrypi.com/viewtopic.php?t=351201)  
+    
+    https://gist.github.com/jauderho/6b7d42030e264a135450ecc0ba521bd8  
+    https://blog.fernvenue.com/archives/upgrade-raspberrypi-to-debian-12-bookworm/  
+    
 * CPU governor
 
     https://askubuntu.com/questions/1021748/  
