@@ -204,6 +204,13 @@ https://www.raspberrypi.com/documentation/computers/os.html
     ```
 
 
+#### Browser
+    
+    https://forums.raspberrypi.com/viewtopic.php?t=331397  
+    https://bugzilla.mozilla.org/show_bug.cgi?id=1663285  
+    https://bugzilla.mozilla.org/show_bug.cgi?id=1725624  
+
+
 #### Other
 
 * Upgrade to Debian 12

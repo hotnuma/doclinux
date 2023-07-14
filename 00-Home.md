@@ -72,6 +72,7 @@
 
 * Environment variables
     
+    https://wiki.archlinux.org/title/environment_variables  
     https://askubuntu.com/questions/866161/  
     
     ```
@@ -123,16 +124,22 @@
     sudo systemctl set-default graphical.target
     ```
 
+* Alternatives
+    
+    https://wiki.debian.org/DebianAlternatives  
+
 
 #### Drives
 
+* Unmount all partitions
+
+    `umount /dev/sdc?`
+    
 * Delete all partitions
 
     https://serverfault.com/questions/250839/  
     
-    ```
-    dd if=/dev/zero of=/dev/sda bs=512 count=1 conv=notrunc
-    ```
+    `dd if=/dev/zero of=/dev/sda bs=512 count=1 conv=notrunc`
 
 * Format `/dev/sdc1` partition in Ext4
 
@@ -153,16 +160,18 @@
 
 * Rename partition
     
-    ```
-    sudo ntfslabel -f /dev/sdc1 Backup1
-    ```
+    `sudo ntfslabel -f /dev/sdc1 Backup1`
 
 * Fix NTFS
     
-    ```
-    sudo ntfsfix /dev/sdc1
-    ```
+    `sudo ntfsfix /dev/sdc1`
 
+* I/O test
+    
+    [how_to_io_test](https://www.cyberciti.biz/faq/howto-linux-unix-test-disk-performance-with-dd-command/)  
+    
+    `dd if=/dev/zero of=/tmp/test1.img bs=1G count=1 oflag=dsync`
+    
 * Power Off Drive
     
     https://askubuntu.com/questions/671683/  
@@ -181,23 +190,13 @@
     
     https://unix.stackexchange.com/questions/35508/
 
-* Unmount all partitions
-
-    ```
-    umount /dev/sdc?
-    ```
-    
 * Read UUID of partitions
 
-    ```
-    sudo blkid
-    ```
+    `sudo blkid`
     
 * Read smart infos
 
-    ```
-    sudo smartctl -s on -a /dev/sdc
-    ```
+    `sudo smartctl -s on -a /dev/sdc`
     
 * Write img file to drive /dev/sdc using systools
 
@@ -217,15 +216,11 @@
     
     [https://www.cyberciti.biz/faq/how-do-i-find-the-largest-file](https://www.cyberciti.biz/faq/how-do-i-find-the-largest-filesdirectories-on-a-linuxunixbsd-filesystem/)  
 
-    ```
-    sudo du -ham / 2>/dev/null | sort -nr | head -n 20
-    ```
+    `sudo du -ham / 2>/dev/null | sort -nr | head -n 20`
     
 * Compress a directory with 7zip
 
-    ```
-    7z a example.7z example/
-    ```
+    `7z a example.7z example/`
     without compression
 
     ```
