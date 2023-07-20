@@ -50,7 +50,6 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     ```
 
 
-
 #### Log files
 
 [https://www.golinuxcloud.com/view-logs-using-journalctl-filt](https://www.golinuxcloud.com/view-logs-using-journalctl-filter-journald/)
@@ -77,7 +76,10 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     sudo find /var/log ! -wholename "/var/log/journal/*" -type f -mtime +5 -delete
     ```
 
-* Stop excessive logging of sudo
+
+#### Turn off excessive logging
+
+* sudo
     
     https://unix.stackexchange.com/questions/224370/  
     https://unix.stackexchange.com/questions/637227/  
@@ -88,6 +90,16 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     session [success=1 default=ignore] pam_succeed_if.so quiet uid = 0 ruser = user_name
     ```
 
+* rtkit-daemon
+    
+    https://unix.stackexchange.com/questions/684379/  
+    
+    ```
+    sudo mkdir /etc/systemd/system/rtkit-daemon.service.d/
+    sudo geany rtkit-daemon.service.d/log.conf
+    sudo systemctl daemon-reload
+    sudo systemctl restart rtkit-daemon.service
+    ```
 
 
 #### Other
