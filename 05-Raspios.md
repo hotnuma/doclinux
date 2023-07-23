@@ -241,6 +241,7 @@ https://bugzilla.mozilla.org/show_bug.cgi?id=1725624
 
 * USB Chipset
     
+    https://forums.raspberrypi.com/viewtopic.php?t=245931  
     https://forums.raspberrypi.com/viewtopic.php?t=326157  
     
     ```
