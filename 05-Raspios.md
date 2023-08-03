@@ -13,9 +13,6 @@ https://www.raspberrypi.com/documentation/
 [howto_desktops](https://forums.raspberrypi.com/viewtopic.php?t=133691)  
 [howto_autostart](https://forums.raspberrypi.com/viewtopic.php?t=294014)  
 
-https://www.fsf.org/resources/hw/single-board-computers  
-https://wiki.debian.org/RaspberryPi/  
-
 https://downloads.raspberrypi.org/raspios_arm64/images/  
 https://github.com/orgs/raspberrypi-ui/repositories  
 https://github.com/orgs/RPi-Distro/repositories  
@@ -215,6 +212,11 @@ https://bugzilla.mozilla.org/show_bug.cgi?id=1725624
 
 #### Other
 
+* Anti-rpi
+
+    https://www.fsf.org/resources/hw/single-board-computers  
+    https://wiki.debian.org/RaspberryPi/  
+
 * Upgrade to Debian 12
     
     [rpios_bookworm](https://forums.raspberrypi.com/viewtopic.php?t=352477)  
@@ -283,11 +285,5 @@ https://bugzilla.mozilla.org/show_bug.cgi?id=1725624
     
     https://forums.raspberrypi.com/viewtopic.php?t=224984  
     https://forums.raspberrypi.com/viewtopic.php?t=171817  
-
-<!--
-* Command line piclone
-    
-    https://forums.raspberrypi.com/viewtopic.php?t=180383  
--->
 
 
