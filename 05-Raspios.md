@@ -21,6 +21,8 @@ https://github.com/orgs/raspberrypi-ui/repositories
 https://github.com/orgs/RPi-Distro/repositories  
 https://github.com/orgs/raspberrypi/repositories  
 
+[best-ssd-storage](https://jamesachambers.com/best-ssd-storage-adapters-for-raspberry-pi-4-400/)  
+
 
 #### System informations
 
