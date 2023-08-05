@@ -9,6 +9,7 @@
 https://forums.raspberrypi.com/search.php?search_id=newposts  
 
 https://www.raspberrypi.com/documentation/  
+[docs_hardware](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html)  
 [tearing_test](https://www.youtube.com/watch?v=cuXsupMuik4)  
 [howto_desktops](https://forums.raspberrypi.com/viewtopic.php?t=133691)  
 [howto_autostart](https://forums.raspberrypi.com/viewtopic.php?t=294014)  
@@ -212,10 +213,15 @@ https://bugzilla.mozilla.org/show_bug.cgi?id=1725624
 
 #### Other
 
-* Anti-rpi
-
-    https://www.fsf.org/resources/hw/single-board-computers  
-    https://wiki.debian.org/RaspberryPi/  
+* SSD Boot
+    
+    Change boot order with `raspi-config`
+    
+    View current EEPROM configuration : `rpi-eeprom-config`
+    
+    Edit configuration : `sudo -E rpi-eeprom-config --edit`
+    
+    Add `USB_MSD_DISCOVER_TIMEOUT=5`
 
 * Upgrade to Debian 12
     
@@ -285,5 +291,17 @@ https://bugzilla.mozilla.org/show_bug.cgi?id=1725624
     
     https://forums.raspberrypi.com/viewtopic.php?t=224984  
     https://forums.raspberrypi.com/viewtopic.php?t=171817  
+
+* Anti-rpi
+
+    https://www.fsf.org/resources/hw/single-board-computers  
+    https://wiki.debian.org/RaspberryPi/  
+
+    Limitations
+    
+    - no real time clock
+    - 1.2A current limit for all USB plugs
+    - slow SD controller (40 MB/s)
+    - incompatible usb to sata controllers
 
 
