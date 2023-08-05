@@ -222,6 +222,8 @@ https://bugzilla.mozilla.org/show_bug.cgi?id=1725624
     Edit configuration : `sudo -E rpi-eeprom-config --edit`
     
     Add `USB_MSD_DISCOVER_TIMEOUT=5`
+    
+    [udev_trim](https://forums.raspberrypi.com/viewtopic.php?t=307276#p1839171)  
 
 * Upgrade to Debian 12
     
