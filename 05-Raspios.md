@@ -24,9 +24,15 @@ https://github.com/orgs/raspberrypi/repositories
 
 #### System informations
 
-* Read kernel and firmware version
+* kernel, firmware, bootloader informations
 
-    `uname -a && vcgencmd version`
+    ```
+    uname -a
+    vcgencmd version
+    vcgencmd bootloader_version
+    vcgencmd bootloader_config
+    rpi-eeprom-config
+    ```
 
 * Read CPU temperature
 
@@ -35,6 +41,30 @@ https://github.com/orgs/raspberrypi/repositories
 * Release notes : 
     
     https://downloads.raspberrypi.org/raspios_arm64/release_notes.txt  
+
+
+#### Raspios configuration
+
+https://www.raspberrypi.com/documentation/computers/os.html  
+
+* Change hostname, disable xcompmgr
+
+    ```
+    sudo raspi-config
+    ```
+
+* Revert to specific firmware using git commit hash
+
+    ```
+    sudo rpi-update 6e61ab523f0a9d2fbb4319f6f6430d4c13203c0e
+    ```
+
+* Revert to stable firmware
+
+    ```
+    sudo apt update
+    sudo apt install --reinstall libraspberrypi0 libraspberrypi-{bin,dev,doc} raspberrypi-bootloader raspberrypi-kernel
+    ```
 
 
 #### Startup Sequence
@@ -138,30 +168,6 @@ https://github.com/orgs/raspberrypi/repositories
 #### Application menu
 
 `/etc/xdg/menus/lxde-pi-applications.menu`
-
-
-#### Raspi configuration
-
-https://www.raspberrypi.com/documentation/computers/os.html  
-
-* Change hostname, disable xcompmgr
-
-    ```
-    sudo raspi-config
-    ```
-
-* Revert to specific firmware using git commit hash
-
-    ```
-    sudo rpi-update 6e61ab523f0a9d2fbb4319f6f6430d4c13203c0e
-    ```
-
-* Revert to stable firmware
-
-    ```
-    sudo apt update
-    sudo apt install --reinstall libraspberrypi0 libraspberrypi-{bin,dev,doc} raspberrypi-bootloader raspberrypi-kernel
-    ```
 
 
 #### Xfce
