@@ -18,7 +18,7 @@ https://downloads.raspberrypi.org/raspios_arm64/images/
 https://github.com/orgs/raspberrypi-ui/repositories  
 https://github.com/orgs/RPi-Distro/repositories  
 https://github.com/orgs/raspberrypi/repositories  
-https://github.com/raspberrypi/rpi-eeprom/releases  
+https://github.com/raspberrypi/rpi-eeprom  
 
 [best-ssd-storage](https://jamesachambers.com/best-ssd-storage-adapters-for-raspberry-pi-4-400/)  
 
