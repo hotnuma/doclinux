@@ -25,7 +25,7 @@ https://github.com/raspberrypi/rpi-eeprom/releases
 
 #### System informations
 
-* kernel, firmware, bootloader informations
+* kernel, firmware, bootloader, eeprom
 
     ```
     uname -a
@@ -34,6 +34,10 @@ https://github.com/raspberrypi/rpi-eeprom/releases
     vcgencmd bootloader_config
     rpi-eeprom-config
     ```
+
+* Board model
+    
+    `cat /sys/firmware/devicetree/base/model`
 
 * Read CPU temperature
 
