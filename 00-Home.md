@@ -470,8 +470,11 @@
 
 * Statistics
     
-    LC_ALL=C datamash --header-out min 1 max 1 mean 1 < file.txt
-    LC_ALL=C datamash --header-out min 1 max 1 median 1 mode 1 mean 1 < file.txt
+    `LC_ALL=C datamash --header-out min 1 max 1 mean 1 < data.txt`
+    
+    `LC_ALL=C datamash --header-out min 1 max 1 median 1 mode 1 mean 1 < data.txt`
+    
+    `gnuplot -p -e "plot './data.txt'"`
 
 * CPU Load
     
