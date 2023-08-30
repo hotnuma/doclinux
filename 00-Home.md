@@ -476,7 +476,7 @@
     
     `gnuplot -p -e "plot './data.txt'"`
 
-    `gnuplot -p -e "plot './data.txt' lc rgb 'blue'"`
+    `gnuplot -p -e "plot './data.txt' lc rgb 'blue' pt 6"`
 
 * CPU Load
     
