@@ -476,6 +476,8 @@
     
     `gnuplot -p -e "plot './data.txt'"`
 
+    `gnuplot -p -e "plot './data.txt' lc rgb 'blue'"`
+
 * CPU Load
     
     https://superuser.com/questions/443406/  
