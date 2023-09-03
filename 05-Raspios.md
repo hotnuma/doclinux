@@ -297,6 +297,10 @@ https://bugzilla.mozilla.org/show_bug.cgi?id=1725624
     cat /sys/firmware/devicetree/base/model
     ```
 
+* Transfer Data Through Bluetooth
+    
+    [https://linuxhint.com/transfer-data-through-bluetooth-raspbe](https://linuxhint.com/transfer-data-through-bluetooth-raspberry-pi/)  
+
 * GPIO Programming
 
     https://forums.raspberrypi.com/viewtopic.php?t=327539  
