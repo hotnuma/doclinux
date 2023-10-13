@@ -12,17 +12,19 @@
     
     https://wiki.debian.org/NetworkConfiguration  
 
-* Netplan
+* Predictable Network Interface Names
     
-    https://askubuntu.com/questions/1034711/  
-
-* DNS
-    
-    https://askubuntu.com/questions/1080230/  
+    https://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/  
     
 * Change DNS configuration
     
-    https://forum.ubuntu-fr.org/viewtopic.php?id=2078751  
+    https://serverfault.com/questions/810636/  
+
+* DNS BBox 
+
+    ```
+    echo "192.168.1.254  mabbox.bytel.fr" >> /etc/hosts
+    ```
 
 * Default network interface
     
@@ -38,12 +40,9 @@
 
 
 
+<!--
 #### Interfaces
 
-* Predictable Network Interface Names
-    
-    https://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/  
-    
 * Switch back to /etc/network/interfaces
     
     https://askubuntu.com/questions/1031709/  
@@ -87,14 +86,6 @@
     sudo nano /etc/resolv.conf
     ```
 
-* DNS BBox 
-
-    ```
-    echo "192.168.1.254  mabbox.bytel.fr" >> /etc/hosts
-    ```
-
-
-
 #### Network Manager
 
 https://askubuntu.com/questions/249944/  
@@ -127,5 +118,12 @@ https://help.ubuntu.com/community/NetworkManager
     ```
     sudo ifup eth0
     ```
+
+* Netplan
+    
+    https://askubuntu.com/questions/1034711/  
+    https://askubuntu.com/questions/1080230/  
+    https://forum.ubuntu-fr.org/viewtopic.php?id=2078751  
+-->
 
 
