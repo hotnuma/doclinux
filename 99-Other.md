@@ -197,3 +197,31 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     [https://dudemanguy.github.io/blog/...](https://dudemanguy.github.io/blog/posts/2022-06-10-wayland-xorg/wayland-xorg.html)  
 
 
+<--
+* Uninstall block snaps
+    
+    https://askubuntu.com/questions/1369159/  
+    https://forum.ubuntu-fr.org/viewtopic.php?pid=22458861#p22458861  
+
+* Firefox ESR
+    
+    https://ubuntuhandbook.org/index.php/2022/03/install-firefox-esr-ubuntu/  
+
+    ```
+    sudo add-apt-repository ppa:mozillateam/ppa
+    sudo apt update
+    sudo apt install firefox-esr
+    ```
+
+* Install Firefox deb
+    
+    https://forum.ubuntu-fr.org/viewtopic.php?id=2074608  
+    [https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-d](https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-deb-apt-ubuntu-22-04)  
+
+* How to disable DRM banner
+    
+    [https://www.reddit.com/r/firefox/comments/sgyu1s/how_to_disa](https://www.reddit.com/r/firefox/comments/sgyu1s/how_to_disable_enable_drm_banner_to_prompt/)  
+    https://support.cdn.mozilla.net/ml/questions/1388341  
+-->
+
+

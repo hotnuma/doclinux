@@ -299,11 +299,6 @@
     
     [https://www.linuxtricks.fr/wiki](https://www.linuxtricks.fr/wiki/debian-configurer-les-sources-activer-non-free-et-contrib)  
 
-* Uninstall block snaps
-    
-    https://askubuntu.com/questions/1369159/  
-    https://forum.ubuntu-fr.org/viewtopic.php?pid=22458861#p22458861  
-
 * Remove useless packages
 
     ```
@@ -429,7 +424,7 @@
 
 * Hardware acceleration
     
-    https://wiki.debian.org/HardwareVideoAcceleration
+    https://wiki.debian.org/HardwareVideoAcceleration  
 
 
 #### Firefox
@@ -449,30 +444,14 @@
     media.gpu-process-decoder true
     ```
 
-* Firefox ESR
-    
-    https://ubuntuhandbook.org/index.php/2022/03/install-firefox-esr-ubuntu/  
-
-    ```
-    sudo add-apt-repository ppa:mozillateam/ppa
-    sudo apt update
-    sudo apt install firefox-esr
-    ```
-
-* Install Firefox deb
-    
-    https://forum.ubuntu-fr.org/viewtopic.php?id=2074608  
-    [https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-d](https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-deb-apt-ubuntu-22-04)  
-
-<--
-* How to disable DRM banner
-    
-    [https://www.reddit.com/r/firefox/comments/sgyu1s/how_to_disa](https://www.reddit.com/r/firefox/comments/sgyu1s/how_to_disable_enable_drm_banner_to_prompt/)  
-    https://support.cdn.mozilla.net/ml/questions/1388341  
--->
-
-
 #### Misc
+
+* Fix Screen Tearing in Linux - YouTube
+    
+    https://www.youtube.com/watch?v=rVBq6d3c1gM  
+    [https://unix.stackexchange.com/questions/667911/](https://unix.stackexchange.com/questions/667911/intel-modesetting-driver-screen-tearing)  
+    https://forum.ubuntu-fr.org/viewtopic.php?id=2066260  
+    [https://linuxfr.org/les-drivers-xorg](https://linuxfr.org/users/gnumdk/journaux/les-drivers-xorg-inutiles-avec-un-noyau-recent)  
 
 * Statistics
     
