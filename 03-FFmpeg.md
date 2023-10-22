@@ -88,8 +88,8 @@ https://ffmpeg.org/ffmpeg-filters.html
 * Download subtitles from YouTube
 
     ```
-    youtube-dl --write-sub --sub-lang en --skip-download "URL"
-    youtube-dl --cookies=cookies/youtube.txt --write-auto-sub --convert-subs=srt --skip-download "URL"
+    yt-dlp --write-sub --sub-lang en --skip-download "URL"
+    yt-dlp --write-auto-sub --convert-subs=srt --skip-download "URL"
     ```
     
 * Remove subtitles and chapters
@@ -120,7 +120,8 @@ https://ffmpeg.org/ffmpeg-filters.html
 
 * Youtube
 
-    yt-dlp --cookies=cookies.txt "URL"
+    yt-dlp --cookies=cookies/youtube.txt "URL"
+    yt-dlp --cookies=cookies/youtube.txt --write-auto-sub --convert-subs=srt --skip-download "URL"
 
 
 
