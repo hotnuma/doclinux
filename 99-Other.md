@@ -197,7 +197,7 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     [https://dudemanguy.github.io/blog/...](https://dudemanguy.github.io/blog/posts/2022-06-10-wayland-xorg/wayland-xorg.html)  
 
 
-<--
+<!--
 * Uninstall block snaps
     
     https://askubuntu.com/questions/1369159/  
