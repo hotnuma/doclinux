@@ -444,7 +444,14 @@
     media.gpu-process-decoder true
     ```
 
+
 #### Misc
+
+* Convert .csv file to .ods
+    
+    https://askubuntu.com/questions/1105378/  
+    
+    `soffice --convert-to ods example.csv --headless`
 
 * Fix Screen Tearing in Linux - YouTube
     
