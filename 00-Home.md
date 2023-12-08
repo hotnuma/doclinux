@@ -447,18 +447,24 @@
 
 #### Misc
 
-* Convert .csv file to .ods
-    
-    https://askubuntu.com/questions/1105378/  
-    
-    `soffice --convert-to ods example.csv --headless`
-
 * Fix Screen Tearing in Linux - YouTube
     
     https://www.youtube.com/watch?v=rVBq6d3c1gM  
     [https://unix.stackexchange.com/questions/667911/](https://unix.stackexchange.com/questions/667911/intel-modesetting-driver-screen-tearing)  
     https://forum.ubuntu-fr.org/viewtopic.php?id=2066260  
     [https://linuxfr.org/les-drivers-xorg](https://linuxfr.org/users/gnumdk/journaux/les-drivers-xorg-inutiles-avec-un-noyau-recent)  
+
+* Center window
+    
+    https://superuser.com/questions/141032/  
+    
+    `Alt+F7`
+
+* Convert .csv file to .ods
+    
+    https://askubuntu.com/questions/1105378/  
+    
+    `soffice --convert-to ods example.csv --headless`
 
 * Statistics
     
