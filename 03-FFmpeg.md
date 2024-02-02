@@ -52,7 +52,7 @@ https://ffmpeg.org/ffmpeg-filters.html
 * Delay audio by one second
 
     ```
-    ffmpeg -i input.mkv -itsoffset 1.0 -i input.mkv -map 0:0 -map 1:1 -c copy output.mkv
+    ffmpeg -i input.mkv -itsoffset -1.0 -i input.mkv -map 0:0 -map 1:1 -c copy output.mkv
     ```
     
 * Choose default audio channel
