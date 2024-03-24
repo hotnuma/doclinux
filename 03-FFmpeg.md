@@ -122,8 +122,9 @@ https://ffmpeg.org/ffmpeg-filters.html
 
 * Youtube
 
+    ```
     yt-dlp --cookies=cookies/youtube.txt "URL"
-    yt-dlp --cookies=cookies/youtube.txt --write-auto-sub --convert-subs=srt --skip-download "URL"
+    ```
 
 
 
@@ -146,6 +147,12 @@ https://ffmpeg.org/ffmpeg-filters.html
 
     ```
     ffmpeg -f concat -safe 0 -i "input.txt" -c copy "output.avi"
+    ```
+
+* Download thumbnail
+    
+    ```
+    yt-dlp --write-thumbnail --skip-download "URL"
     ```
 
 * Write title metadata
