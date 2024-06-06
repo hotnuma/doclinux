@@ -50,6 +50,10 @@
 
 #### Gtk
 
+* Go Back shortcut Alt+P
+
+    https://gitlab.gnome.org/GNOME/evince/-/issues/1095  
+    
 * Gtk4 Listview scrolling is broken
     
     https://gitlab.gnome.org/GNOME/gtk/-/issues/2971  
