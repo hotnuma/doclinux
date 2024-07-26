@@ -20,11 +20,6 @@
     
     https://0e39bf7b.blog/posts/ubuntu-periodic-tasks/
 
-* pkexec
-    
-    https://unix.stackexchange.com/questions/203136/  
-    https://askubuntu.com/questions/608419/  
-    
 
 #### Enable / Disable
 
@@ -54,10 +49,6 @@
 
 #### System
 
-* /sbin /bin /local/bin
-    
-    https://askubuntu.com/questions/308045/  
-
 * Edit grub.conf
     
     https://askubuntu.com/questions/575651/  
@@ -66,10 +57,29 @@
     
     Execute : `sudo update-grub`
 
-* List user's groups
+* Reboot / Halt System
     
-    `groups username`
+    ```
+    systemctl reboot
+    systemctl poweroff
+    ```
 
+* Default boot target
+
+    ```
+    sudo systemctl get-default
+    sudo systemctl set-default graphical.target
+    ```
+
+* /sbin /bin /local/bin
+    
+    https://askubuntu.com/questions/308045/  
+
+* pkexec
+    
+    https://unix.stackexchange.com/questions/203136/  
+    https://askubuntu.com/questions/608419/  
+    
 * Environment variables
     
     https://wiki.archlinux.org/title/environment_variables  
@@ -88,14 +98,14 @@
     /etc/default/locale
     ```
     
+* List user's groups
+    
+    `groups username`
+
 * File associations
     
     `~/.config/mimeapps.list`
     
-* Xsession xdg paths
-    
-    https://askubuntu.com/questions/1179729/  
-
 * Alias
     
     List aliases : `alias`
@@ -106,31 +116,47 @@
     alias cgrep='grep -rni --include=*.{h,c,cpp,cxx}'
     ```
 
-* XBindKeys
-    
-    https://www.nongnu.org/xbindkeys/xbindkeys.html  
-
-* Reboot / Halt System
-    
-    ```
-    systemctl reboot
-    systemctl poweroff
-    ```
-
-* Default boot target
-
-    ```
-    sudo systemctl get-default
-    sudo systemctl set-default graphical.target
-    ```
-
 * Alternatives
     
     https://wiki.debian.org/DebianAlternatives  
 
+* XBindKeys
+    
+    https://www.nongnu.org/xbindkeys/xbindkeys.html  
+
+* Xsession xdg paths
+    
+    https://askubuntu.com/questions/1179729/  
+
 
 #### Drives
 
+* Check drive spin down
+
+    https://superuser.com/questions/173622/  
+
+* Eject USB drives
+    
+    https://unix.stackexchange.com/questions/35508/
+
+* Power Off Drive
+    
+    https://askubuntu.com/questions/671683/  
+    https://forum.manjaro.org/t/eject-external-hard-drive-option-gone/61895/6  
+    
+    ```
+    sync
+    udisksctl power-off -b /dev/sdX
+    ```
+
+* Read smart infos
+
+    `sudo smartctl -s on -a /dev/sdc`
+    
+* Read UUID of partitions
+
+    `sudo blkid`
+    
 * Unmount all partitions
 
     `umount /dev/sdc?`
@@ -171,32 +197,6 @@
     [how_to_io_test](https://www.cyberciti.biz/faq/howto-linux-unix-test-disk-performance-with-dd-command/)  
     
     `dd if=/dev/zero of=/tmp/test1.img bs=1G count=1 oflag=dsync`
-    
-* Power Off Drive
-    
-    https://askubuntu.com/questions/671683/  
-    https://forum.manjaro.org/t/eject-external-hard-drive-option-gone/61895/6  
-    
-    ```
-    sync
-    udisksctl power-off -b /dev/sdX
-    ```
-
-* Check drive spin down
-
-    https://superuser.com/questions/173622/  
-
-* Eject USB drives
-    
-    https://unix.stackexchange.com/questions/35508/
-
-* Read UUID of partitions
-
-    `sudo blkid`
-    
-* Read smart infos
-
-    `sudo smartctl -s on -a /dev/sdc`
     
 * Write img file to drive /dev/sdc using systools
 
