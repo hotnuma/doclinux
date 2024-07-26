@@ -299,30 +299,29 @@
     
     [https://www.linuxtricks.fr/wiki](https://www.linuxtricks.fr/wiki/debian-configurer-les-sources-activer-non-free-et-contrib)  
 
+* System upgrade
+
+    ```
+    sudo apt update
+    sudo apt upgrade
+    ```
+    or
+
+    ```
+    sudo apt update
+    sudo apt full-upgrade
+    ```
+
 * Remove useless packages
 
     ```
-    sudo apt autoremove --purge
+    sudo apt autoremove
     ```
     
     or
     
     ```
-    sudo apt autopurge
-    ```
-
-     https://forum.ubuntu-fr.org/viewtopic.php?pid=22563731#p22563731  
-    
-    ```
-    apt list ~c
-    sudo apt purge ~c
-    ```
-
-   https://forum.ubuntu-fr.org/viewtopic.php?pid=22273320#p22273320  
-    
-    ```
-    dpkg -l | grep -v ^ii
-    dpkg -l | awk '/^rc/{print $2}' | xargs -r sudo dpkg -P
+    sudo apt autoremove --purge
     ```
     
 * End of life releases
@@ -359,21 +358,6 @@
     sudo apt clean ; sudo apt autoclean
     ```
 
-* Ubuntu upgrade system
-
-    ```
-    sudo do-release-upgrade
-    ```
-
-    Troubles can come from third party repositories or orphan packages
-    
-    ```
-    cat /etc/apt/sources.list
-    ls /etc/apt/sources.list.d
-    cat /etc/apt/sources.list.d/*.list
-    apt list | grep "installé, local"
-    ```
-
 * Check if reboot is needed
     
     https://askubuntu.com/questions/164/  
@@ -388,16 +372,6 @@
     python3 -m pip install -U yt-dlp
     ```
 
-* youtube-dl
-    
-    https://github.com/ytdl-org/youtube-dl  
-    
-    Install or Update :
-        
-    ```
-    sudo -H pip install --upgrade youtube-dl
-    ```
-    
 * Codecs and fonts
 
     ```
