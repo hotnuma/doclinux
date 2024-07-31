@@ -165,7 +165,7 @@
 
     https://serverfault.com/questions/250839/  
     
-    `dd if=/dev/zero of=/dev/sda bs=512 count=1 conv=notrunc`
+    `sudo dd if=/dev/zero of=/dev/sdc bs=512 count=1 conv=notrunc`
 
 * Format `/dev/sdc1` partition in Ext4
 
