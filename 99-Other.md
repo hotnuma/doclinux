@@ -198,6 +198,7 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
 
 
 <!--
+
 * Uninstall block snaps
     
     https://askubuntu.com/questions/1369159/  
@@ -222,6 +223,6 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     
     [https://www.reddit.com/r/firefox/comments/sgyu1s/how_to_disa](https://www.reddit.com/r/firefox/comments/sgyu1s/how_to_disable_enable_drm_banner_to_prompt/)  
     https://support.cdn.mozilla.net/ml/questions/1388341  
--->
 
+-->
 
