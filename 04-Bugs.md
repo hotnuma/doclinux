@@ -13,6 +13,12 @@
     https://gitlab.xfce.org/xfce/thunar/-/issues/573  
     [https://gitlab.xfce.org/xfce/thunar/-/commit/...](https://gitlab.xfce.org/xfce/thunar/-/commit/bdb2f762cf335e621d9bd2556f5f92306ecf4201)  
 
+* Sorting
+    
+    https://gitlab.xfce.org/xfce/thunar/-/issues/68  
+    https://unix.stackexchange.com/questions/510530/  
+    https://github.com/linuxmint/nemo/issues/2247  
+
 
 #### XFCE
 
@@ -37,12 +43,6 @@
     https://gitlab.xfce.org/xfce/libxfce4ui/-/issues/14  
     https://winaero.com/disable-client-side-decorations-in-xfce-for-open-save-dialog/  
 
-* File Manager Sorting
-    
-    https://gitlab.xfce.org/xfce/thunar/-/issues/68  
-    https://unix.stackexchange.com/questions/510530/  
-    https://github.com/linuxmint/nemo/issues/2247  
-
 * Window Border
     
     http://sevkeifert.blogspot.com/2014/12/increase-window-border-size-in-xubuntu.html  
@@ -54,30 +54,6 @@
 
     https://gitlab.gnome.org/GNOME/evince/-/issues/1095  
     
-* Gtk4 Listview scrolling is broken
-    
-    https://gitlab.gnome.org/GNOME/gtk/-/issues/2971  
-
-* Double click bug
-
-    https://discourse.gnome.org/t/double-click-on-already-selected-item-will-often-not-open-item-in-nautilus/4590/5  
-    https://gitlab.gnome.org/GNOME/nautilus/-/issues/1599  
-
-* GtkTreeView Memory leak
-    
-    https://bugzilla.redhat.com/show_bug.cgi?id=1965195  
-    [https://gitlab.gnome.org/GNOME/gtk/-/commit/21f8098261486417](https://gitlab.gnome.org/GNOME/gtk/-/commit/21f8098261486417db371b202bc0494c12017468)  
-    https://gitlab.gnome.org/GNOME/gtk/-/pipelines/289296  
-    https://gitlab.gnome.org/GNOME/gtk/-/merge_requests/3660  
-
-* Gtk 3.24.26 preedit bug
-    
-    https://gitlab.gnome.org/GNOME/gtk/-/issues/5744  
-
-* Tooltip position
-    
-    https://gitlab.gnome.org/GNOME/gtk/-/issues/2784  
-
 
 #### Errors
 
@@ -140,17 +116,6 @@
 
 #### Other
 
-* Mpv
-    
-    ```
-    ls -l /var/crash
-    -rw-r-----  1 hotnuma hotnuma 23227218 févr. 24 05:59 _usr_bin_mpv.1000.crash
-    ```
-
-* QtCreator printf
-
-    https://chowdera.com/2020/12/20201208210320326z.html  
-
 * Geany Underscore Bug
     
     https://github.com/geany/geany/issues/1387  
@@ -166,6 +131,17 @@
     
     https://github.com/geany/geany/issues/1890  
     
+* Mpv
+    
+    ```
+    ls -l /var/crash
+    -rw-r-----  1 hotnuma hotnuma 23227218 févr. 24 05:59 _usr_bin_mpv.1000.crash
+    ```
+
+* QtCreator printf
+
+    https://chowdera.com/2020/12/20201208210320326z.html  
+
 * ifupdown
     
     https://bugs.launchpad.net/ubuntu/+source/ifupdown/+bug/1907878  
@@ -176,5 +152,34 @@
     
     [https://gitlab.freedesktop.org/plymouth/](https://gitlab.freedesktop.org/plymouth/plymouth/-/commit/c74b3aef9c34c1c51b2c9c14f10f2906925ed380)  
     https://ubuntuforums.org/showthread.php?t=2457946  
+
+
+<!--
+
+* Gtk4 Listview scrolling is broken
+    
+    https://gitlab.gnome.org/GNOME/gtk/-/issues/2971  
+
+* Double click bug
+
+    https://discourse.gnome.org/t/double-click-on-already-selected-item-will-often-not-open-item-in-nautilus/4590/5  
+    https://gitlab.gnome.org/GNOME/nautilus/-/issues/1599  
+
+* GtkTreeView Memory leak
+    
+    https://bugzilla.redhat.com/show_bug.cgi?id=1965195  
+    [https://gitlab.gnome.org/GNOME/gtk/-/commit/21f8098261486417](https://gitlab.gnome.org/GNOME/gtk/-/commit/21f8098261486417db371b202bc0494c12017468)  
+    https://gitlab.gnome.org/GNOME/gtk/-/pipelines/289296  
+    https://gitlab.gnome.org/GNOME/gtk/-/merge_requests/3660  
+
+* Gtk 3.24.26 preedit bug
+    
+    https://gitlab.gnome.org/GNOME/gtk/-/issues/5744  
+
+* Tooltip position
+    
+    https://gitlab.gnome.org/GNOME/gtk/-/issues/2784  
+
+-->
 
 

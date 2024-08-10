@@ -40,7 +40,6 @@
 
 
 
-<!--
 #### Interfaces
 
 * Switch back to /etc/network/interfaces
@@ -119,11 +118,14 @@ https://help.ubuntu.com/community/NetworkManager
     sudo ifup eth0
     ```
 
+<!--
+
 * Netplan
     
     https://askubuntu.com/questions/1034711/  
     https://askubuntu.com/questions/1080230/  
     https://forum.ubuntu-fr.org/viewtopic.php?id=2078751  
+
 -->
 
 
