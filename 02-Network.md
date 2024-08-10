@@ -16,7 +16,10 @@
     
     [https://www.freedesktop.org/.../PredictableNetworkInterfaceNames](https://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/)  
     
-    switch back to eth0 :
+    Switch back to eth0 :
+    
+    add `GRUB_CMDLINE_LINUX="net.ifnames=0"` in `/etc/default/grub`
+    then `sudo update-grub`
     
     `ln -s /dev/null /etc/systemd/network/99-default.link`
     
