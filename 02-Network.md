@@ -12,6 +12,18 @@
     
     https://wiki.debian.org/NetworkConfiguration  
 
+* Read network configuration
+    
+    `ip route show default`
+    
+    `ip route show default | cut -d " " -f 5`
+    
+    `ifconfig`
+
+* Read DNS servers
+    
+    `cat /etc/resolv.conf`
+
 * Predictable Network Interface Names
     
     [https://www.freedesktop.org/.../PredictableNetworkInterfaceNames](https://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/)  
@@ -25,13 +37,50 @@
 
     `echo "192.168.1.254  mabbox.bytel.fr" >> /etc/hosts`
 
-* Read network configuration
+#### Interfaces
+
+* Use systemd-networkd
     
-    `ip route show default`
+    [https://linux.fernandocejas.com/docs/...systemd-networkd](https://linux.fernandocejas.com/docs/how-to/switch-from-network-manager-to-systemd-networkd)  
     
-    `ip route show default | cut -d " " -f 5`
+    Create a configuration file :
     
-    `ifconfig`
+    /etc/systemd/network/00-enp3s0.network
+
+    ```
+    [Match]
+    Name=eth0
+
+    [Network]
+    Address=192.168.1.101
+    Gateway=192.168.1.254
+    DNS=8.8.8.8
+    DNS=8.8.4.4
+    ```
+    
+    Start services :
+    
+    ```
+    sudo apt install systemd-resolved
+
+    sudo systemctl stop NetworkManager
+    sudo systemctl disable NetworkManager
+
+    sudo systemctl enable systemd-networkd
+
+    sudo systemctl enable systemd-resolved
+    sudo systemctl start systemd-resolved
+
+    sudo rm /etc/resolv.conf
+    sudo ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
+
+    networkctl
+    ```
+
+
+
+
+<!--
 
 * Set a static IP with NetworkManager
 
@@ -43,10 +92,6 @@
     nmcli con up eth0
     ```
     
-<!--
-
-#### Interfaces
-
 * Switch back to /etc/network/interfaces
     
     https://askubuntu.com/questions/1031709/  
