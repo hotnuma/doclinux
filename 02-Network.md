@@ -21,8 +21,6 @@
     add `GRUB_CMDLINE_LINUX="net.ifnames=0"` in `/etc/default/grub`
     then `sudo update-grub`
     
-    `ln -s /dev/null /etc/systemd/network/99-default.link`
-    
 * Set BBox name in hosts file
 
     `echo "192.168.1.254  mabbox.bytel.fr" >> /etc/hosts`
@@ -146,6 +144,11 @@ https://help.ubuntu.com/community/NetworkManager
     ```
 
 <!--
+
+enable eth0
+
+    `ln -s /dev/null /etc/systemd/network/99-default.link`
+    
 
 * Netplan
     
