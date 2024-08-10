@@ -27,12 +27,23 @@
 
 * Read network configuration
     
-    `ifconfig`
-    
     `ip route show default`
     
     `ip route show default | cut -d " " -f 5`
     
+    `ifconfig`
+
+* Set a static IP with NetworkManager
+
+    ```
+    nmcli con mod eth0 ipv4.addresses 192.168.1.101
+    nmcli con mod eth0 ipv4.gateway 192.168.1.254
+    nmcli con mod eth0 ipv4.dns “8.8.8.8 8.8.4.4”
+    nmcli con mod eth0 ipv4.method manual
+    nmcli con up eth0
+    ```
+    
+<!--
 
 #### Interfaces
 
@@ -142,8 +153,6 @@ https://help.ubuntu.com/community/NetworkManager
     ```
     sudo ifup eth0
     ```
-
-<!--
 
 enable eth0
 
