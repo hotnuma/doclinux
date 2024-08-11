@@ -84,19 +84,42 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     https://unix.stackexchange.com/questions/224370/  
     https://unix.stackexchange.com/questions/637227/  
     
-    In `/etc/pam.d/sudo` replace user_name with real name
+    In `/etc/pam.d/sudo` add the following with a real name :
+
+    `session [success=1 default=ignore] pam_succeed_if.so quiet uid = 0 ruser = username`
+    
+    Example of `/etc/pam.d/sudo` file :
     
     ```
-    session [success=1 default=ignore] pam_succeed_if.so quiet uid = 0 ruser = user_name
-    ```
+    #%PAM-1.0
 
+    # Set up user limits from /etc/security/limits.conf.
+    session    required   pam_limits.so
+    session [success=1 default=ignore] pam_succeed_if.so quiet uid = 0 ruser = hotnuma
+
+    @include common-auth
+    @include common-account
+    @include common-session-noninteractive
+    ```
 * rtkit-daemon
     
     https://unix.stackexchange.com/questions/684379/  
     
     ```
     sudo mkdir /etc/systemd/system/rtkit-daemon.service.d/
-    sudo geany rtkit-daemon.service.d/log.conf
+    sudo geany /etc/systemd/system/rtkit-daemon.service.d/log.conf
+    ```
+    
+    Add the following :
+    
+    ```
+    [Service]
+    LogLevelMax=4
+    ```
+    
+    Reload the service
+    
+    ```
     sudo systemctl daemon-reload
     sudo systemctl restart rtkit-daemon.service
     ```
