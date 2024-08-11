@@ -39,6 +39,16 @@
 
     `echo "192.168.1.254  mabbox.bytel.fr" >> /etc/hosts`
 
+* Disable IPv6 in Kernel
+
+    Edit `/etc/default/grub` and add `ipv6.disable=1` :
+    
+    `GRUB_CMDLINE_LINUX_DEFAULT="ipv6.disable=1 quiet"`
+
+    Update grub :
+
+    `sudo update-grub`
+
 
 #### Switch back to /etc/network/interfaces
 
@@ -167,7 +177,10 @@
     Name=eth0
 
     [Network]
-    Address=192.168.1.101
+    LinkLocalAddressing=no
+    IPv6AcceptRA=no
+    DHCP=no
+    Address=192.168.1.101/24
     Gateway=192.168.1.254
     DNS=8.8.8.8
     DNS=8.8.4.4
@@ -186,7 +199,7 @@
     sudo systemctl enable systemd-resolved
     sudo systemctl start systemd-resolved
 
-    sudo rm /etc/resolv.conf
+    sudo mv /etc/resolv.conf /etc/resolv.conf.bak
     sudo ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
 
     networkctl
@@ -194,23 +207,18 @@
 
 <!--
 
-#### Network
+* Disable IPv6
 
-* networkd: interfaces stuck in "configuring" state · Issue #17831 · systemd/systemd · GitHub
+    In `/etc/sysctl.conf` add the following :
     
-    https://github.com/systemd/systemd/issues/17831  
-
-* Disabling IPv6 causes network interface to stay in configuring status · Issue #1419 · coreos/bugs · GitHub
+    ```
+    net.ipv6.conf.all.disable_ipv6 = 1
+    net.ipv6.conf.default.disable_ipv6 = 1
+    net.ipv6.conf.lo.disable_ipv6 = 1
+    net.ipv6.conf.tun0.disable_ipv6 = 1
+    ```
     
-    https://github.com/coreos/bugs/issues/1419  
-
-* Systemd-networkd: ipv6 et ipv4 - Support Debian - debian-fr.org
-    
-    [https://www.debian-fr.org/t/systemd-networkd-ipv6-et-ipv4/80](https://www.debian-fr.org/t/systemd-networkd-ipv6-et-ipv4/80773/7)  
-
-* [Résolu]Changer le DNS (de façon stable) / Accès internet et réseaux / Forum Ubuntu-fr.org
-    
-    https://forum.ubuntu-fr.org/viewtopic.php?id=2074877  
+    Reboot the system.
 
 -->
 
