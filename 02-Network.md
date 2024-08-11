@@ -39,18 +39,15 @@
 
     `echo "192.168.1.254  mabbox.bytel.fr" >> /etc/hosts`
 
-* Disable IPv6
+* Disable IPv6 in Kernel
 
-    In `/etc/sysctl.conf` add the following :
+    Edit `/etc/default/grub` and add `ipv6.disable=1` :
     
-    ```
-    net.ipv6.conf.all.disable_ipv6 = 1
-    net.ipv6.conf.default.disable_ipv6 = 1
-    net.ipv6.conf.lo.disable_ipv6 = 1
-    net.ipv6.conf.tun0.disable_ipv6 = 1
-    ```
-    
-    Reboot the system.
+    `GRUB_CMDLINE_LINUX_DEFAULT="ipv6.disable=1 quiet"`
+
+    Update grub :
+
+    `sudo update-grub`
 
 
 #### Interfaces
@@ -95,5 +92,22 @@
 
     networkctl
     ```
+
+<!--
+
+* Disable IPv6
+
+    In `/etc/sysctl.conf` add the following :
+    
+    ```
+    net.ipv6.conf.all.disable_ipv6 = 1
+    net.ipv6.conf.default.disable_ipv6 = 1
+    net.ipv6.conf.lo.disable_ipv6 = 1
+    net.ipv6.conf.tun0.disable_ipv6 = 1
+    ```
+    
+    Reboot the system.
+
+-->
 
 
