@@ -54,7 +54,6 @@
 
 * resolvconf
     
-    
     ```
     # check to see if resolvconf is installed
     sudo systemctl status resolvconf.service
