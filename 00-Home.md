@@ -23,9 +23,10 @@
 
 #### Enable / Disable
 
-* Disable Overlay Scrollbars
+* Disable AppArmor
     
-    https://forums.linuxmint.com/viewtopic.php?t=298083  
+    https://linuxconfig.org/how-to-disable-apparmor-on-ubuntu-20-04-focal-fossa-linux  
+    https://help.ubuntu.com/community/AppArmor  
 
 * Disable at-spi
     
@@ -35,10 +36,18 @@
     
     `NO_AT_BRIDGE=1`
 
-* Disable AppArmor
+* Disable ssh agent and pgp agent
     
-    https://linuxconfig.org/how-to-disable-apparmor-on-ubuntu-20-04-focal-fossa-linux  
-    https://help.ubuntu.com/community/AppArmor  
+    https://docs.xfce.org/xfce/xfce4-session/advanced#ssh_and_gpg_agents  
+    
+    ```
+    xfconf-query -c xfce4-session -p /startup/ssh-agent/enabled -n -t bool -s false
+    xfconf-query -c xfce4-session -p /startup/gpg-agent/enabled -n -t bool -s false
+    ```
+
+* Disable Overlay Scrollbars
+    
+    https://forums.linuxmint.com/viewtopic.php?t=298083  
 
 * Disable autostart programs
     
