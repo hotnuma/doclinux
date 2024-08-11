@@ -15,6 +15,8 @@
 
 * Read network configuration
     
+    `networkctl`
+    
     `ip route show default`
     
     `ip route show default | cut -d " " -f 5`
@@ -46,7 +48,7 @@
     
     Create a configuration file :
     
-    /etc/systemd/network/00-eth0.network
+    `/etc/systemd/network/00-eth0.network`
 
     ```
     [Match]
@@ -78,30 +80,26 @@
     networkctl
     ```
 
-#### Network
+<!--
 
-* Disabling IPv6 causes network interface to stay in configuring status · Issue #1419 · coreos/bugs · GitHub
-    
-    https://github.com/coreos/bugs/issues/1419  
+#### Network
 
 * networkd: interfaces stuck in "configuring" state · Issue #17831 · systemd/systemd · GitHub
     
     https://github.com/systemd/systemd/issues/17831  
 
+* Disabling IPv6 causes network interface to stay in configuring status · Issue #1419 · coreos/bugs · GitHub
+    
+    https://github.com/coreos/bugs/issues/1419  
+
 * Systemd-networkd: ipv6 et ipv4 - Support Debian - debian-fr.org
     
     [https://www.debian-fr.org/t/systemd-networkd-ipv6-et-ipv4/80](https://www.debian-fr.org/t/systemd-networkd-ipv6-et-ipv4/80773/7)  
 
-* [Networking] After reboot computer can not connect to internet - Debian User Forums
-    
-    https://forums.debian.net/viewtopic.php?t=153621  
-
-* [SOLVED] Debian 12 Bookworm on HC4 - no network connection - ODROID
-    
-    https://forum.odroid.com/viewtopic.php?t=48251  
-
 * [Résolu]Changer le DNS (de façon stable) / Accès internet et réseaux / Forum Ubuntu-fr.org
     
     https://forum.ubuntu-fr.org/viewtopic.php?id=2074877  
+
+-->
 
 
