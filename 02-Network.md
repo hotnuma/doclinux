@@ -40,7 +40,7 @@
     `echo "192.168.1.254  mabbox.bytel.fr" >> /etc/hosts`
 
 
-#### Switch back to /etc/network/interfaces
+#### Switch to /etc/network/interfaces
 
 * References
     
@@ -55,9 +55,6 @@
 * resolvconf
     
     ```
-    # check to see if resolvconf is installed
-    sudo systemctl status resolvconf.service
-
     # install resolveconf package
     sudo apt update
     sudo apt install ifupdown resolvconf
@@ -68,9 +65,6 @@
     # if resolveconf isn't running, enable then start it
     sudo systemctl enable resolvconf.service
     sudo systemctl start resolvconf.service
-
-    # check resolveconf status
-    sudo systemctl status resolvconf.service
 
     # edit the head file
     sudo nano /etc/resolvconf/resolv.conf.d/head
@@ -87,7 +81,7 @@
     sudo nano /etc/resolv.conf
     ```
 
-* Disable network manager
+* Disable NetworkManager
 
     ```
     sudo systemctl stop NetworkManager.service
@@ -98,6 +92,14 @@
     sudo systemctl disable NetworkManager-dispatcher.service
     sudo systemctl stop network-manager.service
     sudo systemctl disable network-manager.service
+    ```
+
+* Disable systemd-networkd
+    
+    ```
+    sudo systemctl stop systemd-networkd
+    sudo systemctl disable systemd-networkd
+    sudo rm /etc/systemd/network/00-eth0.network
     ```
 
 * Interface
@@ -131,6 +133,16 @@
     nameserver 8.8.4.4
     nameserver 127.0.0.53
     ```
+    
+    Configure eth0 using ifup.
+
+    ```
+    sudo ifup eth0
+    ```
+    
+* Enable eth0
+
+    `ln -s /dev/null /etc/systemd/network/99-default.link`
 
 * Uninstall network manager
 
@@ -140,16 +152,6 @@
     sudo apt purge network-manager
     ```
 
-    Configure eth0 using ifup.
-
-    ```
-    sudo ifup eth0
-    ```
-
-* Enable eth0
-
-    `ln -s /dev/null /etc/systemd/network/99-default.link`
-    
 
 #### Use systemd-networkd
 
