@@ -24,6 +24,10 @@
 * Read DNS servers
     
     `cat /etc/resolv.conf`
+    
+    `ls /etc/resolv.conf`
+    
+    `resolvectl status`
 
 * Predictable Network Interface Names
     
@@ -44,7 +48,11 @@
 
 * Install systemd-resolved
     
-    `sudo apt install ifupdown systemd-resolved`
+    ```
+    sudo apt install ifupdown systemd-resolved
+    sudo cp /etc/resolv.conf /etc/resolv.conf.bak
+    sudo rm /etc/resolv.conf
+    sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 
 * Disable NetworkManager
 
