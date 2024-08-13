@@ -21,13 +21,10 @@
     networkctl
     networkctl status
     ```
-
-* Change interface state
     
-    ```
-    sudo ip link set dev eth0 down
-    sudo ip link set dev eth0 up
-    ```
+    List interfaces : `ls /sys/class/net`
+    
+* Change interface state
     
     ```
     sudo ifdown eth0
@@ -35,6 +32,11 @@
     ```
 
     `sudo ifdown eth0 && sudo ifup eth0`
+    
+    ```
+    sudo ip link set dev eth0 down
+    sudo ip link set dev eth0 up
+    ```
     
     `sudo systemctl restart networking`
 
@@ -88,20 +90,16 @@
     Create `/etc/network/interfaces` :
 
     ```
-    # The loopback network interface
     auto lo
     iface lo inet loopback
 
-    allow-hotplug eth0
     auto eth0
     iface eth0 inet static
-      address 192.168.1.100
-      netmask 255.255.255.0
-      broadcast 192.168.1.255
-      gateway 192.168.1.254
-      # Only relevant if you make use of RESOLVCONF(8)
-      # or similar...
-      dns-nameservers 8.8.8.8 8.8.4.4
+        address 192.168.1.100/24
+        netmask 255.255.255.0
+        broadcast 192.168.1.255
+        gateway 192.168.1.254
+        dns-nameservers 8.8.8.8 8.8.4.4
     ```
 
     Configure eth0 using ifup :
