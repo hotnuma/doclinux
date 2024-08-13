@@ -15,19 +15,19 @@
 
 * Read network configuration
     
-    `networkctl`
-    
-    `ip route show default`
-    
-    `ip route show default | cut -d " " -f 5`
+    ```
+    ip addr
+    ip route show default
+    networkctl
+    networkctl status
+    ```
 
 * Read DNS servers
     
-    `cat /etc/resolv.conf`
-    
-    `ls /etc/resolv.conf`
-    
-    `resolvectl status`
+    ```
+    cat /etc/resolv.conf
+    ls /etc/resolv.conf
+    ```
 
 * Predictable Network Interface Names
     
@@ -46,13 +46,11 @@
 
 #### Switch to /etc/network/interfaces
 
-* Install systemd-resolved
+* Install ifupdown
     
     ```
-    sudo apt install ifupdown systemd-resolved
-    sudo cp /etc/resolv.conf /etc/resolv.conf.bak
-    sudo rm /etc/resolv.conf
-    sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+    sudo apt install ifupdown resolvconf
+    ```
 
 * Disable NetworkManager
 
@@ -137,15 +135,20 @@
     sudo systemctl enable systemd-resolved
     sudo systemctl start systemd-resolved
 
-    sudo cp /etc/resolv.conf /etc/resolv.conf.bak
-    sudo rm /etc/resolv.conf
-    sudo ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
-
     networkctl
     ```
 
 <!--
 
+    sudo cp /etc/resolv.conf /etc/resolv.conf.bak
+    sudo rm /etc/resolv.conf
+    sudo ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
+    
+    sudo cp /etc/resolv.conf /etc/resolv.conf.bak
+    sudo rm /etc/resolv.conf
+    sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+    
+    ip route show default | cut -d " " -f 5
 
 -->
 
