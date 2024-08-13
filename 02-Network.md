@@ -87,7 +87,7 @@
       gateway 192.168.1.254
       # Only relevant if you make use of RESOLVCONF(8)
       # or similar...
-      #dns-nameservers 8.8.8.8 8.8.4.4
+      dns-nameservers 8.8.8.8 8.8.4.4
     ```
 
     Configure eth0 using ifup :
@@ -118,7 +118,7 @@
     Name=eth0
 
     [Network]
-    Address=192.168.1.101
+    Address=192.168.1.100/24
     Gateway=192.168.1.254
     DNS=8.8.8.8
     DNS=8.8.4.4
@@ -137,6 +137,7 @@
     sudo systemctl enable systemd-resolved
     sudo systemctl start systemd-resolved
 
+    sudo cp /etc/resolv.conf /etc/resolv.conf.bak
     sudo rm /etc/resolv.conf
     sudo ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
 
@@ -145,9 +146,6 @@
 
 <!--
 
-https://unix.stackexchange.com/questions/113828/how-to-find-and-reload-specific-driver-from-kernel  
-https://www.layerstack.com/resources/tutorials/How-to-restart-Network-Interface-or-Network-Adapter-on-Linux-and-Windows-Cloud-Servers  
-https://www.cyberciti.biz/faq/linux-restart-network-interface/  
 
 -->
 
