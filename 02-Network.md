@@ -22,6 +22,20 @@
     networkctl status
     ```
 
+* Change interface state
+    
+    ```
+    sudo ip link set dev eth0 down
+    sudo ip link set dev eth0 up
+    ```
+    
+    ```
+    sudo ifdown eth0
+    sudo ifup eth0
+    ```
+
+    `sudo ifdown eth0 && sudo ifup eth0`
+
 * Read DNS servers
     
     ```

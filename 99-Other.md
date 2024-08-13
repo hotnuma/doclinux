@@ -8,15 +8,9 @@
 
 #### Forums
 
-117 https://forums.linuxmint.com/search.php?search_id=active_topics  
-071 https://forums.raspberrypi.com/search.php?search_id=active_topics  
-046 https://forum.endeavouros.com/latest  
-039 https://forum.manjaro.org/latest  
-037 https://ubuntuforums.org/search.php?do=getnew&contenttype=vBForum_Post  
-036 https://bbs.archlinux.org/search.php?action=show_recent  
-030 https://forum.mxlinux.org/search.php?search_id=active_topics  
-020 https://forum.ubuntu-fr.org/search.php?action=show_recent  
 018 https://forums.debian.net/search.php?search_id=active_topics  
+020 https://forum.ubuntu-fr.org/search.php?action=show_recent  
+071 https://forums.raspberrypi.com/search.php?search_id=active_topics  
 
 
 #### Articles
@@ -154,6 +148,7 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     mem : 261
     ```
 
+<!--
 
 #### Anti-Linux :-D
 
@@ -197,7 +192,6 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     [https://dudemanguy.github.io/blog/...](https://dudemanguy.github.io/blog/posts/2022-06-10-wayland-xorg/wayland-xorg.html)  
 
 
-<!--
 
 * Uninstall block snaps
     
