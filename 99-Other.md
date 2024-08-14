@@ -8,8 +8,8 @@
 
 #### Forums
 
-018 https://forums.debian.net/search.php?search_id=active_topics  
 020 https://forum.ubuntu-fr.org/search.php?action=show_recent  
+018 https://forums.debian.net/search.php?search_id=active_topics  
 071 https://forums.raspberrypi.com/search.php?search_id=active_topics  
 
 
@@ -18,6 +18,12 @@
 * Set  default audio output
     
     https://askubuntu.com/questions/1038490/  
+
+* Named anchor in markdown
+    
+    https://stackoverflow.com/questions/5319754/  
+
+    `#### <a name="tith"></a>This is the Heading`
 
 
 #### System Processes on Debian 12
@@ -154,7 +160,7 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     
     GNOME Keyring is a collection of components that store secrets, passwords, keys, certificates and make them available to applications.
     
-    Directory : `~/.local/share/keyrings`
+    directory : `~/.local/share/keyrings`
     
     mem : 2637
 
@@ -179,5 +185,20 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     
     [https://www.reddit.com/r/firefox/comments/sgyu1s/how_to_disa](https://www.reddit.com/r/firefox/comments/sgyu1s/how_to_disable_enable_drm_banner_to_prompt/)  
     https://support.cdn.mozilla.net/ml/questions/1388341  
+
+
+<!--
+
+* CPU Load
+    
+    https://superuser.com/questions/443406/  
+    
+    `openssl speed -multi $(nproc --all)`
+
+* XBindKeys
+    
+    https://www.nongnu.org/xbindkeys/xbindkeys.html  
+
+-->
 
 

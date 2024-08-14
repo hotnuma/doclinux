@@ -21,7 +21,7 @@
     https://0e39bf7b.blog/posts/ubuntu-periodic-tasks/
 
 
-#### Enable / Disable
+#### <a name="disable"></a> Enable / Disable Programs
 
 * Disable AppArmor
     
@@ -56,7 +56,7 @@
     `echo "Hidden=true" > $HOME/.config/autostart/xcompmgr.desktop`
 
 
-#### System
+#### System Configuration
 
 * Edit grub.conf
     
@@ -66,29 +66,22 @@
     
     Execute : `sudo update-grub`
 
-* Reboot / Halt System
+* Alias
     
-    ```
-    systemctl reboot
-    systemctl poweroff
-    ```
+    List aliases : `alias`
+    
+    Define aliases in `~/.bash_aliases` or `~/.bashrc`
 
-* Default boot target
+    Example : `alias cgrep='grep -rni --include=*.{h,c,cpp,cxx}'`
 
-    ```
-    sudo systemctl get-default
-    sudo systemctl set-default graphical.target
-    ```
+* Alternatives
+    
+    https://wiki.debian.org/DebianAlternatives  
 
 * /sbin /bin /local/bin
     
     https://askubuntu.com/questions/308045/  
 
-* pkexec
-    
-    https://unix.stackexchange.com/questions/203136/  
-    https://askubuntu.com/questions/608419/  
-    
 * Environment variables
     
     https://wiki.archlinux.org/title/environment_variables  
@@ -99,40 +92,39 @@
     ~/.profile
     ```
     
-* Locale
-    
-    https://wiki.archlinux.org/title/locale
-    
-    ```
-    /etc/default/locale
-    ```
-    
-* List user's groups
-    
-    `groups username`
-
 * File associations
     
     `~/.config/mimeapps.list`
     
-* Alias
+* Locale
     
-    List aliases : `alias`
+    https://wiki.archlinux.org/title/locale
     
-    Define aliases in `~/.bash_aliases` or `~/.bashrc`
+    `/etc/default/locale`
+    
+* User's groups
+    
+    `groups username`
+
+* Default boot target
 
     ```
-    alias cgrep='grep -rni --include=*.{h,c,cpp,cxx}'
+    sudo systemctl get-default
+    sudo systemctl set-default graphical.target
     ```
 
-* Alternatives
+* Reboot / Halt System
     
-    https://wiki.debian.org/DebianAlternatives  
+    ```
+    systemctl reboot
+    systemctl poweroff
+    ```
 
-* XBindKeys
+* pkexec
     
-    https://www.nongnu.org/xbindkeys/xbindkeys.html  
-
+    https://unix.stackexchange.com/questions/203136/  
+    https://askubuntu.com/questions/608419/  
+    
 * Xsession xdg paths
     
     https://askubuntu.com/questions/1179729/  
@@ -300,9 +292,7 @@
 
 * Source list
     
-    ```
-    /etc/apt/sources.list
-    ```
+    `/etc/apt/sources.list`
 
 * Enable non-free-firmware
     
@@ -430,7 +420,7 @@
 
 #### Misc
 
-* Fix Screen Tearing in Linux - YouTube
+* Fix Screen Tearing in Linux
     
     https://www.youtube.com/watch?v=rVBq6d3c1gM  
     [https://unix.stackexchange.com/questions/667911/](https://unix.stackexchange.com/questions/667911/intel-modesetting-driver-screen-tearing)  
@@ -459,12 +449,6 @@
 
     `gnuplot -p -e "plot './data.txt' lc rgb 'blue' pt 6"`
 
-* CPU Load
-    
-    https://superuser.com/questions/443406/  
-    
-    `openssl speed -multi $(nproc --all)`
-
 * Check VA-API
 
     `vainfo`
@@ -479,9 +463,7 @@
 
 * Installation date
     
-    ```
-    stat -c %w /
-    ```
+    `stat -c %w /`
 
 * Play a sound
     
@@ -489,31 +471,24 @@
     
 * Delete thumbnails older than 30 days
 
-    find ~/.cache/thumbnails/ -type f -iname \*.png -mtime +30 -delete
+    `find ~/.cache/thumbnails/ -type f -iname \*.png -mtime +30 -delete`
 
 * Output command without localization
 
-    ```
-    LANGUAGE=C free -h
-    ```
+    `LANGUAGE=C free -h`
     
     or
     
-    ```
-    LANG=C free -h
-    ```
+    `LANG=C free -h`
     
 * Change default terminal
     
     https://stackoverflow.com/questions/16808231/  
     
-    ```
-    sudo update-alternatives --config x-terminal-emulator
-    ```
+    `sudo update-alternatives --config x-terminal-emulator`
     
 * Change default session
     
-    ```
-    sudo update-alternatives --config x-session-manager
-    ```
+    `sudo update-alternatives --config x-session-manager`
+
 
