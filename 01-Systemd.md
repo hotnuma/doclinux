@@ -33,6 +33,14 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     sudo systemctl reload application.service
     ```
 
+    `sudo systemctl daemon-reload`
+
+* Modify unit file
+    
+    https://serverfault.com/questions/840996/  
+    
+    `systemctl edit <service-name>`
+
 * List services
     
     https://askubuntu.com/questions/795226/  
@@ -133,22 +141,12 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
 
     ```
     systemd-analyze time
-    systemd-analyze blame --no-pager
+    systemd-analyze --no-pager blame
     systemd-analyze critical-chain
-    ```
-
-* Modify unit file
-    
-    https://serverfault.com/questions/840996/  
-    
-    ```
-    systemctl edit <service-name>
     ```
 
 * Read shutdown log
 
-    ```
-    journalctl -b -1 -e
-    ```
+    `journalctl -b -1 -e`
     
 
