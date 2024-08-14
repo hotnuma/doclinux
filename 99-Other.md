@@ -79,6 +79,8 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
 
 * ssh-agent
     
+    https://docs.xfce.org/xfce/xfce4-session/advanced#ssh_and_gpg_agents  
+    
     mem : 1074
 
 * systemd
@@ -148,6 +150,7 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
 * gnome-keyring-daemon
     
     https://wiki.archlinux.org/title/GNOME/Keyring  
+    https://docs.xfce.org/xfce/xfce4-session/advanced#ssh_and_gpg_agents  
     
     GNOME Keyring is a collection of components that store secrets, passwords, keys, certificates and make them available to applications.
     
