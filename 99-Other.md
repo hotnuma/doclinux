@@ -127,8 +127,7 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     mem : 3546
 
 
-
-<!--
+#### More System Processes on Ubuntu
 
 * accounts-daemon
     
@@ -164,39 +163,18 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     
     mem : 563
 
-* systemd-resolved
-    
-    https://wiki.archlinux.org/title/systemd-resolved  
-    
-    `systemd-resolved` is a systemd service that provides network name resolution to local applications via a D-Bus interface, the resolve NSS service (nss-resolve), and a local DNS stub listener on 127.0.0.53.
-    
-    mem : 5850
 
-* Uninstall block snaps
-    
-    https://askubuntu.com/questions/1369159/  
-    https://forum.ubuntu-fr.org/viewtopic.php?pid=22458861#p22458861  
-
-* Firefox ESR
-    
-    https://ubuntuhandbook.org/index.php/2022/03/install-firefox-esr-ubuntu/  
-
-    ```
-    sudo add-apt-repository ppa:mozillateam/ppa
-    sudo apt update
-    sudo apt install firefox-esr
-    ```
+#### Other
 
 * Install Firefox deb
     
     https://forum.ubuntu-fr.org/viewtopic.php?id=2074608  
     [https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-d](https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-deb-apt-ubuntu-22-04)  
+    https://www.youtube.com/watch?v=H7VcIIrdoXg  
 
 * How to disable DRM banner
     
     [https://www.reddit.com/r/firefox/comments/sgyu1s/how_to_disa](https://www.reddit.com/r/firefox/comments/sgyu1s/how_to_disable_enable_drm_banner_to_prompt/)  
     https://support.cdn.mozilla.net/ml/questions/1388341  
-
--->
 
 
