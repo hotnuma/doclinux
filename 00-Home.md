@@ -55,6 +55,10 @@
 
     `echo "Hidden=true" > $HOME/.config/autostart/xcompmgr.desktop`
 
+* Disable systemd-oomd
+    
+    https://askubuntu.com/questions/1404888/  
+    
 
 #### System Configuration
 

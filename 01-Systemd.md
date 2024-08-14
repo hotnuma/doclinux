@@ -137,10 +137,6 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     systemd-analyze critical-chain
     ```
 
-* Disable systemd-oomd
-    
-    https://askubuntu.com/questions/1404888/  
-    
 * Modify unit file
     
     https://serverfault.com/questions/840996/  
