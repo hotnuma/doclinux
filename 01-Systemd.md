@@ -16,17 +16,18 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     
     [https://www.digitalocean.com/community/tutorials/](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units-fr)  
     
-    ```
-    sudo systemctl status application.service
-    ```
+    `sudo systemctl status application.service`
+    
     ```
     sudo systemctl start application.service
     sudo systemctl stop application.service
     ```
+    
     ```
     sudo systemctl enable application.service
     sudo systemctl disable application.service
     ```
+    
     ```
     sudo systemctl restart application.service
     sudo systemctl reload application.service
@@ -77,16 +78,16 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     ```
 
 
-#### Turn off excessive logging
+#### <a name="disable"></a> Turn off excessive logging
 
 * sudo
     
     https://unix.stackexchange.com/questions/224370/  
     https://unix.stackexchange.com/questions/637227/  
     
-    In `/etc/pam.d/sudo` add the following with a real name :
+    In `/etc/pam.d/sudo` add the following with a real user name :
 
-    `session [success=1 default=ignore] pam_succeed_if.so quiet uid = 0 ruser = username`
+    `session [success=1 default=ignore] pam_succeed_if.so quiet uid = 0 ruser = <username>`
     
     Example of `/etc/pam.d/sudo` file :
     
@@ -101,6 +102,7 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     @include common-account
     @include common-session-noninteractive
     ```
+
 * rtkit-daemon
     
     https://unix.stackexchange.com/questions/684379/  
