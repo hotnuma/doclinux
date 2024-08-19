@@ -64,12 +64,17 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
 [https://www.golinuxcloud.com/view-logs-using-journalctl-filt](https://www.golinuxcloud.com/view-logs-using-journalctl-filter-journald/)
 
 * journalctl
+    
+    last 100 lines : `journalctl -b -f --lines=100`
+    
+    last errors : `journalctl --no-pager -b -p err`
+    
+    last errors : `journalctl --no-pager -b -p 4`
 
-    ```
-    journalctl -b -f --lines=100
-    journalctl --no-pager -b -p err
-    ```
+* Read shutdown log
 
+    `journalctl -b -1 -e`
+    
 * Rotation des logs avec logrotate
     
     [https://journaldunadminlinux.fr/rotation-des-logs-avec-logro](https://journaldunadminlinux.fr/rotation-des-logs-avec-logrotate/)
@@ -144,9 +149,4 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     systemd-analyze --no-pager blame
     systemd-analyze critical-chain
     ```
-
-* Read shutdown log
-
-    `journalctl -b -1 -e`
-    
 
