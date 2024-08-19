@@ -61,6 +61,10 @@
     [https://gitlab.xfce.org/xfce/xfce4-settings/](https://gitlab.xfce.org/xfce/xfce4-settings/-/issues/232)  
     [https://gitlab.xfce.org/xfce/xfce4-settings/](https://gitlab.xfce.org/xfce/xfce4-settings/-/issues/257)  
 
+* Xfwm4 Unmaximize
+    
+    https://gitlab.xfce.org/xfce/xfwm4/-/issues/190  
+
 
 #### Errors
 

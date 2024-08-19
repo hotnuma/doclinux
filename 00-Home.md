@@ -424,6 +424,18 @@
 
 #### Misc
 
+* Delete empty directories
+    
+    https://unix.stackexchange.com/questions/46322/  
+
+* Replace multiple spaces
+    
+    https://superuser.com/questions/241018/  
+
+* Get source of package
+    
+    https://www.cyberciti.biz/faq/how-to-get-source-code-of-package-using-the-apt-command-on-debian-or-ubuntu/  
+
 * Fix Screen Tearing in Linux
     
     https://www.youtube.com/watch?v=rVBq6d3c1gM  
