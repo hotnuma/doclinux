@@ -6,11 +6,13 @@
 
 ---
 
-#### NO-CARRIER on network interface
+#### Networking
+
+* NO-CARRIER on network interface
     
-    https://bbs.archlinux.org/viewtopic.php?id=274048  
-    https://bbs.archlinux.org/viewtopic.php?id=262075  
     https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1497005  
+    https://bbs.archlinux.org/viewtopic.php?id=262075  
+    https://bbs.archlinux.org/viewtopic.php?id=274048  
 
 
 #### Gtk
