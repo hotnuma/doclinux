@@ -67,10 +67,10 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     
     last 100 lines : `journalctl -b -f --lines=100`
     
-    last errors : `journalctl --no-pager -b -p err`
-    
     last errors : `journalctl --no-pager -b -p 4`
 
+    last errors : `journalctl --no-pager -b -p err`
+    
 * Read shutdown log
 
     `journalctl -b -1 -e`
