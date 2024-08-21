@@ -16,7 +16,7 @@
 * Read network configuration
     
     ```
-    ip addr
+    ip a
     ip route show default
     networkctl
     networkctl status
