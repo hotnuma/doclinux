@@ -18,8 +18,11 @@
 #### Gtk
 
 * Go Back shortcut Alt+P
-
+    
     https://gitlab.gnome.org/GNOME/evince/-/issues/1095  
+    https://gitlab.gnome.org/GNOME/evince/-/issues/1562  
+    https://gitlab.gnome.org/GNOME/gtk/-/issues/860  
+    https://askubuntu.com/questions/76077/  
 
 
 #### Thunar
