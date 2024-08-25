@@ -6,15 +6,6 @@
 
 ---
 
-#### Networking
-
-* NO-CARRIER on network interface
-    
-    https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1497005  
-    https://bbs.archlinux.org/viewtopic.php?id=262075  
-    https://bbs.archlinux.org/viewtopic.php?id=274048  
-
-
 #### Gtk
 
 * Go Back shortcut Alt+P
@@ -54,10 +45,6 @@
     https://gitlab.xfce.org/xfce/xfce4-session/-/issues/50  
     https://gitlab.xfce.org/xfce/xfce4-session/-/issues/111  
 
-* Window Border
-    
-    http://sevkeifert.blogspot.com/2014/12/increase-window-border-size-in-xubuntu.html  
-
 * xfsettingsd shortcuts
     
     [https://archived.forum.manjaro.org/t/xfce4-keyboard-shortcut](https://web.archive.org/web/20210123051319/https://archived.forum.manjaro.org/t/xfce4-keyboard-shortcut-not-working-sometimes-when-logging-in/73498)  
@@ -73,16 +60,6 @@
 
 #### Errors
 
-* Firefox
-    
-    https://support.google.com/youtube/thread/120697903?hl=en&msgid=120734104  
-
-    ```
-    Your browser can't play this video.
-    Impossible de lire cette vidéo avec votre navigateur
-    Votre navigateur est à jour
-    ```
-
 * gnome-keyring-daemon
     
     https://bbs.archlinux.org/viewtopic.php?id=224652  
@@ -94,13 +71,9 @@
 
 * Startup/Restart freeze
     
-    ```
-    nov. 15 16:28:59 athlon kernel: [drm:drm_atomic_helper_wait_for_flip_done [drm_kms_helper]] *ERROR* [CRTC:62:crtc-0] flip_done timed out
-    ```
+    `nov. 15 16:28:59 athlon kernel: [drm:drm_atomic_helper_wait_for_flip_done [drm_kms_helper]] *ERROR* [CRTC:62:crtc-0] flip_done timed out`
 
-    ```
-    dev/sdaX: clean, X files, X blocks
-    ```
+    `dev/sdaX: clean, X files, X blocks`
 
 * systemd
     
@@ -132,6 +105,10 @@
 
 #### Other
 
+* Geany double clic on tab buttons
+    
+    https://github.com/geany/geany/issues/1890  
+    
 * Geany Underscore Bug
     
     https://github.com/geany/geany/issues/1387  
@@ -143,22 +120,11 @@
     line_height=0;2;
     ```
 
-* Geany double clic on tab buttons
-    
-    https://github.com/geany/geany/issues/1890  
-    
 * ifupdown
     
     https://bugs.launchpad.net/ubuntu/+source/ifupdown/+bug/1907878  
     https://bugs.launchpad.net/ubuntu/+source/ifupdown/+bug/1910273  
     [https://git.launchpad.net/ubuntu/+source/ifupdown/](https://git.launchpad.net/ubuntu/+source/ifupdown/commit/?id=54fec5eedfd59adaffe9021c271914578dd05d1b)  
-
-* Mpv
-    
-    ```
-    ls -l /var/crash
-    -rw-r-----  1 hotnuma hotnuma 23227218 févr. 24 05:59 _usr_bin_mpv.1000.crash
-    ```
 
 * Plymouth KillMode=none
     
@@ -168,5 +134,38 @@
 * QtCreator printf
 
     https://chowdera.com/2020/12/20201208210320326z.html  
+
+<!--
+
+#### Networking
+
+* NO-CARRIER on network interface
+    
+    https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1497005  
+    https://bbs.archlinux.org/viewtopic.php?id=262075  
+    https://bbs.archlinux.org/viewtopic.php?id=274048  
+
+* Window Border
+    
+    http://sevkeifert.blogspot.com/2014/12/increase-window-border-size-in-xubuntu.html  
+
+* Firefox
+    
+    https://support.google.com/youtube/thread/120697903?hl=en&msgid=120734104  
+
+    ```
+    Your browser can't play this video.
+    Impossible de lire cette vidéo avec votre navigateur
+    Votre navigateur est à jour
+    ```
+
+* Mpv
+    
+    ```
+    ls -l /var/crash
+    -rw-r-----  1 hotnuma hotnuma 23227218 févr. 24 05:59 _usr_bin_mpv.1000.crash
+    ```
+
+-->
 
 
