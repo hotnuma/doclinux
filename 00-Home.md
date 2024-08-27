@@ -292,6 +292,28 @@
     ```
 
 
+#### Firefox
+
+* Config
+    
+    about:config
+    
+    ```
+    browser.sessionstore.resume_from_crash false
+    layers.acceleration.force-enabled true
+    layers.gpu-process.enabled true
+    media.gpu-process-decoder true
+    ```
+
+* Extensions
+    
+    uBlock Origin, Single File, Export Cookies
+    
+* Safe Mode
+    
+    In a terminal : `firefox --safe-mode`
+
+
 #### Install
 
 * Source list
@@ -402,24 +424,6 @@
 * Hardware acceleration
     
     https://wiki.debian.org/HardwareVideoAcceleration  
-
-
-#### Firefox
-
-* Extensions
-    
-    uBlock Origin, Single File, Export Cookies
-    
-* Config
-    
-    about:config
-    
-    ```
-    browser.sessionstore.resume_from_crash false
-    layers.acceleration.force-enabled true
-    layers.gpu-process.enabled true
-    media.gpu-process-decoder true
-    ```
 
 
 #### Misc
