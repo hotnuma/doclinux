@@ -226,70 +226,57 @@
 * Compress a directory with 7zip
 
     `7z a example.7z example/`
-    without compression
+    
+    without compression :
 
-    ```
-    7z a -mx=0 example.7z example/
-    ```
+    `7z a -mx=0 example.7z example/`
     
 * Recursive grep
 
     https://stackoverflow.com/questions/12516937/
     
-    ```
-    grep -r "texthere" .
-    ```
+    `grep -r "texthere" .`
     
-    ```
-    grep -rni --include=*.{h,c,cpp,cxx} "texthere"
-    ```
+    `grep -rni --include=*.{h,c,cpp,cxx} "texthere"`
     
 
 #### Files
 
-* Create a symbolic link
-
-    ```
-    ln -s target_path link_name
-    ```
-
-* Check open files
+* Check opened files
     
     https://linuxhint.com/check-open-files-in-linux/  
 
-* Get file's MIME type
-    
-    [https://stackoverflow.com/questions/2227182/how-can-i-find-o](https://stackoverflow.com/questions/2227182/how-can-i-find-out-a-files-mime-type-content-type)  
+* Create a symbolic link
 
-* Ignore errors
+    `ln -s target_path link_name`
+
+* Find biggest files in directory
     
-    ```
-    find / -name *.html 2>/dev/null
-    ```
-    
-* List biggest files in directory
-    
-    ```
-    find . -type f -printf "%s\t%p\n" | sort -nr | head -10
-    ```
-    
-* find multiple pattern
-    
-    ```
-    find . -type f \( -name "*.h" -o -name "*.c" \)
-    ```
-    
+    `find . -type f -printf "%s\t%p\n" | sort -nr | head -10`
+
 * Find files not own by user
 
-    ```
-    find ~ \( ! -user $USER -o ! -group $USER \)
-    ```
+    `find ~ \( ! -user $USER -o ! -group $USER \)`
+    
+* Find ignore errors
+    
+    `find / -name *.html 2>/dev/null`
     
 * Find last modified files
 
-    ```
-    find ~ -cmin -5
-    ```
+    `find ~ -cmin -5`
+
+* Find multiple pattern
+    
+    `find . -type f \( -name "*.h" -o -name "*.c" \)`
+    
+* Get file's MIME type
+    
+    https://stackoverflow.com/questions/2227182/  
+
+* Remove presentation mode in PDFs
+    
+    https://unix.stackexchange.com/questions/754414/  
 
 
 #### Firefox
@@ -309,9 +296,21 @@
     
     uBlock Origin, Single File, Export Cookies
     
+* Fix Slow YouTube
+    
+    https://lifehacker.com/tech/stop-google-slowing-down-youtube-firefox-edge  
+
 * Safe Mode
     
     In a terminal : `firefox --safe-mode`
+
+* Turn off ambient mode
+    
+    https://www.popsci.com/diy/youtube-ambient-mode-off-on/  
+    
+* Turn off picture-in-picture mode
+    
+    https://support.mozilla.org/en-US/kb/turn-picture-picture-mode  
 
 
 #### Install
@@ -339,15 +338,11 @@
 
 * Remove useless packages
 
-    ```
-    sudo apt autoremove
-    ```
+    `sudo apt autoremove`
     
     or
     
-    ```
-    sudo apt autoremove --purge
-    ```
+    `sudo apt autoremove --purge`
     
 * End of life releases
     
@@ -355,13 +350,9 @@
     
 * List installed packages
     
-    ```
-    apt list --installed | grep glib
-    ```
+    `apt list --installed | grep glib`
 
-    ```
-    apt list thunar
-    ```
+    `apt list thunar`
     
 * Find the package that provides a file
     
@@ -373,15 +364,11 @@
 
 * Get package version
 
-    ```
-    dpkg -l libgtk-3-0 | grep ^ii
-    ```
+    `dpkg -l libgtk-3-0 | grep ^ii`
 
 * Purge Apt Cache
 
-    ```
-    sudo apt clean ; sudo apt autoclean
-    ```
+    `sudo apt clean ; sudo apt autoclean`
 
 * Check if reboot is needed
     
@@ -393,37 +380,47 @@
     
     Install or Update :
     
-    ```
-    python3 -m pip install -U yt-dlp
-    ```
+    `python3 -m pip install -U yt-dlp`
 
 * Codecs and fonts
 
-    ```
-    sudo apt install ubuntu-restricted-extras
-    ```
+    `sudo apt install ubuntu-restricted-extras`
 
 * NVidia Drivers
 
     https://phoenixnap.com/kb/install-nvidia-drivers-ubuntu  
 
-    ```
-    apt search nvidia-driver
-    ```
+    `apt search nvidia-driver`
 
     or
 
-    ```
-    ubuntu-drivers devices
-    ```
+    `ubuntu-drivers devices`
 
-    ```
-    sudo apt install nvidia-driver-470
-    ```
+    `sudo apt install nvidia-driver-470`
 
 * Hardware acceleration
     
     https://wiki.debian.org/HardwareVideoAcceleration  
+
+
+#### Shortcuts
+
+* Batocera
+    
+    https://www.reddit.com/r/batocera/comments/14kii1n/batocera_keyboard_hotkey_list/  
+
+* Mpv
+    
+    https://mpv.io/manual/master/  
+
+* MuPdf
+    
+    https://askubuntu.com/questions/314802/  
+
+* Zathura
+    
+    https://www.maketecheasier.com/cheatsheet/zathura-keyboard-shortcuts/  
+    https://unix.stackexchange.com/questions/497737/  
 
 
 #### Misc
