@@ -115,41 +115,6 @@
 
     `sudo smartctl -s on -a /dev/sdc`
     
-* Read UUID of partitions
-
-    `sudo blkid`
-    
-* Unmount all partitions
-
-    `umount /dev/sdc?`
-    
-* Delete all partitions
-
-    https://serverfault.com/questions/250839/  
-    
-    `sudo dd if=/dev/zero of=/dev/sdc bs=512 count=1 conv=notrunc`
-
-* Format `/dev/sdc1` partition in Ext4
-
-    ```
-    lsblk -p
-    sudo umount /dev/sdc1
-    sudo mkfs.ext4 -L "Backup" /dev/sdc1
-    sudo chown $USER:$USER /media/$USER/Backup
-    ```
-    
-* Format `/dev/sdc1` partition in NTFS
-
-    ```
-    lsblk -p
-    sudo umount /dev/sdc1
-    sudo mkfs.ntfs -f -L "Backup" /dev/sdc1
-    ```
-
-* Rename partition
-    
-    `sudo ntfslabel -f /dev/sdc1 Backup1`
-
 * Fix NTFS
     
     `sudo ntfsfix /dev/sdc1`
@@ -169,6 +134,44 @@
     sudo umount /dev/sdc?
     lsblk -p
     rpimg "file.img" /dev/sdc
+    ```
+
+
+#### Drives Partitions
+
+* Read UUID
+
+    `sudo blkid`
+
+* Rename NTFS partition
+    
+    `sudo ntfslabel -f /dev/sdc1 Backup1`
+
+* Unmount all
+
+    `umount /dev/sdc?`
+    
+* Delete all
+
+    https://serverfault.com/questions/250839/  
+    
+    `sudo dd if=/dev/zero of=/dev/sdc bs=512 count=1 conv=notrunc`
+
+* Format `/dev/sdc1` in Ext4
+
+    ```
+    lsblk -p
+    sudo umount /dev/sdc1
+    sudo mkfs.ext4 -L "Backup" /dev/sdc1
+    sudo chown $USER:$USER /media/$USER/Backup
+    ```
+    
+* Format `/dev/sdc1` in NTFS
+
+    ```
+    lsblk -p
+    sudo umount /dev/sdc1
+    sudo mkfs.ntfs -f -L "Backup" /dev/sdc1
     ```
 
 
