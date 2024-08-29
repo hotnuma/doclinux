@@ -367,6 +367,10 @@
     
     https://lifehacker.com/tech/stop-google-slowing-down-youtube-firefox-edge  
 
+* Profiles location
+    
+    Type `about:profiles` in the address bar.
+
 * Safe Mode
     
     In a terminal : `firefox --safe-mode`
