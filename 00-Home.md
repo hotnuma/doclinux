@@ -16,59 +16,8 @@
     
     https://itvision.altervista.org/linux-desktop-environments-system-usage.html  
 
-* Ubuntu periodic tasks
-    
-    https://0e39bf7b.blog/posts/ubuntu-periodic-tasks/
-
-
-#### <a name="disable"></a> Enable / Disable Programs
-
-* Disable AppArmor
-    
-    https://linuxconfig.org/how-to-disable-apparmor-on-ubuntu-20-04-focal-fossa-linux  
-    https://help.ubuntu.com/community/AppArmor  
-
-* Disable at-spi
-    
-    https://wiki.archlinux.de/title/GNOME#Tipps_und_Tricks  
-    
-    In `/etc/environment` add :
-    
-    `NO_AT_BRIDGE=1`
-
-* Disable ssh agent and pgp agent
-    
-    https://docs.xfce.org/xfce/xfce4-session/advanced#ssh_and_gpg_agents  
-    
-    ```
-    xfconf-query -c xfce4-session -p /startup/ssh-agent/enabled -n -t bool -s false
-    xfconf-query -c xfce4-session -p /startup/gpg-agent/enabled -n -t bool -s false
-    ```
-
-* Disable Overlay Scrollbars
-    
-    https://forums.linuxmint.com/viewtopic.php?t=298083  
-
-* Disable autostart programs
-    
-    https://wiki.archlinux.org/title/XDG_Autostart  
-
-    `echo "Hidden=true" > $HOME/.config/autostart/xcompmgr.desktop`
-
-* Disable systemd-oomd
-    
-    https://askubuntu.com/questions/1404888/  
-    
 
 #### System Configuration
-
-* Edit grub.conf
-    
-    https://askubuntu.com/questions/575651/  
-    
-    Modify : `/etc/default/grub`
-    
-    Execute : `sudo update-grub`
 
 * Alias
     
@@ -82,9 +31,12 @@
     
     https://wiki.debian.org/DebianAlternatives  
 
-* /sbin /bin /local/bin
-    
-    https://askubuntu.com/questions/308045/  
+* Boot target
+
+    ```
+    sudo systemctl get-default
+    sudo systemctl set-default graphical.target
+    ```
 
 * Environment variables
     
@@ -100,23 +52,25 @@
     
     `~/.config/mimeapps.list`
     
+* grub.conf
+    
+    https://askubuntu.com/questions/575651/  
+    
+    Modify : `/etc/default/grub`
+    
+    Execute : `sudo update-grub`
+
 * Locale
     
     https://wiki.archlinux.org/title/locale
     
     `/etc/default/locale`
     
-* User's groups
+* pkexec
     
-    `groups username`
-
-* Default boot target
-
-    ```
-    sudo systemctl get-default
-    sudo systemctl set-default graphical.target
-    ```
-
+    https://unix.stackexchange.com/questions/203136/  
+    https://askubuntu.com/questions/608419/  
+    
 * Reboot / Halt System
     
     ```
@@ -124,11 +78,14 @@
     systemctl poweroff
     ```
 
-* pkexec
+* /sbin /bin /local/bin
     
-    https://unix.stackexchange.com/questions/203136/  
-    https://askubuntu.com/questions/608419/  
+    https://askubuntu.com/questions/308045/  
+
+* User's groups
     
+    `groups username`
+
 * Xsession xdg paths
     
     https://askubuntu.com/questions/1179729/  
@@ -279,38 +236,24 @@
     https://unix.stackexchange.com/questions/754414/  
 
 
-#### Firefox
+#### Shortcuts
 
-* Config
+* Batocera
     
-    about:config
-    
-    ```
-    browser.sessionstore.resume_from_crash false
-    layers.acceleration.force-enabled true
-    layers.gpu-process.enabled true
-    media.gpu-process-decoder true
-    ```
+    https://www.reddit.com/r/batocera/comments/14kii1n/batocera_keyboard_hotkey_list/  
 
-* Extensions
+* Mpv
     
-    uBlock Origin, Single File, Export Cookies
-    
-* Fix Slow YouTube
-    
-    https://lifehacker.com/tech/stop-google-slowing-down-youtube-firefox-edge  
+    https://mpv.io/manual/master/  
 
-* Safe Mode
+* MuPdf
     
-    In a terminal : `firefox --safe-mode`
+    https://askubuntu.com/questions/314802/  
 
-* Turn off ambient mode
+* Zathura
     
-    https://www.popsci.com/diy/youtube-ambient-mode-off-on/  
-    
-* Turn off picture-in-picture mode
-    
-    https://support.mozilla.org/en-US/kb/turn-picture-picture-mode  
+    https://www.maketecheasier.com/cheatsheet/zathura-keyboard-shortcuts/  
+    https://unix.stackexchange.com/questions/497737/  
 
 
 #### Install
@@ -403,24 +346,38 @@
     https://wiki.debian.org/HardwareVideoAcceleration  
 
 
-#### Shortcuts
+#### Firefox
 
-* Batocera
+* Config
     
-    https://www.reddit.com/r/batocera/comments/14kii1n/batocera_keyboard_hotkey_list/  
+    about:config
+    
+    ```
+    browser.sessionstore.resume_from_crash false
+    layers.acceleration.force-enabled true
+    layers.gpu-process.enabled true
+    media.gpu-process-decoder true
+    ```
 
-* Mpv
+* Extensions
     
-    https://mpv.io/manual/master/  
+    uBlock Origin, Single File, Export Cookies
+    
+* Fix Slow YouTube
+    
+    https://lifehacker.com/tech/stop-google-slowing-down-youtube-firefox-edge  
 
-* MuPdf
+* Safe Mode
     
-    https://askubuntu.com/questions/314802/  
+    In a terminal : `firefox --safe-mode`
 
-* Zathura
+* Turn off ambient mode
     
-    https://www.maketecheasier.com/cheatsheet/zathura-keyboard-shortcuts/  
-    https://unix.stackexchange.com/questions/497737/  
+    https://www.popsci.com/diy/youtube-ambient-mode-off-on/  
+    
+* Turn off picture-in-picture mode
+    
+    https://support.mozilla.org/en-US/kb/turn-picture-picture-mode  
 
 
 #### Misc
