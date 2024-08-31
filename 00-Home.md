@@ -91,6 +91,103 @@
     https://askubuntu.com/questions/1179729/  
 
 
+#### Install
+
+* Source list
+    
+    `/etc/apt/sources.list`
+
+* Check if reboot is needed
+    
+    https://askubuntu.com/questions/164/  
+
+* Codecs and fonts
+
+    `sudo apt install ubuntu-restricted-extras`
+
+* Enable non-free-firmware
+    
+    [https://www.linuxtricks.fr/wiki](https://www.linuxtricks.fr/wiki/debian-configurer-les-sources-activer-non-free-et-contrib)  
+
+* End of life releases
+    
+    https://doc.ubuntu-fr.org/old-releases  
+    
+* Find the package that provides a file
+    
+    https://askubuntu.com/questions/481/  
+
+* Get package version
+
+    `dpkg -l libgtk-3-0 | grep ^ii`
+
+* List installed packages
+    
+    `dpkg -l`
+    
+    `dpkg -l | grep thunar`
+    
+    `apt list thunar`
+    
+    `apt list --installed | grep glib`
+    
+* List files from a package
+    
+    https://askubuntu.com/questions/32507/  
+
+* Purge Apt Cache
+
+    `sudo apt clean ; sudo apt autoclean`
+
+* Remove useless packages
+
+    `sudo apt autoremove`
+    
+    or
+    
+    `sudo apt autoremove --purge`
+    
+* Search package name
+
+    `apt search thunar`
+
+* System upgrade
+
+    ```
+    sudo apt update
+    sudo apt upgrade
+    ```
+    or
+    ```
+    sudo apt update
+    sudo apt full-upgrade
+    ```
+
+* Hardware acceleration
+    
+    https://wiki.debian.org/HardwareVideoAcceleration  
+
+* NVidia Drivers
+
+    https://phoenixnap.com/kb/install-nvidia-drivers-ubuntu  
+
+    `apt search nvidia-driver`
+
+    or
+
+    `ubuntu-drivers devices`
+
+    `sudo apt install nvidia-driver-470`
+
+* yt-dlp
+    
+    https://github.com/yt-dlp/yt-dlp  
+    
+    Install or Update :
+    
+    `python3 -m pip install -U yt-dlp`
+
+
 #### Drives
 
 * Check drive spin down
@@ -248,116 +345,6 @@
     https://unix.stackexchange.com/questions/754414/  
 
 
-#### Shortcuts
-
-* Batocera
-    
-    https://www.reddit.com/r/batocera/comments/14kii1n/batocera_keyboard_hotkey_list/  
-
-* Mpv
-    
-    https://mpv.io/manual/master/  
-
-* MuPdf
-    
-    https://askubuntu.com/questions/314802/  
-
-* Zathura
-    
-    https://www.maketecheasier.com/cheatsheet/zathura-keyboard-shortcuts/  
-    https://unix.stackexchange.com/questions/497737/  
-
-
-#### Install
-
-* Source list
-    
-    `/etc/apt/sources.list`
-
-* Enable non-free-firmware
-    
-    [https://www.linuxtricks.fr/wiki](https://www.linuxtricks.fr/wiki/debian-configurer-les-sources-activer-non-free-et-contrib)  
-
-* System upgrade
-
-    ```
-    sudo apt update
-    sudo apt upgrade
-    ```
-    or
-
-    ```
-    sudo apt update
-    sudo apt full-upgrade
-    ```
-
-* Remove useless packages
-
-    `sudo apt autoremove`
-    
-    or
-    
-    `sudo apt autoremove --purge`
-    
-* End of life releases
-    
-    https://doc.ubuntu-fr.org/old-releases  
-    
-* List installed packages
-    
-    `apt list --installed | grep glib`
-
-    `apt list thunar`
-    
-* Find the package that provides a file
-    
-    https://askubuntu.com/questions/481/  
-
-* List of installed files from a package
-    
-    https://askubuntu.com/questions/32507/  
-
-* Get package version
-
-    `dpkg -l libgtk-3-0 | grep ^ii`
-
-* Purge Apt Cache
-
-    `sudo apt clean ; sudo apt autoclean`
-
-* Check if reboot is needed
-    
-    https://askubuntu.com/questions/164/  
-
-* yt-dlp
-    
-    https://github.com/yt-dlp/yt-dlp  
-    
-    Install or Update :
-    
-    `python3 -m pip install -U yt-dlp`
-
-* Codecs and fonts
-
-    `sudo apt install ubuntu-restricted-extras`
-
-* NVidia Drivers
-
-    https://phoenixnap.com/kb/install-nvidia-drivers-ubuntu  
-
-    `apt search nvidia-driver`
-
-    or
-
-    `ubuntu-drivers devices`
-
-    `sudo apt install nvidia-driver-470`
-
-* Hardware acceleration
-    
-    https://wiki.debian.org/HardwareVideoAcceleration  
-
-
 #### Firefox
 
 * Config
@@ -394,6 +381,26 @@
 * Turn off picture-in-picture mode
     
     https://support.mozilla.org/en-US/kb/turn-picture-picture-mode  
+
+
+#### Shortcuts
+
+* Batocera
+    
+    https://www.reddit.com/r/batocera/comments/14kii1n/batocera_keyboard_hotkey_list/  
+
+* Mpv
+    
+    https://mpv.io/manual/master/  
+
+* MuPdf
+    
+    https://askubuntu.com/questions/314802/  
+
+* Zathura
+    
+    https://www.maketecheasier.com/cheatsheet/zathura-keyboard-shortcuts/  
+    https://unix.stackexchange.com/questions/497737/  
 
 
 #### Misc
