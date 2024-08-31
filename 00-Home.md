@@ -191,6 +191,15 @@
 
     `7z a -mx=0 example.7z example/`
     
+* Delete empty directories
+    
+    https://unix.stackexchange.com/questions/46322/  
+    
+    To check : `find . -type d -empty -print`
+
+    To delete : `find . -type d -empty -delete`
+`
+
 * Recursive grep
 
     https://stackoverflow.com/questions/12516937/
@@ -389,36 +398,78 @@
 
 #### Misc
 
-* Delete empty directories
-    
-    https://unix.stackexchange.com/questions/46322/  
-
-* Replace multiple spaces
-    
-    https://superuser.com/questions/241018/  
-
-* Get source of package
-    
-    https://www.cyberciti.biz/faq/how-to-get-source-code-of-package-using-the-apt-command-on-debian-or-ubuntu/  
-
-* Fix Screen Tearing in Linux
-    
-    https://www.youtube.com/watch?v=rVBq6d3c1gM  
-    [https://unix.stackexchange.com/questions/667911/](https://unix.stackexchange.com/questions/667911/intel-modesetting-driver-screen-tearing)  
-    https://forum.ubuntu-fr.org/viewtopic.php?id=2066260  
-    [https://linuxfr.org/les-drivers-xorg](https://linuxfr.org/users/gnumdk/journaux/les-drivers-xorg-inutiles-avec-un-noyau-recent)  
-
 * Center window
     
     https://superuser.com/questions/141032/  
     
     `Alt+F7`
 
+* Change default session
+    
+    `sudo update-alternatives --config x-session-manager`
+
+* Change default terminal
+    
+    https://stackoverflow.com/questions/16808231/  
+    
+    `sudo update-alternatives --config x-terminal-emulator`
+    
+* Change desktop background
+
+    Solid color : `hsetroot -solid '#5e5c64'`
+    
+    Walpaper : `feh --bg-scale /usr/share/rpd-wallpaper/clouds.jpg`
+    
+    Random walpaper : `feh --bg-scale --randomize /usr/share/rpd-wallpaper/`
+
+* Check VA-API
+
+    `vainfo`
+
 * Convert .csv file to .ods
     
     https://askubuntu.com/questions/1105378/  
     
     `soffice --convert-to ods example.csv --headless`
+
+* Delete thumbnails older than 30 days
+
+    `find ~/.cache/thumbnails/ -type f -iname \*.png -mtime +30 -delete`
+
+* Enable copy-to-clipboard in Zathura
+    
+    https://unix.stackexchange.com/questions/339487/  
+    
+* Fix Screen Tearing in Linux
+    
+    https://www.youtube.com/watch?v=rVBq6d3c1gM  
+    https://unix.stackexchange.com/questions/667911/  
+    https://forum.ubuntu-fr.org/viewtopic.php?id=2066260  
+    [https://linuxfr.org/les-drivers-xorg](https://linuxfr.org/users/gnumdk/journaux/les-drivers-xorg-inutiles-avec-un-noyau-recent)  
+
+* Get installation date
+    
+    `stat -c %w /`
+
+* Get source of package
+    
+    https://www.cyberciti.biz/faq/how-to-get-source-code-of-package-using-the-apt-command-on-debian-or-ubuntu/  
+
+* Output command without localization
+
+    `LANGUAGE=C free -h`
+    
+    or
+    
+    `LANG=C free -h`
+    
+* Play a sound
+    
+    `paplay /usr/share/sounds/freedesktop/stereo/dialog-information.oga`
+    
+* Replace multiple spaces
+    
+    https://superuser.com/questions/241018/  
 
 * Statistics
     
@@ -430,46 +481,11 @@
 
     `gnuplot -p -e "plot './data.txt' lc rgb 'blue' pt 6"`
 
-* Check VA-API
+* Switch to non-graphical
+    
+    https://superuser.com/questions/100693/  
 
-    `vainfo`
-
-* Change desktop background
-
-    Solid color : `hsetroot -solid '#5e5c64'`
-    
-    Walpaper : `feh --bg-scale /usr/share/rpd-wallpaper/clouds.jpg`
-    
-    Random walpaper : `feh --bg-scale --randomize /usr/share/rpd-wallpaper/`
-
-* Installation date
-    
-    `stat -c %w /`
-
-* Play a sound
-    
-    `paplay /usr/share/sounds/freedesktop/stereo/dialog-information.oga`
-    
-* Delete thumbnails older than 30 days
-
-    `find ~/.cache/thumbnails/ -type f -iname \*.png -mtime +30 -delete`
-
-* Output command without localization
-
-    `LANGUAGE=C free -h`
-    
-    or
-    
-    `LANG=C free -h`
-    
-* Change default terminal
-    
-    https://stackoverflow.com/questions/16808231/  
-    
-    `sudo update-alternatives --config x-terminal-emulator`
-    
-* Change default session
-    
-    `sudo update-alternatives --config x-session-manager`
+    console : `Ctrl+Alt+F1`
+    graphical : `Ctrl+Alt+F7`
 
 
