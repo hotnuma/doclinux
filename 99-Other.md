@@ -15,15 +15,21 @@
 
 #### Articles
 
-* Set  default audio output
+* Format output to a specific line length
     
-    https://askubuntu.com/questions/1038490/  
+    https://unix.stackexchange.com/questions/146089/  
+    
+    `fmt --width=120 input.txt > output.txt`
 
 * Named anchor in markdown
     
     https://stackoverflow.com/questions/5319754/  
 
-    `#### <a name="tith"></a>This is the Heading`
+#### <a name="tith"></a>This is the Heading`
+
+* Set  default audio output
+    
+    https://askubuntu.com/questions/1038490/  
 
 
 #### System Processes on Debian 12
