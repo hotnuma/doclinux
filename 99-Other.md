@@ -21,11 +21,19 @@
     
     `fmt --width=120 input.txt > output.txt`
 
+* Repack epub files
+    
+    https://ebooks.stackexchange.com/questions/257/
+    
+    Extract : `unzip ../file.epub`
+    
+    Compress : `zip -rX ../file.epub mimetype META-INF/ OPS/`
+    
 * Named anchor in markdown
     
     https://stackoverflow.com/questions/5319754/  
 
-#### <a name="tith"></a>This is the Heading`
+    `#### <a name="tith"></a>This is the Heading`
 
 * Set  default audio output
     
