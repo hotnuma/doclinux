@@ -39,6 +39,12 @@
     
     https://askubuntu.com/questions/1038490/  
 
+* OCR
+    
+    https://stackoverflow.com/questions/52998331/  
+    https://github.com/tesseract-ocr/tessdata/blob/main/fra.traineddata  
+    https://tech.kibatic.com/linux/ocr-tesseract-pdf/  
+
 
 #### System Processes on Debian 12
 

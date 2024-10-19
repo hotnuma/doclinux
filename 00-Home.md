@@ -358,6 +358,12 @@
     media.gpu-process-decoder true
     ```
 
+* Change user agent
+    
+    Create the following key in `about:config` :
+    
+    `general.useragent.override	Mozilla/5.0 (X11; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0`
+
 * Extensions
     
     uBlock Origin, Single File, Export Cookies
