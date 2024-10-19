@@ -42,8 +42,15 @@
 * OCR
     
     https://stackoverflow.com/questions/52998331/  
+    https://stackoverflow.com/questions/31407010/  
     https://github.com/tesseract-ocr/tessdata/blob/main/fra.traineddata  
+    https://dfir.science/2017/04/tesseract-ocr-extract-text-from-images.html  
     https://tech.kibatic.com/linux/ocr-tesseract-pdf/  
+    
+    ```
+    convert -density 300 input.pdf -depth 8 -strip -background white -alpha off out.tiff
+    tesseract out.tiff output -l fra
+    ```
 
 
 #### System Processes on Debian 12
