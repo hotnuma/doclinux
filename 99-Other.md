@@ -48,8 +48,8 @@
     https://tech.kibatic.com/linux/ocr-tesseract-pdf/  
     
     ```
-    convert -density 300 input.pdf -depth 8 -strip -background white -alpha off out.tiff
-    tesseract out.tiff output -l fra
+    convert -density 300 input.pdf -depth 8 -strip -background white -alpha off out1.tiff
+    tesseract out1.tiff out2 -l fra
     ```
 
 
