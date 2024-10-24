@@ -53,6 +53,26 @@
     ```
 
 
+#### Other
+
+* LibreOffice Writer
+    
+    [remove leading dot](https://ask.libreoffice.org/t/how-to-remove-leading-dot-from-heading/56558/5)  
+    [remove blank lines](https://ask.libreoffice.org/t/how-do-i-remove-blank-lines-between-paragraphs-in-libre-office-writer/32015/6)  
+
+    
+* Install Firefox deb
+    
+    https://forum.ubuntu-fr.org/viewtopic.php?id=2074608  
+    [https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-d](https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-deb-apt-ubuntu-22-04)  
+    https://www.youtube.com/watch?v=H7VcIIrdoXg  
+
+* How to disable DRM banner
+    
+    [https://www.reddit.com/r/firefox/comments/sgyu1s/how_to_disa](https://www.reddit.com/r/firefox/comments/sgyu1s/how_to_disable_enable_drm_banner_to_prompt/)  
+    https://support.cdn.mozilla.net/ml/questions/1388341  
+
+
 #### System Processes on Debian 12
 
 https://debian-facile.org/viewtopic.php?pid=254022#p254022  
@@ -198,20 +218,6 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     Distribute hardware interrupts across processors on a multiprocessor system.
     
     mem : 563
-
-
-#### Other
-
-* Install Firefox deb
-    
-    https://forum.ubuntu-fr.org/viewtopic.php?id=2074608  
-    [https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-d](https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-deb-apt-ubuntu-22-04)  
-    https://www.youtube.com/watch?v=H7VcIIrdoXg  
-
-* How to disable DRM banner
-    
-    [https://www.reddit.com/r/firefox/comments/sgyu1s/how_to_disa](https://www.reddit.com/r/firefox/comments/sgyu1s/how_to_disable_enable_drm_banner_to_prompt/)  
-    https://support.cdn.mozilla.net/ml/questions/1388341  
 
 
 <!--
