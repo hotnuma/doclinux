@@ -347,6 +347,12 @@
 
 #### Firefox
 
+* Install from deb
+    
+    https://forum.ubuntu-fr.org/viewtopic.php?id=2074608  
+    [https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-d](https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-deb-apt-ubuntu-22-04)  
+    https://www.youtube.com/watch?v=H7VcIIrdoXg  
+
 * Config
     
     about:config
