@@ -47,6 +47,8 @@
     https://dfir.science/2017/04/tesseract-ocr-extract-text-from-images.html  
     https://tech.kibatic.com/linux/ocr-tesseract-pdf/  
     
+    data files : `/usr/share/tesseract-ocr/4.00/tessdata/`
+    
     ```
     convert -density 300 input.pdf -depth 8 -strip -background white -alpha off out1.tiff
     tesseract out1.tiff out2 -l fra
