@@ -43,7 +43,8 @@
     
     https://stackoverflow.com/questions/52998331/  
     https://stackoverflow.com/questions/31407010/  
-    https://github.com/tesseract-ocr/tessdata/blob/main/fra.traineddata  
+    https://github.com/tesseract-ocr/tessdata_best  
+    https://github.com/tesseract-ocr/tessdata  
     https://dfir.science/2017/04/tesseract-ocr-extract-text-from-images.html  
     https://tech.kibatic.com/linux/ocr-tesseract-pdf/  
     
