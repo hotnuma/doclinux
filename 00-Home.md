@@ -345,6 +345,26 @@
     https://unix.stackexchange.com/questions/754414/  
 
 
+#### Shortcuts
+
+* Batocera
+    
+    https://www.reddit.com/r/batocera/comments/14kii1n/batocera_keyboard_hotkey_list/  
+
+* Mpv
+    
+    https://mpv.io/manual/master/  
+
+* MuPdf
+    
+    https://askubuntu.com/questions/314802/  
+
+* Zathura
+    
+    https://www.maketecheasier.com/cheatsheet/zathura-keyboard-shortcuts/  
+    https://unix.stackexchange.com/questions/497737/  
+
+
 #### Firefox
 
 * Install from mozilla
@@ -354,26 +374,25 @@
     ```
     sudo tar xjf firefox-*.tar.bz2
     sudo mv firefox /opt
-    sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
-    sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/install-firefox-linux/firefox.desktop -P /usr/local/share/applications
+    sudo mv /usr/bin/firefox /usr/bin/firefox.bak
+    sudo ln -s /opt/firefox/firefox /usr/bin/firefox
     ```
     
+    default link : `sudo ln -s /usr/lib/firefox/firefox.sh /usr/bin/firefox`
+
+<!--
 * Install from deb
     
     https://forum.ubuntu-fr.org/viewtopic.php?id=2074608  
     [https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-d](https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-deb-apt-ubuntu-22-04)  
-    https://www.youtube.com/watch?v=H7VcIIrdoXg  
+
+-->
 
 * Config
     
     about:config
     
-    ```
-    browser.sessionstore.resume_from_crash false
-    layers.acceleration.force-enabled true
-    layers.gpu-process.enabled true
-    media.gpu-process-decoder true
-    ```
+    `browser.sessionstore.resume_from_crash false`
 
 * Change user agent
     
@@ -404,26 +423,6 @@
 * Turn off picture-in-picture mode
     
     https://support.mozilla.org/en-US/kb/turn-picture-picture-mode  
-
-
-#### Shortcuts
-
-* Batocera
-    
-    https://www.reddit.com/r/batocera/comments/14kii1n/batocera_keyboard_hotkey_list/  
-
-* Mpv
-    
-    https://mpv.io/manual/master/  
-
-* MuPdf
-    
-    https://askubuntu.com/questions/314802/  
-
-* Zathura
-    
-    https://www.maketecheasier.com/cheatsheet/zathura-keyboard-shortcuts/  
-    https://unix.stackexchange.com/questions/497737/  
 
 
 #### Misc
