@@ -13,55 +13,24 @@
 071 https://forums.raspberrypi.com/search.php?search_id=active_topics  
 
 
-#### Articles
+#### Shortcuts
 
-* Format output to a specific line length
+* Batocera
     
-    https://unix.stackexchange.com/questions/146089/  
-    
-    `fmt --width=120 input.txt > output.txt`
+    https://www.reddit.com/r/batocera/comments/14kii1n/batocera_keyboard_hotkey_list/  
 
-* Repack epub files
+* Mpv
     
-    https://ebooks.stackexchange.com/questions/257/
-    
-    Extract : `unzip ../file.epub`
-    
-    Compress : `zip -rX ../file.epub mimetype META-INF/ OPS/`
-    
-* Named anchor in markdown
-    
-    https://stackoverflow.com/questions/5319754/  
+    https://mpv.io/manual/master/  
 
-    `#### <a name="tith"></a>This is the Heading`
-
-* Set  default audio output
+* MuPdf
     
-    https://askubuntu.com/questions/1038490/  
+    https://askubuntu.com/questions/314802/  
 
-* OCR
+* Zathura
     
-    https://stackoverflow.com/questions/52998331/  
-    https://stackoverflow.com/questions/31407010/  
-    https://github.com/tesseract-ocr/tessdata_best  
-    https://github.com/tesseract-ocr/tessdata  
-    https://dfir.science/2017/04/tesseract-ocr-extract-text-from-images.html  
-    https://tech.kibatic.com/linux/ocr-tesseract-pdf/  
-    
-    data files : `/usr/share/tesseract-ocr/4.00/tessdata/`
-    
-    ```
-    convert -density 300 input.pdf -depth 8 -strip -background white -alpha off out1.tiff
-    tesseract out1.tiff out2 -l fra
-    ```
-
-
-#### Other
-
-* LibreOffice Writer
-    
-    [remove leading dot](https://ask.libreoffice.org/t/how-to-remove-leading-dot-from-heading/56558/5)  
-    [remove blank lines](https://ask.libreoffice.org/t/how-do-i-remove-blank-lines-between-paragraphs-in-libre-office-writer/32015/6)  
+    https://www.maketecheasier.com/cheatsheet/zathura-keyboard-shortcuts/  
+    https://unix.stackexchange.com/questions/497737/  
 
 
 #### System Processes on Debian 12
@@ -209,25 +178,5 @@ https://debian-facile.org/viewtopic.php?pid=254022#p254022
     Distribute hardware interrupts across processors on a multiprocessor system.
     
     mem : 563
-
-
-<!--
-
-* How to disable DRM banner
-    
-    [https://www.reddit.com/r/firefox/comments/sgyu1s/how_to_disa](https://www.reddit.com/r/firefox/comments/sgyu1s/how_to_disable_enable_drm_banner_to_prompt/)  
-    https://support.cdn.mozilla.net/ml/questions/1388341  
-
-* CPU Load
-    
-    https://superuser.com/questions/443406/  
-    
-    `openssl speed -multi $(nproc --all)`
-
-* XBindKeys
-    
-    https://www.nongnu.org/xbindkeys/xbindkeys.html  
-
--->
 
 

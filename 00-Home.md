@@ -345,26 +345,6 @@
     https://unix.stackexchange.com/questions/754414/  
 
 
-#### Shortcuts
-
-* Batocera
-    
-    https://www.reddit.com/r/batocera/comments/14kii1n/batocera_keyboard_hotkey_list/  
-
-* Mpv
-    
-    https://mpv.io/manual/master/  
-
-* MuPdf
-    
-    https://askubuntu.com/questions/314802/  
-
-* Zathura
-    
-    https://www.maketecheasier.com/cheatsheet/zathura-keyboard-shortcuts/  
-    https://unix.stackexchange.com/questions/497737/  
-
-
 #### Firefox
 
 * Install from mozilla
@@ -379,14 +359,6 @@
     ```
     
     default link : `sudo ln -s /usr/lib/firefox/firefox.sh /usr/bin/firefox`
-
-<!--
-* Install from deb
-    
-    https://forum.ubuntu-fr.org/viewtopic.php?id=2074608  
-    [https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-d](https://www.omgubuntu.co.uk/2022/04/how-to-install-firefox-deb-apt-ubuntu-22-04)  
-
--->
 
 * Config
     
