@@ -6,18 +6,7 @@
 
 ---
 
-#### References
-
-* FreeDesktop
-    
-    https://specifications.freedesktop.org/  
-
-* Memory Usage
-    
-    https://itvision.altervista.org/linux-desktop-environments-system-usage.html  
-
-
-#### System Configuration
+#### System
 
 * Alias
     
