@@ -6,13 +6,6 @@
 
 ---
 
-#### Forums
-
-020 https://forum.ubuntu-fr.org/search.php?action=show_recent  
-018 https://forums.debian.net/search.php?search_id=active_topics  
-071 https://forums.raspberrypi.com/search.php?search_id=active_topics  
-
-
 #### Shortcuts
 
 * Batocera
