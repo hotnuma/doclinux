@@ -349,11 +349,10 @@
     
     default link : `sudo ln -s /usr/lib/firefox/firefox.sh /usr/bin/firefox`
 
-* Config
+* Settings in about:config
     
-    about:config
-    
-    `browser.sessionstore.resume_from_crash false`
+    no resume           `browser.sessionstore.resume_from_crash false`  
+    disable DRM banner  `browser.eme.ui.enabled false`  
 
 * Change user agent
     
