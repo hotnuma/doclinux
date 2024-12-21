@@ -27,6 +27,10 @@
     sudo systemctl set-default graphical.target
     ```
 
+* Drivers infos
+
+    `glxinfo | egrep "OpenGL vendor|OpenGL renderer"`
+
 * Environment variables
     
     https://wiki.archlinux.org/title/environment_variables  
@@ -66,10 +70,6 @@
     systemctl reboot
     systemctl poweroff
     ```
-
-* /sbin /bin /local/bin
-    
-    https://askubuntu.com/questions/308045/  
 
 * User's groups
     
