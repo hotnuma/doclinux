@@ -229,11 +229,18 @@
     
     ```
     lsblk -p
-    sudo umount /dev/sdc?
-    lsblk -p
-    rpimg "file.img" /dev/sdc
+    sudo umount /dev/sdX?
+    rpimg "file.img" /dev/sdX
     ```
 
+* Write Debian Iso
+    
+    ```
+    lsblk -p
+    sudo umount /dev/sdX?
+    sudo cp "debian.iso" /dev/sdX
+    sudo sync
+    ```
 
 #### Drives Partitions
 
