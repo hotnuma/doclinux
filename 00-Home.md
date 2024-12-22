@@ -217,10 +217,6 @@
 
     `sudo smartctl -s on -a /dev/sdc`
     
-* Fix NTFS
-    
-    `sudo ntfsfix /dev/sdc1`
-
 * I/O test
     
     [how_to_io_test](https://www.cyberciti.biz/faq/howto-linux-unix-test-disk-performance-with-dd-command/)  
@@ -245,19 +241,15 @@
 
     `sudo blkid`
 
-* Rename NTFS partition
-    
-    `sudo ntfslabel -f /dev/sdc1 Backup1`
-
 * Unmount all
 
     `umount /dev/sdc?`
     
-* Delete all
+* Delete all partitions
 
     https://serverfault.com/questions/250839/  
     
-    `sudo dd if=/dev/zero of=/dev/sdc bs=512 count=1 conv=notrunc`
+    `sudo dd if=/dev/zero of=/dev/sdX bs=512 count=1 conv=notrunc`
 
 * Format `/dev/sdc1` in Ext4
 
@@ -275,6 +267,14 @@
     sudo umount /dev/sdc1
     sudo mkfs.ntfs -f -L "Backup" /dev/sdc1
     ```
+
+* Rename NTFS partition
+    
+    `sudo ntfslabel -f /dev/sdc1 Backup1`
+
+* Fix NTFS partition
+    
+    `sudo ntfsfix /dev/sdc1`
 
 
 #### Directories
