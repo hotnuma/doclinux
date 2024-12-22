@@ -75,6 +75,34 @@
     
     `groups username`
 
+* Session
+
+    https://askubuntu.com/questions/77191/  
+
+    _The Name entry is what lightdm would display for this session. The Exec entry is the important thing, and it should be the name of the program that starts the actual session. When you log in, lightdm calls the /etc/X11/Xsession script, passing it the value of Exec as an argument, and Xsession will, eventually, execute this program (for example, it could be startxfce4 for starting a xfce4 session). If the Exec entry is the special string default, then Xsession will execute the user's ~/.xsession file. (Xsession would also execute ~/.xsession if it's called without arguments.)_
+
+    `DESKTOP_SESSION=xubuntu`
+
+    `cat ~/.dmrc`
+
+    ```
+    [Desktop]
+    Session=xubuntu
+    ```
+
+    `/usr/share/xsessions/xubuntu.desktop`
+
+    ```
+    [Desktop Entry]
+    Version=1.0
+    Name=Default Xsession
+    Exec=startxfce4
+    Icon=
+    Type=Application
+    ```
+    
+    Startup script : `/usr/bin/startxfce4`
+
 * Xsession xdg paths
     
     https://askubuntu.com/questions/1179729/  
@@ -89,10 +117,6 @@
 * Check if reboot is needed
     
     https://askubuntu.com/questions/164/  
-
-* Codecs and fonts
-
-    `sudo apt install ubuntu-restricted-extras`
 
 * Enable non-free-firmware
     
@@ -136,6 +160,10 @@
     
     `sudo apt autoremove --purge`
     
+    or
+    
+    `sudo apt autopurge`
+
 * Search package name
 
     `apt search thunar`
@@ -155,18 +183,6 @@
 * Hardware acceleration
     
     https://wiki.debian.org/HardwareVideoAcceleration  
-
-* NVidia Drivers
-
-    https://phoenixnap.com/kb/install-nvidia-drivers-ubuntu  
-
-    `apt search nvidia-driver`
-
-    or
-
-    `ubuntu-drivers devices`
-
-    `sudo apt install nvidia-driver-470`
 
 * yt-dlp
     
@@ -346,13 +362,11 @@
     sudo mv /usr/bin/firefox /usr/bin/firefox.bak
     sudo ln -s /opt/firefox/firefox /usr/bin/firefox
     ```
-    
-    default link : `sudo ln -s /usr/lib/firefox/firefox.sh /usr/bin/firefox`
 
 * Settings in about:config
     
-    no resume           `browser.sessionstore.resume_from_crash false`  
-    disable DRM banner  `browser.eme.ui.enabled false`  
+    no resume :             `browser.sessionstore.resume_from_crash false`  
+    disable DRM banner :    `browser.eme.ui.enabled false`  
 
 * Change user agent
     
@@ -364,10 +378,6 @@
     
     uBlock Origin, Single File, Export Cookies
     
-* Fix Slow YouTube
-    
-    https://lifehacker.com/tech/stop-google-slowing-down-youtube-firefox-edge  
-
 * Profiles location
     
     Type `about:profiles` in the address bar.
@@ -405,11 +415,11 @@
     
 * Change desktop background
 
-    Solid color : `hsetroot -solid '#5e5c64'`
+    Solid color :       `hsetroot -solid '#5e5c64'`
     
-    Walpaper : `feh --bg-scale /usr/share/rpd-wallpaper/clouds.jpg`
+    Walpaper :          `feh --bg-scale /usr/share/rpd-wallpaper/clouds.jpg`
     
-    Random walpaper : `feh --bg-scale --randomize /usr/share/rpd-wallpaper/`
+    Random walpaper :   `feh --bg-scale --randomize /usr/share/rpd-wallpaper/`
 
 * Check VA-API
 
@@ -421,21 +431,10 @@
     
     `soffice --convert-to ods example.csv --headless`
 
-* Delete thumbnails older than 30 days
-
-    `find ~/.cache/thumbnails/ -type f -iname \*.png -mtime +30 -delete`
-
 * Enable copy-to-clipboard in Zathura
     
     https://unix.stackexchange.com/questions/339487/  
     
-* Fix Screen Tearing in Linux
-    
-    https://www.youtube.com/watch?v=rVBq6d3c1gM  
-    https://unix.stackexchange.com/questions/667911/  
-    https://forum.ubuntu-fr.org/viewtopic.php?id=2066260  
-    [https://linuxfr.org/les-drivers-xorg](https://linuxfr.org/users/gnumdk/journaux/les-drivers-xorg-inutiles-avec-un-noyau-recent)  
-
 * Get installation date
     
     `stat -c %w /`
@@ -452,29 +451,15 @@
     
     `LANG=C free -h`
     
-* Play a sound
-    
-    `paplay /usr/share/sounds/freedesktop/stereo/dialog-information.oga`
-    
 * Replace multiple spaces
     
     https://superuser.com/questions/241018/  
-
-* Statistics
-    
-    `LC_ALL=C datamash --header-out min 1 max 1 mean 1 < data.txt`
-    
-    `LC_ALL=C datamash --header-out min 1 max 1 median 1 mode 1 mean 1 < data.txt`
-    
-    `gnuplot -p -e "plot './data.txt'"`
-
-    `gnuplot -p -e "plot './data.txt' lc rgb 'blue' pt 6"`
 
 * Switch to non-graphical
     
     https://superuser.com/questions/100693/  
 
-    console : `Ctrl+Alt+F1`
+    console :   `Ctrl+Alt+F1`
     graphical : `Ctrl+Alt+F7`
 
 
