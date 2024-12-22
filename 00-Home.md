@@ -81,8 +81,6 @@
 
     _The Name entry is what lightdm would display for this session. The Exec entry is the important thing, and it should be the name of the program that starts the actual session. When you log in, lightdm calls the /etc/X11/Xsession script, passing it the value of Exec as an argument, and Xsession will, eventually, execute this program (for example, it could be startxfce4 for starting a xfce4 session). If the Exec entry is the special string default, then Xsession will execute the user's ~/.xsession file. (Xsession would also execute ~/.xsession if it's called without arguments.)_
 
-    `DESKTOP_SESSION=xubuntu`
-
     `cat ~/.dmrc`
 
     ```
@@ -102,6 +100,8 @@
     ```
     
     Startup script : `/usr/bin/startxfce4`
+
+    session variable : `DESKTOP_SESSION=xubuntu`
 
 * Xsession xdg paths
     
