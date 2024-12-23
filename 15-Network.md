@@ -13,6 +13,20 @@
     https://wiki.debian.org/NetworkConfiguration  
     https://wiki.debian.org/NetworkManager  
 
+* Read DNS servers
+    
+    ```
+    cat /etc/resolv.conf
+    ls /etc/resolv.conf
+    ```
+
+* Read hostname and domain name
+    
+    ```
+    hostname
+    hostname -d
+    ```
+
 * Read network configuration
     
     ```
@@ -31,21 +45,12 @@
     sudo ifup eth0
     ```
 
-    `sudo ifdown eth0 && sudo ifup eth0`
-    
     ```
     sudo ip link set dev eth0 down
     sudo ip link set dev eth0 up
     ```
     
     `sudo systemctl restart networking`
-
-* Read DNS servers
-    
-    ```
-    cat /etc/resolv.conf
-    ls /etc/resolv.conf
-    ```
 
 * Predictable Network Interface Names
     
@@ -57,10 +62,6 @@
     
     Execute `sudo update-grub`
     
-* Set BBox name in hosts file
-
-    `echo "192.168.1.254  mabbox.bytel.fr" >> /etc/hosts`
-
 
 #### Switch to /etc/network/interfaces
 
