@@ -208,10 +208,7 @@
     https://askubuntu.com/questions/671683/  
     https://forum.manjaro.org/t/eject-external-hard-drive-option-gone/61895/6  
     
-    ```
-    sync
-    udisksctl power-off -b /dev/sdX
-    ```
+    `sync; udisksctl power-off -b /dev/sdX`
 
 * Read smart infos
 
