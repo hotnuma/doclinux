@@ -20,6 +20,17 @@
     ls /etc/resolv.conf
     ```
 
+* Change DNS
+
+    Get network connection name : `nmcli con`
+    
+    ```
+    nmcli con mod "Wired connection 1" ipv4.dns "8.8.8.8 8.8.4.4"
+    nmcli con mod "Wired connection 1" ipv4.ignore-auto-dns yes
+    service NetworkManager restart
+    cat /etc/resolv.conf
+    ```
+
 * Read hostname and domain name
     
     ```
