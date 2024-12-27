@@ -22,6 +22,8 @@
 
 * Change DNS
 
+    https://serverfault.com/questions/810636/  
+    
     Get network connection name : `nmcli con`
     
     ```
