@@ -19,6 +19,13 @@
     [xfce-developer](https://developer.xfce.org/)  
 
 
+#### Settings dialogs
+    
+    ```
+    xfce4-mime-settings
+    ```
+
+
 #### Libraries
     
     xfce4-dev-tools libxmu-dev libwnck-3-dev
