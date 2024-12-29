@@ -18,18 +18,23 @@
     [xfce-gitlab-apps](https://gitlab.xfce.org/apps)  
     [xfce-developer](https://developer.xfce.org/)  
 
-
-#### Settings dialogs
+* Xfce Dialogs
     
-    ```
-    xfce4-mime-settings
-    ```
-
-
-#### Libraries
+    | Command                   | Description               |
+    | :------------------------ | :------------------------ |
+    | xfce4-settings-manager    | Configuration Panel       |
+    | xfce4-mime-settings       | Default Apps              |
+    | xfce4-keyboard-settings   | Keyboard Settings         |
+    | xfce4-mouse-settings      | Mouse Settings            |
+    | xfce4-notifyd-config      | Notifications Settings    |
+    | xfce4-panel --preferences | Panel Preferences         |
+    | xfce4-session-settings    | Session Settings          |
+    | xfce4-settings-editor     | Xfconf Editor             |
+    | xfce4-appearance-settings | Appearance                |
+    | xfce4-display-settings    | Display Settings          |
+    | xfwm4-settings            | Window Manager Settings   |
+    | xfwm4-tweaks-settings     | Window Manager Tweaks     |
     
-    xfce4-dev-tools libxmu-dev libwnck-3-dev
-
 
 #### Sessions
 
@@ -39,7 +44,7 @@
     https://askubuntu.com/questions/62833/  
     
     ```
-    /usr/share/xsessions/xubuntu.desktop
+    /usr/share/xsessions/lightdm-xsession.desktop
     /usr/share/xsessions/xfce.desktop
     ```
     
@@ -58,14 +63,12 @@
 
     ```
     /sbin/ini
-        
         graphical.target
-
         lightdm
-            Xorg
-            lightdm --session-child
-                xfce4-session
-        
+            startxfce4
+                Xorg
+                lightdm --session-child
+                    xfce4-session
         agetty
         systemd/systemd --user
     ```
@@ -92,9 +95,7 @@
 
 * Default config
     
-    ```
-    /etc/skel/.config
-    ```
+    `/etc/skel/.config`
 
 * XDG_CONFIG_DIRS
     
@@ -103,46 +104,33 @@
     https://xubuntu-users.narkive.com/yXIe6V85/difference-between-etc-xdg-and-etc-xdg-xdg-xubuntu  
     https://gitlab.xfce.org/xfce/xfce4-session/-/issues/50  
 
-    ```
-    $XDG_CONFIG_DIRS : /etc/xdg/xdg-xubuntu:/etc/xdg
-    ```
+    `$XDG_CONFIG_DIRS : /etc/xdg`
 
 * XFCE Config
     
     ```
     $HOME/.config/xfce4/
-    /etc/xdg/xdg-xubuntu/xfce4/
     /etc/xdg/xfce4/
     ```
 
 * xfce4-session
 
-    ```
-    /etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
-    /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
-    ```
+    `/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml`
 
 * xsettings
     
     http://www.freedesktop.org/wiki/Specifications/XSettingsRegistry  
 
-    ```
-    /etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
-    /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
-    ```
+    `/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml`
 
 * Xdg menu
     
-    ```
-    /etc/xdg/xdg-xubuntu/menus/xfce-applications.menu
-    /etc/xdg/menus/xfce-applications.menu
-    ```
+    `/etc/xdg/menus/xfce-applications.menu`
 
 * Keyboard shortcuts
     
     ```
     $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
-    /etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
     /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
     ```
 
@@ -161,22 +149,18 @@
 
     ```
     $HOME/.local/share/applications/
-    /usr/share/xubuntu/applications/
     /usr/share/applications/
     /usr/local/share/applications/
     ```
 
 * Prefered applications
 
-    ```
-    /etc/xdg/xfce4/helpers.rc
-    ```
+    `/etc/xdg/xfce4/helpers.rc`
     
 * Default Applications
     
     ```
     $HOME/.config/mimeapps.list
-    /usr/share/xubuntu/applications/defaults.list
     /usr/share/xfce4/applications/defaults.list
     /etc/xfce4/defaults.list
     /usr/share/applications/defaults.list
@@ -192,19 +176,13 @@
 
 * Location
     
-    ```
-    $HOME/.themes/
-    ```
+    `$HOME/.themes/`
 
 * Desktop background
     
-    ```
-    hsetroot -solid '#5e5c64'
-    ```
+    `hsetroot -solid '#5e5c64'`
 
-    ```
-    feh --bg-scale /usr/share/rpd-wallpaper/clouds.jpg
-    ```
+    `feh --bg-scale /usr/share/rpd-wallpaper/clouds.jpg`
 
 * Wallpapers
 
@@ -223,20 +201,6 @@
     https://docs.xfce.org/xfce/thunar/4.12/custom-actions  
     https://forum.xfce.org/viewtopic.php?id=12633  
     
-    ```
-    xfce4-terminal -e 'bash -c "extract.sh %f; bash"'
-    ```
-
-* Xfce Classic Fork
-    
-    [https://www.linuxadictos.com/en/xfce-classic](https://www.linuxadictos.com/en/xfce-classic-a-fork-of-xfce-but-without-the-client-side-window-decoration.html)  
-
-* xfwm4 creates input lag
-    
-    https://gitlab.xfce.org/xfce/xfwm4/-/issues/679#note_60519  
-
-* Port to Wayland
-    
-    [https://gitlab.xfce.org/xfce/xfce4-panel/-/merge_requests/10](https://gitlab.xfce.org/xfce/xfce4-panel/-/merge_requests/103#note_60758)  
+    `xfce4-terminal -e 'bash -c "extract.sh %f; bash"'`
 
 
