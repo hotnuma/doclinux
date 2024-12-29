@@ -359,6 +359,9 @@
 * Install from mozilla
     
     https://support.mozilla.org/en-US/kb/install-firefox-linux  
+    https://ftp.mozilla.org/pub/firefox/releases/  
+    
+    Might require dbus-glib : `apt install libdbus-glib-1-2`
     
     ```
     sudo tar xjf firefox-*.tar.bz2
@@ -380,11 +383,15 @@
 
 * Extensions
     
-    uBlock Origin, Single File, Export Cookies
+    uBlock Origin, Single File, cookies.txt
     
 * Profiles location
     
     Type `about:profiles` in the address bar.
+
+* User data
+
+    https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data  
 
 * Safe Mode
     
@@ -398,6 +405,12 @@
     
     https://support.mozilla.org/en-US/kb/turn-picture-picture-mode  
 
+* Turn off updates
+    
+    ```
+    sudo mkdir -p /opt/firefox115esr/distribution/
+    sudo cp ./policies.json /opt/firefox115esr/distribution/
+    ```
 
 #### Misc
 
