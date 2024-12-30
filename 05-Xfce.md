@@ -38,16 +38,21 @@
 
 #### Sessions
 
-* Desktop sessions
-    
-    https://askubuntu.com/questions/77191/  
-    https://askubuntu.com/questions/62833/  
-    
+* startup
+
     ```
-    /usr/share/xsessions/lightdm-xsession.desktop
-    /usr/share/xsessions/xfce.desktop
+    /sbin/ini
+        dbus-demon
+        lightdm
+            /usr/share/xsessions/xfce.desktop
+                startxfce4
+                    Xorg
+            lightdm --session-child
+                xfce4-session
+        agetty
+        systemd/systemd --user
     ```
-    
+
 * lightdm
     
     https://wiki.archlinux.org/title/LightDM  
@@ -59,20 +64,16 @@
     
     Show configuration : `lightdm --show-config`
 
-* startup
-
+* Desktop sessions
+    
+    https://askubuntu.com/questions/77191/  
+    https://askubuntu.com/questions/62833/  
+    
     ```
-    /sbin/ini
-        graphical.target
-        lightdm
-            startxfce4
-                Xorg
-                lightdm --session-child
-                    xfce4-session
-        agetty
-        systemd/systemd --user
+    /usr/share/xsessions/lightdm-xsession.desktop
+    /usr/share/xsessions/xfce.desktop
     ```
-
+    
 * Bash Startup Files
     
     [https://www.linuxfromscratch.org/blfs/view/11.0/postlfs/prof](https://www.linuxfromscratch.org/blfs/view/11.0/postlfs/profile.html)  
