@@ -91,30 +91,7 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     ```
 
 
-#### <a name="disable"></a> Turn off excessive logging
-
-* sudo
-    
-    https://unix.stackexchange.com/questions/224370/  
-    https://unix.stackexchange.com/questions/637227/  
-    
-    In `/etc/pam.d/sudo` add the following with a real user name :
-
-    `session [success=1 default=ignore] pam_succeed_if.so quiet uid = 0 ruser = <username>`
-    
-    Example of `/etc/pam.d/sudo` file :
-    
-    ```
-    #%PAM-1.0
-
-    # Set up user limits from /etc/security/limits.conf.
-    session    required   pam_limits.so
-    session [success=1 default=ignore] pam_succeed_if.so quiet uid = 0 ruser = hotnuma
-
-    @include common-auth
-    @include common-account
-    @include common-session-noninteractive
-    ```
+#### <a name="disable"></a> Turn off excessive logs
 
 * rtkit-daemon
     
@@ -137,6 +114,29 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     ```
     sudo systemctl daemon-reload
     sudo systemctl restart rtkit-daemon.service
+    ```
+
+* sudo
+    
+    https://unix.stackexchange.com/questions/224370/  
+    https://unix.stackexchange.com/questions/637227/  
+    
+    In `/etc/pam.d/sudo` add the following with a real user name :
+
+    `session [success=1 default=ignore] pam_succeed_if.so quiet uid = 0 ruser = <username>`
+    
+    Example of `/etc/pam.d/sudo` file :
+    
+    ```
+    #%PAM-1.0
+
+    # Set up user limits from /etc/security/limits.conf.
+    session    required   pam_limits.so
+    session [success=1 default=ignore] pam_succeed_if.so quiet uid = 0 ruser = hotnuma
+
+    @include common-auth
+    @include common-account
+    @include common-session-noninteractive
     ```
 
 
