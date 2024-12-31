@@ -35,6 +35,7 @@
     
     https://wiki.archlinux.org/title/environment_variables  
     https://askubuntu.com/questions/866161/  
+    https://askubuntu.com/questions/60218/  
     
     ```
     /etc/environment
