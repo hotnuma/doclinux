@@ -6,6 +6,10 @@
 
 ---
 
+#### Firefox
+    
+    https://bugzilla.mozilla.org/show_bug.cgi?id=1939685  
+
 #### XFCE
 
 * Xfwm4 Unmaximize
