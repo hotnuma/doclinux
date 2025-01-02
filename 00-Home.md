@@ -370,21 +370,12 @@
     sudo ln -s /opt/firefox/firefox /usr/bin/firefox
     ```
 
-* Settings in about:config
-    
-    no resume :             `browser.sessionstore.resume_from_crash false`  
-    disable DRM banner :    `browser.eme.ui.enabled false`  
-
 * Change user agent
     
     Create the following key in `about:config` :
     
     `general.useragent.override	Mozilla/5.0 (X11; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0`
 
-* Extensions
-    
-    uBlock Origin, Single File, cookies.txt
-    
 * Profiles location
     
     Type `about:profiles` in the address bar.
@@ -407,10 +398,23 @@
 
 * Turn off updates
     
+    Create a `policies.json` file in `firefox/distribution/` :
+    
+    ```
+    {
+        "policies":
+        {
+            "DisableAppUpdate": true,
+            "ManualAppUpdateOnly": true
+        }
+    }
+    ```
+    
     ```
     sudo mkdir -p /opt/firefox115esr/distribution/
     sudo cp ./policies.json /opt/firefox115esr/distribution/
     ```
+
 
 #### Misc
 
