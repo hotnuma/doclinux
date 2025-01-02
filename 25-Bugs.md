@@ -7,6 +7,8 @@
 ---
 
 #### Firefox
+
+* Video stuttering regression
     
     https://bugzilla.mozilla.org/show_bug.cgi?id=1939685  
 
