@@ -8,6 +8,12 @@
 
 #### System
 
+* System Infos
+
+    `inxi -b`
+
+    `glxinfo | egrep "OpenGL vendor|OpenGL renderer"`
+
 * Alias
     
     List aliases : `alias`
@@ -26,10 +32,6 @@
     sudo systemctl get-default
     sudo systemctl set-default graphical.target
     ```
-
-* Drivers infos
-
-    `glxinfo | egrep "OpenGL vendor|OpenGL renderer"`
 
 * Environment variables
     
