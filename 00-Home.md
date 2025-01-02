@@ -370,6 +370,11 @@
     sudo ln -s /opt/firefox/firefox /usr/bin/firefox
     ```
 
+* Test Videos
+    
+    https://www.youtube.com/watch?v=cuXsupMuik4  
+    https://www.youtube.com/watch?v=TVtoxUohG5E  
+
 * Change user agent
     
     Create the following key in `about:config` :
