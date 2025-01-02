@@ -145,7 +145,7 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
 * Analyze startup
 
     ```
-    systemd-analyze time
+    systemd-analyze
     systemd-analyze --no-pager blame
     systemd-analyze critical-chain
     ```
