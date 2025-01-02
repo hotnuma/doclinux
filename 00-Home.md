@@ -362,7 +362,7 @@
     https://support.mozilla.org/en-US/kb/install-firefox-linux  
     https://ftp.mozilla.org/pub/firefox/releases/  
     
-    Might require dbus-glib : `apt install libdbus-glib-1-2`
+    Might require dbus-glib : `sudo apt install libdbus-glib-1-2`
     
     ```
     sudo tar xjf firefox-*.tar.bz2 && sudo mv firefox /opt/firefox121_01/
