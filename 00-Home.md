@@ -6,6 +6,11 @@
 
 ---
 
+#### References
+    
+    https://wiki.debian.org/FrontPage  
+    
+    
 #### System
 
 * System Infos
@@ -361,6 +366,7 @@
 
 * References
     
+    https://wiki.debian.org/Firefox  
     https://wiki.archlinux.org/title/Firefox  
     
 * Install from mozilla
