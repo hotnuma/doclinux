@@ -7,11 +7,11 @@
 ---
 
 #### References
-    
-    https://wiki.debian.org/FrontPage  
-    https://forums.debian.net/viewtopic.php?p=781767#p781767  
-    
-    
+
+https://wiki.debian.org/FrontPage  
+https://forums.debian.net/viewtopic.php?p=781767#p781767  
+
+
 #### System
 
 * System Infos
@@ -86,31 +86,37 @@
 
 * Session
 
-    https://askubuntu.com/questions/77191/  
-
-    _The Name entry is what lightdm would display for this session. The Exec entry is the important thing, and it should be the name of the program that starts the actual session. When you log in, lightdm calls the /etc/X11/Xsession script, passing it the value of Exec as an argument, and Xsession will, eventually, execute this program (for example, it could be startxfce4 for starting a xfce4 session). If the Exec entry is the special string default, then Xsession will execute the user's ~/.xsession file. (Xsession would also execute ~/.xsession if it's called without arguments.)_
+    show config : `lightdm --show-config`
 
     `cat ~/.dmrc`
 
     ```
     [Desktop]
-    Session=xubuntu
+    Session=lightdm-xsession
     ```
 
-    `/usr/share/xsessions/xubuntu.desktop`
+    `/usr/share/xsessions/lightdm-xsession.desktop`
 
     ```
     [Desktop Entry]
     Version=1.0
     Name=Default Xsession
-    Exec=startxfce4
+    Exec=default
     Icon=
     Type=Application
     ```
     
-    Startup script : `/usr/bin/startxfce4`
+    `Exec=default` means that the session is defined in alternatives :
+    
+    `update-alternatives --config x-session-manager`
+    
+    ```
+    ------------------------------------------------------------
+    * 0            /usr/bin/startxfce4      50        mode automatique
+      1            /usr/bin/startxfce4      50        mode manuel
+      2            /usr/bin/xfce4-session   40        mode manuel
 
-    session variable : `DESKTOP_SESSION=xubuntu`
+    ```
 
 * Xsession xdg paths
     
