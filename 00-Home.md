@@ -359,6 +359,10 @@
 
 #### Firefox
 
+* References
+    
+    https://wiki.archlinux.org/title/Firefox  
+    
 * Install from mozilla
     
     https://support.mozilla.org/en-US/kb/install-firefox-linux  
@@ -383,14 +387,23 @@
     
     `general.useragent.override	Mozilla/5.0 (X11; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0`
 
-* Profiles location
+* Fix Slow YouTube
     
-    Type `about:profiles` in the address bar.
+    https://lifehacker.com/tech/stop-google-slowing-down-youtube-firefox-edge  
+    
+    `||googlevideo.com/videoplayback$xhr,3p,method=get,domain=www.youtube.com`
 
-* User data
+* User Profiles
 
     https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data  
 
+    Type `about:profiles` in the address bar.
+    
+    ```
+    ~/.mozilla/firefox/
+    ~/.cache/mozilla/firefox/
+    ```
+    
 * Safe Mode
     
     In a terminal : `firefox --safe-mode`
@@ -459,6 +472,12 @@
     
     `soffice --convert-to ods example.csv --headless`
 
+* Edit config files
+    
+    https://unix.stackexchange.com/questions/642578/  
+    
+    `sudo sed -e 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' -i "$dest"`
+    
 * Enable copy-to-clipboard in Zathura
     
     https://unix.stackexchange.com/questions/339487/  
