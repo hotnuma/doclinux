@@ -31,7 +31,10 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
 * Alternatives
     
     https://wiki.debian.org/DebianAlternatives  
-
+    
+    list alternatives : `update-alternatives --get-selections`  
+    list choices : `update-alternatives --list x-cursor-theme`  
+    
 * Boot target
 
     ```
