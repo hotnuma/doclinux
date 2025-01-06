@@ -6,9 +6,89 @@
 
 ---
 
-#### Reference
+#### Firefox
 
-* Configuration
+* References
+    
+    https://wiki.debian.org/Firefox  
+    https://wiki.archlinux.org/title/Firefox  
+    
+* Install from mozilla
+    
+    https://support.mozilla.org/en-US/kb/install-firefox-linux  
+    https://ftp.mozilla.org/pub/firefox/releases/  
+    
+    Might require dbus-glib : `sudo apt install libdbus-glib-1-2`
+    
+    ```
+    sudo tar xjf firefox-*.tar.bz2 && sudo mv firefox /opt/firefox121_01/
+    sudo mv /usr/bin/firefox /usr/bin/firefox.bak
+    sudo ln -s /opt/firefox/firefox /usr/bin/firefox
+    ```
+
+* Test Videos
+    
+    https://www.youtube.com/watch?v=cuXsupMuik4  
+    https://www.youtube.com/watch?v=TVtoxUohG5E  
+
+* Change user agent
+    
+    Create the following key in `about:config` :
+    
+    `general.useragent.override	Mozilla/5.0 (X11; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0`
+
+* Fix Slow YouTube
+    
+    https://lifehacker.com/tech/stop-google-slowing-down-youtube-firefox-edge  
+    
+    `||googlevideo.com/videoplayback$xhr,3p,method=get,domain=www.youtube.com`
+
+* User Profiles
+
+    https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data  
+
+    Type `about:profiles` in the address bar.
+    
+    ```
+    ~/.mozilla/firefox/
+    ~/.cache/mozilla/firefox/
+    ```
+    
+* Safe Mode
+    
+    In a terminal : `firefox --safe-mode`
+
+* Turn off ambient mode
+    
+    https://www.popsci.com/diy/youtube-ambient-mode-off-on/  
+    
+* Turn off picture-in-picture mode
+    
+    https://support.mozilla.org/en-US/kb/turn-picture-picture-mode  
+
+* Turn off updates
+    
+    Create a `policies.json` file in `firefox/distribution/` :
+    
+    ```
+    {
+        "policies":
+        {
+            "DisableAppUpdate": true,
+            "ManualAppUpdateOnly": true
+        }
+    }
+    ```
+    
+    ```
+    sudo mkdir -p /opt/firefox115esr/distribution/
+    sudo cp ./policies.json /opt/firefox115esr/distribution/
+    ```
+
+
+#### Network
+
+* Reference
     
     https://wiki.debian.org/NetworkConfiguration  
     https://wiki.debian.org/NetworkManager  
@@ -165,19 +245,5 @@
 
     networkctl
     ```
-
-<!--
-
-    sudo cp /etc/resolv.conf /etc/resolv.conf.bak
-    sudo rm /etc/resolv.conf
-    sudo ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
-    
-    sudo cp /etc/resolv.conf /etc/resolv.conf.bak
-    sudo rm /etc/resolv.conf
-    sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
-    
-    ip route show default | cut -d " " -f 5
-
--->
 
 
