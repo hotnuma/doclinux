@@ -1,6 +1,6 @@
 <link href="style.css" rel="stylesheet"></link>
 
-**[ [Home](00-Home.html) | Xfce | [Systemd](10-Systemd.html) | [Network](15-Network.html) | [FFmpeg](20-FFmpeg.html) | [Bugs](25-Bugs.html) | [Other](99-Other.html) ]**
+**[ [Home](00-Home.html) | Xfce | [Network](10-Network.html) | [FFmpeg](15-FFmpeg.html) | [Systemd](20-Systemd.html) | [Bugs](25-Bugs.html) | [Other](99-Other.html) ]**
 
 ## Xfce
 
