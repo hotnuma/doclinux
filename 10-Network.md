@@ -12,6 +12,7 @@
     
     https://wiki.debian.org/Firefox  
     https://wiki.archlinux.org/title/Firefox  
+    https://www.mozilla.org/en-US/firefox/releases/  
     
 * Install from mozilla
     

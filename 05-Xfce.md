@@ -38,6 +38,44 @@
 
 #### Sessions
 
+* Session
+
+    show config : `lightdm --show-config`
+
+    `cat ~/.dmrc`
+
+    ```
+    [Desktop]
+    Session=lightdm-xsession
+    ```
+
+    `/usr/share/xsessions/lightdm-xsession.desktop`
+
+    ```
+    [Desktop Entry]
+    Version=1.0
+    Name=Default Xsession
+    Exec=default
+    Icon=
+    Type=Application
+    ```
+    
+    `Exec=default` means that the session is defined in alternatives :
+    
+    `update-alternatives --config x-session-manager`
+    
+    ```
+    ------------------------------------------------------------
+    * 0            /usr/bin/startxfce4      50        mode automatique
+      1            /usr/bin/startxfce4      50        mode manuel
+      2            /usr/bin/xfce4-session   40        mode manuel
+
+    ```
+
+* Xsession xdg paths
+    
+    https://askubuntu.com/questions/1179729/  
+
 * startup
 
     ```
@@ -93,6 +131,10 @@
     $HOME/.profile
     /etc/profile
     ```
+
+* Disable CSD
+    
+    https://forum.xfce.org/viewtopic.php?pid=77880#p77880  
 
 * Default config
     
