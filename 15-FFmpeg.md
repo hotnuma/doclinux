@@ -91,7 +91,7 @@ https://ffmpeg.org/ffmpeg-filters.html
     yt-dlp --list-subs "URL"
     yt-dlp --write-sub --sub-lang en --skip-download "URL"
     yt-dlp --write-sub --convert-subs=srt --skip-download "URL"
-    yt-dlp --write-auto-sub --sub-lang fr-en --skip-download "URL"
+    yt-dlp --write-auto-sub --sub-lang fr --skip-download "URL"
     ```
     
 * Remove subtitles and chapters
