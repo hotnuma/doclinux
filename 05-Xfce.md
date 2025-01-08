@@ -41,15 +41,17 @@
 * Session
 
     show config : `lightdm --show-config`
+    
+    list sessions : `ls /usr/share/xsessions/`
 
-    `cat ~/.dmrc`
+    current session : `cat ~/.dmrc`
 
     ```
     [Desktop]
     Session=lightdm-xsession
     ```
 
-    `/usr/share/xsessions/lightdm-xsession.desktop`
+    session file : `/usr/share/xsessions/lightdm-xsession.desktop`
 
     ```
     [Desktop Entry]
@@ -72,17 +74,13 @@
 
     ```
 
-* Xsession xdg paths
-    
-    https://askubuntu.com/questions/1179729/  
-
 * startup
 
     ```
     /sbin/ini
         dbus-demon
         lightdm
-            /usr/share/xsessions/xfce.desktop
+            /usr/share/xsessions/lightdm-xsession.desktop
                 startxfce4
                     Xorg
             lightdm --session-child
@@ -91,63 +89,16 @@
         systemd/systemd --user
     ```
 
-* lightdm
+* Xsession xdg paths
     
-    https://wiki.archlinux.org/title/LightDM  
-    
-    ```
-    /etc/lightdm/lightdm.conf
-    /usr/share/lightdm/lightdm.conf.d/
-    ```
-    
-    Show configuration : `lightdm --show-config`
+    https://askubuntu.com/questions/1179729/  
 
-* Desktop sessions
-    
-    https://askubuntu.com/questions/77191/  
-    https://askubuntu.com/questions/62833/  
-    
-    ```
-    /usr/share/xsessions/lightdm-xsession.desktop
-    /usr/share/xsessions/xfce.desktop
-    ```
-    
 * Bash Startup Files
     
     [https://www.linuxfromscratch.org/blfs/view/11.0/postlfs/prof](https://www.linuxfromscratch.org/blfs/view/11.0/postlfs/profile.html)  
 
 
 #### Configuration
-
-* xfconf-query
-    
-    https://docs.xfce.org/xfce/xfconf/xfconf-query  
-    [http://manpages.ubuntu.com/manpages/...](http://manpages.ubuntu.com/manpages/bionic/man1/xfconf-query.1.html)  
-
-* Profile
-
-    ```
-    /etc/environment
-    $HOME/.profile
-    /etc/profile
-    ```
-
-* Disable CSD
-    
-    https://forum.xfce.org/viewtopic.php?pid=77880#p77880  
-
-* Default config
-    
-    `/etc/skel/.config`
-
-* XDG_CONFIG_DIRS
-    
-    https://askubuntu.com/questions/1179729/  
-
-    https://xubuntu-users.narkive.com/yXIe6V85/difference-between-etc-xdg-and-etc-xdg-xdg-xubuntu  
-    https://gitlab.xfce.org/xfce/xfce4-session/-/issues/50  
-
-    `$XDG_CONFIG_DIRS : /etc/xdg`
 
 * XFCE Config
     
@@ -156,34 +107,22 @@
     /etc/xdg/xfce4/
     ```
 
-* xfce4-session
+    keyboard : `/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml`  
+    xfce4-session : `/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml`  
+    xsettings : `/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml`  
 
-    `/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml`
-
-* xsettings
+* xfconf-query
     
-    http://www.freedesktop.org/wiki/Specifications/XSettingsRegistry  
-
-    `/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml`
+    https://docs.xfce.org/xfce/xfconf/xfconf-query  
+    [http://manpages.ubuntu.com/manpages/...](http://manpages.ubuntu.com/manpages/bionic/man1/xfconf-query.1.html)  
 
 * Xdg menu
     
     `/etc/xdg/menus/xfce-applications.menu`
 
-* Keyboard shortcuts
+* Disable CSD
     
-    ```
-    $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
-    /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
-    ```
-
-* The offending /etc/xdg/xfce4/xinitrc script
-    
-    https://gist.github.com/ncraike/6204799  
-
-* XF86 Multimedia Keys
-    
-    https://unix.stackexchange.com/questions/426977/  
+    https://forum.xfce.org/viewtopic.php?pid=77880#p77880  
 
 
 #### Applications
@@ -196,10 +135,10 @@
     /usr/local/share/applications/
     ```
 
-* Prefered applications
-
-    `/etc/xdg/xfce4/helpers.rc`
+* XDG MIME Applications
     
+    https://wiki.archlinux.org/title/XDG_MIME_Applications
+
 * Default Applications
     
     ```
@@ -210,10 +149,10 @@
     /etc/gnome/defaults.list
     ```
 
-* XDG MIME Applications
-    
-    https://wiki.archlinux.org/title/XDG_MIME_Applications
+* Prefered applications
 
+    `/etc/xdg/xfce4/helpers.rc`
+    
 
 #### Themes
 
@@ -221,11 +160,13 @@
     
     `$HOME/.themes/`
 
-* Desktop background
-    
-    `hsetroot -solid '#5e5c64'`
+* Change desktop background
 
-    `feh --bg-scale /usr/share/rpd-wallpaper/clouds.jpg`
+    Solid color : `hsetroot -solid '#5e5c64'`  
+    
+    Walpaper : `feh --bg-scale /usr/share/rpd-wallpaper/clouds.jpg`  
+    
+    Random walpaper : `feh --bg-scale --randomize /usr/share/rpd-wallpaper/`  
 
 * Wallpapers
 
@@ -238,6 +179,12 @@
 
 
 #### Other
+
+* Center window
+    
+    https://superuser.com/questions/141032/  
+    
+    `Alt+F7`
 
 * Thunar Custom Actions
     

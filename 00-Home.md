@@ -35,6 +35,9 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
     list alternatives : `update-alternatives --get-selections`  
     list choices : `update-alternatives --list x-cursor-theme`  
     
+    default session : `sudo update-alternatives --config x-session-manager`  
+    defaylt terminal : `sudo update-alternatives --config x-terminal-emulator`  
+    
 * Boot target
 
     ```
@@ -50,13 +53,10 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
     
     ```
     /etc/environment
-    ~/.profile
+    $HOME/.profile
+    /etc/profile
     ```
-    
-* File associations
-    
-    `~/.config/mimeapps.list`
-    
+
 * grub.conf
     
     https://askubuntu.com/questions/575651/  
@@ -336,39 +336,16 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
 
 #### Misc
 
-* Center window
+* Switch to non-graphical
     
-    https://superuser.com/questions/141032/  
-    
-    `Alt+F7`
+    https://superuser.com/questions/100693/  
 
-* Change default session
-    
-    `sudo update-alternatives --config x-session-manager`
-
-* Change default terminal
-    
-    https://stackoverflow.com/questions/16808231/  
-    
-    `sudo update-alternatives --config x-terminal-emulator`
-    
-* Change desktop background
-
-    Solid color :       `hsetroot -solid '#5e5c64'`
-    
-    Walpaper :          `feh --bg-scale /usr/share/rpd-wallpaper/clouds.jpg`
-    
-    Random walpaper :   `feh --bg-scale --randomize /usr/share/rpd-wallpaper/`
+    console : `Ctrl+Alt+F1`  
+    graphical : `Ctrl+Alt+F7`  
 
 * Check VA-API
 
     `vainfo`
-
-* Convert .csv file to .ods
-    
-    https://askubuntu.com/questions/1105378/  
-    
-    `soffice --convert-to ods example.csv --headless`
 
 * Edit config files
     
@@ -376,6 +353,16 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
     
     `sudo sed -e 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' -i "$dest"`
     
+* Convert .csv file to .ods
+    
+    https://askubuntu.com/questions/1105378/  
+    
+    `soffice --convert-to ods example.csv --headless`
+
+* Replace multiple spaces
+    
+    https://superuser.com/questions/241018/  
+
 * Enable copy-to-clipboard in Zathura
     
     https://unix.stackexchange.com/questions/339487/  
@@ -396,15 +383,4 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
     
     `LANG=C free -h`
     
-* Replace multiple spaces
-    
-    https://superuser.com/questions/241018/  
-
-* Switch to non-graphical
-    
-    https://superuser.com/questions/100693/  
-
-    console :   `Ctrl+Alt+F1`
-    graphical : `Ctrl+Alt+F7`
-
 
