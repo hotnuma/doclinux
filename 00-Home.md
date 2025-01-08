@@ -160,17 +160,20 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
     sudo apt full-upgrade
     ```
 
-* Hardware acceleration
+* Install python programs
     
-    https://wiki.debian.org/HardwareVideoAcceleration  
-
+    https://stackoverflow.com/questions/58831133/  
+    https://luminousmen.com/post/why-use-pip-install-user  
+    
+    `python3 -m pip install --user <appname>`
+    
 * yt-dlp
     
     https://github.com/yt-dlp/yt-dlp  
     
     Install or Update :
     
-    `python3 -m pip install -U yt-dlp`
+    `python3 -m pip install --user -U yt-dlp`
 
 
 #### Drives
@@ -346,6 +349,10 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
 * Check VA-API
 
     `vainfo`
+
+* Hardware acceleration
+    
+    https://wiki.debian.org/HardwareVideoAcceleration  
 
 * Edit config files
     
