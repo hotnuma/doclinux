@@ -13,11 +13,11 @@
     https://wiki.debian.org/Firefox  
     https://wiki.archlinux.org/title/Firefox  
     https://www.mozilla.org/en-US/firefox/releases/  
+    https://ftp.mozilla.org/pub/firefox/releases/  
     
 * Install from mozilla
     
     https://support.mozilla.org/en-US/kb/install-firefox-linux  
-    https://ftp.mozilla.org/pub/firefox/releases/  
     
     Might require dbus-glib : `sudo apt install libdbus-glib-1-2`
     
