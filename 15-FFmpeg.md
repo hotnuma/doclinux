@@ -16,54 +16,53 @@ https://ffmpeg.org/ffmpeg-filters.html
 
 * Mp3 encoding
 
-    `ffmpeg -i input.m4a -c:a libmp3lame -b:a 192k output.mp3`
+    `ffmpeg -y -i "input.m4a" -c:a libmp3lame -b:a 192k "output.mp3"`
     
 * Keep left channel
 
-    `ffmpeg -i "input.avi" -c:v copy -c:a libmp3lame -b:a 192k -af "pan=stereo|c0=c0|c1=c0" "output.avi"`
+    `ffmpeg -y -i "input.avi" -c:v copy -c:a libmp3lame -b:a 192k -af "pan=stereo|c0=c0|c1=c0" "output.avi"`
     
 * Keep right channel
 
-    `ffmpeg -i "input.avi" -c:v copy -c:a libmp3lame -b:a 192k -af "pan=stereo|c0=c1|c1=c1" "output.avi"`
+    `ffmpeg -y -i "input.avi" -c:v copy -c:a libmp3lame -b:a 192k -af "pan=stereo|c0=c1|c1=c1" "output.avi"`
     
 * Audio normalize
 
-    http://superuser.com/questions/323119/
+    http://superuser.com/questions/323119/  
 
     Analyze audio level with volumedetect
     
-    `ffmpeg -i "input.avi" -af "volumedetect" -f null /dev/null`
+    `ffmpeg -y -i "input.avi" -af "volumedetect" -f null /dev/null`
     
     Read "max_volume", for example -22.5 dB, then amplify audio channel by +22.5dB.
     
-    `ffmpeg -i "input.mp4" -c:v copy -c:a libmp3lame -b:a 192k -af "volume=22.5dB" "output.mp4"`
+    `ffmpeg -y -i "input.mp4" -c:v copy -c:a libmp3lame -b:a 192k -af "volume=22.5dB" "output.mp4"`
     
 * Delay audio by one second
 
-    `ffmpeg -i input.mkv -itsoffset -1.0 -i input.mkv -map 0:0 -map 1:1 -c copy output.mkv`
+    `ffmpeg -y -i "input.mp4" -itsoffset -1.0 -i input.mp4 -map 0:0 -map 1:1 -c copy "output.mp4"`
     
 * Choose default audio channel
 
     ```
-    ffmpeg -i "input.mkv" -map 0:0 -map 0:2 -map 0:1 \
-    -disposition:a:0 default -disposition:a:1 none -c copy "output.mkv"
+    ffmpeg -y -i "input.mp4" -map 0:0 -map 0:2 -map 0:1 \
+    -disposition:a:0 default -disposition:a:1 none -c copy "output.mp4"
     ```
     
 * Change audio speed
 
-    `ffmpeg -i "audio.mp3" -af "atempo=1.001" -b:a 192k "audio-faster.mp3"`
+    `ffmpeg -y -i "audio.mp3" -af "atempo=1.001" -b:a 192k "audio-faster.mp3"`
+
+* Audio filter
+
+    `ffmpeg -y -i "input.mp4" -c:v copy -af "highpass=f=100" "output.mp4"`
 
 
 #### Video
 
-* Curves
-    
-    https://hhsprings.bitbucket.io/docs/programming/examples/ffmpeg/manipulating_video_colors/curves.html
-    
-    ```
-    curves=preset=darker
-    curves=preset=lighter
-    ```
+* Change aspect ratio :
+
+    `ffmpeg -y -i "input.mp4" -aspect "4:3" -c copy "output.mp4"`
 
 
 #### Subtitles
@@ -79,11 +78,11 @@ https://ffmpeg.org/ffmpeg-filters.html
     
 * Remove subtitles and chapters
 
-    `ffmpeg -i in.mp4 -c copy -sn out.mp4`
+    `ffmpeg -y -i "input.mp4" -c copy -sn "output.mp4"`
 
-    `ffmpeg -i in.mp4 -c copy -map_chapters -1 out.mp4`
+    `ffmpeg -y -i "input.mp4" -c copy -map_chapters -1 "output.mp4"`
     
-    `ffmpeg -i in.mp4 -c copy -dn -map_metadata:c -1 out.mp4`
+    `ffmpeg -y -i "input.mp4" -c copy -dn -map_metadata:c -1 "output.mp4"`
     
 * Extract subs with MKVToolNix
 
@@ -126,5 +125,5 @@ https://ffmpeg.org/ffmpeg-filters.html
 
 * Write title metadata
     
-    `ffmpeg -i "input.mp4" -c copy -metadata title="Test title" "output.mp4"`
+    `ffmpeg -y -i "input.mp4" -c copy -metadata title="Test title" "output.mp4"`
 
