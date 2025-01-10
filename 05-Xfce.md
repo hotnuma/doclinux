@@ -10,13 +10,14 @@
 
 * Links
     
+    https://wiki.xfce.org/start  
     https://wiki.archlinux.org/title/xfce  
-    https://wiki.xfce.org/fr/howto/customize-menu  
+    https://wiki.xfce.org/releng/wayland_roadmap  
     
-    [xfce-forum](https://forum.xfce.org/search.php?action=show_recent)  
-    [xfce-gitlab](https://gitlab.xfce.org/xfce)  
-    [xfce-gitlab-apps](https://gitlab.xfce.org/apps)  
-    [xfce-developer](https://developer.xfce.org/)  
+    [https://forum.xfce.org/](https://forum.xfce.org/search.php?action=show_recent)  
+    https://gitlab.xfce.org/xfce  
+    https://gitlab.xfce.org/apps  
+    https://developer.xfce.org/  
 
 * Xfce Dialogs
     
