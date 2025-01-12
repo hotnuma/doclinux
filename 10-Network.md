@@ -22,7 +22,7 @@
     Might require dbus-glib : `sudo apt install libdbus-glib-1-2`
     
     ```
-    sudo tar xjf firefox-*.tar.bz2 && sudo mv firefox /opt/firefox121_01/
+    sudo tar xf firefox-116.0.tar.bz2 && sudo mv firefox /opt/firefox116_00/
     sudo mv /usr/bin/firefox /usr/bin/firefox.bak
     sudo ln -s /opt/firefox/firefox /usr/bin/firefox
     ```
