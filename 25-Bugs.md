@@ -11,6 +11,11 @@
 * Video stuttering regression
     
     https://bugzilla.mozilla.org/show_bug.cgi?id=1939685  
+    https://hg.mozilla.org/integration/autoland/pushloghtml?startdate=2023-07-13&enddate=2023-07-16  
+    https://hg.mozilla.org/integration/autoland/rev/e1c387461f1491b8b63445d4505d5617392ed527  
+    
+    fix : `user_pref("gfx.x11.glx_sgi_video_sync", true);`
+
 
 * DMZ Cursor bug
     

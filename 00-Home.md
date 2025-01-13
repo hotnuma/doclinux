@@ -114,6 +114,17 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
 
     `dpkg -l libgtk-3-0 | grep ^ii`
 
+* Get source of package
+    
+    https://www.cyberciti.biz/faq/how-to-get-source-code-of-package-using-the-apt-command-on-debian-or-ubuntu/  
+    
+    Check if `deb-src` is enabled : `cat /etc/apt/sources.list`
+    
+    ```
+    sudo apt update
+    apt source <package>
+    ```
+
 * List installed packages
     
     `dpkg -l`
@@ -377,10 +388,6 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
 * Get installation date
     
     `stat -c %w /`
-
-* Get source of package
-    
-    https://www.cyberciti.biz/faq/how-to-get-source-code-of-package-using-the-apt-command-on-debian-or-ubuntu/  
 
 * Output command without localization
 
