@@ -98,6 +98,10 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
     
     https://askubuntu.com/questions/164/  
 
+* Check which packages can be uodated
+    
+    `sudo apt update && apt list --upgradable`
+
 * Enable non-free-firmware
     
     [https://www.linuxtricks.fr/wiki](https://www.linuxtricks.fr/wiki/debian-configurer-les-sources-activer-non-free-et-contrib)  
