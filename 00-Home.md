@@ -375,6 +375,10 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
     
     `sudo sed -e 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' -i "$dest"`
     
+* Remove entry from drun in rofi
+    
+    Type Shift+Delete on the entry.
+
 * Convert .csv file to .ods
     
     https://askubuntu.com/questions/1105378/  
