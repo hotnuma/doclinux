@@ -375,6 +375,10 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
 
 #### Misc
 
+* Delete thumbnails older than 30 days
+
+    `find ~/.cache/thumbnails/ -type f -iname \*.png -mtime +30 -delete`
+
 * Edit config files
     
     https://unix.stackexchange.com/questions/642578/  
