@@ -58,14 +58,49 @@ https://ffmpeg.org/ffmpeg-filters.html
     `ffmpeg -y -i "input.mp4" -c:v copy -af "highpass=f=100" "output.mp4"`
 
 
-#### Video
+#### Audio/Video
 
-* Change aspect ratio :
+* Change aspect ratio
 
     `ffmpeg -y -i "input.mp4" -aspect "4:3" -c copy "output.mp4"`
 
+* Get a 1 min sample from 2 min of the beginning
+
+    ffmpeg -y -ss 00:02:00 -i "input.mp4" -t 00:01:00 -c copy "output.mp4"
+
+* Get a 1 min samle with audio only
+
+    ffmpeg -y -ss 00:02:00  -i "input.mp4" -t 00:01:00 -map 0:1 -c copy "output.mp4"
+
+* Get a 1 min samle with video only
+
+    ffmpeg -y -ss 00:02:00 -i "input.mp4" -t 00:01:00 -map 0:0 -c copy "output.mp4"
+
+* Get file informations
+
+    ffprobe -v quiet -show_format -show_streams "input.avi"
+
 
 #### Subtitles
+
+* Convert sub to srt online
+
+    https://subtitletools.com/convert-sub-idx-to-srt-online  
+
+* Extract subs with MKVToolNix
+
+    `mkvextract tracks "input.mkv" 2:out.idx`
+
+* Remove subtitles and chapters
+
+    `ffmpeg -y -i "input.mp4" -c copy -sn "output.mp4"`
+
+    `ffmpeg -y -i "input.mp4" -c copy -map_chapters -1 "output.mp4"`
+    
+    `ffmpeg -y -i "input.mp4" -c copy -dn -map_metadata:c -1 "output.mp4"`
+    
+
+#### yt-dlp
 
 * Download subtitles from YouTube
 
@@ -76,26 +111,11 @@ https://ffmpeg.org/ffmpeg-filters.html
     yt-dlp --write-auto-sub --sub-lang fr --skip-download "URL"
     ```
     
-* Remove subtitles and chapters
-
-    `ffmpeg -y -i "input.mp4" -c copy -sn "output.mp4"`
-
-    `ffmpeg -y -i "input.mp4" -c copy -map_chapters -1 "output.mp4"`
+* Download thumbnail
     
-    `ffmpeg -y -i "input.mp4" -c copy -dn -map_metadata:c -1 "output.mp4"`
-    
-* Extract subs with MKVToolNix
+    `yt-dlp --write-thumbnail --skip-download "URL"`
 
-    `mkvextract tracks "input.mkv" 2:out.idx`
-    
-* Convert sub to srt online
-
-    https://subtitletools.com/convert-sub-idx-to-srt-online  
-
-
-#### Cookies
-
-* Youtube
+* Use cookies
 
     `yt-dlp --cookies=cookies/youtube.txt "URL"`
 
@@ -110,20 +130,17 @@ https://ffmpeg.org/ffmpeg-filters.html
     Create a file containing the list of files to concatenate :
     
     ```
-    file 'part1.avi'
-    file 'part2.avi'
-    file 'part3.avi'
+    file 'part1.mp4'
+    file 'part2.mp4'
+    file 'part3.mp4'
     ``` 
 
     Then execute the concat command :
 
-    `ffmpeg -f concat -safe 0 -i "input.txt" -c copy "output.avi"`
-
-* Download thumbnail
-    
-    `yt-dlp --write-thumbnail --skip-download "URL"`
+    `ffmpeg -f concat -safe 0 -i "input.txt" -c copy "output.mp4"`
 
 * Write title metadata
     
     `ffmpeg -y -i "input.mp4" -c copy -metadata title="Test title" "output.mp4"`
+
 
