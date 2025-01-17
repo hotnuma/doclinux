@@ -14,12 +14,6 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
 
 #### System
 
-* System Infos
-
-    `inxi -b`
-
-    `glxinfo | egrep "OpenGL vendor|OpenGL renderer"`
-
 * Alias
     
     List aliases : `alias`
@@ -82,6 +76,11 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
     systemctl reboot
     systemctl poweroff
     ```
+
+* System Infos
+
+    `inxi -b`  
+    `glxinfo | egrep "OpenGL vendor|OpenGL renderer"`  
 
 * User's groups
     
@@ -323,6 +322,12 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
 
     `ln -s target_path link_name`
 
+* Edit config files
+    
+    https://unix.stackexchange.com/questions/642578/  
+    
+    `sudo sed -e 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' -i "$dest"`
+    
 * Find biggest files in directory
     
     `find . -type f -printf "%s\t%p\n" | sort -nr | head -10`
@@ -343,6 +348,12 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
     
     `find . -type f \( -name "*.h" -o -name "*.c" \)`
     
+* Format text file to a specific line length
+    
+    https://unix.stackexchange.com/questions/146089/  
+    
+    `fmt --width=120 input.txt > output.txt`
+
 * Get file's MIME type
     
     https://stackoverflow.com/questions/2227182/  
@@ -379,12 +390,6 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
 
     `find ~/.cache/thumbnails/ -type f -iname \*.png -mtime +30 -delete`
 
-* Edit config files
-    
-    https://unix.stackexchange.com/questions/642578/  
-    
-    `sudo sed -e 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' -i "$dest"`
-    
 * Get installation date
     
     `stat -c %w /`
@@ -403,9 +408,11 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
     
     `LANG=C free -h`
     
-* Replace multiple spaces
+* Replace multiple spaces or tabs
     
     https://superuser.com/questions/241018/  
+    
+    `sed 's/ \+ /\t/g' input.txt > output.txt`
 
 * Switch to non-graphical
     
@@ -413,4 +420,7 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
 
     console : `Ctrl+Alt+F1`  
     graphical : `Ctrl+Alt+F7`  
+
+<br/>
+
 
