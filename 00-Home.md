@@ -9,18 +9,15 @@
 #### References
 
 https://wiki.debian.org/FrontPage  
-https://forums.debian.net/viewtopic.php?p=781767#p781767  
 
 
 #### System
 
-* Alias
+* Aliases
     
-    List aliases : `alias`
-    
-    Define aliases in `~/.bash_aliases` or `~/.bashrc`
-
-    Example : `alias cgrep='grep -rni --include=*.{h,c,cpp,cxx}'`
+    list aliases : `alias`  
+    aliases file : `~/.bash_aliases`  
+    example : `alias cgrep='grep -rni --include=*.{h,c,cpp,cxx}'`  
 
 * Alternatives
     
@@ -55,9 +52,8 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
     
     https://askubuntu.com/questions/575651/  
     
-    Modify : `/etc/default/grub`
-    
-    Execute : `sudo update-grub`
+    edit config : `/etc/default/grub`  
+    update : `sudo update-grub`  
 
 * Locale
     
@@ -381,7 +377,7 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
 
 * zathura
 
-    enable copy-to-clipboard : https://unix.stackexchange.com/questions/339487/  
+    copy to clipboard : https://unix.stackexchange.com/questions/339487/  
 
 
 #### Misc
