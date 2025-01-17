@@ -30,7 +30,7 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
     list choices : `update-alternatives --list x-cursor-theme`  
     
     default session : `sudo update-alternatives --config x-session-manager`  
-    defaylt terminal : `sudo update-alternatives --config x-terminal-emulator`  
+    default terminal : `sudo update-alternatives --config x-terminal-emulator`  
     
 * Boot target
 
