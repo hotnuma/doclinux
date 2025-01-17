@@ -352,22 +352,28 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
     https://unix.stackexchange.com/questions/754414/  
 
 
+#### Programs
+
+* feh
+    
+    https://wiki.archlinux.org/title/Feh  
+    
+    open command : `feh --start-at`
+
+* libreoffice
+    
+    convert csv to odt : `soffice --convert-to ods example.csv --headless`
+
+* rofi
+    
+    delete entry : type Shift+Delete on the entry
+
+* zathura
+
+    enable copy-to-clipboard : https://unix.stackexchange.com/questions/339487/  
+
+
 #### Misc
-
-* Switch to non-graphical
-    
-    https://superuser.com/questions/100693/  
-
-    console : `Ctrl+Alt+F1`  
-    graphical : `Ctrl+Alt+F7`  
-
-* Check VA-API
-
-    `vainfo`
-
-* Hardware acceleration
-    
-    https://wiki.debian.org/HardwareVideoAcceleration  
 
 * Edit config files
     
@@ -375,27 +381,15 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
     
     `sudo sed -e 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' -i "$dest"`
     
-* Remove entry from drun in rofi
-    
-    Type Shift+Delete on the entry.
-
-* Convert .csv file to .ods
-    
-    https://askubuntu.com/questions/1105378/  
-    
-    `soffice --convert-to ods example.csv --headless`
-
-* Replace multiple spaces
-    
-    https://superuser.com/questions/241018/  
-
-* Enable copy-to-clipboard in Zathura
-    
-    https://unix.stackexchange.com/questions/339487/  
-    
 * Get installation date
     
     `stat -c %w /`
+
+* Hardware acceleration
+
+    https://wiki.debian.org/HardwareVideoAcceleration  
+    
+    chack vaapi : `vainfo`
 
 * Output command without localization
 
@@ -405,4 +399,14 @@ https://forums.debian.net/viewtopic.php?p=781767#p781767
     
     `LANG=C free -h`
     
+* Replace multiple spaces
+    
+    https://superuser.com/questions/241018/  
+
+* Switch to non-graphical
+    
+    https://superuser.com/questions/100693/  
+
+    console : `Ctrl+Alt+F1`  
+    graphical : `Ctrl+Alt+F7`  
 
