@@ -37,9 +37,24 @@
     | xfwm4-tweaks-settings     | Window Manager Tweaks     |
     
 
-#### Sessions
+#### System Startup
 
-* Session
+* systemd
+
+    ```
+    /sbin/ini
+        dbus-demon
+        lightdm
+            /usr/share/xsessions/lightdm-xsession.desktop
+                startxfce4
+                    Xorg
+            lightdm --session-child
+                xfce4-session
+        agetty
+        systemd/systemd --user
+    ```
+
+* lightdm
 
     show config : `lightdm --show-config`
     
@@ -74,29 +89,18 @@
       2            /usr/bin/xfce4-session   40        mode manuel
 
     ```
-
-* startup
-
-    ```
-    /sbin/ini
-        dbus-demon
-        lightdm
-            /usr/share/xsessions/lightdm-xsession.desktop
-                startxfce4
-                    Xorg
-            lightdm --session-child
-                xfce4-session
-        agetty
-        systemd/systemd --user
-    ```
-
-* Xsession xdg paths
     
-    https://askubuntu.com/questions/1179729/  
+* xfce4-session
+    
+    https://docs.xfce.org/xfce/xfce4-session/advanced  
 
 * Bash Startup Files
     
     [https://www.linuxfromscratch.org/blfs/view/11.0/postlfs/prof](https://www.linuxfromscratch.org/blfs/view/11.0/postlfs/profile.html)  
+
+* Xsession xdg paths
+    
+    https://askubuntu.com/questions/1179729/  
 
 
 #### Configuration
