@@ -350,10 +350,6 @@ https://wiki.debian.org/FrontPage
     
     `fmt --width=120 input.txt > output.txt`
 
-* Get file's MIME type
-    
-    https://stackoverflow.com/questions/2227182/  
-
 * Remove presentation mode in PDFs
     
     https://unix.stackexchange.com/questions/754414/  

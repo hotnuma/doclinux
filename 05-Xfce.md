@@ -136,23 +136,23 @@
 
     ```
     $HOME/.local/share/applications/
-    /usr/share/applications/
     /usr/local/share/applications/
+    /usr/share/applications/
     ```
 
-* XDG MIME Applications
+* File associations
     
-    https://wiki.archlinux.org/title/XDG_MIME_Applications
+    https://wiki.archlinux.org/title/XDG_MIME_Applications  
+    https://unix.stackexchange.com/questions/114075/  
 
-* Default Applications
-    
     ```
     $HOME/.config/mimeapps.list
-    /usr/share/xfce4/applications/defaults.list
-    /etc/xfce4/defaults.list
-    /usr/share/applications/defaults.list
-    /etc/gnome/defaults.list
+    /usr/share/applications/mimeinfo.cache
     ```
+
+* Get file's MIME type
+    
+    https://stackoverflow.com/questions/2227182/  
 
 * Prefered applications
 
