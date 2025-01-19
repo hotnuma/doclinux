@@ -147,6 +147,8 @@
 
     ```
     $HOME/.config/mimeapps.list
+    $HOME/.local/share/applications/mimeinfo.cache
+    /usr/local/share/applications/mimeinfo.cache
     /usr/share/applications/mimeinfo.cache
     ```
 
