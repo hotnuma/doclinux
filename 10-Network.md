@@ -23,9 +23,11 @@
     
     ```
     sudo tar xf firefox-116.0.tar.bz2 && sudo mv firefox /opt/firefox116_00/
-    sudo mv /usr/bin/firefox /usr/bin/firefox.bak
-    sudo ln -s /opt/firefox/firefox /usr/bin/firefox
+    sudo ln -s /opt/firefox/firefox /usr/local/bin/firefox
+    sudo wget https://raw.githubusercontent.com/mozilla/sumo-kb/main/install-firefox-linux/firefox.desktop -P /usr/local/share/applications
     ```
+    
+    edit icon path : sudo nano /usr/local/share/applications/firefox.desktop
 
 * Test Videos
     
