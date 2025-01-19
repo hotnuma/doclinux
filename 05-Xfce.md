@@ -156,8 +156,10 @@
 
 * Prefered applications
 
-    `/etc/xdg/xfce4/helpers.rc`
-    
+    ```
+    $HOME/.config/xfce4/helpers.rc
+    /etc/xdg/xfce4/helpers.rc
+    ```
 
 #### Themes
 
