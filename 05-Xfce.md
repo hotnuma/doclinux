@@ -143,7 +143,9 @@
 * File associations
     
     https://wiki.archlinux.org/title/XDG_MIME_Applications  
+    https://unix.stackexchange.com/questions/507943/  
     https://unix.stackexchange.com/questions/114075/  
+    https://stackoverflow.com/questions/2227182/  
 
     ```
     $HOME/.config/mimeapps.list
@@ -152,11 +154,7 @@
     /usr/share/applications/mimeinfo.cache
     ```
 
-* Get file's MIME type
-    
-    https://stackoverflow.com/questions/2227182/  
-
-* Prefered applications
+* Default applications
 
     ```
     $HOME/.config/xfce4/helpers.rc
