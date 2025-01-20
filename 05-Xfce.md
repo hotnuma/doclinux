@@ -142,6 +142,8 @@
 
 * File associations
     
+    https://wiki.debian.org/MIME  
+    https://wiki.debian.org/MimeTypesSupport  
     https://wiki.archlinux.org/title/XDG_MIME_Applications  
     https://unix.stackexchange.com/questions/507943/  
     https://unix.stackexchange.com/questions/114075/  
