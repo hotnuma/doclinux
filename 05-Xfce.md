@@ -149,12 +149,13 @@
     https://unix.stackexchange.com/questions/114075/  
     https://stackoverflow.com/questions/2227182/  
 
-    ```
-    $HOME/.config/mimeapps.list
-    $HOME/.local/share/applications/mimeinfo.cache
-    /usr/local/share/applications/mimeinfo.cache
-    /usr/share/applications/mimeinfo.cache
-    ```
+    mime cache : `/usr/share/applications/mimeinfo.cache`  
+    default apps : `$HOME/.config/mimeapps.list`  
+    
+    regenerate mimeinfo.cache files :
+    
+    global files : `update-desktop-database`  
+    in user dir : `update-desktop-database ~/.local/share/applications`  
 
 * Default applications
 
