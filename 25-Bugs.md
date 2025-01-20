@@ -16,7 +16,6 @@
     
     fix : `user_pref("gfx.x11.glx_sgi_video_sync", true);`
 
-
 * DMZ Cursor bug
     
     https://forums.linuxmint.com/viewtopic.php?t=414360  
@@ -32,6 +31,11 @@
 * Xfwm4 Unmaximize
     
     https://gitlab.xfce.org/xfce/xfwm4/-/issues/190  
+
+* /usr/share appears twice in XDG_DATA_DIRS
+    
+    https://gitlab.xfce.org/xfce/xfce4-session/-/issues/111  
+    https://gitlab.xfce.org/xfce/xfce4-session/-/issues/50  
 
 
 #### Other
