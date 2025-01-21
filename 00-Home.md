@@ -322,7 +322,7 @@ https://wiki.debian.org/FrontPage
     
     https://unix.stackexchange.com/questions/642578/  
     
-    `sed -i 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' "$dest"`
+    `sed -i 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' "input.txt"`
 
 * Extract lines
     
@@ -364,6 +364,13 @@ https://wiki.debian.org/FrontPage
 * Remove presentation mode in PDFs
     
     https://unix.stackexchange.com/questions/754414/  
+
+* Replace multiple spaces
+    
+    https://superuser.com/questions/241018/  
+    
+    `sed -i 's/  */ /g' "input.txt"`
+    `sed -i 's/  */\t/g' "input.txt"`
 
 
 #### Programs
@@ -411,12 +418,6 @@ https://wiki.debian.org/FrontPage
     
     `LANG=C free -h`
     
-* Replace multiple spaces or tabs
-    
-    https://superuser.com/questions/241018/  
-    
-    `sed 's/ \+ /\t/g' input.txt > output.txt`
-
 * Switch to non-graphical
     
     https://superuser.com/questions/100693/  
