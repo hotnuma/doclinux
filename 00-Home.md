@@ -322,8 +322,19 @@ https://wiki.debian.org/FrontPage
     
     https://unix.stackexchange.com/questions/642578/  
     
-    `sudo sed -e 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' -i "$dest"`
+    `sed -i 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' "$dest"`
+
+* Extract lines
     
+    ```
+    sed -n \
+    -e '/^\[Desktop Entry\]/p' \
+    -e '/^Name=/p' \
+    -e '/^Exec=/p' \
+    -e '/^Type=/p' \
+    /usr/share/applications/firefox.desktop
+    ```
+
 * Find biggest files in directory
     
     `find . -type f -printf "%s\t%p\n" | sort -nr | head -10`
