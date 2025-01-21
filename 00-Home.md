@@ -9,6 +9,7 @@
 #### References
 
 https://wiki.debian.org/FrontPage  
+https://wiki.debian.org/HardwareVideoAcceleration  
 
 
 #### System
@@ -77,6 +78,7 @@ https://wiki.debian.org/FrontPage
 
     `inxi -b`  
     `glxinfo | egrep "OpenGL vendor|OpenGL renderer"`  
+    `vainfo`
 
 * User's groups
     
@@ -108,6 +110,8 @@ https://wiki.debian.org/FrontPage
 * Find the package that provides a file
     
     https://askubuntu.com/questions/481/  
+    
+    `dpkg -S /bin/ls`
 
 * Get package version
 
@@ -115,9 +119,9 @@ https://wiki.debian.org/FrontPage
 
 * Get source of package
     
-    https://www.cyberciti.biz/faq/how-to-get-source-code-of-package-using-the-apt-command-on-debian-or-ubuntu/  
+    [https://www.cyberciti.biz/faq/how-to-get-source...](https://www.cyberciti.biz/faq/how-to-get-source-code-of-package-using-the-apt-command-on-debian-or-ubuntu/)  
     
-    Check if `deb-src` is enabled : `cat /etc/apt/sources.list`
+    check if `deb-src` is enabled : `cat /etc/apt/sources.list`
     
     ```
     sudo apt update
@@ -137,22 +141,25 @@ https://wiki.debian.org/FrontPage
 * List files from a package
     
     https://askubuntu.com/questions/32507/  
+    
+    installed package : `dpkg-query -L <package_name>`
 
 * Purge Apt Cache
 
-    `sudo apt clean ; sudo apt autoclean`
+    `sudo apt clean; sudo apt autoclean`
 
 * Remove useless packages
 
+    `sudo apt autopurge`
+    
+    or
+    
     `sudo apt autoremove`
     
     or
     
     `sudo apt autoremove --purge`
     
-    or
-    
-    `sudo apt autopurge`
 
 * Search package name
 
@@ -191,10 +198,14 @@ https://wiki.debian.org/FrontPage
 * Check drive spin down
 
     https://superuser.com/questions/173622/  
+    
+    `hdparm -C /dev/sdX`
 
 * Eject USB drives
     
-    https://unix.stackexchange.com/questions/35508/
+    https://unix.stackexchange.com/questions/35508/  
+    
+    `sudo eject /dev/sdX`
 
 * Power Off Drive
     
@@ -205,15 +216,15 @@ https://wiki.debian.org/FrontPage
 
 * Read smart infos
 
-    `sudo smartctl -s on -a /dev/sdc`
+    `sudo smartctl -s on -a /dev/sdX`
     
 * I/O test
     
-    [how_to_io_test](https://www.cyberciti.biz/faq/howto-linux-unix-test-disk-performance-with-dd-command/)  
+    [https://www.cyberciti.biz/howto-test-disk-performance...](https://www.cyberciti.biz/faq/howto-linux-unix-test-disk-performance-with-dd-command/)  
     
     `dd if=/dev/zero of=/tmp/test1.img bs=1G count=1 oflag=dsync`
     
-* Write img file to drive /dev/sdc using systools
+* Write an img file to a drive using systools
 
     https://github.com/hotnuma/systools  
     
@@ -229,50 +240,50 @@ https://wiki.debian.org/FrontPage
     lsblk -p
     sudo umount /dev/sdX?
     sudo cp "debian.iso" /dev/sdX
-    sudo sync
+    sync
     ```
 
 #### Drives Partitions
 
-* Read UUID
-
-    `sudo blkid`
-
-* Unmount all
-
-    `umount /dev/sdc?`
-    
 * Delete all partitions
 
     https://serverfault.com/questions/250839/  
     
     `sudo dd if=/dev/zero of=/dev/sdX bs=512 count=1 conv=notrunc`
 
-* Format `/dev/sdc1` in Ext4
+* Fix NTFS partition
+    
+    `sudo ntfsfix /dev/sdX1`
+
+* Format `/dev/sdX1` in Ext4
 
     ```
     lsblk -p
-    sudo umount /dev/sdc1
-    sudo mkfs.ext4 -L "Backup" /dev/sdc1
+    sudo umount /dev/sdX1
+    sudo mkfs.ext4 -L "Backup" /dev/sdX1
     sudo chown $USER:$USER /media/$USER/Backup
     ```
     
-* Format `/dev/sdc1` in NTFS
+* Format `/dev/sdX1` in NTFS
 
     ```
     lsblk -p
-    sudo umount /dev/sdc1
-    sudo mkfs.ntfs -f -L "Backup" /dev/sdc1
+    sudo umount /dev/sdX1
+    sudo mkfs.ntfs -f -L "Backup" /dev/sdX1
     ```
+
+* Read UUID
+
+    `sudo blkid`
 
 * Rename NTFS partition
     
-    `sudo ntfslabel -f /dev/sdc1 Backup1`
+    `sudo ntfslabel -f /dev/sdX1 Backup1`
 
-* Fix NTFS partition
+* Unmount all
+
+    `umount /dev/sdX?`
     
-    `sudo ntfsfix /dev/sdc1`
-
 
 #### Directories
 
@@ -297,7 +308,6 @@ https://wiki.debian.org/FrontPage
     To check : `find . -type d -empty -print`
 
     To delete : `find . -type d -empty -delete`
-`
 
 * Recursive grep
 
@@ -369,8 +379,8 @@ https://wiki.debian.org/FrontPage
     
     https://superuser.com/questions/241018/  
     
-    `sed -i 's/  */ /g' "input.txt"`
-    `sed -i 's/  */\t/g' "input.txt"`
+    <code>sed -i 's/&nbsp;&nbsp;&#42;/ /g' "input.txt"</code>  
+    <code>sed -i 's/&nbsp;&nbsp;&#42;/\t/g' "input.txt"</code>  
 
 
 #### Programs
@@ -387,7 +397,7 @@ https://wiki.debian.org/FrontPage
 
 * rofi
     
-    delete entry : type Shift+Delete on the entry
+    delete entry : type shift+delete on the entry
 
 * zathura
 
@@ -403,12 +413,6 @@ https://wiki.debian.org/FrontPage
 * Get installation date
     
     `stat -c %w /`
-
-* Hardware acceleration
-
-    https://wiki.debian.org/HardwareVideoAcceleration  
-    
-    chack vaapi : `vainfo`
 
 * Output command without localization
 
