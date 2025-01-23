@@ -182,17 +182,18 @@ https://wiki.debian.org/HardwareVideoAcceleration
     https://stackoverflow.com/questions/58831133/  
     https://luminousmen.com/post/why-use-pip-install-user  
     
-    `python3 -m pip install --user <appname>`
+    create an alias such as :  
+    
+    `alias pyinst='python3 -m pip install --break-system-packages --user'`
+    
+    then run : `pyinst <appname>`
     
 * yt-dlp
     
     https://github.com/yt-dlp/yt-dlp  
     
-    Install or Update :
-    
-    `python3 -m pip install --break-system-packages --user -U yt-dlp`  
-    
-    create link : `sudo ln -s ~/.local/bin/yt-dlp /usr/local/bin/yt-dlp`
+    install or update : `pyinst -U yt-dlp`  
+    create a symlink : `sudo ln -s ~/.local/bin/yt-dlp /usr/local/bin/yt-dlp`  
 
 
 #### Drives
