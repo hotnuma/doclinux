@@ -385,6 +385,10 @@ https://wiki.debian.org/HardwareVideoAcceleration
 
 #### Programs
 
+* bash
+    
+    https://ss64.com/bash/syntax-keyboard.html  
+
 * feh
     
     https://wiki.archlinux.org/title/Feh  
