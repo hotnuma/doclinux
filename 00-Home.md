@@ -190,7 +190,9 @@ https://wiki.debian.org/HardwareVideoAcceleration
     
     Install or Update :
     
-    `python3 -m pip install --break-system-packages --user -U yt-dlp`
+    `python3 -m pip install --break-system-packages --user -U yt-dlp`  
+    
+    create link : `sudo ln -s ~/.local/bin/yt-dlp /usr/local/bin/yt-dlp`
 
 
 #### Drives
