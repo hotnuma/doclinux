@@ -354,7 +354,7 @@ https://wiki.debian.org/HardwareVideoAcceleration
 
 * Find files not own by user
 
-    `find ~ \( ! -user $USER -o ! -group $USER \)`
+    `find ~ ! -user $USER -o ! -group $USER`
     
 * Find ignore errors
     
@@ -366,7 +366,7 @@ https://wiki.debian.org/HardwareVideoAcceleration
 
 * Find multiple pattern
     
-    `find . -type f \( -name "*.h" -o -name "*.c" \)`
+    `find . -type f -name "*.h" -o -name "*.c"`
     
 * Format text file to a specific line length
     
