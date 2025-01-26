@@ -323,6 +323,10 @@ https://wiki.debian.org/HardwareVideoAcceleration
 
 #### Files
 
+* Change file owner
+    
+    `sudo chown $USER:$USER <filepath>`
+
 * Check opened files
     
     https://linuxhint.com/check-open-files-in-linux/  
