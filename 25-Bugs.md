@@ -40,6 +40,10 @@
 
 #### Other
 
+* clang-format
+    
+    https://github.com/llvm/llvm-project/issues/58300  
+
 * Firmwares warnings
 
     Warning :
