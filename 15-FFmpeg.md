@@ -40,7 +40,7 @@ https://ffmpeg.org/ffmpeg-filters.html
     
 * Delay audio by one second
 
-    `ffmpeg -y -i "input.mp4" -itsoffset -1.0 -i "input.mp4" -map 0:0 -map 1:1 -c copy "output.mp4"`
+    `ffmpeg -y -i "input.mp4" -itsoffset +1.0 -i "input.mp4" -map 0:0 -map 1:1 -c copy "output.mp4"`
     
 * Choose default audio channel
 
