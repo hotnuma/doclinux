@@ -194,6 +194,8 @@ https://wiki.debian.org/HardwareVideoAcceleration
     
     install or update : `pyinst -U yt-dlp`  
     create a symlink : `sudo ln -s ~/.local/bin/yt-dlp /usr/local/bin/yt-dlp`  
+    
+    nightly releases : https://github.com/yt-dlp/yt-dlp-nightly-builds/releases  
 
 
 #### Drives
