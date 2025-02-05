@@ -38,7 +38,9 @@ https://ffmpeg.org/ffmpeg-filters.html
     
     `ffmpeg -y -i "input.mp4" -c:v copy -c:a libmp3lame -b:a 192k -af "volume=22.5dB" "output.mp4"`
     
-* Delay audio by one second
+* Advance or delay audio by one second
+
+    `ffmpeg -y -i "input.mp4" -itsoffset -1.0 -i "input.mp4" -map 0:0 -map 1:1 -c copy "output.mp4"`
 
     `ffmpeg -y -i "input.mp4" -itsoffset +1.0 -i "input.mp4" -map 0:0 -map 1:1 -c copy "output.mp4"`
     
