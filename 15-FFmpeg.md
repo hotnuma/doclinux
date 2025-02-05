@@ -20,11 +20,11 @@ https://ffmpeg.org/ffmpeg-filters.html
     
 * Keep left channel
 
-    `ffmpeg -y -i "input.avi" -c:v copy -c:a libmp3lame -b:a 192k -af "pan=stereo|c0=c0|c1=c0" "output.avi"`
+    `ffmpeg -y -i "input.mp4" -c:v copy -c:a libmp3lame -b:a 192k -af "pan=stereo|c0=c0|c1=c0" "output.mp4"`
     
 * Keep right channel
 
-    `ffmpeg -y -i "input.avi" -c:v copy -c:a libmp3lame -b:a 192k -af "pan=stereo|c0=c1|c1=c1" "output.avi"`
+    `ffmpeg -y -i "input.mp4" -c:v copy -c:a libmp3lame -b:a 192k -af "pan=stereo|c0=c1|c1=c1" "output.mp4"`
     
 * Audio normalize
 
@@ -32,7 +32,7 @@ https://ffmpeg.org/ffmpeg-filters.html
 
     Analyze audio level with volumedetect
     
-    `ffmpeg -y -i "input.avi" -af "volumedetect" -f null /dev/null`
+    `ffmpeg -y -i "input.mp4" -af "volumedetect" -f null /dev/null`
     
     Read "max_volume", for example -22.5 dB, then amplify audio channel by +22.5dB.
     
@@ -40,7 +40,7 @@ https://ffmpeg.org/ffmpeg-filters.html
     
 * Delay audio by one second
 
-    `ffmpeg -y -i "input.mp4" -itsoffset -1.0 -i input.mp4 -map 0:0 -map 1:1 -c copy "output.mp4"`
+    `ffmpeg -y -i "input.mp4" -itsoffset -1.0 -i "input.mp4" -map 0:0 -map 1:1 -c copy "output.mp4"`
     
 * Choose default audio channel
 
@@ -78,7 +78,7 @@ https://ffmpeg.org/ffmpeg-filters.html
 
 * Get file informations
 
-    ffprobe -v quiet -show_format -show_streams "input.avi"
+    ffprobe -v quiet -show_format -show_streams "input.mp4"
 
 
 #### Subtitles
