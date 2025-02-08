@@ -295,8 +295,9 @@ https://wiki.debian.org/HardwareVideoAcceleration
 * Top Directories
     
     [https://www.cyberciti.biz/faq/how-do-i-find-the-largest-file](https://www.cyberciti.biz/faq/how-do-i-find-the-largest-filesdirectories-on-a-linuxunixbsd-filesystem/)  
-
-    `sudo du -ham / 2>/dev/null | sort -nr | head -n 20`
+    
+    `sudo du / -xam --max-depth=2 2>/dev/null | sort -nr | head -20`  
+    `sudo du / -ham 2>/dev/null | sort -nr | head -n 20`  
     
 * Compress a directory with 7zip
 
