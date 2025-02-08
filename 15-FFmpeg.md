@@ -80,8 +80,10 @@ https://ffmpeg.org/ffmpeg-filters.html
 
 * Get file informations
 
-    ffprobe -v quiet -show_format -show_streams "input.mp4"
+    `ffprobe -hide_banner "input.mp4"`
 
+    `ffprobe -v quiet -show_format -show_streams "input.mp4"`
+    
 
 #### Subtitles
 
