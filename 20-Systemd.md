@@ -80,7 +80,14 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     [https://journaldunadminlinux.fr/rotation-des-logs-avec-logro](https://journaldunadminlinux.fr/rotation-des-logs-avec-logrotate/)
 
 * Delete old files
-    
+
+    https://unix.stackexchange.com/questions/139513/  
+
+    delete older than 2 days : `sudo journalctl --vacuum-time=2d`
+
+    check result : `sudo du /var/log  -x | sort -nr | head -10`
+
+<!--
     https://unix.stackexchange.com/questions/459996/  
     https://unix.stackexchange.com/questions/184488/  
 
@@ -89,6 +96,7 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     sudo find /var/log -maxdepth 1 -type f -mtime +5 -delete
     sudo find /var/log ! -wholename "/var/log/journal/*" -type f -mtime +5 -delete
     ```
+-->
 
 
 #### <a name="disable"></a> Turn off excessive logs
