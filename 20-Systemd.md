@@ -54,9 +54,7 @@ https://www.freedesktop.org/software/systemd/man/systemctl.html
     
 * List timers
     
-    ```
-    systemctl list-timers --all
-    ```
+    `systemctl --no-pager list-timers`
 
 
 #### Log files
