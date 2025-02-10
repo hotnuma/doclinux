@@ -180,11 +180,18 @@
 
 * Wallpapers
 
+    system :
+    
+    ```
+    /usr/share/backgrounds/
+    ```
+    
+    xfce :
+    
     ```
     $HOME/.local/share/xfce4/backdrops/
     /usr/share/xfce4/backdrops/
     /usr/share/xfce4/backdrops/xfce/
-    /usr/share/backgrounds/
     ```
 
 
