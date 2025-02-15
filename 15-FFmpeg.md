@@ -12,6 +12,31 @@ https://ffmpeg.org/ffmpeg-filters.html
 [https://www.codeproject.com/Tips/5356341/](https://www.codeproject.com/Tips/5356341/How-to-Compile-FFmpeg-6-0-in-Linux-and-What-New-Th)  
 
 
+#### Audio/Video
+
+* Change aspect ratio
+
+    `ffmpeg -y -i "input.mp4" -aspect "4:3" -c copy "output.mp4"`
+
+* Get a 1 min sample from 2 min of the beginning
+
+    ffmpeg -y -ss 00:02:00 -i "input.mp4" -t 00:01:00 -c copy "output.mp4"
+
+* Get a 1 min samle with audio only
+
+    ffmpeg -y -ss 00:02:00  -i "input.mp4" -t 00:01:00 -map 0:1 -c copy "output.mp4"
+
+* Get a 1 min samle with video only
+
+    ffmpeg -y -ss 00:02:00 -i "input.mp4" -t 00:01:00 -map 0:0 -c copy "output.mp4"
+
+* Get file informations
+
+    `ffprobe -hide_banner "input.mp4"`
+
+    `ffprobe -v quiet -show_format -show_streams "input.mp4"`
+    
+
 #### Audio
 
 * Mp3 encoding
@@ -60,30 +85,15 @@ https://ffmpeg.org/ffmpeg-filters.html
     `ffmpeg -y -i "input.mp4" -c:v copy -af "highpass=f=100" "output.mp4"`
 
 
-#### Audio/Video
-
-* Change aspect ratio
-
-    `ffmpeg -y -i "input.mp4" -aspect "4:3" -c copy "output.mp4"`
-
-* Get a 1 min sample from 2 min of the beginning
-
-    ffmpeg -y -ss 00:02:00 -i "input.mp4" -t 00:01:00 -c copy "output.mp4"
-
-* Get a 1 min samle with audio only
-
-    ffmpeg -y -ss 00:02:00  -i "input.mp4" -t 00:01:00 -map 0:1 -c copy "output.mp4"
-
-* Get a 1 min samle with video only
-
-    ffmpeg -y -ss 00:02:00 -i "input.mp4" -t 00:01:00 -map 0:0 -c copy "output.mp4"
-
-* Get file informations
-
-    `ffprobe -hide_banner "input.mp4"`
-
-    `ffprobe -v quiet -show_format -show_streams "input.mp4"`
+#### Images
     
+    * Resize image
+    
+    ```
+    ffmpeg -y -hide_banner -loglevel error \
+    -i "input.jpg" -vf scale=1680:1050:flags=lanczos "output.jpg"
+    ```
+
 
 #### Subtitles
 
