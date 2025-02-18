@@ -22,7 +22,7 @@ https://ffmpeg.org/ffmpeg-filters.html
 
     ffmpeg -y -ss 00:02:00 -i "input.mp4" -t 00:01:00 -c copy "output.mp4"
 
-* Get a 1 min samle with audio only
+* Get a 1 min sample with audio only
 
     ffmpeg -y -ss 00:02:00  -i "input.mp4" -t 00:01:00 -map 0:1 -c copy "output.mp4"
 
@@ -87,7 +87,7 @@ https://ffmpeg.org/ffmpeg-filters.html
 
 #### Images
     
-    * Resize image
+* Resize image
     
     ```
     ffmpeg -y -hide_banner -loglevel error \
