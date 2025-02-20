@@ -90,8 +90,8 @@ https://ffmpeg.org/ffmpeg-filters.html
 * Resize image
     
     ```
-    ffmpeg -y -hide_banner -loglevel error \
-    -i "input.jpg" -vf scale=1680:1050:flags=lanczos "output.jpg"
+    ffmpeg -hide_banner -loglevel error -y \
+    -i "input.jpg" -q:v 1 -vf scale=1680:1050:flags=lanczos "output.jpg"
     ```
 
 
