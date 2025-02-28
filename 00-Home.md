@@ -417,6 +417,24 @@ https://wiki.debian.org/HardwareVideoAcceleration
 
     copy to clipboard : https://unix.stackexchange.com/questions/339487/  
 
+* Additional programs
+
+    ```
+    datamash
+    evince
+    exiv2
+    freefilesync
+    gnuplot
+    greybird-gtk-theme
+    libgd-dev
+    lz4json
+    plotutils
+    sigil
+    uchardet
+    vainfo
+    xfce4-screenshooter
+    ```
+
 
 #### Misc
 
