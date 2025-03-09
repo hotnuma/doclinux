@@ -26,6 +26,13 @@
     `sudo update-alternatives --config x-cursor-theme`
 
 
+#### Labwc
+    
+    * Chromium geometry
+    
+    https://github.com/labwc/labwc/issues/2327  
+
+
 #### XFCE
 
 * Xfwm4 Unmaximize
