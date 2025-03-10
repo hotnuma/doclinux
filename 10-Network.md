@@ -161,11 +161,30 @@
 
 #### Switch to /etc/network/interfaces
 
-* Install ifupdown
+* Network Interfaces
+
+    check interfaces names : `ifconfig`
+
+    `sudo mv /etc/network/interfaces /etc/network/interfaces.bak`
+    
+    `sudo nano /etc/network/interfaces`
     
     ```
-    sudo apt install ifupdown resolvconf
+    auto lo
+    iface lo inet loopback
+
+    auto eth0
+    iface eth0 inet static
+        address 192.168.1.132/24
+        netmask 255.255.255.0
+        broadcast 192.168.1.255
+        gateway 192.168.1.254
+        dns-nameservers 8.8.8.8 8.8.4.4
     ```
+
+* Install ifupdown
+    
+    `sudo apt install ifupdown resolvconf`
 
 * Disable NetworkManager
 
@@ -175,6 +194,8 @@
     ```
 
 * Disable systemd-networkd
+
+    check service : `sudo systemctl status systemd-networkd`
     
     ```
     sudo systemctl stop systemd-networkd
@@ -182,30 +203,15 @@
     sudo rm /etc/systemd/network/00-eth0.network
     ```
 
-* Interface
-    
-    Create `/etc/network/interfaces` :
-
-    ```
-    auto lo
-    iface lo inet loopback
-
-    auto eth0
-    iface eth0 inet static
-        address 192.168.1.100/24
-        netmask 255.255.255.0
-        broadcast 192.168.1.255
-        gateway 192.168.1.254
-        dns-nameservers 8.8.8.8 8.8.4.4
-    ```
-
-    Configure eth0 using ifup :
-
-    `sudo ifup eth0`
-
 * Enable eth0
 
-    `ln -s /dev/null /etc/systemd/network/99-default.link`
+    check links : `ls -la /etc/systemd/network/`
+    
+    `sudo ln -s /dev/null /etc/systemd/network/99-default.link`
+
+* Configure eth0 using ifup :
+
+    `sudo ifup eth0`
 
 * Uninstall network manager
 
